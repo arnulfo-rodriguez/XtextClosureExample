@@ -10,8 +10,7 @@ Program:
 ;
 	
 Expression:
-	FunctionDeclaration  |
-	/*VariableAssignment |*/
+ 	FunctionDeclaration  | 
 	NumericExpression;
 
 
@@ -19,9 +18,14 @@ FunctionDeclaration:
 	'func' '(' parameters=FunctionParameters ')' body=Body;
 
 Body:
-	expressions+=Expression |
-	{Body}'{'expressions+=Expression* '}'
+ 	expression=Expression |
+	{Body}'{'expressions=Expression tail=BodyTail? '}'
 ;
+
+BodyTail:
+	';' Expression tail=BodyTail?
+;
+
  
 
 FunctionParameters:
@@ -37,7 +41,6 @@ ApplyFunctionAlpha:
 	{ApplyFunctionAlpha}'(' args=FunctionArguments? ')' nextCall=ApplyFunctionAlpha?
 ;
 
-
 FunctionArguments:
 	arguments+=Expression (',' arguments+=Expression)*
 ;
@@ -50,14 +53,9 @@ SymbolReference:
 	id=ID
 ;
 
-VariableAssignment:
-	symbol=SymbolReference '=' expression=Expression
-;
-
 NumericExpression:
 	factor=Factor exprTail=ExprTail?
 ;
-
 
 ExprTail:
 	'+' factor=Factor exprTail=ExprTail? |
@@ -72,7 +70,6 @@ FactorTail:
 
 Term:
  	LiteralExpr |
-	/*SymbolReference | */
 	ApplyFunction |
 	ParenthesisExpression;
 
