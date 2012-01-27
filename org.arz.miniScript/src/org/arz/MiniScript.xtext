@@ -6,9 +6,13 @@ Model:
 	Program;
 
 Program:
-	expressions+=Expression ';' (expression+=Expression ';')*
+	expressions+=Expression tail=ProgramTail?
 ;
-	
+
+ProgramTail:
+	';' expression=Expression tail=ProgramTail?
+;
+
 Expression:
  	FunctionDeclaration  | 
 	NumericExpression;
@@ -23,16 +27,13 @@ Body:
 ;
 
 BodyTail:
-	';' Expression tail=BodyTail?
+	';' expression=Expression tail=BodyTail?
 ;
 
- 
-
-FunctionParameters:
+ FunctionParameters:
 	{FunctionParameters}parameters+=ID? |
 	parameters+=ID (',' parameters+=ID)+
 	;
-
 
 ApplyFunction:
 	functor=SymbolReference app3=ApplyFunctionAlpha;
@@ -71,7 +72,13 @@ FactorTail:
 Term:
  	LiteralExpr |
 	ApplyFunction |
+	VariableAssignment |
 	ParenthesisExpression;
+
+VariableAssignment:
+	id=ID '=' expression=Expression
+;
+
 
 ParenthesisExpression:
 	'(' Expression ')'
