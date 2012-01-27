@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.arz.miniScript/src-gen"
+    editDirectory="/org.arz.miniScript.edit/src" editorDirectory="/org.arz.miniScript.editor/src"
+    modelPluginID="org.arz.miniScript" forceOverwrite="true" modelName="MiniScript"
+    updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.arz.miniScript.edit"
+    editorPluginID="org.arz.miniScript.editor">
+  <genPackages prefix="MiniScript" basePackage="org.arz" disposableProviderFactory="true"
+      ecorePackage="MiniScript.ecore#/">
+    <genClasses ecoreClass="MiniScript.ecore#//Model"/>
+    <genClasses ecoreClass="MiniScript.ecore#//Program">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//Program/expressions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//Program/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="MiniScript.ecore#//Expression"/>
+    <genClasses ecoreClass="MiniScript.ecore#//FunctionDeclaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//FunctionDeclaration/parameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//FunctionDeclaration/body"/>
+    </genClasses>
+    <genClasses ecoreClass="MiniScript.ecore#//Body">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//Body/expressions"/>
+    </genClasses>
+    <genClasses ecoreClass="MiniScript.ecore#//FunctionParameters">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MiniScript.ecore#//FunctionParameters/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="MiniScript.ecore#//ApplyFunction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//ApplyFunction/functor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//ApplyFunction/app3"/>
+    </genClasses>
+    <genClasses ecoreClass="MiniScript.ecore#//ApplyFunctionAlpha">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//ApplyFunctionAlpha/args"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//ApplyFunctionAlpha/nextCall"/>
+    </genClasses>
+    <genClasses ecoreClass="MiniScript.ecore#//FunctionArguments">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//FunctionArguments/arguments"/>
+    </genClasses>
+    <genClasses ecoreClass="MiniScript.ecore#//LiteralExpr">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MiniScript.ecore#//LiteralExpr/value"/>
+    </genClasses>
+    <genClasses ecoreClass="MiniScript.ecore#//SymbolReference">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MiniScript.ecore#//SymbolReference/id"/>
+    </genClasses>
+    <genClasses ecoreClass="MiniScript.ecore#//VariableAssignment">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//VariableAssignment/symbol"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//VariableAssignment/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="MiniScript.ecore#//NumericExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//NumericExpression/factor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//NumericExpression/exprTail"/>
+    </genClasses>
+    <genClasses ecoreClass="MiniScript.ecore#//ExprTail">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//ExprTail/factor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//ExprTail/exprTail"/>
+    </genClasses>
+    <genClasses ecoreClass="MiniScript.ecore#//Factor">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//Factor/term"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//Factor/factorTail"/>
+    </genClasses>
+    <genClasses ecoreClass="MiniScript.ecore#//FactorTail">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//FactorTail/term"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//FactorTail/factorTail"/>
+    </genClasses>
+    <genClasses ecoreClass="MiniScript.ecore#//Term"/>
+    <genClasses ecoreClass="MiniScript.ecore#//ParenthesisExpression"/>
+  </genPackages>
+</genmodel:GenModel>

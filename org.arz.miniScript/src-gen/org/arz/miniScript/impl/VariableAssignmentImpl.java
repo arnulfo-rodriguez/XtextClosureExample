@@ -1,0 +1,269 @@
+/**
+ * <copyright>
+ * </copyright>
+ *
+ */
+package org.arz.miniScript.impl;
+
+import org.arz.miniScript.Expression;
+import org.arz.miniScript.MiniScriptPackage;
+import org.arz.miniScript.SymbolReference;
+import org.arz.miniScript.VariableAssignment;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Variable Assignment</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link org.arz.miniScript.impl.VariableAssignmentImpl#getSymbol <em>Symbol</em>}</li>
+ *   <li>{@link org.arz.miniScript.impl.VariableAssignmentImpl#getExpression <em>Expression</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class VariableAssignmentImpl extends MinimalEObjectImpl.Container implements VariableAssignment
+{
+  /**
+   * The cached value of the '{@link #getSymbol() <em>Symbol</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSymbol()
+   * @generated
+   * @ordered
+   */
+  protected SymbolReference symbol;
+
+  /**
+   * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getExpression()
+   * @generated
+   * @ordered
+   */
+  protected Expression expression;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  protected VariableAssignmentImpl()
+  {
+    super();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  protected EClass eStaticClass()
+  {
+    return MiniScriptPackage.Literals.VARIABLE_ASSIGNMENT;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SymbolReference getSymbol()
+  {
+    return symbol;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetSymbol(SymbolReference newSymbol, NotificationChain msgs)
+  {
+    SymbolReference oldSymbol = symbol;
+    symbol = newSymbol;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.VARIABLE_ASSIGNMENT__SYMBOL, oldSymbol, newSymbol);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSymbol(SymbolReference newSymbol)
+  {
+    if (newSymbol != symbol)
+    {
+      NotificationChain msgs = null;
+      if (symbol != null)
+        msgs = ((InternalEObject)symbol).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.VARIABLE_ASSIGNMENT__SYMBOL, null, msgs);
+      if (newSymbol != null)
+        msgs = ((InternalEObject)newSymbol).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.VARIABLE_ASSIGNMENT__SYMBOL, null, msgs);
+      msgs = basicSetSymbol(newSymbol, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.VARIABLE_ASSIGNMENT__SYMBOL, newSymbol, newSymbol));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Expression getExpression()
+  {
+    return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetExpression(Expression newExpression, NotificationChain msgs)
+  {
+    Expression oldExpression = expression;
+    expression = newExpression;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.VARIABLE_ASSIGNMENT__EXPRESSION, oldExpression, newExpression);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setExpression(Expression newExpression)
+  {
+    if (newExpression != expression)
+    {
+      NotificationChain msgs = null;
+      if (expression != null)
+        msgs = ((InternalEObject)expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.VARIABLE_ASSIGNMENT__EXPRESSION, null, msgs);
+      if (newExpression != null)
+        msgs = ((InternalEObject)newExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.VARIABLE_ASSIGNMENT__EXPRESSION, null, msgs);
+      msgs = basicSetExpression(newExpression, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.VARIABLE_ASSIGNMENT__EXPRESSION, newExpression, newExpression));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case MiniScriptPackage.VARIABLE_ASSIGNMENT__SYMBOL:
+        return basicSetSymbol(null, msgs);
+      case MiniScriptPackage.VARIABLE_ASSIGNMENT__EXPRESSION:
+        return basicSetExpression(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Object eGet(int featureID, boolean resolve, boolean coreType)
+  {
+    switch (featureID)
+    {
+      case MiniScriptPackage.VARIABLE_ASSIGNMENT__SYMBOL:
+        return getSymbol();
+      case MiniScriptPackage.VARIABLE_ASSIGNMENT__EXPRESSION:
+        return getExpression();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eSet(int featureID, Object newValue)
+  {
+    switch (featureID)
+    {
+      case MiniScriptPackage.VARIABLE_ASSIGNMENT__SYMBOL:
+        setSymbol((SymbolReference)newValue);
+        return;
+      case MiniScriptPackage.VARIABLE_ASSIGNMENT__EXPRESSION:
+        setExpression((Expression)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eUnset(int featureID)
+  {
+    switch (featureID)
+    {
+      case MiniScriptPackage.VARIABLE_ASSIGNMENT__SYMBOL:
+        setSymbol((SymbolReference)null);
+        return;
+      case MiniScriptPackage.VARIABLE_ASSIGNMENT__EXPRESSION:
+        setExpression((Expression)null);
+        return;
+    }
+    super.eUnset(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public boolean eIsSet(int featureID)
+  {
+    switch (featureID)
+    {
+      case MiniScriptPackage.VARIABLE_ASSIGNMENT__SYMBOL:
+        return symbol != null;
+      case MiniScriptPackage.VARIABLE_ASSIGNMENT__EXPRESSION:
+        return expression != null;
+    }
+    return super.eIsSet(featureID);
+  }
+
+} //VariableAssignmentImpl

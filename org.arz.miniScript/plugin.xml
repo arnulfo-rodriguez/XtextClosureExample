@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http://www.arz.org/MiniScript" 
+       class = "org.arz.miniScript.MiniScriptPackage"
+       genModel = "org/arz/MiniScript.genmodel" /> 
+	
+  </extension>
+
+
+
+
+
+</plugin>

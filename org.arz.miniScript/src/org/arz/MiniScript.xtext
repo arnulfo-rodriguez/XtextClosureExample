@@ -1,0 +1,83 @@
+grammar org.arz.MiniScript with org.eclipse.xtext.common.Terminals
+
+generate miniScript "http://www.arz.org/MiniScript"
+
+Model:
+	Program;
+
+Program:
+	expressions+=Expression ';' (expression+=Expression ';')*
+;
+	
+Expression:
+	FunctionDeclaration  |
+	/*VariableAssignment |*/
+	NumericExpression;
+
+
+FunctionDeclaration:
+	'func' '(' parameters=FunctionParameters ')' body=Body;
+
+Body:
+	expressions+=Expression |
+	{Body}'{'expressions+=Expression* '}'
+;
+ 
+
+FunctionParameters:
+	{FunctionParameters}parameters+=ID? |
+	parameters+=ID (',' parameters+=ID)+
+	;
+
+
+ApplyFunction:
+	functor=SymbolReference app3=ApplyFunctionAlpha;
+
+ApplyFunctionAlpha:
+	{ApplyFunctionAlpha}'(' args=FunctionArguments? ')' nextCall=ApplyFunctionAlpha?
+;
+
+
+FunctionArguments:
+	arguments+=Expression (',' arguments+=Expression)*
+;
+
+LiteralExpr:
+	value=Num
+;
+
+SymbolReference:
+	id=ID
+;
+
+VariableAssignment:
+	symbol=SymbolReference '=' expression=Expression
+;
+
+NumericExpression:
+	factor=Factor exprTail=ExprTail?
+;
+
+
+ExprTail:
+	'+' factor=Factor exprTail=ExprTail? |
+	'-' factor=Factor exprTail=ExprTail? 
+;
+
+Factor: term=Term factorTail=FactorTail?;
+
+FactorTail:
+	'*' term=Term factorTail=FactorTail? |
+	'/' term=Term factorTail=FactorTail? ;
+
+Term:
+ 	LiteralExpr |
+	/*SymbolReference | */
+	ApplyFunction |
+	ParenthesisExpression;
+
+ParenthesisExpression:
+	'(' Expression ')'
+;
+
+terminal Num: '0'..'9';
