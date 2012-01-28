@@ -15,6 +15,7 @@ ProgramTail:
 
 Expression:
  	FunctionDeclaration  | 
+    VariableAssignment |
 	NumericExpression;
 
 
@@ -36,7 +37,7 @@ BodyTail:
 	;
 
 ApplyFunction:
-	functor=SymbolReference app3=ApplyFunctionAlpha;
+	functor=SymbolReference arguments=ApplyFunctionAlpha;
 
 ApplyFunctionAlpha:
 	{ApplyFunctionAlpha}'(' args=FunctionArguments? ')' nextCall=ApplyFunctionAlpha?
@@ -72,13 +73,12 @@ FactorTail:
 Term:
  	LiteralExpr |
 	ApplyFunction |
-	VariableAssignment |
+	SymbolReference |
 	ParenthesisExpression;
 
 VariableAssignment:
 	id=ID '=' expression=Expression
 ;
-
 
 ParenthesisExpression:
 	'(' Expression ')'
