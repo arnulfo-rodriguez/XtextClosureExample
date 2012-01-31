@@ -20,11 +20,11 @@ Expression:
 
 
 FunctionDeclaration:
-	'func' '(' parameters=FunctionParameters ')' body=Body;
+	'func' '(' parameters=FunctionParameters? ')' body=Body;
 
 Body:
  	expression=Expression |
-	{Body}'{'expressions=Expression tail=BodyTail? '}'
+    '{'expressions=Expression tail=BodyTail? '}'
 ;
 
 BodyTail:
@@ -32,19 +32,34 @@ BodyTail:
 ;
 
  FunctionParameters:
-	{FunctionParameters}parameters+=ID? |
-	parameters+=ID (',' parameters+=ID)+
+	parameter=ID nextParameters=
+	FunctionParametersTail?
 	;
 
+FunctionParametersTail:
+	',' parameter=ID nextParameters=FunctionParametersTail?
+;
+
+
 ApplyFunction:
-	functor=SymbolReference arguments=ApplyFunctionAlpha;
+	functor=Functor arguments=ApplyFunctionAlpha;
+
+Functor:
+	SymbolReference |
+	'[' FunctionDeclaration ']'
+;
+
 
 ApplyFunctionAlpha:
 	{ApplyFunctionAlpha}'(' args=FunctionArguments? ')' nextCall=ApplyFunctionAlpha?
 ;
 
 FunctionArguments:
-	arguments+=Expression (',' arguments+=Expression)*
+	argument=Expression nextArguments=FunctionArgumentsTail?
+;
+
+FunctionArgumentsTail:
+	',' argument=Expression nextArguments=FunctionArgumentsTail?
 ;
 
 LiteralExpr:
