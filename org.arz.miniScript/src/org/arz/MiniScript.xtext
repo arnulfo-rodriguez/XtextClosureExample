@@ -40,18 +40,17 @@ FunctionParametersTail:
 	',' parameter=ID nextParameters=FunctionParametersTail?
 ;
 
-
-ApplyFunction:
-	functor=Functor arguments=ApplyFunctionAlpha;
+Apply:
+	functor=Functor arguments=ApplyTail?;
 
 Functor:
 	SymbolReference |
-	'[' FunctionDeclaration ']'
+	ParenthesisExpression
 ;
 
 
-ApplyFunctionAlpha:
-	{ApplyFunctionAlpha}'(' args=FunctionArguments? ')' nextCall=ApplyFunctionAlpha?
+ApplyTail:
+	{ApplyFunctionAlpha}'(' args=FunctionArguments? ')' nextCall=ApplyTail?
 ;
 
 FunctionArguments:
@@ -87,9 +86,8 @@ FactorTail:
 
 Term:
  	LiteralExpr |
-	ApplyFunction |
-	SymbolReference |
-	ParenthesisExpression;
+	Apply 
+;
 
 VariableAssignment:
 	id=ID '=' expression=Expression
