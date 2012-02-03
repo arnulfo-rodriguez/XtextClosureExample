@@ -9,22 +9,22 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Function Arguments</b></em>'.
+ * A representation of the model object '<em><b>Function Arguments Tail</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.arz.miniScript.FunctionArguments#getArgument <em>Argument</em>}</li>
- *   <li>{@link org.arz.miniScript.FunctionArguments#getNextArguments <em>Next Arguments</em>}</li>
+ *   <li>{@link org.arz.miniScript.FunctionArgumentsTail#getArgument <em>Argument</em>}</li>
+ *   <li>{@link org.arz.miniScript.FunctionArgumentsTail#getNextArguments <em>Next Arguments</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.arz.miniScript.MiniScriptPackage#getFunctionArguments()
+ * @see org.arz.miniScript.MiniScriptPackage#getFunctionArgumentsTail()
  * @model
  * @generated
  */
-public interface FunctionArguments extends EObject
+public interface FunctionArgumentsTail extends EObject
 {
   /**
    * Returns the value of the '<em><b>Argument</b></em>' containment reference.
@@ -36,14 +36,14 @@ public interface FunctionArguments extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Argument</em>' containment reference.
    * @see #setArgument(Expression)
-   * @see org.arz.miniScript.MiniScriptPackage#getFunctionArguments_Argument()
+   * @see org.arz.miniScript.MiniScriptPackage#getFunctionArgumentsTail_Argument()
    * @model containment="true"
    * @generated
    */
   Expression getArgument();
 
   /**
-   * Sets the value of the '{@link org.arz.miniScript.FunctionArguments#getArgument <em>Argument</em>}' containment reference.
+   * Sets the value of the '{@link org.arz.miniScript.FunctionArgumentsTail#getArgument <em>Argument</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Argument</em>' containment reference.
@@ -62,14 +62,14 @@ public interface FunctionArguments extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Next Arguments</em>' containment reference.
    * @see #setNextArguments(FunctionArgumentsTail)
-   * @see org.arz.miniScript.MiniScriptPackage#getFunctionArguments_NextArguments()
+   * @see org.arz.miniScript.MiniScriptPackage#getFunctionArgumentsTail_NextArguments()
    * @model containment="true"
    * @generated
    */
   FunctionArgumentsTail getNextArguments();
 
   /**
-   * Sets the value of the '{@link org.arz.miniScript.FunctionArguments#getNextArguments <em>Next Arguments</em>}' containment reference.
+   * Sets the value of the '{@link org.arz.miniScript.FunctionArgumentsTail#getNextArguments <em>Next Arguments</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Next Arguments</em>' containment reference.
@@ -78,4 +78,4 @@ public interface FunctionArguments extends EObject
    */
   void setNextArguments(FunctionArgumentsTail value);
 
-} // FunctionArguments
+} // FunctionArgumentsTail

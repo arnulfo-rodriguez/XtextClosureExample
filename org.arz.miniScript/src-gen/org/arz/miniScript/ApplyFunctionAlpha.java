@@ -5,7 +5,6 @@
  */
 package org.arz.miniScript;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ApplyFunctionAlpha extends EObject
+public interface ApplyFunctionAlpha extends ApplyTail
 {
   /**
    * Returns the value of the '<em><b>Args</b></em>' containment reference.
@@ -61,12 +60,12 @@ public interface ApplyFunctionAlpha extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Next Call</em>' containment reference.
-   * @see #setNextCall(ApplyFunctionAlpha)
+   * @see #setNextCall(ApplyTail)
    * @see org.arz.miniScript.MiniScriptPackage#getApplyFunctionAlpha_NextCall()
    * @model containment="true"
    * @generated
    */
-  ApplyFunctionAlpha getNextCall();
+  ApplyTail getNextCall();
 
   /**
    * Sets the value of the '{@link org.arz.miniScript.ApplyFunctionAlpha#getNextCall <em>Next Call</em>}' containment reference.
@@ -76,6 +75,6 @@ public interface ApplyFunctionAlpha extends EObject
    * @see #getNextCall()
    * @generated
    */
-  void setNextCall(ApplyFunctionAlpha value);
+  void setNextCall(ApplyTail value);
 
 } // ApplyFunctionAlpha

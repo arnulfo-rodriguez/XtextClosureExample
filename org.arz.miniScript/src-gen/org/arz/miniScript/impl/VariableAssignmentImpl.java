@@ -7,7 +7,6 @@ package org.arz.miniScript.impl;
 
 import org.arz.miniScript.Expression;
 import org.arz.miniScript.MiniScriptPackage;
-import org.arz.miniScript.SymbolReference;
 import org.arz.miniScript.VariableAssignment;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -17,7 +16,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,24 +24,34 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.arz.miniScript.impl.VariableAssignmentImpl#getSymbol <em>Symbol</em>}</li>
+ *   <li>{@link org.arz.miniScript.impl.VariableAssignmentImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.arz.miniScript.impl.VariableAssignmentImpl#getExpression <em>Expression</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class VariableAssignmentImpl extends MinimalEObjectImpl.Container implements VariableAssignment
+public class VariableAssignmentImpl extends ExpressionImpl implements VariableAssignment
 {
   /**
-   * The cached value of the '{@link #getSymbol() <em>Symbol</em>}' containment reference.
+   * The default value of the '{@link #getId() <em>Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSymbol()
+   * @see #getId()
    * @generated
    * @ordered
    */
-  protected SymbolReference symbol;
+  protected static final String ID_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getId()
+   * @generated
+   * @ordered
+   */
+  protected String id = ID_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
@@ -81,9 +89,9 @@ public class VariableAssignmentImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public SymbolReference getSymbol()
+  public String getId()
   {
-    return symbol;
+    return id;
   }
 
   /**
@@ -91,37 +99,12 @@ public class VariableAssignmentImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetSymbol(SymbolReference newSymbol, NotificationChain msgs)
+  public void setId(String newId)
   {
-    SymbolReference oldSymbol = symbol;
-    symbol = newSymbol;
+    String oldId = id;
+    id = newId;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.VARIABLE_ASSIGNMENT__SYMBOL, oldSymbol, newSymbol);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setSymbol(SymbolReference newSymbol)
-  {
-    if (newSymbol != symbol)
-    {
-      NotificationChain msgs = null;
-      if (symbol != null)
-        msgs = ((InternalEObject)symbol).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.VARIABLE_ASSIGNMENT__SYMBOL, null, msgs);
-      if (newSymbol != null)
-        msgs = ((InternalEObject)newSymbol).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.VARIABLE_ASSIGNMENT__SYMBOL, null, msgs);
-      msgs = basicSetSymbol(newSymbol, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.VARIABLE_ASSIGNMENT__SYMBOL, newSymbol, newSymbol));
+      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.VARIABLE_ASSIGNMENT__ID, oldId, id));
   }
 
   /**
@@ -182,8 +165,6 @@ public class VariableAssignmentImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
-      case MiniScriptPackage.VARIABLE_ASSIGNMENT__SYMBOL:
-        return basicSetSymbol(null, msgs);
       case MiniScriptPackage.VARIABLE_ASSIGNMENT__EXPRESSION:
         return basicSetExpression(null, msgs);
     }
@@ -200,8 +181,8 @@ public class VariableAssignmentImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
-      case MiniScriptPackage.VARIABLE_ASSIGNMENT__SYMBOL:
-        return getSymbol();
+      case MiniScriptPackage.VARIABLE_ASSIGNMENT__ID:
+        return getId();
       case MiniScriptPackage.VARIABLE_ASSIGNMENT__EXPRESSION:
         return getExpression();
     }
@@ -218,8 +199,8 @@ public class VariableAssignmentImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
-      case MiniScriptPackage.VARIABLE_ASSIGNMENT__SYMBOL:
-        setSymbol((SymbolReference)newValue);
+      case MiniScriptPackage.VARIABLE_ASSIGNMENT__ID:
+        setId((String)newValue);
         return;
       case MiniScriptPackage.VARIABLE_ASSIGNMENT__EXPRESSION:
         setExpression((Expression)newValue);
@@ -238,8 +219,8 @@ public class VariableAssignmentImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
-      case MiniScriptPackage.VARIABLE_ASSIGNMENT__SYMBOL:
-        setSymbol((SymbolReference)null);
+      case MiniScriptPackage.VARIABLE_ASSIGNMENT__ID:
+        setId(ID_EDEFAULT);
         return;
       case MiniScriptPackage.VARIABLE_ASSIGNMENT__EXPRESSION:
         setExpression((Expression)null);
@@ -258,12 +239,29 @@ public class VariableAssignmentImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
-      case MiniScriptPackage.VARIABLE_ASSIGNMENT__SYMBOL:
-        return symbol != null;
+      case MiniScriptPackage.VARIABLE_ASSIGNMENT__ID:
+        return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
       case MiniScriptPackage.VARIABLE_ASSIGNMENT__EXPRESSION:
         return expression != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (id: ");
+    result.append(id);
+    result.append(')');
+    return result.toString();
   }
 
 } //VariableAssignmentImpl

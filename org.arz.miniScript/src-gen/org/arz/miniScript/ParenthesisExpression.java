@@ -16,6 +16,6 @@ package org.arz.miniScript;
  * @model
  * @generated
  */
-public interface ParenthesisExpression extends Term
+public interface ParenthesisExpression extends Functor
 {
 } // ParenthesisExpression

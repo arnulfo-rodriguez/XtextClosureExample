@@ -9,22 +9,22 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Function Parameters</b></em>'.
+ * A representation of the model object '<em><b>Function Parameters Tail</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.arz.miniScript.FunctionParameters#getParameter <em>Parameter</em>}</li>
- *   <li>{@link org.arz.miniScript.FunctionParameters#getNextParameters <em>Next Parameters</em>}</li>
+ *   <li>{@link org.arz.miniScript.FunctionParametersTail#getParameter <em>Parameter</em>}</li>
+ *   <li>{@link org.arz.miniScript.FunctionParametersTail#getNextParameters <em>Next Parameters</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.arz.miniScript.MiniScriptPackage#getFunctionParameters()
+ * @see org.arz.miniScript.MiniScriptPackage#getFunctionParametersTail()
  * @model
  * @generated
  */
-public interface FunctionParameters extends EObject
+public interface FunctionParametersTail extends EObject
 {
   /**
    * Returns the value of the '<em><b>Parameter</b></em>' attribute.
@@ -36,14 +36,14 @@ public interface FunctionParameters extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Parameter</em>' attribute.
    * @see #setParameter(String)
-   * @see org.arz.miniScript.MiniScriptPackage#getFunctionParameters_Parameter()
+   * @see org.arz.miniScript.MiniScriptPackage#getFunctionParametersTail_Parameter()
    * @model
    * @generated
    */
   String getParameter();
 
   /**
-   * Sets the value of the '{@link org.arz.miniScript.FunctionParameters#getParameter <em>Parameter</em>}' attribute.
+   * Sets the value of the '{@link org.arz.miniScript.FunctionParametersTail#getParameter <em>Parameter</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Parameter</em>' attribute.
@@ -62,14 +62,14 @@ public interface FunctionParameters extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Next Parameters</em>' containment reference.
    * @see #setNextParameters(FunctionParametersTail)
-   * @see org.arz.miniScript.MiniScriptPackage#getFunctionParameters_NextParameters()
+   * @see org.arz.miniScript.MiniScriptPackage#getFunctionParametersTail_NextParameters()
    * @model containment="true"
    * @generated
    */
   FunctionParametersTail getNextParameters();
 
   /**
-   * Sets the value of the '{@link org.arz.miniScript.FunctionParameters#getNextParameters <em>Next Parameters</em>}' containment reference.
+   * Sets the value of the '{@link org.arz.miniScript.FunctionParametersTail#getNextParameters <em>Next Parameters</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Next Parameters</em>' containment reference.
@@ -78,4 +78,4 @@ public interface FunctionParameters extends EObject
    */
   void setNextParameters(FunctionParametersTail value);
 
-} // FunctionParameters
+} // FunctionParametersTail

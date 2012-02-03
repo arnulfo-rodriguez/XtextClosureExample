@@ -5,7 +5,6 @@
  */
 package org.arz.miniScript;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.arz.miniScript.VariableAssignment#getSymbol <em>Symbol</em>}</li>
+ *   <li>{@link org.arz.miniScript.VariableAssignment#getId <em>Id</em>}</li>
  *   <li>{@link org.arz.miniScript.VariableAssignment#getExpression <em>Expression</em>}</li>
  * </ul>
  * </p>
@@ -24,33 +23,33 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface VariableAssignment extends EObject
+public interface VariableAssignment extends Expression
 {
   /**
-   * Returns the value of the '<em><b>Symbol</b></em>' containment reference.
+   * Returns the value of the '<em><b>Id</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Symbol</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Id</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Symbol</em>' containment reference.
-   * @see #setSymbol(SymbolReference)
-   * @see org.arz.miniScript.MiniScriptPackage#getVariableAssignment_Symbol()
-   * @model containment="true"
+   * @return the value of the '<em>Id</em>' attribute.
+   * @see #setId(String)
+   * @see org.arz.miniScript.MiniScriptPackage#getVariableAssignment_Id()
+   * @model
    * @generated
    */
-  SymbolReference getSymbol();
+  String getId();
 
   /**
-   * Sets the value of the '{@link org.arz.miniScript.VariableAssignment#getSymbol <em>Symbol</em>}' containment reference.
+   * Sets the value of the '{@link org.arz.miniScript.VariableAssignment#getId <em>Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Symbol</em>' containment reference.
-   * @see #getSymbol()
+   * @param value the new value of the '<em>Id</em>' attribute.
+   * @see #getId()
    * @generated
    */
-  void setSymbol(SymbolReference value);
+  void setId(String value);
 
   /**
    * Returns the value of the '<em><b>Expression</b></em>' containment reference.

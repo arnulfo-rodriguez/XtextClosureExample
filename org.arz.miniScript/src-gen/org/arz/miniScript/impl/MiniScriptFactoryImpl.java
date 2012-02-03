@@ -69,22 +69,28 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
     {
       case MiniScriptPackage.MODEL: return createModel();
       case MiniScriptPackage.PROGRAM: return createProgram();
+      case MiniScriptPackage.PROGRAM_TAIL: return createProgramTail();
       case MiniScriptPackage.EXPRESSION: return createExpression();
       case MiniScriptPackage.FUNCTION_DECLARATION: return createFunctionDeclaration();
       case MiniScriptPackage.BODY: return createBody();
+      case MiniScriptPackage.BODY_TAIL: return createBodyTail();
       case MiniScriptPackage.FUNCTION_PARAMETERS: return createFunctionParameters();
-      case MiniScriptPackage.APPLY_FUNCTION: return createApplyFunction();
-      case MiniScriptPackage.APPLY_FUNCTION_ALPHA: return createApplyFunctionAlpha();
+      case MiniScriptPackage.FUNCTION_PARAMETERS_TAIL: return createFunctionParametersTail();
+      case MiniScriptPackage.APPLY: return createApply();
+      case MiniScriptPackage.FUNCTOR: return createFunctor();
+      case MiniScriptPackage.APPLY_TAIL: return createApplyTail();
       case MiniScriptPackage.FUNCTION_ARGUMENTS: return createFunctionArguments();
+      case MiniScriptPackage.FUNCTION_ARGUMENTS_TAIL: return createFunctionArgumentsTail();
       case MiniScriptPackage.LITERAL_EXPR: return createLiteralExpr();
       case MiniScriptPackage.SYMBOL_REFERENCE: return createSymbolReference();
-      case MiniScriptPackage.VARIABLE_ASSIGNMENT: return createVariableAssignment();
       case MiniScriptPackage.NUMERIC_EXPRESSION: return createNumericExpression();
       case MiniScriptPackage.EXPR_TAIL: return createExprTail();
       case MiniScriptPackage.FACTOR: return createFactor();
       case MiniScriptPackage.FACTOR_TAIL: return createFactorTail();
       case MiniScriptPackage.TERM: return createTerm();
+      case MiniScriptPackage.VARIABLE_ASSIGNMENT: return createVariableAssignment();
       case MiniScriptPackage.PARENTHESIS_EXPRESSION: return createParenthesisExpression();
+      case MiniScriptPackage.APPLY_FUNCTION_ALPHA: return createApplyFunctionAlpha();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -110,6 +116,17 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
   {
     ProgramImpl program = new ProgramImpl();
     return program;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ProgramTail createProgramTail()
+  {
+    ProgramTailImpl programTail = new ProgramTailImpl();
+    return programTail;
   }
 
   /**
@@ -150,6 +167,17 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
    * <!-- end-user-doc -->
    * @generated
    */
+  public BodyTail createBodyTail()
+  {
+    BodyTailImpl bodyTail = new BodyTailImpl();
+    return bodyTail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public FunctionParameters createFunctionParameters()
   {
     FunctionParametersImpl functionParameters = new FunctionParametersImpl();
@@ -161,10 +189,10 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public ApplyFunction createApplyFunction()
+  public FunctionParametersTail createFunctionParametersTail()
   {
-    ApplyFunctionImpl applyFunction = new ApplyFunctionImpl();
-    return applyFunction;
+    FunctionParametersTailImpl functionParametersTail = new FunctionParametersTailImpl();
+    return functionParametersTail;
   }
 
   /**
@@ -172,10 +200,32 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public ApplyFunctionAlpha createApplyFunctionAlpha()
+  public Apply createApply()
   {
-    ApplyFunctionAlphaImpl applyFunctionAlpha = new ApplyFunctionAlphaImpl();
-    return applyFunctionAlpha;
+    ApplyImpl apply = new ApplyImpl();
+    return apply;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Functor createFunctor()
+  {
+    FunctorImpl functor = new FunctorImpl();
+    return functor;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ApplyTail createApplyTail()
+  {
+    ApplyTailImpl applyTail = new ApplyTailImpl();
+    return applyTail;
   }
 
   /**
@@ -187,6 +237,17 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
   {
     FunctionArgumentsImpl functionArguments = new FunctionArgumentsImpl();
     return functionArguments;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FunctionArgumentsTail createFunctionArgumentsTail()
+  {
+    FunctionArgumentsTailImpl functionArgumentsTail = new FunctionArgumentsTailImpl();
+    return functionArgumentsTail;
   }
 
   /**
@@ -209,17 +270,6 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
   {
     SymbolReferenceImpl symbolReference = new SymbolReferenceImpl();
     return symbolReference;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public VariableAssignment createVariableAssignment()
-  {
-    VariableAssignmentImpl variableAssignment = new VariableAssignmentImpl();
-    return variableAssignment;
   }
 
   /**
@@ -282,10 +332,32 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
    * <!-- end-user-doc -->
    * @generated
    */
+  public VariableAssignment createVariableAssignment()
+  {
+    VariableAssignmentImpl variableAssignment = new VariableAssignmentImpl();
+    return variableAssignment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public ParenthesisExpression createParenthesisExpression()
   {
     ParenthesisExpressionImpl parenthesisExpression = new ParenthesisExpressionImpl();
     return parenthesisExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ApplyFunctionAlpha createApplyFunctionAlpha()
+  {
+    ApplyFunctionAlphaImpl applyFunctionAlpha = new ApplyFunctionAlphaImpl();
+    return applyFunctionAlpha;
   }
 
   /**

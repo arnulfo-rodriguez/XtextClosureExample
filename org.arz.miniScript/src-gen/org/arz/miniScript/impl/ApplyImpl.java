@@ -5,10 +5,10 @@
  */
 package org.arz.miniScript.impl;
 
-import org.arz.miniScript.ApplyFunction;
-import org.arz.miniScript.ApplyFunctionAlpha;
+import org.arz.miniScript.Apply;
+import org.arz.miniScript.ApplyTail;
+import org.arz.miniScript.Functor;
 import org.arz.miniScript.MiniScriptPackage;
-import org.arz.miniScript.SymbolReference;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -20,19 +20,19 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Apply Function</b></em>'.
+ * An implementation of the model object '<em><b>Apply</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.arz.miniScript.impl.ApplyFunctionImpl#getFunctor <em>Functor</em>}</li>
- *   <li>{@link org.arz.miniScript.impl.ApplyFunctionImpl#getApp3 <em>App3</em>}</li>
+ *   <li>{@link org.arz.miniScript.impl.ApplyImpl#getFunctor <em>Functor</em>}</li>
+ *   <li>{@link org.arz.miniScript.impl.ApplyImpl#getArguments <em>Arguments</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ApplyFunctionImpl extends TermImpl implements ApplyFunction
+public class ApplyImpl extends TermImpl implements Apply
 {
   /**
    * The cached value of the '{@link #getFunctor() <em>Functor</em>}' containment reference.
@@ -42,24 +42,24 @@ public class ApplyFunctionImpl extends TermImpl implements ApplyFunction
    * @generated
    * @ordered
    */
-  protected SymbolReference functor;
+  protected Functor functor;
 
   /**
-   * The cached value of the '{@link #getApp3() <em>App3</em>}' containment reference.
+   * The cached value of the '{@link #getArguments() <em>Arguments</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getApp3()
+   * @see #getArguments()
    * @generated
    * @ordered
    */
-  protected ApplyFunctionAlpha app3;
+  protected ApplyTail arguments;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ApplyFunctionImpl()
+  protected ApplyImpl()
   {
     super();
   }
@@ -72,7 +72,7 @@ public class ApplyFunctionImpl extends TermImpl implements ApplyFunction
   @Override
   protected EClass eStaticClass()
   {
-    return MiniScriptPackage.Literals.APPLY_FUNCTION;
+    return MiniScriptPackage.Literals.APPLY;
   }
 
   /**
@@ -80,7 +80,7 @@ public class ApplyFunctionImpl extends TermImpl implements ApplyFunction
    * <!-- end-user-doc -->
    * @generated
    */
-  public SymbolReference getFunctor()
+  public Functor getFunctor()
   {
     return functor;
   }
@@ -90,13 +90,13 @@ public class ApplyFunctionImpl extends TermImpl implements ApplyFunction
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetFunctor(SymbolReference newFunctor, NotificationChain msgs)
+  public NotificationChain basicSetFunctor(Functor newFunctor, NotificationChain msgs)
   {
-    SymbolReference oldFunctor = functor;
+    Functor oldFunctor = functor;
     functor = newFunctor;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.APPLY_FUNCTION__FUNCTOR, oldFunctor, newFunctor);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.APPLY__FUNCTOR, oldFunctor, newFunctor);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -107,20 +107,20 @@ public class ApplyFunctionImpl extends TermImpl implements ApplyFunction
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setFunctor(SymbolReference newFunctor)
+  public void setFunctor(Functor newFunctor)
   {
     if (newFunctor != functor)
     {
       NotificationChain msgs = null;
       if (functor != null)
-        msgs = ((InternalEObject)functor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.APPLY_FUNCTION__FUNCTOR, null, msgs);
+        msgs = ((InternalEObject)functor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.APPLY__FUNCTOR, null, msgs);
       if (newFunctor != null)
-        msgs = ((InternalEObject)newFunctor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.APPLY_FUNCTION__FUNCTOR, null, msgs);
+        msgs = ((InternalEObject)newFunctor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.APPLY__FUNCTOR, null, msgs);
       msgs = basicSetFunctor(newFunctor, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.APPLY_FUNCTION__FUNCTOR, newFunctor, newFunctor));
+      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.APPLY__FUNCTOR, newFunctor, newFunctor));
   }
 
   /**
@@ -128,9 +128,9 @@ public class ApplyFunctionImpl extends TermImpl implements ApplyFunction
    * <!-- end-user-doc -->
    * @generated
    */
-  public ApplyFunctionAlpha getApp3()
+  public ApplyTail getArguments()
   {
-    return app3;
+    return arguments;
   }
 
   /**
@@ -138,13 +138,13 @@ public class ApplyFunctionImpl extends TermImpl implements ApplyFunction
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetApp3(ApplyFunctionAlpha newApp3, NotificationChain msgs)
+  public NotificationChain basicSetArguments(ApplyTail newArguments, NotificationChain msgs)
   {
-    ApplyFunctionAlpha oldApp3 = app3;
-    app3 = newApp3;
+    ApplyTail oldArguments = arguments;
+    arguments = newArguments;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.APPLY_FUNCTION__APP3, oldApp3, newApp3);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.APPLY__ARGUMENTS, oldArguments, newArguments);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -155,20 +155,20 @@ public class ApplyFunctionImpl extends TermImpl implements ApplyFunction
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setApp3(ApplyFunctionAlpha newApp3)
+  public void setArguments(ApplyTail newArguments)
   {
-    if (newApp3 != app3)
+    if (newArguments != arguments)
     {
       NotificationChain msgs = null;
-      if (app3 != null)
-        msgs = ((InternalEObject)app3).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.APPLY_FUNCTION__APP3, null, msgs);
-      if (newApp3 != null)
-        msgs = ((InternalEObject)newApp3).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.APPLY_FUNCTION__APP3, null, msgs);
-      msgs = basicSetApp3(newApp3, msgs);
+      if (arguments != null)
+        msgs = ((InternalEObject)arguments).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.APPLY__ARGUMENTS, null, msgs);
+      if (newArguments != null)
+        msgs = ((InternalEObject)newArguments).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.APPLY__ARGUMENTS, null, msgs);
+      msgs = basicSetArguments(newArguments, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.APPLY_FUNCTION__APP3, newApp3, newApp3));
+      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.APPLY__ARGUMENTS, newArguments, newArguments));
   }
 
   /**
@@ -181,10 +181,10 @@ public class ApplyFunctionImpl extends TermImpl implements ApplyFunction
   {
     switch (featureID)
     {
-      case MiniScriptPackage.APPLY_FUNCTION__FUNCTOR:
+      case MiniScriptPackage.APPLY__FUNCTOR:
         return basicSetFunctor(null, msgs);
-      case MiniScriptPackage.APPLY_FUNCTION__APP3:
-        return basicSetApp3(null, msgs);
+      case MiniScriptPackage.APPLY__ARGUMENTS:
+        return basicSetArguments(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -199,10 +199,10 @@ public class ApplyFunctionImpl extends TermImpl implements ApplyFunction
   {
     switch (featureID)
     {
-      case MiniScriptPackage.APPLY_FUNCTION__FUNCTOR:
+      case MiniScriptPackage.APPLY__FUNCTOR:
         return getFunctor();
-      case MiniScriptPackage.APPLY_FUNCTION__APP3:
-        return getApp3();
+      case MiniScriptPackage.APPLY__ARGUMENTS:
+        return getArguments();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -217,11 +217,11 @@ public class ApplyFunctionImpl extends TermImpl implements ApplyFunction
   {
     switch (featureID)
     {
-      case MiniScriptPackage.APPLY_FUNCTION__FUNCTOR:
-        setFunctor((SymbolReference)newValue);
+      case MiniScriptPackage.APPLY__FUNCTOR:
+        setFunctor((Functor)newValue);
         return;
-      case MiniScriptPackage.APPLY_FUNCTION__APP3:
-        setApp3((ApplyFunctionAlpha)newValue);
+      case MiniScriptPackage.APPLY__ARGUMENTS:
+        setArguments((ApplyTail)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -237,11 +237,11 @@ public class ApplyFunctionImpl extends TermImpl implements ApplyFunction
   {
     switch (featureID)
     {
-      case MiniScriptPackage.APPLY_FUNCTION__FUNCTOR:
-        setFunctor((SymbolReference)null);
+      case MiniScriptPackage.APPLY__FUNCTOR:
+        setFunctor((Functor)null);
         return;
-      case MiniScriptPackage.APPLY_FUNCTION__APP3:
-        setApp3((ApplyFunctionAlpha)null);
+      case MiniScriptPackage.APPLY__ARGUMENTS:
+        setArguments((ApplyTail)null);
         return;
     }
     super.eUnset(featureID);
@@ -257,12 +257,12 @@ public class ApplyFunctionImpl extends TermImpl implements ApplyFunction
   {
     switch (featureID)
     {
-      case MiniScriptPackage.APPLY_FUNCTION__FUNCTOR:
+      case MiniScriptPackage.APPLY__FUNCTOR:
         return functor != null;
-      case MiniScriptPackage.APPLY_FUNCTION__APP3:
-        return app3 != null;
+      case MiniScriptPackage.APPLY__ARGUMENTS:
+        return arguments != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //ApplyFunctionImpl
+} //ApplyImpl

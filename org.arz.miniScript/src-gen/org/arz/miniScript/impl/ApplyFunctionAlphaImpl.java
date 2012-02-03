@@ -6,6 +6,7 @@
 package org.arz.miniScript.impl;
 
 import org.arz.miniScript.ApplyFunctionAlpha;
+import org.arz.miniScript.ApplyTail;
 import org.arz.miniScript.FunctionArguments;
 import org.arz.miniScript.MiniScriptPackage;
 
@@ -16,7 +17,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class ApplyFunctionAlphaImpl extends MinimalEObjectImpl.Container implements ApplyFunctionAlpha
+public class ApplyFunctionAlphaImpl extends ApplyTailImpl implements ApplyFunctionAlpha
 {
   /**
    * The cached value of the '{@link #getArgs() <em>Args</em>}' containment reference.
@@ -52,7 +52,7 @@ public class ApplyFunctionAlphaImpl extends MinimalEObjectImpl.Container impleme
    * @generated
    * @ordered
    */
-  protected ApplyFunctionAlpha nextCall;
+  protected ApplyTail nextCall;
 
   /**
    * <!-- begin-user-doc -->
@@ -128,7 +128,7 @@ public class ApplyFunctionAlphaImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public ApplyFunctionAlpha getNextCall()
+  public ApplyTail getNextCall()
   {
     return nextCall;
   }
@@ -138,9 +138,9 @@ public class ApplyFunctionAlphaImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetNextCall(ApplyFunctionAlpha newNextCall, NotificationChain msgs)
+  public NotificationChain basicSetNextCall(ApplyTail newNextCall, NotificationChain msgs)
   {
-    ApplyFunctionAlpha oldNextCall = nextCall;
+    ApplyTail oldNextCall = nextCall;
     nextCall = newNextCall;
     if (eNotificationRequired())
     {
@@ -155,7 +155,7 @@ public class ApplyFunctionAlphaImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setNextCall(ApplyFunctionAlpha newNextCall)
+  public void setNextCall(ApplyTail newNextCall)
   {
     if (newNextCall != nextCall)
     {
@@ -221,7 +221,7 @@ public class ApplyFunctionAlphaImpl extends MinimalEObjectImpl.Container impleme
         setArgs((FunctionArguments)newValue);
         return;
       case MiniScriptPackage.APPLY_FUNCTION_ALPHA__NEXT_CALL:
-        setNextCall((ApplyFunctionAlpha)newValue);
+        setNextCall((ApplyTail)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -241,7 +241,7 @@ public class ApplyFunctionAlphaImpl extends MinimalEObjectImpl.Container impleme
         setArgs((FunctionArguments)null);
         return;
       case MiniScriptPackage.APPLY_FUNCTION_ALPHA__NEXT_CALL:
-        setNextCall((ApplyFunctionAlpha)null);
+        setNextCall((ApplyTail)null);
         return;
     }
     super.eUnset(featureID);

@@ -44,6 +44,15 @@ public interface MiniScriptFactory extends EFactory
   Program createProgram();
 
   /**
+   * Returns a new object of class '<em>Program Tail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Program Tail</em>'.
+   * @generated
+   */
+  ProgramTail createProgramTail();
+
+  /**
    * Returns a new object of class '<em>Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -71,6 +80,15 @@ public interface MiniScriptFactory extends EFactory
   Body createBody();
 
   /**
+   * Returns a new object of class '<em>Body Tail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Body Tail</em>'.
+   * @generated
+   */
+  BodyTail createBodyTail();
+
+  /**
    * Returns a new object of class '<em>Function Parameters</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -80,22 +98,40 @@ public interface MiniScriptFactory extends EFactory
   FunctionParameters createFunctionParameters();
 
   /**
-   * Returns a new object of class '<em>Apply Function</em>'.
+   * Returns a new object of class '<em>Function Parameters Tail</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Apply Function</em>'.
+   * @return a new object of class '<em>Function Parameters Tail</em>'.
    * @generated
    */
-  ApplyFunction createApplyFunction();
+  FunctionParametersTail createFunctionParametersTail();
 
   /**
-   * Returns a new object of class '<em>Apply Function Alpha</em>'.
+   * Returns a new object of class '<em>Apply</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Apply Function Alpha</em>'.
+   * @return a new object of class '<em>Apply</em>'.
    * @generated
    */
-  ApplyFunctionAlpha createApplyFunctionAlpha();
+  Apply createApply();
+
+  /**
+   * Returns a new object of class '<em>Functor</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Functor</em>'.
+   * @generated
+   */
+  Functor createFunctor();
+
+  /**
+   * Returns a new object of class '<em>Apply Tail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Apply Tail</em>'.
+   * @generated
+   */
+  ApplyTail createApplyTail();
 
   /**
    * Returns a new object of class '<em>Function Arguments</em>'.
@@ -105,6 +141,15 @@ public interface MiniScriptFactory extends EFactory
    * @generated
    */
   FunctionArguments createFunctionArguments();
+
+  /**
+   * Returns a new object of class '<em>Function Arguments Tail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Function Arguments Tail</em>'.
+   * @generated
+   */
+  FunctionArgumentsTail createFunctionArgumentsTail();
 
   /**
    * Returns a new object of class '<em>Literal Expr</em>'.
@@ -123,15 +168,6 @@ public interface MiniScriptFactory extends EFactory
    * @generated
    */
   SymbolReference createSymbolReference();
-
-  /**
-   * Returns a new object of class '<em>Variable Assignment</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Variable Assignment</em>'.
-   * @generated
-   */
-  VariableAssignment createVariableAssignment();
 
   /**
    * Returns a new object of class '<em>Numeric Expression</em>'.
@@ -179,6 +215,15 @@ public interface MiniScriptFactory extends EFactory
   Term createTerm();
 
   /**
+   * Returns a new object of class '<em>Variable Assignment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Variable Assignment</em>'.
+   * @generated
+   */
+  VariableAssignment createVariableAssignment();
+
+  /**
    * Returns a new object of class '<em>Parenthesis Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -186,6 +231,15 @@ public interface MiniScriptFactory extends EFactory
    * @generated
    */
   ParenthesisExpression createParenthesisExpression();
+
+  /**
+   * Returns a new object of class '<em>Apply Function Alpha</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Apply Function Alpha</em>'.
+   * @generated
+   */
+  ApplyFunctionAlpha createApplyFunctionAlpha();
 
   /**
    * Returns the package supported by this factory.

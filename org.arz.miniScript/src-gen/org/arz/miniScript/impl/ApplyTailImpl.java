@@ -5,28 +5,30 @@
  */
 package org.arz.miniScript.impl;
 
+import org.arz.miniScript.ApplyTail;
 import org.arz.miniScript.MiniScriptPackage;
-import org.arz.miniScript.ParenthesisExpression;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Parenthesis Expression</b></em>'.
+ * An implementation of the model object '<em><b>Apply Tail</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class ParenthesisExpressionImpl extends FunctorImpl implements ParenthesisExpression
+public class ApplyTailImpl extends MinimalEObjectImpl.Container implements ApplyTail
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ParenthesisExpressionImpl()
+  protected ApplyTailImpl()
   {
     super();
   }
@@ -39,7 +41,7 @@ public class ParenthesisExpressionImpl extends FunctorImpl implements Parenthesi
   @Override
   protected EClass eStaticClass()
   {
-    return MiniScriptPackage.Literals.PARENTHESIS_EXPRESSION;
+    return MiniScriptPackage.Literals.APPLY_TAIL;
   }
 
-} //ParenthesisExpressionImpl
+} //ApplyTailImpl

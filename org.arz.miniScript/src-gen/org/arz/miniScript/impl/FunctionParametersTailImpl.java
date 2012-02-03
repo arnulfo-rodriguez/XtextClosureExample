@@ -5,7 +5,6 @@
  */
 package org.arz.miniScript.impl;
 
-import org.arz.miniScript.FunctionParameters;
 import org.arz.miniScript.FunctionParametersTail;
 import org.arz.miniScript.MiniScriptPackage;
 
@@ -20,19 +19,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Function Parameters</b></em>'.
+ * An implementation of the model object '<em><b>Function Parameters Tail</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.arz.miniScript.impl.FunctionParametersImpl#getParameter <em>Parameter</em>}</li>
- *   <li>{@link org.arz.miniScript.impl.FunctionParametersImpl#getNextParameters <em>Next Parameters</em>}</li>
+ *   <li>{@link org.arz.miniScript.impl.FunctionParametersTailImpl#getParameter <em>Parameter</em>}</li>
+ *   <li>{@link org.arz.miniScript.impl.FunctionParametersTailImpl#getNextParameters <em>Next Parameters</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class FunctionParametersImpl extends MinimalEObjectImpl.Container implements FunctionParameters
+public class FunctionParametersTailImpl extends MinimalEObjectImpl.Container implements FunctionParametersTail
 {
   /**
    * The default value of the '{@link #getParameter() <em>Parameter</em>}' attribute.
@@ -69,7 +68,7 @@ public class FunctionParametersImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  protected FunctionParametersImpl()
+  protected FunctionParametersTailImpl()
   {
     super();
   }
@@ -82,7 +81,7 @@ public class FunctionParametersImpl extends MinimalEObjectImpl.Container impleme
   @Override
   protected EClass eStaticClass()
   {
-    return MiniScriptPackage.Literals.FUNCTION_PARAMETERS;
+    return MiniScriptPackage.Literals.FUNCTION_PARAMETERS_TAIL;
   }
 
   /**
@@ -105,7 +104,7 @@ public class FunctionParametersImpl extends MinimalEObjectImpl.Container impleme
     String oldParameter = parameter;
     parameter = newParameter;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FUNCTION_PARAMETERS__PARAMETER, oldParameter, parameter));
+      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FUNCTION_PARAMETERS_TAIL__PARAMETER, oldParameter, parameter));
   }
 
   /**
@@ -129,7 +128,7 @@ public class FunctionParametersImpl extends MinimalEObjectImpl.Container impleme
     nextParameters = newNextParameters;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FUNCTION_PARAMETERS__NEXT_PARAMETERS, oldNextParameters, newNextParameters);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FUNCTION_PARAMETERS_TAIL__NEXT_PARAMETERS, oldNextParameters, newNextParameters);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -146,14 +145,14 @@ public class FunctionParametersImpl extends MinimalEObjectImpl.Container impleme
     {
       NotificationChain msgs = null;
       if (nextParameters != null)
-        msgs = ((InternalEObject)nextParameters).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FUNCTION_PARAMETERS__NEXT_PARAMETERS, null, msgs);
+        msgs = ((InternalEObject)nextParameters).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FUNCTION_PARAMETERS_TAIL__NEXT_PARAMETERS, null, msgs);
       if (newNextParameters != null)
-        msgs = ((InternalEObject)newNextParameters).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FUNCTION_PARAMETERS__NEXT_PARAMETERS, null, msgs);
+        msgs = ((InternalEObject)newNextParameters).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FUNCTION_PARAMETERS_TAIL__NEXT_PARAMETERS, null, msgs);
       msgs = basicSetNextParameters(newNextParameters, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FUNCTION_PARAMETERS__NEXT_PARAMETERS, newNextParameters, newNextParameters));
+      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FUNCTION_PARAMETERS_TAIL__NEXT_PARAMETERS, newNextParameters, newNextParameters));
   }
 
   /**
@@ -166,7 +165,7 @@ public class FunctionParametersImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
-      case MiniScriptPackage.FUNCTION_PARAMETERS__NEXT_PARAMETERS:
+      case MiniScriptPackage.FUNCTION_PARAMETERS_TAIL__NEXT_PARAMETERS:
         return basicSetNextParameters(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -182,9 +181,9 @@ public class FunctionParametersImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
-      case MiniScriptPackage.FUNCTION_PARAMETERS__PARAMETER:
+      case MiniScriptPackage.FUNCTION_PARAMETERS_TAIL__PARAMETER:
         return getParameter();
-      case MiniScriptPackage.FUNCTION_PARAMETERS__NEXT_PARAMETERS:
+      case MiniScriptPackage.FUNCTION_PARAMETERS_TAIL__NEXT_PARAMETERS:
         return getNextParameters();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -200,10 +199,10 @@ public class FunctionParametersImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
-      case MiniScriptPackage.FUNCTION_PARAMETERS__PARAMETER:
+      case MiniScriptPackage.FUNCTION_PARAMETERS_TAIL__PARAMETER:
         setParameter((String)newValue);
         return;
-      case MiniScriptPackage.FUNCTION_PARAMETERS__NEXT_PARAMETERS:
+      case MiniScriptPackage.FUNCTION_PARAMETERS_TAIL__NEXT_PARAMETERS:
         setNextParameters((FunctionParametersTail)newValue);
         return;
     }
@@ -220,10 +219,10 @@ public class FunctionParametersImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
-      case MiniScriptPackage.FUNCTION_PARAMETERS__PARAMETER:
+      case MiniScriptPackage.FUNCTION_PARAMETERS_TAIL__PARAMETER:
         setParameter(PARAMETER_EDEFAULT);
         return;
-      case MiniScriptPackage.FUNCTION_PARAMETERS__NEXT_PARAMETERS:
+      case MiniScriptPackage.FUNCTION_PARAMETERS_TAIL__NEXT_PARAMETERS:
         setNextParameters((FunctionParametersTail)null);
         return;
     }
@@ -240,9 +239,9 @@ public class FunctionParametersImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
-      case MiniScriptPackage.FUNCTION_PARAMETERS__PARAMETER:
+      case MiniScriptPackage.FUNCTION_PARAMETERS_TAIL__PARAMETER:
         return PARAMETER_EDEFAULT == null ? parameter != null : !PARAMETER_EDEFAULT.equals(parameter);
-      case MiniScriptPackage.FUNCTION_PARAMETERS__NEXT_PARAMETERS:
+      case MiniScriptPackage.FUNCTION_PARAMETERS_TAIL__NEXT_PARAMETERS:
         return nextParameters != null;
     }
     return super.eIsSet(featureID);
@@ -265,4 +264,4 @@ public class FunctionParametersImpl extends MinimalEObjectImpl.Container impleme
     return result.toString();
   }
 
-} //FunctionParametersImpl
+} //FunctionParametersTailImpl

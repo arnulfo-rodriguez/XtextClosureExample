@@ -6,7 +6,6 @@
 package org.arz.miniScript.impl;
 
 import org.arz.miniScript.Expression;
-import org.arz.miniScript.FunctionArguments;
 import org.arz.miniScript.FunctionArgumentsTail;
 import org.arz.miniScript.MiniScriptPackage;
 
@@ -21,19 +20,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Function Arguments</b></em>'.
+ * An implementation of the model object '<em><b>Function Arguments Tail</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.arz.miniScript.impl.FunctionArgumentsImpl#getArgument <em>Argument</em>}</li>
- *   <li>{@link org.arz.miniScript.impl.FunctionArgumentsImpl#getNextArguments <em>Next Arguments</em>}</li>
+ *   <li>{@link org.arz.miniScript.impl.FunctionArgumentsTailImpl#getArgument <em>Argument</em>}</li>
+ *   <li>{@link org.arz.miniScript.impl.FunctionArgumentsTailImpl#getNextArguments <em>Next Arguments</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class FunctionArgumentsImpl extends MinimalEObjectImpl.Container implements FunctionArguments
+public class FunctionArgumentsTailImpl extends MinimalEObjectImpl.Container implements FunctionArgumentsTail
 {
   /**
    * The cached value of the '{@link #getArgument() <em>Argument</em>}' containment reference.
@@ -60,7 +59,7 @@ public class FunctionArgumentsImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  protected FunctionArgumentsImpl()
+  protected FunctionArgumentsTailImpl()
   {
     super();
   }
@@ -73,7 +72,7 @@ public class FunctionArgumentsImpl extends MinimalEObjectImpl.Container implemen
   @Override
   protected EClass eStaticClass()
   {
-    return MiniScriptPackage.Literals.FUNCTION_ARGUMENTS;
+    return MiniScriptPackage.Literals.FUNCTION_ARGUMENTS_TAIL;
   }
 
   /**
@@ -97,7 +96,7 @@ public class FunctionArgumentsImpl extends MinimalEObjectImpl.Container implemen
     argument = newArgument;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FUNCTION_ARGUMENTS__ARGUMENT, oldArgument, newArgument);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FUNCTION_ARGUMENTS_TAIL__ARGUMENT, oldArgument, newArgument);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -114,14 +113,14 @@ public class FunctionArgumentsImpl extends MinimalEObjectImpl.Container implemen
     {
       NotificationChain msgs = null;
       if (argument != null)
-        msgs = ((InternalEObject)argument).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FUNCTION_ARGUMENTS__ARGUMENT, null, msgs);
+        msgs = ((InternalEObject)argument).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FUNCTION_ARGUMENTS_TAIL__ARGUMENT, null, msgs);
       if (newArgument != null)
-        msgs = ((InternalEObject)newArgument).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FUNCTION_ARGUMENTS__ARGUMENT, null, msgs);
+        msgs = ((InternalEObject)newArgument).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FUNCTION_ARGUMENTS_TAIL__ARGUMENT, null, msgs);
       msgs = basicSetArgument(newArgument, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FUNCTION_ARGUMENTS__ARGUMENT, newArgument, newArgument));
+      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FUNCTION_ARGUMENTS_TAIL__ARGUMENT, newArgument, newArgument));
   }
 
   /**
@@ -145,7 +144,7 @@ public class FunctionArgumentsImpl extends MinimalEObjectImpl.Container implemen
     nextArguments = newNextArguments;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FUNCTION_ARGUMENTS__NEXT_ARGUMENTS, oldNextArguments, newNextArguments);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FUNCTION_ARGUMENTS_TAIL__NEXT_ARGUMENTS, oldNextArguments, newNextArguments);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -162,14 +161,14 @@ public class FunctionArgumentsImpl extends MinimalEObjectImpl.Container implemen
     {
       NotificationChain msgs = null;
       if (nextArguments != null)
-        msgs = ((InternalEObject)nextArguments).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FUNCTION_ARGUMENTS__NEXT_ARGUMENTS, null, msgs);
+        msgs = ((InternalEObject)nextArguments).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FUNCTION_ARGUMENTS_TAIL__NEXT_ARGUMENTS, null, msgs);
       if (newNextArguments != null)
-        msgs = ((InternalEObject)newNextArguments).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FUNCTION_ARGUMENTS__NEXT_ARGUMENTS, null, msgs);
+        msgs = ((InternalEObject)newNextArguments).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FUNCTION_ARGUMENTS_TAIL__NEXT_ARGUMENTS, null, msgs);
       msgs = basicSetNextArguments(newNextArguments, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FUNCTION_ARGUMENTS__NEXT_ARGUMENTS, newNextArguments, newNextArguments));
+      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FUNCTION_ARGUMENTS_TAIL__NEXT_ARGUMENTS, newNextArguments, newNextArguments));
   }
 
   /**
@@ -182,9 +181,9 @@ public class FunctionArgumentsImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
-      case MiniScriptPackage.FUNCTION_ARGUMENTS__ARGUMENT:
+      case MiniScriptPackage.FUNCTION_ARGUMENTS_TAIL__ARGUMENT:
         return basicSetArgument(null, msgs);
-      case MiniScriptPackage.FUNCTION_ARGUMENTS__NEXT_ARGUMENTS:
+      case MiniScriptPackage.FUNCTION_ARGUMENTS_TAIL__NEXT_ARGUMENTS:
         return basicSetNextArguments(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -200,9 +199,9 @@ public class FunctionArgumentsImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
-      case MiniScriptPackage.FUNCTION_ARGUMENTS__ARGUMENT:
+      case MiniScriptPackage.FUNCTION_ARGUMENTS_TAIL__ARGUMENT:
         return getArgument();
-      case MiniScriptPackage.FUNCTION_ARGUMENTS__NEXT_ARGUMENTS:
+      case MiniScriptPackage.FUNCTION_ARGUMENTS_TAIL__NEXT_ARGUMENTS:
         return getNextArguments();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -218,10 +217,10 @@ public class FunctionArgumentsImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
-      case MiniScriptPackage.FUNCTION_ARGUMENTS__ARGUMENT:
+      case MiniScriptPackage.FUNCTION_ARGUMENTS_TAIL__ARGUMENT:
         setArgument((Expression)newValue);
         return;
-      case MiniScriptPackage.FUNCTION_ARGUMENTS__NEXT_ARGUMENTS:
+      case MiniScriptPackage.FUNCTION_ARGUMENTS_TAIL__NEXT_ARGUMENTS:
         setNextArguments((FunctionArgumentsTail)newValue);
         return;
     }
@@ -238,10 +237,10 @@ public class FunctionArgumentsImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
-      case MiniScriptPackage.FUNCTION_ARGUMENTS__ARGUMENT:
+      case MiniScriptPackage.FUNCTION_ARGUMENTS_TAIL__ARGUMENT:
         setArgument((Expression)null);
         return;
-      case MiniScriptPackage.FUNCTION_ARGUMENTS__NEXT_ARGUMENTS:
+      case MiniScriptPackage.FUNCTION_ARGUMENTS_TAIL__NEXT_ARGUMENTS:
         setNextArguments((FunctionArgumentsTail)null);
         return;
     }
@@ -258,12 +257,12 @@ public class FunctionArgumentsImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
-      case MiniScriptPackage.FUNCTION_ARGUMENTS__ARGUMENT:
+      case MiniScriptPackage.FUNCTION_ARGUMENTS_TAIL__ARGUMENT:
         return argument != null;
-      case MiniScriptPackage.FUNCTION_ARGUMENTS__NEXT_ARGUMENTS:
+      case MiniScriptPackage.FUNCTION_ARGUMENTS_TAIL__NEXT_ARGUMENTS:
         return nextArguments != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //FunctionArgumentsImpl
+} //FunctionArgumentsTailImpl

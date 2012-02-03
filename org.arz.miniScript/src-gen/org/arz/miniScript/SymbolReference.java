@@ -5,7 +5,6 @@
  */
 package org.arz.miniScript;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface SymbolReference extends EObject
+public interface SymbolReference extends Functor
 {
   /**
    * Returns the value of the '<em><b>Id</b></em>' attribute.
