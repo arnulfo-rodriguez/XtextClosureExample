@@ -90,19 +90,10 @@ public class MiniScriptSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case MiniScriptPackage.PROGRAM_TAIL:
-      {
-        ProgramTail programTail = (ProgramTail)theEObject;
-        T result = caseProgramTail(programTail);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case MiniScriptPackage.EXPRESSION:
       {
         Expression expression = (Expression)theEObject;
         T result = caseExpression(expression);
-        if (result == null) result = caseParenthesisExpression(expression);
-        if (result == null) result = caseFunctor(expression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -111,8 +102,6 @@ public class MiniScriptSwitch<T> extends Switch<T>
         FunctionDeclaration functionDeclaration = (FunctionDeclaration)theEObject;
         T result = caseFunctionDeclaration(functionDeclaration);
         if (result == null) result = caseExpression(functionDeclaration);
-        if (result == null) result = caseParenthesisExpression(functionDeclaration);
-        if (result == null) result = caseFunctor(functionDeclaration);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -123,42 +112,6 @@ public class MiniScriptSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case MiniScriptPackage.BODY_TAIL:
-      {
-        BodyTail bodyTail = (BodyTail)theEObject;
-        T result = caseBodyTail(bodyTail);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case MiniScriptPackage.FUNCTION_PARAMETERS:
-      {
-        FunctionParameters functionParameters = (FunctionParameters)theEObject;
-        T result = caseFunctionParameters(functionParameters);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case MiniScriptPackage.FUNCTION_PARAMETERS_TAIL:
-      {
-        FunctionParametersTail functionParametersTail = (FunctionParametersTail)theEObject;
-        T result = caseFunctionParametersTail(functionParametersTail);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case MiniScriptPackage.APPLY:
-      {
-        Apply apply = (Apply)theEObject;
-        T result = caseApply(apply);
-        if (result == null) result = caseTerm(apply);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case MiniScriptPackage.FUNCTOR:
-      {
-        Functor functor = (Functor)theEObject;
-        T result = caseFunctor(functor);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case MiniScriptPackage.APPLY_TAIL:
       {
         ApplyTail applyTail = (ApplyTail)theEObject;
@@ -166,25 +119,11 @@ public class MiniScriptSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case MiniScriptPackage.FUNCTION_ARGUMENTS:
-      {
-        FunctionArguments functionArguments = (FunctionArguments)theEObject;
-        T result = caseFunctionArguments(functionArguments);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case MiniScriptPackage.FUNCTION_ARGUMENTS_TAIL:
-      {
-        FunctionArgumentsTail functionArgumentsTail = (FunctionArgumentsTail)theEObject;
-        T result = caseFunctionArgumentsTail(functionArgumentsTail);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case MiniScriptPackage.LITERAL_EXPR:
       {
         LiteralExpr literalExpr = (LiteralExpr)theEObject;
         T result = caseLiteralExpr(literalExpr);
-        if (result == null) result = caseTerm(literalExpr);
+        if (result == null) result = caseExpression(literalExpr);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -192,31 +131,14 @@ public class MiniScriptSwitch<T> extends Switch<T>
       {
         SymbolReference symbolReference = (SymbolReference)theEObject;
         T result = caseSymbolReference(symbolReference);
-        if (result == null) result = caseFunctor(symbolReference);
+        if (result == null) result = caseExpression(symbolReference);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case MiniScriptPackage.NUMERIC_EXPRESSION:
+      case MiniScriptPackage.NUM_EXPR_TAIL:
       {
-        NumericExpression numericExpression = (NumericExpression)theEObject;
-        T result = caseNumericExpression(numericExpression);
-        if (result == null) result = caseExpression(numericExpression);
-        if (result == null) result = caseParenthesisExpression(numericExpression);
-        if (result == null) result = caseFunctor(numericExpression);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case MiniScriptPackage.EXPR_TAIL:
-      {
-        ExprTail exprTail = (ExprTail)theEObject;
-        T result = caseExprTail(exprTail);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case MiniScriptPackage.FACTOR:
-      {
-        Factor factor = (Factor)theEObject;
-        T result = caseFactor(factor);
+        NumExprTail numExprTail = (NumExprTail)theEObject;
+        T result = caseNumExprTail(numExprTail);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -227,36 +149,35 @@ public class MiniScriptSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case MiniScriptPackage.TERM:
-      {
-        Term term = (Term)theEObject;
-        T result = caseTerm(term);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case MiniScriptPackage.VARIABLE_ASSIGNMENT:
       {
         VariableAssignment variableAssignment = (VariableAssignment)theEObject;
         T result = caseVariableAssignment(variableAssignment);
         if (result == null) result = caseExpression(variableAssignment);
-        if (result == null) result = caseParenthesisExpression(variableAssignment);
-        if (result == null) result = caseFunctor(variableAssignment);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case MiniScriptPackage.PARENTHESIS_EXPRESSION:
+      case MiniScriptPackage.APPLY:
       {
-        ParenthesisExpression parenthesisExpression = (ParenthesisExpression)theEObject;
-        T result = caseParenthesisExpression(parenthesisExpression);
-        if (result == null) result = caseFunctor(parenthesisExpression);
+        Apply apply = (Apply)theEObject;
+        T result = caseApply(apply);
+        if (result == null) result = caseExpression(apply);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case MiniScriptPackage.APPLY_FUNCTION_ALPHA:
+      case MiniScriptPackage.NUMERIC_EXPRESSION:
       {
-        ApplyFunctionAlpha applyFunctionAlpha = (ApplyFunctionAlpha)theEObject;
-        T result = caseApplyFunctionAlpha(applyFunctionAlpha);
-        if (result == null) result = caseApplyTail(applyFunctionAlpha);
+        NumericExpression numericExpression = (NumericExpression)theEObject;
+        T result = caseNumericExpression(numericExpression);
+        if (result == null) result = caseExpression(numericExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MiniScriptPackage.FACTOR:
+      {
+        Factor factor = (Factor)theEObject;
+        T result = caseFactor(factor);
+        if (result == null) result = caseExpression(factor);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -292,22 +213,6 @@ public class MiniScriptSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseProgram(Program object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Program Tail</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Program Tail</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseProgramTail(ProgramTail object)
   {
     return null;
   }
@@ -361,86 +266,6 @@ public class MiniScriptSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Body Tail</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Body Tail</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseBodyTail(BodyTail object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Function Parameters</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Function Parameters</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseFunctionParameters(FunctionParameters object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Function Parameters Tail</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Function Parameters Tail</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseFunctionParametersTail(FunctionParametersTail object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Apply</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Apply</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseApply(Apply object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Functor</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Functor</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseFunctor(Functor object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Apply Tail</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -452,38 +277,6 @@ public class MiniScriptSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseApplyTail(ApplyTail object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Function Arguments</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Function Arguments</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseFunctionArguments(FunctionArguments object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Function Arguments Tail</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Function Arguments Tail</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseFunctionArgumentsTail(FunctionArgumentsTail object)
   {
     return null;
   }
@@ -521,49 +314,17 @@ public class MiniScriptSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Numeric Expression</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Num Expr Tail</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Numeric Expression</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Num Expr Tail</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseNumericExpression(NumericExpression object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Expr Tail</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Expr Tail</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseExprTail(ExprTail object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Factor</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Factor</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseFactor(Factor object)
+  public T caseNumExprTail(NumExprTail object)
   {
     return null;
   }
@@ -585,22 +346,6 @@ public class MiniScriptSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Term</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Term</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseTerm(Term object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Variable Assignment</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -617,33 +362,49 @@ public class MiniScriptSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Parenthesis Expression</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Apply</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Parenthesis Expression</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Apply</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseParenthesisExpression(ParenthesisExpression object)
+  public T caseApply(Apply object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Apply Function Alpha</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Numeric Expression</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Apply Function Alpha</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Numeric Expression</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseApplyFunctionAlpha(ApplyFunctionAlpha object)
+  public T caseNumericExpression(NumericExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Factor</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Factor</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFactor(Factor object)
   {
     return null;
   }

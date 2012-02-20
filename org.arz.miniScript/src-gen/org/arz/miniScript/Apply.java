@@ -23,7 +23,7 @@ package org.arz.miniScript;
  * @model
  * @generated
  */
-public interface Apply extends Term
+public interface Apply extends Expression
 {
   /**
    * Returns the value of the '<em><b>Functor</b></em>' containment reference.
@@ -34,12 +34,12 @@ public interface Apply extends Term
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Functor</em>' containment reference.
-   * @see #setFunctor(Functor)
+   * @see #setFunctor(Expression)
    * @see org.arz.miniScript.MiniScriptPackage#getApply_Functor()
    * @model containment="true"
    * @generated
    */
-  Functor getFunctor();
+  Expression getFunctor();
 
   /**
    * Sets the value of the '{@link org.arz.miniScript.Apply#getFunctor <em>Functor</em>}' containment reference.
@@ -49,7 +49,7 @@ public interface Apply extends Term
    * @see #getFunctor()
    * @generated
    */
-  void setFunctor(Functor value);
+  void setFunctor(Expression value);
 
   /**
    * Returns the value of the '<em><b>Arguments</b></em>' containment reference.

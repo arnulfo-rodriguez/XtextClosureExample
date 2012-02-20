@@ -5,6 +5,7 @@
  */
 package org.arz.miniScript;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,30 +27,20 @@ package org.arz.miniScript;
 public interface FunctionDeclaration extends Expression
 {
   /**
-   * Returns the value of the '<em><b>Parameters</b></em>' containment reference.
+   * Returns the value of the '<em><b>Parameters</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.String}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Parameters</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Parameters</em>' attribute list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Parameters</em>' containment reference.
-   * @see #setParameters(FunctionParameters)
+   * @return the value of the '<em>Parameters</em>' attribute list.
    * @see org.arz.miniScript.MiniScriptPackage#getFunctionDeclaration_Parameters()
-   * @model containment="true"
+   * @model unique="false"
    * @generated
    */
-  FunctionParameters getParameters();
-
-  /**
-   * Sets the value of the '{@link org.arz.miniScript.FunctionDeclaration#getParameters <em>Parameters</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Parameters</em>' containment reference.
-   * @see #getParameters()
-   * @generated
-   */
-  void setParameters(FunctionParameters value);
+  EList<String> getParameters();
 
   /**
    * Returns the value of the '<em><b>Body</b></em>' containment reference.

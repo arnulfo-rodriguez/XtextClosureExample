@@ -4,7 +4,7 @@ import org.eclipse.emf.mwe.utils.*
 import org.eclipse.xtext.generator.*
 import org.eclipse.xtext.ui.generator.*
 
-var grammarURI = "classpath:/org/arz/MiniScript.xtext"
+var grammarURI = "classpath:/org/arz/miniScript.xtext"
 var file.extensions = "mscrpt"
 var projectName = "org.arz.miniScript"
 var runtimeProject = "../${projectName}"
@@ -135,6 +135,11 @@ Workflow {
             // provides a compare view
             fragment = compare.CompareFragment {
                  fileExtensions = file.extensions
+            }
+            
+           fragment = de.itemis.interpreter.generator.InterpreterGenerator {
+            	expressionRootClassName = "Expression"
+           	    statementRootClassName = "Program"
             }
 
         }

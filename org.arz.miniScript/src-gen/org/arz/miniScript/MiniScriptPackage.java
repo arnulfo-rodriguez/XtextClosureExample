@@ -41,7 +41,7 @@ public interface MiniScriptPackage extends EPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  String eNS_URI = "http://www.arz.org/MiniScript";
+  String eNS_URI = "http://www.arz.org/miniScript";
 
   /**
    * The package namespace name.
@@ -98,97 +98,13 @@ public interface MiniScriptPackage extends EPackage
   int PROGRAM__EXPRESSIONS = MODEL_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Tail</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PROGRAM__TAIL = MODEL_FEATURE_COUNT + 1;
-
-  /**
    * The number of structural features of the '<em>Program</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROGRAM_FEATURE_COUNT = MODEL_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.arz.miniScript.impl.ProgramTailImpl <em>Program Tail</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.arz.miniScript.impl.ProgramTailImpl
-   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getProgramTail()
-   * @generated
-   */
-  int PROGRAM_TAIL = 2;
-
-  /**
-   * The feature id for the '<em><b>Expression</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PROGRAM_TAIL__EXPRESSION = 0;
-
-  /**
-   * The feature id for the '<em><b>Tail</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PROGRAM_TAIL__TAIL = 1;
-
-  /**
-   * The number of structural features of the '<em>Program Tail</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PROGRAM_TAIL_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.arz.miniScript.impl.FunctorImpl <em>Functor</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.arz.miniScript.impl.FunctorImpl
-   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getFunctor()
-   * @generated
-   */
-  int FUNCTOR = 10;
-
-  /**
-   * The number of structural features of the '<em>Functor</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUNCTOR_FEATURE_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link org.arz.miniScript.impl.ParenthesisExpressionImpl <em>Parenthesis Expression</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.arz.miniScript.impl.ParenthesisExpressionImpl
-   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getParenthesisExpression()
-   * @generated
-   */
-  int PARENTHESIS_EXPRESSION = 22;
-
-  /**
-   * The number of structural features of the '<em>Parenthesis Expression</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PARENTHESIS_EXPRESSION_FEATURE_COUNT = FUNCTOR_FEATURE_COUNT + 0;
+  int PROGRAM_FEATURE_COUNT = MODEL_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.arz.miniScript.impl.ExpressionImpl <em>Expression</em>}' class.
@@ -198,7 +114,7 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 3;
+  int EXPRESSION = 2;
 
   /**
    * The number of structural features of the '<em>Expression</em>' class.
@@ -207,7 +123,7 @@ public interface MiniScriptPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXPRESSION_FEATURE_COUNT = PARENTHESIS_EXPRESSION_FEATURE_COUNT + 0;
+  int EXPRESSION_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link org.arz.miniScript.impl.FunctionDeclarationImpl <em>Function Declaration</em>}' class.
@@ -217,10 +133,10 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getFunctionDeclaration()
    * @generated
    */
-  int FUNCTION_DECLARATION = 4;
+  int FUNCTION_DECLARATION = 3;
 
   /**
-   * The feature id for the '<em><b>Parameters</b></em>' containment reference.
+   * The feature id for the '<em><b>Parameters</b></em>' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -254,34 +170,16 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getBody()
    * @generated
    */
-  int BODY = 5;
+  int BODY = 4;
 
   /**
-   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * The feature id for the '<em><b>Expressions</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BODY__EXPRESSION = 0;
-
-  /**
-   * The feature id for the '<em><b>Expressions</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BODY__EXPRESSIONS = 1;
-
-  /**
-   * The feature id for the '<em><b>Tail</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BODY__TAIL = 2;
+  int BODY__EXPRESSIONS = 0;
 
   /**
    * The number of structural features of the '<em>Body</em>' class.
@@ -290,174 +188,7 @@ public interface MiniScriptPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BODY_FEATURE_COUNT = 3;
-
-  /**
-   * The meta object id for the '{@link org.arz.miniScript.impl.BodyTailImpl <em>Body Tail</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.arz.miniScript.impl.BodyTailImpl
-   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getBodyTail()
-   * @generated
-   */
-  int BODY_TAIL = 6;
-
-  /**
-   * The feature id for the '<em><b>Expression</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BODY_TAIL__EXPRESSION = 0;
-
-  /**
-   * The feature id for the '<em><b>Tail</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BODY_TAIL__TAIL = 1;
-
-  /**
-   * The number of structural features of the '<em>Body Tail</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BODY_TAIL_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.arz.miniScript.impl.FunctionParametersImpl <em>Function Parameters</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.arz.miniScript.impl.FunctionParametersImpl
-   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getFunctionParameters()
-   * @generated
-   */
-  int FUNCTION_PARAMETERS = 7;
-
-  /**
-   * The feature id for the '<em><b>Parameter</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUNCTION_PARAMETERS__PARAMETER = 0;
-
-  /**
-   * The feature id for the '<em><b>Next Parameters</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUNCTION_PARAMETERS__NEXT_PARAMETERS = 1;
-
-  /**
-   * The number of structural features of the '<em>Function Parameters</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUNCTION_PARAMETERS_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.arz.miniScript.impl.FunctionParametersTailImpl <em>Function Parameters Tail</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.arz.miniScript.impl.FunctionParametersTailImpl
-   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getFunctionParametersTail()
-   * @generated
-   */
-  int FUNCTION_PARAMETERS_TAIL = 8;
-
-  /**
-   * The feature id for the '<em><b>Parameter</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUNCTION_PARAMETERS_TAIL__PARAMETER = 0;
-
-  /**
-   * The feature id for the '<em><b>Next Parameters</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUNCTION_PARAMETERS_TAIL__NEXT_PARAMETERS = 1;
-
-  /**
-   * The number of structural features of the '<em>Function Parameters Tail</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUNCTION_PARAMETERS_TAIL_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.arz.miniScript.impl.TermImpl <em>Term</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.arz.miniScript.impl.TermImpl
-   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getTerm()
-   * @generated
-   */
-  int TERM = 20;
-
-  /**
-   * The number of structural features of the '<em>Term</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TERM_FEATURE_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link org.arz.miniScript.impl.ApplyImpl <em>Apply</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.arz.miniScript.impl.ApplyImpl
-   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getApply()
-   * @generated
-   */
-  int APPLY = 9;
-
-  /**
-   * The feature id for the '<em><b>Functor</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int APPLY__FUNCTOR = TERM_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Arguments</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int APPLY__ARGUMENTS = TERM_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Apply</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int APPLY_FEATURE_COUNT = TERM_FEATURE_COUNT + 2;
+  int BODY_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.arz.miniScript.impl.ApplyTailImpl <em>Apply Tail</em>}' class.
@@ -467,7 +198,25 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getApplyTail()
    * @generated
    */
-  int APPLY_TAIL = 11;
+  int APPLY_TAIL = 5;
+
+  /**
+   * The feature id for the '<em><b>Arguments</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int APPLY_TAIL__ARGUMENTS = 0;
+
+  /**
+   * The feature id for the '<em><b>Next Call</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int APPLY_TAIL__NEXT_CALL = 1;
 
   /**
    * The number of structural features of the '<em>Apply Tail</em>' class.
@@ -476,81 +225,7 @@ public interface MiniScriptPackage extends EPackage
    * @generated
    * @ordered
    */
-  int APPLY_TAIL_FEATURE_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link org.arz.miniScript.impl.FunctionArgumentsImpl <em>Function Arguments</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.arz.miniScript.impl.FunctionArgumentsImpl
-   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getFunctionArguments()
-   * @generated
-   */
-  int FUNCTION_ARGUMENTS = 12;
-
-  /**
-   * The feature id for the '<em><b>Argument</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUNCTION_ARGUMENTS__ARGUMENT = 0;
-
-  /**
-   * The feature id for the '<em><b>Next Arguments</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUNCTION_ARGUMENTS__NEXT_ARGUMENTS = 1;
-
-  /**
-   * The number of structural features of the '<em>Function Arguments</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUNCTION_ARGUMENTS_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.arz.miniScript.impl.FunctionArgumentsTailImpl <em>Function Arguments Tail</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.arz.miniScript.impl.FunctionArgumentsTailImpl
-   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getFunctionArgumentsTail()
-   * @generated
-   */
-  int FUNCTION_ARGUMENTS_TAIL = 13;
-
-  /**
-   * The feature id for the '<em><b>Argument</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUNCTION_ARGUMENTS_TAIL__ARGUMENT = 0;
-
-  /**
-   * The feature id for the '<em><b>Next Arguments</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUNCTION_ARGUMENTS_TAIL__NEXT_ARGUMENTS = 1;
-
-  /**
-   * The number of structural features of the '<em>Function Arguments Tail</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUNCTION_ARGUMENTS_TAIL_FEATURE_COUNT = 2;
+  int APPLY_TAIL_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.arz.miniScript.impl.LiteralExprImpl <em>Literal Expr</em>}' class.
@@ -560,7 +235,7 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getLiteralExpr()
    * @generated
    */
-  int LITERAL_EXPR = 14;
+  int LITERAL_EXPR = 6;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -569,7 +244,7 @@ public interface MiniScriptPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LITERAL_EXPR__VALUE = TERM_FEATURE_COUNT + 0;
+  int LITERAL_EXPR__VALUE = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Literal Expr</em>' class.
@@ -578,7 +253,7 @@ public interface MiniScriptPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LITERAL_EXPR_FEATURE_COUNT = TERM_FEATURE_COUNT + 1;
+  int LITERAL_EXPR_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.arz.miniScript.impl.SymbolReferenceImpl <em>Symbol Reference</em>}' class.
@@ -588,7 +263,7 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getSymbolReference()
    * @generated
    */
-  int SYMBOL_REFERENCE = 15;
+  int SYMBOL_REFERENCE = 7;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -597,7 +272,7 @@ public interface MiniScriptPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SYMBOL_REFERENCE__ID = FUNCTOR_FEATURE_COUNT + 0;
+  int SYMBOL_REFERENCE__ID = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Symbol Reference</em>' class.
@@ -606,17 +281,26 @@ public interface MiniScriptPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SYMBOL_REFERENCE_FEATURE_COUNT = FUNCTOR_FEATURE_COUNT + 1;
+  int SYMBOL_REFERENCE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link org.arz.miniScript.impl.NumericExpressionImpl <em>Numeric Expression</em>}' class.
+   * The meta object id for the '{@link org.arz.miniScript.impl.NumExprTailImpl <em>Num Expr Tail</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.arz.miniScript.impl.NumericExpressionImpl
-   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getNumericExpression()
+   * @see org.arz.miniScript.impl.NumExprTailImpl
+   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getNumExprTail()
    * @generated
    */
-  int NUMERIC_EXPRESSION = 16;
+  int NUM_EXPR_TAIL = 8;
+
+  /**
+   * The feature id for the '<em><b>Operator</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NUM_EXPR_TAIL__OPERATOR = 0;
 
   /**
    * The feature id for the '<em><b>Factor</b></em>' containment reference.
@@ -625,7 +309,7 @@ public interface MiniScriptPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NUMERIC_EXPRESSION__FACTOR = EXPRESSION_FEATURE_COUNT + 0;
+  int NUM_EXPR_TAIL__FACTOR = 1;
 
   /**
    * The feature id for the '<em><b>Expr Tail</b></em>' containment reference.
@@ -634,90 +318,16 @@ public interface MiniScriptPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NUMERIC_EXPRESSION__EXPR_TAIL = EXPRESSION_FEATURE_COUNT + 1;
+  int NUM_EXPR_TAIL__EXPR_TAIL = 2;
 
   /**
-   * The number of structural features of the '<em>Numeric Expression</em>' class.
+   * The number of structural features of the '<em>Num Expr Tail</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NUMERIC_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.arz.miniScript.impl.ExprTailImpl <em>Expr Tail</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.arz.miniScript.impl.ExprTailImpl
-   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getExprTail()
-   * @generated
-   */
-  int EXPR_TAIL = 17;
-
-  /**
-   * The feature id for the '<em><b>Factor</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPR_TAIL__FACTOR = 0;
-
-  /**
-   * The feature id for the '<em><b>Expr Tail</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPR_TAIL__EXPR_TAIL = 1;
-
-  /**
-   * The number of structural features of the '<em>Expr Tail</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPR_TAIL_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.arz.miniScript.impl.FactorImpl <em>Factor</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.arz.miniScript.impl.FactorImpl
-   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getFactor()
-   * @generated
-   */
-  int FACTOR = 18;
-
-  /**
-   * The feature id for the '<em><b>Term</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FACTOR__TERM = 0;
-
-  /**
-   * The feature id for the '<em><b>Factor Tail</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FACTOR__FACTOR_TAIL = 1;
-
-  /**
-   * The number of structural features of the '<em>Factor</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FACTOR_FEATURE_COUNT = 2;
+  int NUM_EXPR_TAIL_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.arz.miniScript.impl.FactorTailImpl <em>Factor Tail</em>}' class.
@@ -727,7 +337,16 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getFactorTail()
    * @generated
    */
-  int FACTOR_TAIL = 19;
+  int FACTOR_TAIL = 9;
+
+  /**
+   * The feature id for the '<em><b>Operator</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACTOR_TAIL__OPERATOR = 0;
 
   /**
    * The feature id for the '<em><b>Term</b></em>' containment reference.
@@ -736,7 +355,7 @@ public interface MiniScriptPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FACTOR_TAIL__TERM = 0;
+  int FACTOR_TAIL__TERM = 1;
 
   /**
    * The feature id for the '<em><b>Factor Tail</b></em>' containment reference.
@@ -745,7 +364,7 @@ public interface MiniScriptPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FACTOR_TAIL__FACTOR_TAIL = 1;
+  int FACTOR_TAIL__FACTOR_TAIL = 2;
 
   /**
    * The number of structural features of the '<em>Factor Tail</em>' class.
@@ -754,7 +373,7 @@ public interface MiniScriptPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FACTOR_TAIL_FEATURE_COUNT = 2;
+  int FACTOR_TAIL_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.arz.miniScript.impl.VariableAssignmentImpl <em>Variable Assignment</em>}' class.
@@ -764,7 +383,7 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getVariableAssignment()
    * @generated
    */
-  int VARIABLE_ASSIGNMENT = 21;
+  int VARIABLE_ASSIGNMENT = 10;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -794,41 +413,115 @@ public interface MiniScriptPackage extends EPackage
   int VARIABLE_ASSIGNMENT_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link org.arz.miniScript.impl.ApplyFunctionAlphaImpl <em>Apply Function Alpha</em>}' class.
+   * The meta object id for the '{@link org.arz.miniScript.impl.ApplyImpl <em>Apply</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.arz.miniScript.impl.ApplyFunctionAlphaImpl
-   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getApplyFunctionAlpha()
+   * @see org.arz.miniScript.impl.ApplyImpl
+   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getApply()
    * @generated
    */
-  int APPLY_FUNCTION_ALPHA = 23;
+  int APPLY = 11;
 
   /**
-   * The feature id for the '<em><b>Args</b></em>' containment reference.
+   * The feature id for the '<em><b>Functor</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int APPLY_FUNCTION_ALPHA__ARGS = APPLY_TAIL_FEATURE_COUNT + 0;
+  int APPLY__FUNCTOR = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Next Call</b></em>' containment reference.
+   * The feature id for the '<em><b>Arguments</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int APPLY_FUNCTION_ALPHA__NEXT_CALL = APPLY_TAIL_FEATURE_COUNT + 1;
+  int APPLY__ARGUMENTS = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
-   * The number of structural features of the '<em>Apply Function Alpha</em>' class.
+   * The number of structural features of the '<em>Apply</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int APPLY_FUNCTION_ALPHA_FEATURE_COUNT = APPLY_TAIL_FEATURE_COUNT + 2;
+  int APPLY_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.arz.miniScript.impl.NumericExpressionImpl <em>Numeric Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.arz.miniScript.impl.NumericExpressionImpl
+   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getNumericExpression()
+   * @generated
+   */
+  int NUMERIC_EXPRESSION = 12;
+
+  /**
+   * The feature id for the '<em><b>Factor</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NUMERIC_EXPRESSION__FACTOR = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Num Expr Tail</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NUMERIC_EXPRESSION__NUM_EXPR_TAIL = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Numeric Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NUMERIC_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.arz.miniScript.impl.FactorImpl <em>Factor</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.arz.miniScript.impl.FactorImpl
+   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getFactor()
+   * @generated
+   */
+  int FACTOR = 13;
+
+  /**
+   * The feature id for the '<em><b>Term</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACTOR__TERM = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Factor Tail</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACTOR__FACTOR_TAIL = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Factor</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACTOR_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
 
   /**
@@ -863,49 +556,6 @@ public interface MiniScriptPackage extends EPackage
   EReference getProgram_Expressions();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.Program#getTail <em>Tail</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Tail</em>'.
-   * @see org.arz.miniScript.Program#getTail()
-   * @see #getProgram()
-   * @generated
-   */
-  EReference getProgram_Tail();
-
-  /**
-   * Returns the meta object for class '{@link org.arz.miniScript.ProgramTail <em>Program Tail</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Program Tail</em>'.
-   * @see org.arz.miniScript.ProgramTail
-   * @generated
-   */
-  EClass getProgramTail();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.ProgramTail#getExpression <em>Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Expression</em>'.
-   * @see org.arz.miniScript.ProgramTail#getExpression()
-   * @see #getProgramTail()
-   * @generated
-   */
-  EReference getProgramTail_Expression();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.ProgramTail#getTail <em>Tail</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Tail</em>'.
-   * @see org.arz.miniScript.ProgramTail#getTail()
-   * @see #getProgramTail()
-   * @generated
-   */
-  EReference getProgramTail_Tail();
-
-  /**
    * Returns the meta object for class '{@link org.arz.miniScript.Expression <em>Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -926,15 +576,15 @@ public interface MiniScriptPackage extends EPackage
   EClass getFunctionDeclaration();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.FunctionDeclaration#getParameters <em>Parameters</em>}'.
+   * Returns the meta object for the attribute list '{@link org.arz.miniScript.FunctionDeclaration#getParameters <em>Parameters</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Parameters</em>'.
+   * @return the meta object for the attribute list '<em>Parameters</em>'.
    * @see org.arz.miniScript.FunctionDeclaration#getParameters()
    * @see #getFunctionDeclaration()
    * @generated
    */
-  EReference getFunctionDeclaration_Parameters();
+  EAttribute getFunctionDeclaration_Parameters();
 
   /**
    * Returns the meta object for the containment reference '{@link org.arz.miniScript.FunctionDeclaration#getBody <em>Body</em>}'.
@@ -958,175 +608,15 @@ public interface MiniScriptPackage extends EPackage
   EClass getBody();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.Body#getExpression <em>Expression</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.arz.miniScript.Body#getExpressions <em>Expressions</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Expression</em>'.
-   * @see org.arz.miniScript.Body#getExpression()
-   * @see #getBody()
-   * @generated
-   */
-  EReference getBody_Expression();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.Body#getExpressions <em>Expressions</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Expressions</em>'.
+   * @return the meta object for the containment reference list '<em>Expressions</em>'.
    * @see org.arz.miniScript.Body#getExpressions()
    * @see #getBody()
    * @generated
    */
   EReference getBody_Expressions();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.Body#getTail <em>Tail</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Tail</em>'.
-   * @see org.arz.miniScript.Body#getTail()
-   * @see #getBody()
-   * @generated
-   */
-  EReference getBody_Tail();
-
-  /**
-   * Returns the meta object for class '{@link org.arz.miniScript.BodyTail <em>Body Tail</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Body Tail</em>'.
-   * @see org.arz.miniScript.BodyTail
-   * @generated
-   */
-  EClass getBodyTail();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.BodyTail#getExpression <em>Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Expression</em>'.
-   * @see org.arz.miniScript.BodyTail#getExpression()
-   * @see #getBodyTail()
-   * @generated
-   */
-  EReference getBodyTail_Expression();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.BodyTail#getTail <em>Tail</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Tail</em>'.
-   * @see org.arz.miniScript.BodyTail#getTail()
-   * @see #getBodyTail()
-   * @generated
-   */
-  EReference getBodyTail_Tail();
-
-  /**
-   * Returns the meta object for class '{@link org.arz.miniScript.FunctionParameters <em>Function Parameters</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Function Parameters</em>'.
-   * @see org.arz.miniScript.FunctionParameters
-   * @generated
-   */
-  EClass getFunctionParameters();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.arz.miniScript.FunctionParameters#getParameter <em>Parameter</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Parameter</em>'.
-   * @see org.arz.miniScript.FunctionParameters#getParameter()
-   * @see #getFunctionParameters()
-   * @generated
-   */
-  EAttribute getFunctionParameters_Parameter();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.FunctionParameters#getNextParameters <em>Next Parameters</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Next Parameters</em>'.
-   * @see org.arz.miniScript.FunctionParameters#getNextParameters()
-   * @see #getFunctionParameters()
-   * @generated
-   */
-  EReference getFunctionParameters_NextParameters();
-
-  /**
-   * Returns the meta object for class '{@link org.arz.miniScript.FunctionParametersTail <em>Function Parameters Tail</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Function Parameters Tail</em>'.
-   * @see org.arz.miniScript.FunctionParametersTail
-   * @generated
-   */
-  EClass getFunctionParametersTail();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.arz.miniScript.FunctionParametersTail#getParameter <em>Parameter</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Parameter</em>'.
-   * @see org.arz.miniScript.FunctionParametersTail#getParameter()
-   * @see #getFunctionParametersTail()
-   * @generated
-   */
-  EAttribute getFunctionParametersTail_Parameter();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.FunctionParametersTail#getNextParameters <em>Next Parameters</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Next Parameters</em>'.
-   * @see org.arz.miniScript.FunctionParametersTail#getNextParameters()
-   * @see #getFunctionParametersTail()
-   * @generated
-   */
-  EReference getFunctionParametersTail_NextParameters();
-
-  /**
-   * Returns the meta object for class '{@link org.arz.miniScript.Apply <em>Apply</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Apply</em>'.
-   * @see org.arz.miniScript.Apply
-   * @generated
-   */
-  EClass getApply();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.Apply#getFunctor <em>Functor</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Functor</em>'.
-   * @see org.arz.miniScript.Apply#getFunctor()
-   * @see #getApply()
-   * @generated
-   */
-  EReference getApply_Functor();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.Apply#getArguments <em>Arguments</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Arguments</em>'.
-   * @see org.arz.miniScript.Apply#getArguments()
-   * @see #getApply()
-   * @generated
-   */
-  EReference getApply_Arguments();
-
-  /**
-   * Returns the meta object for class '{@link org.arz.miniScript.Functor <em>Functor</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Functor</em>'.
-   * @see org.arz.miniScript.Functor
-   * @generated
-   */
-  EClass getFunctor();
 
   /**
    * Returns the meta object for class '{@link org.arz.miniScript.ApplyTail <em>Apply Tail</em>}'.
@@ -1139,68 +629,26 @@ public interface MiniScriptPackage extends EPackage
   EClass getApplyTail();
 
   /**
-   * Returns the meta object for class '{@link org.arz.miniScript.FunctionArguments <em>Function Arguments</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.arz.miniScript.ApplyTail#getArguments <em>Arguments</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Function Arguments</em>'.
-   * @see org.arz.miniScript.FunctionArguments
+   * @return the meta object for the containment reference list '<em>Arguments</em>'.
+   * @see org.arz.miniScript.ApplyTail#getArguments()
+   * @see #getApplyTail()
    * @generated
    */
-  EClass getFunctionArguments();
+  EReference getApplyTail_Arguments();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.FunctionArguments#getArgument <em>Argument</em>}'.
+   * Returns the meta object for the containment reference '{@link org.arz.miniScript.ApplyTail#getNextCall <em>Next Call</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Argument</em>'.
-   * @see org.arz.miniScript.FunctionArguments#getArgument()
-   * @see #getFunctionArguments()
+   * @return the meta object for the containment reference '<em>Next Call</em>'.
+   * @see org.arz.miniScript.ApplyTail#getNextCall()
+   * @see #getApplyTail()
    * @generated
    */
-  EReference getFunctionArguments_Argument();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.FunctionArguments#getNextArguments <em>Next Arguments</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Next Arguments</em>'.
-   * @see org.arz.miniScript.FunctionArguments#getNextArguments()
-   * @see #getFunctionArguments()
-   * @generated
-   */
-  EReference getFunctionArguments_NextArguments();
-
-  /**
-   * Returns the meta object for class '{@link org.arz.miniScript.FunctionArgumentsTail <em>Function Arguments Tail</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Function Arguments Tail</em>'.
-   * @see org.arz.miniScript.FunctionArgumentsTail
-   * @generated
-   */
-  EClass getFunctionArgumentsTail();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.FunctionArgumentsTail#getArgument <em>Argument</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Argument</em>'.
-   * @see org.arz.miniScript.FunctionArgumentsTail#getArgument()
-   * @see #getFunctionArgumentsTail()
-   * @generated
-   */
-  EReference getFunctionArgumentsTail_Argument();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.FunctionArgumentsTail#getNextArguments <em>Next Arguments</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Next Arguments</em>'.
-   * @see org.arz.miniScript.FunctionArgumentsTail#getNextArguments()
-   * @see #getFunctionArgumentsTail()
-   * @generated
-   */
-  EReference getFunctionArgumentsTail_NextArguments();
+  EReference getApplyTail_NextCall();
 
   /**
    * Returns the meta object for class '{@link org.arz.miniScript.LiteralExpr <em>Literal Expr</em>}'.
@@ -1245,100 +693,47 @@ public interface MiniScriptPackage extends EPackage
   EAttribute getSymbolReference_Id();
 
   /**
-   * Returns the meta object for class '{@link org.arz.miniScript.NumericExpression <em>Numeric Expression</em>}'.
+   * Returns the meta object for class '{@link org.arz.miniScript.NumExprTail <em>Num Expr Tail</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Numeric Expression</em>'.
-   * @see org.arz.miniScript.NumericExpression
+   * @return the meta object for class '<em>Num Expr Tail</em>'.
+   * @see org.arz.miniScript.NumExprTail
    * @generated
    */
-  EClass getNumericExpression();
+  EClass getNumExprTail();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.NumericExpression#getFactor <em>Factor</em>}'.
+   * Returns the meta object for the attribute '{@link org.arz.miniScript.NumExprTail#getOperator <em>Operator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Operator</em>'.
+   * @see org.arz.miniScript.NumExprTail#getOperator()
+   * @see #getNumExprTail()
+   * @generated
+   */
+  EAttribute getNumExprTail_Operator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.arz.miniScript.NumExprTail#getFactor <em>Factor</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Factor</em>'.
-   * @see org.arz.miniScript.NumericExpression#getFactor()
-   * @see #getNumericExpression()
+   * @see org.arz.miniScript.NumExprTail#getFactor()
+   * @see #getNumExprTail()
    * @generated
    */
-  EReference getNumericExpression_Factor();
+  EReference getNumExprTail_Factor();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.NumericExpression#getExprTail <em>Expr Tail</em>}'.
+   * Returns the meta object for the containment reference '{@link org.arz.miniScript.NumExprTail#getExprTail <em>Expr Tail</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Expr Tail</em>'.
-   * @see org.arz.miniScript.NumericExpression#getExprTail()
-   * @see #getNumericExpression()
+   * @see org.arz.miniScript.NumExprTail#getExprTail()
+   * @see #getNumExprTail()
    * @generated
    */
-  EReference getNumericExpression_ExprTail();
-
-  /**
-   * Returns the meta object for class '{@link org.arz.miniScript.ExprTail <em>Expr Tail</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Expr Tail</em>'.
-   * @see org.arz.miniScript.ExprTail
-   * @generated
-   */
-  EClass getExprTail();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.ExprTail#getFactor <em>Factor</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Factor</em>'.
-   * @see org.arz.miniScript.ExprTail#getFactor()
-   * @see #getExprTail()
-   * @generated
-   */
-  EReference getExprTail_Factor();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.ExprTail#getExprTail <em>Expr Tail</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Expr Tail</em>'.
-   * @see org.arz.miniScript.ExprTail#getExprTail()
-   * @see #getExprTail()
-   * @generated
-   */
-  EReference getExprTail_ExprTail();
-
-  /**
-   * Returns the meta object for class '{@link org.arz.miniScript.Factor <em>Factor</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Factor</em>'.
-   * @see org.arz.miniScript.Factor
-   * @generated
-   */
-  EClass getFactor();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.Factor#getTerm <em>Term</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Term</em>'.
-   * @see org.arz.miniScript.Factor#getTerm()
-   * @see #getFactor()
-   * @generated
-   */
-  EReference getFactor_Term();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.Factor#getFactorTail <em>Factor Tail</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Factor Tail</em>'.
-   * @see org.arz.miniScript.Factor#getFactorTail()
-   * @see #getFactor()
-   * @generated
-   */
-  EReference getFactor_FactorTail();
+  EReference getNumExprTail_ExprTail();
 
   /**
    * Returns the meta object for class '{@link org.arz.miniScript.FactorTail <em>Factor Tail</em>}'.
@@ -1349,6 +744,17 @@ public interface MiniScriptPackage extends EPackage
    * @generated
    */
   EClass getFactorTail();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.arz.miniScript.FactorTail#getOperator <em>Operator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Operator</em>'.
+   * @see org.arz.miniScript.FactorTail#getOperator()
+   * @see #getFactorTail()
+   * @generated
+   */
+  EAttribute getFactorTail_Operator();
 
   /**
    * Returns the meta object for the containment reference '{@link org.arz.miniScript.FactorTail#getTerm <em>Term</em>}'.
@@ -1371,16 +777,6 @@ public interface MiniScriptPackage extends EPackage
    * @generated
    */
   EReference getFactorTail_FactorTail();
-
-  /**
-   * Returns the meta object for class '{@link org.arz.miniScript.Term <em>Term</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Term</em>'.
-   * @see org.arz.miniScript.Term
-   * @generated
-   */
-  EClass getTerm();
 
   /**
    * Returns the meta object for class '{@link org.arz.miniScript.VariableAssignment <em>Variable Assignment</em>}'.
@@ -1415,46 +811,100 @@ public interface MiniScriptPackage extends EPackage
   EReference getVariableAssignment_Expression();
 
   /**
-   * Returns the meta object for class '{@link org.arz.miniScript.ParenthesisExpression <em>Parenthesis Expression</em>}'.
+   * Returns the meta object for class '{@link org.arz.miniScript.Apply <em>Apply</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Parenthesis Expression</em>'.
-   * @see org.arz.miniScript.ParenthesisExpression
+   * @return the meta object for class '<em>Apply</em>'.
+   * @see org.arz.miniScript.Apply
    * @generated
    */
-  EClass getParenthesisExpression();
+  EClass getApply();
 
   /**
-   * Returns the meta object for class '{@link org.arz.miniScript.ApplyFunctionAlpha <em>Apply Function Alpha</em>}'.
+   * Returns the meta object for the containment reference '{@link org.arz.miniScript.Apply#getFunctor <em>Functor</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Apply Function Alpha</em>'.
-   * @see org.arz.miniScript.ApplyFunctionAlpha
+   * @return the meta object for the containment reference '<em>Functor</em>'.
+   * @see org.arz.miniScript.Apply#getFunctor()
+   * @see #getApply()
    * @generated
    */
-  EClass getApplyFunctionAlpha();
+  EReference getApply_Functor();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.ApplyFunctionAlpha#getArgs <em>Args</em>}'.
+   * Returns the meta object for the containment reference '{@link org.arz.miniScript.Apply#getArguments <em>Arguments</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Args</em>'.
-   * @see org.arz.miniScript.ApplyFunctionAlpha#getArgs()
-   * @see #getApplyFunctionAlpha()
+   * @return the meta object for the containment reference '<em>Arguments</em>'.
+   * @see org.arz.miniScript.Apply#getArguments()
+   * @see #getApply()
    * @generated
    */
-  EReference getApplyFunctionAlpha_Args();
+  EReference getApply_Arguments();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.ApplyFunctionAlpha#getNextCall <em>Next Call</em>}'.
+   * Returns the meta object for class '{@link org.arz.miniScript.NumericExpression <em>Numeric Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Next Call</em>'.
-   * @see org.arz.miniScript.ApplyFunctionAlpha#getNextCall()
-   * @see #getApplyFunctionAlpha()
+   * @return the meta object for class '<em>Numeric Expression</em>'.
+   * @see org.arz.miniScript.NumericExpression
    * @generated
    */
-  EReference getApplyFunctionAlpha_NextCall();
+  EClass getNumericExpression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.arz.miniScript.NumericExpression#getFactor <em>Factor</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Factor</em>'.
+   * @see org.arz.miniScript.NumericExpression#getFactor()
+   * @see #getNumericExpression()
+   * @generated
+   */
+  EReference getNumericExpression_Factor();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.arz.miniScript.NumericExpression#getNumExprTail <em>Num Expr Tail</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Num Expr Tail</em>'.
+   * @see org.arz.miniScript.NumericExpression#getNumExprTail()
+   * @see #getNumericExpression()
+   * @generated
+   */
+  EReference getNumericExpression_NumExprTail();
+
+  /**
+   * Returns the meta object for class '{@link org.arz.miniScript.Factor <em>Factor</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Factor</em>'.
+   * @see org.arz.miniScript.Factor
+   * @generated
+   */
+  EClass getFactor();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.arz.miniScript.Factor#getTerm <em>Term</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Term</em>'.
+   * @see org.arz.miniScript.Factor#getTerm()
+   * @see #getFactor()
+   * @generated
+   */
+  EReference getFactor_Term();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.arz.miniScript.Factor#getFactorTail <em>Factor Tail</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Factor Tail</em>'.
+   * @see org.arz.miniScript.Factor#getFactorTail()
+   * @see #getFactor()
+   * @generated
+   */
+  EReference getFactor_FactorTail();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -1508,40 +958,6 @@ public interface MiniScriptPackage extends EPackage
     EReference PROGRAM__EXPRESSIONS = eINSTANCE.getProgram_Expressions();
 
     /**
-     * The meta object literal for the '<em><b>Tail</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PROGRAM__TAIL = eINSTANCE.getProgram_Tail();
-
-    /**
-     * The meta object literal for the '{@link org.arz.miniScript.impl.ProgramTailImpl <em>Program Tail</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.arz.miniScript.impl.ProgramTailImpl
-     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getProgramTail()
-     * @generated
-     */
-    EClass PROGRAM_TAIL = eINSTANCE.getProgramTail();
-
-    /**
-     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PROGRAM_TAIL__EXPRESSION = eINSTANCE.getProgramTail_Expression();
-
-    /**
-     * The meta object literal for the '<em><b>Tail</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PROGRAM_TAIL__TAIL = eINSTANCE.getProgramTail_Tail();
-
-    /**
      * The meta object literal for the '{@link org.arz.miniScript.impl.ExpressionImpl <em>Expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1562,12 +978,12 @@ public interface MiniScriptPackage extends EPackage
     EClass FUNCTION_DECLARATION = eINSTANCE.getFunctionDeclaration();
 
     /**
-     * The meta object literal for the '<em><b>Parameters</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Parameters</b></em>' attribute list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference FUNCTION_DECLARATION__PARAMETERS = eINSTANCE.getFunctionDeclaration_Parameters();
+    EAttribute FUNCTION_DECLARATION__PARAMETERS = eINSTANCE.getFunctionDeclaration_Parameters();
 
     /**
      * The meta object literal for the '<em><b>Body</b></em>' containment reference feature.
@@ -1588,142 +1004,12 @@ public interface MiniScriptPackage extends EPackage
     EClass BODY = eINSTANCE.getBody();
 
     /**
-     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference BODY__EXPRESSION = eINSTANCE.getBody_Expression();
-
-    /**
-     * The meta object literal for the '<em><b>Expressions</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Expressions</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference BODY__EXPRESSIONS = eINSTANCE.getBody_Expressions();
-
-    /**
-     * The meta object literal for the '<em><b>Tail</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference BODY__TAIL = eINSTANCE.getBody_Tail();
-
-    /**
-     * The meta object literal for the '{@link org.arz.miniScript.impl.BodyTailImpl <em>Body Tail</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.arz.miniScript.impl.BodyTailImpl
-     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getBodyTail()
-     * @generated
-     */
-    EClass BODY_TAIL = eINSTANCE.getBodyTail();
-
-    /**
-     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference BODY_TAIL__EXPRESSION = eINSTANCE.getBodyTail_Expression();
-
-    /**
-     * The meta object literal for the '<em><b>Tail</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference BODY_TAIL__TAIL = eINSTANCE.getBodyTail_Tail();
-
-    /**
-     * The meta object literal for the '{@link org.arz.miniScript.impl.FunctionParametersImpl <em>Function Parameters</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.arz.miniScript.impl.FunctionParametersImpl
-     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getFunctionParameters()
-     * @generated
-     */
-    EClass FUNCTION_PARAMETERS = eINSTANCE.getFunctionParameters();
-
-    /**
-     * The meta object literal for the '<em><b>Parameter</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute FUNCTION_PARAMETERS__PARAMETER = eINSTANCE.getFunctionParameters_Parameter();
-
-    /**
-     * The meta object literal for the '<em><b>Next Parameters</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FUNCTION_PARAMETERS__NEXT_PARAMETERS = eINSTANCE.getFunctionParameters_NextParameters();
-
-    /**
-     * The meta object literal for the '{@link org.arz.miniScript.impl.FunctionParametersTailImpl <em>Function Parameters Tail</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.arz.miniScript.impl.FunctionParametersTailImpl
-     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getFunctionParametersTail()
-     * @generated
-     */
-    EClass FUNCTION_PARAMETERS_TAIL = eINSTANCE.getFunctionParametersTail();
-
-    /**
-     * The meta object literal for the '<em><b>Parameter</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute FUNCTION_PARAMETERS_TAIL__PARAMETER = eINSTANCE.getFunctionParametersTail_Parameter();
-
-    /**
-     * The meta object literal for the '<em><b>Next Parameters</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FUNCTION_PARAMETERS_TAIL__NEXT_PARAMETERS = eINSTANCE.getFunctionParametersTail_NextParameters();
-
-    /**
-     * The meta object literal for the '{@link org.arz.miniScript.impl.ApplyImpl <em>Apply</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.arz.miniScript.impl.ApplyImpl
-     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getApply()
-     * @generated
-     */
-    EClass APPLY = eINSTANCE.getApply();
-
-    /**
-     * The meta object literal for the '<em><b>Functor</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference APPLY__FUNCTOR = eINSTANCE.getApply_Functor();
-
-    /**
-     * The meta object literal for the '<em><b>Arguments</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference APPLY__ARGUMENTS = eINSTANCE.getApply_Arguments();
-
-    /**
-     * The meta object literal for the '{@link org.arz.miniScript.impl.FunctorImpl <em>Functor</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.arz.miniScript.impl.FunctorImpl
-     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getFunctor()
-     * @generated
-     */
-    EClass FUNCTOR = eINSTANCE.getFunctor();
 
     /**
      * The meta object literal for the '{@link org.arz.miniScript.impl.ApplyTailImpl <em>Apply Tail</em>}' class.
@@ -1736,56 +1022,20 @@ public interface MiniScriptPackage extends EPackage
     EClass APPLY_TAIL = eINSTANCE.getApplyTail();
 
     /**
-     * The meta object literal for the '{@link org.arz.miniScript.impl.FunctionArgumentsImpl <em>Function Arguments</em>}' class.
+     * The meta object literal for the '<em><b>Arguments</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.arz.miniScript.impl.FunctionArgumentsImpl
-     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getFunctionArguments()
      * @generated
      */
-    EClass FUNCTION_ARGUMENTS = eINSTANCE.getFunctionArguments();
+    EReference APPLY_TAIL__ARGUMENTS = eINSTANCE.getApplyTail_Arguments();
 
     /**
-     * The meta object literal for the '<em><b>Argument</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Next Call</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference FUNCTION_ARGUMENTS__ARGUMENT = eINSTANCE.getFunctionArguments_Argument();
-
-    /**
-     * The meta object literal for the '<em><b>Next Arguments</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FUNCTION_ARGUMENTS__NEXT_ARGUMENTS = eINSTANCE.getFunctionArguments_NextArguments();
-
-    /**
-     * The meta object literal for the '{@link org.arz.miniScript.impl.FunctionArgumentsTailImpl <em>Function Arguments Tail</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.arz.miniScript.impl.FunctionArgumentsTailImpl
-     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getFunctionArgumentsTail()
-     * @generated
-     */
-    EClass FUNCTION_ARGUMENTS_TAIL = eINSTANCE.getFunctionArgumentsTail();
-
-    /**
-     * The meta object literal for the '<em><b>Argument</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FUNCTION_ARGUMENTS_TAIL__ARGUMENT = eINSTANCE.getFunctionArgumentsTail_Argument();
-
-    /**
-     * The meta object literal for the '<em><b>Next Arguments</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FUNCTION_ARGUMENTS_TAIL__NEXT_ARGUMENTS = eINSTANCE.getFunctionArgumentsTail_NextArguments();
+    EReference APPLY_TAIL__NEXT_CALL = eINSTANCE.getApplyTail_NextCall();
 
     /**
      * The meta object literal for the '{@link org.arz.miniScript.impl.LiteralExprImpl <em>Literal Expr</em>}' class.
@@ -1824,14 +1074,22 @@ public interface MiniScriptPackage extends EPackage
     EAttribute SYMBOL_REFERENCE__ID = eINSTANCE.getSymbolReference_Id();
 
     /**
-     * The meta object literal for the '{@link org.arz.miniScript.impl.NumericExpressionImpl <em>Numeric Expression</em>}' class.
+     * The meta object literal for the '{@link org.arz.miniScript.impl.NumExprTailImpl <em>Num Expr Tail</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.arz.miniScript.impl.NumericExpressionImpl
-     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getNumericExpression()
+     * @see org.arz.miniScript.impl.NumExprTailImpl
+     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getNumExprTail()
      * @generated
      */
-    EClass NUMERIC_EXPRESSION = eINSTANCE.getNumericExpression();
+    EClass NUM_EXPR_TAIL = eINSTANCE.getNumExprTail();
+
+    /**
+     * The meta object literal for the '<em><b>Operator</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute NUM_EXPR_TAIL__OPERATOR = eINSTANCE.getNumExprTail_Operator();
 
     /**
      * The meta object literal for the '<em><b>Factor</b></em>' containment reference feature.
@@ -1839,7 +1097,7 @@ public interface MiniScriptPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference NUMERIC_EXPRESSION__FACTOR = eINSTANCE.getNumericExpression_Factor();
+    EReference NUM_EXPR_TAIL__FACTOR = eINSTANCE.getNumExprTail_Factor();
 
     /**
      * The meta object literal for the '<em><b>Expr Tail</b></em>' containment reference feature.
@@ -1847,59 +1105,7 @@ public interface MiniScriptPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference NUMERIC_EXPRESSION__EXPR_TAIL = eINSTANCE.getNumericExpression_ExprTail();
-
-    /**
-     * The meta object literal for the '{@link org.arz.miniScript.impl.ExprTailImpl <em>Expr Tail</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.arz.miniScript.impl.ExprTailImpl
-     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getExprTail()
-     * @generated
-     */
-    EClass EXPR_TAIL = eINSTANCE.getExprTail();
-
-    /**
-     * The meta object literal for the '<em><b>Factor</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXPR_TAIL__FACTOR = eINSTANCE.getExprTail_Factor();
-
-    /**
-     * The meta object literal for the '<em><b>Expr Tail</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXPR_TAIL__EXPR_TAIL = eINSTANCE.getExprTail_ExprTail();
-
-    /**
-     * The meta object literal for the '{@link org.arz.miniScript.impl.FactorImpl <em>Factor</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.arz.miniScript.impl.FactorImpl
-     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getFactor()
-     * @generated
-     */
-    EClass FACTOR = eINSTANCE.getFactor();
-
-    /**
-     * The meta object literal for the '<em><b>Term</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FACTOR__TERM = eINSTANCE.getFactor_Term();
-
-    /**
-     * The meta object literal for the '<em><b>Factor Tail</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FACTOR__FACTOR_TAIL = eINSTANCE.getFactor_FactorTail();
+    EReference NUM_EXPR_TAIL__EXPR_TAIL = eINSTANCE.getNumExprTail_ExprTail();
 
     /**
      * The meta object literal for the '{@link org.arz.miniScript.impl.FactorTailImpl <em>Factor Tail</em>}' class.
@@ -1910,6 +1116,14 @@ public interface MiniScriptPackage extends EPackage
      * @generated
      */
     EClass FACTOR_TAIL = eINSTANCE.getFactorTail();
+
+    /**
+     * The meta object literal for the '<em><b>Operator</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FACTOR_TAIL__OPERATOR = eINSTANCE.getFactorTail_Operator();
 
     /**
      * The meta object literal for the '<em><b>Term</b></em>' containment reference feature.
@@ -1926,16 +1140,6 @@ public interface MiniScriptPackage extends EPackage
      * @generated
      */
     EReference FACTOR_TAIL__FACTOR_TAIL = eINSTANCE.getFactorTail_FactorTail();
-
-    /**
-     * The meta object literal for the '{@link org.arz.miniScript.impl.TermImpl <em>Term</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.arz.miniScript.impl.TermImpl
-     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getTerm()
-     * @generated
-     */
-    EClass TERM = eINSTANCE.getTerm();
 
     /**
      * The meta object literal for the '{@link org.arz.miniScript.impl.VariableAssignmentImpl <em>Variable Assignment</em>}' class.
@@ -1964,40 +1168,82 @@ public interface MiniScriptPackage extends EPackage
     EReference VARIABLE_ASSIGNMENT__EXPRESSION = eINSTANCE.getVariableAssignment_Expression();
 
     /**
-     * The meta object literal for the '{@link org.arz.miniScript.impl.ParenthesisExpressionImpl <em>Parenthesis Expression</em>}' class.
+     * The meta object literal for the '{@link org.arz.miniScript.impl.ApplyImpl <em>Apply</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.arz.miniScript.impl.ParenthesisExpressionImpl
-     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getParenthesisExpression()
+     * @see org.arz.miniScript.impl.ApplyImpl
+     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getApply()
      * @generated
      */
-    EClass PARENTHESIS_EXPRESSION = eINSTANCE.getParenthesisExpression();
+    EClass APPLY = eINSTANCE.getApply();
 
     /**
-     * The meta object literal for the '{@link org.arz.miniScript.impl.ApplyFunctionAlphaImpl <em>Apply Function Alpha</em>}' class.
+     * The meta object literal for the '<em><b>Functor</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.arz.miniScript.impl.ApplyFunctionAlphaImpl
-     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getApplyFunctionAlpha()
      * @generated
      */
-    EClass APPLY_FUNCTION_ALPHA = eINSTANCE.getApplyFunctionAlpha();
+    EReference APPLY__FUNCTOR = eINSTANCE.getApply_Functor();
 
     /**
-     * The meta object literal for the '<em><b>Args</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Arguments</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference APPLY_FUNCTION_ALPHA__ARGS = eINSTANCE.getApplyFunctionAlpha_Args();
+    EReference APPLY__ARGUMENTS = eINSTANCE.getApply_Arguments();
 
     /**
-     * The meta object literal for the '<em><b>Next Call</b></em>' containment reference feature.
+     * The meta object literal for the '{@link org.arz.miniScript.impl.NumericExpressionImpl <em>Numeric Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.arz.miniScript.impl.NumericExpressionImpl
+     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getNumericExpression()
+     * @generated
+     */
+    EClass NUMERIC_EXPRESSION = eINSTANCE.getNumericExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Factor</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference APPLY_FUNCTION_ALPHA__NEXT_CALL = eINSTANCE.getApplyFunctionAlpha_NextCall();
+    EReference NUMERIC_EXPRESSION__FACTOR = eINSTANCE.getNumericExpression_Factor();
+
+    /**
+     * The meta object literal for the '<em><b>Num Expr Tail</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference NUMERIC_EXPRESSION__NUM_EXPR_TAIL = eINSTANCE.getNumericExpression_NumExprTail();
+
+    /**
+     * The meta object literal for the '{@link org.arz.miniScript.impl.FactorImpl <em>Factor</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.arz.miniScript.impl.FactorImpl
+     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getFactor()
+     * @generated
+     */
+    EClass FACTOR = eINSTANCE.getFactor();
+
+    /**
+     * The meta object literal for the '<em><b>Term</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FACTOR__TERM = eINSTANCE.getFactor_Term();
+
+    /**
+     * The meta object literal for the '<em><b>Factor Tail</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FACTOR__FACTOR_TAIL = eINSTANCE.getFactor_FactorTail();
 
   }
 

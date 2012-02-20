@@ -3,22 +3,16 @@ package org.arz.serializer;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import org.arz.miniScript.Apply;
-import org.arz.miniScript.ApplyFunctionAlpha;
+import org.arz.miniScript.ApplyTail;
 import org.arz.miniScript.Body;
-import org.arz.miniScript.BodyTail;
-import org.arz.miniScript.ExprTail;
 import org.arz.miniScript.Factor;
 import org.arz.miniScript.FactorTail;
-import org.arz.miniScript.FunctionArguments;
-import org.arz.miniScript.FunctionArgumentsTail;
 import org.arz.miniScript.FunctionDeclaration;
-import org.arz.miniScript.FunctionParameters;
-import org.arz.miniScript.FunctionParametersTail;
 import org.arz.miniScript.LiteralExpr;
 import org.arz.miniScript.MiniScriptPackage;
+import org.arz.miniScript.NumExprTail;
 import org.arz.miniScript.NumericExpression;
 import org.arz.miniScript.Program;
-import org.arz.miniScript.ProgramTail;
 import org.arz.miniScript.SymbolReference;
 import org.arz.miniScript.VariableAssignment;
 import org.arz.services.MiniScriptGrammarAccess;
@@ -64,14 +58,22 @@ public class AbstractMiniScriptSemanticSequencer extends AbstractSemanticSequenc
 		if(semanticObject.eClass().getEPackage() == MiniScriptPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
 			case MiniScriptPackage.APPLY:
 				if(context == grammarAccess.getApplyRule() ||
+				   context == grammarAccess.getApplyAccess().getApplyFunctorAction_1_0() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getFactorRule() ||
+				   context == grammarAccess.getFactorAccess().getFactorTermAction_1_0() ||
+				   context == grammarAccess.getFunctorRule() ||
+				   context == grammarAccess.getNumericExpressionRule() ||
+				   context == grammarAccess.getNumericExpressionAccess().getNumericExpressionFactorAction_1_0() ||
+				   context == grammarAccess.getParenthesisExpressionRule() ||
 				   context == grammarAccess.getTermRule()) {
 					sequence_Apply(context, (Apply) semanticObject); 
 					return; 
 				}
 				else break;
-			case MiniScriptPackage.APPLY_FUNCTION_ALPHA:
+			case MiniScriptPackage.APPLY_TAIL:
 				if(context == grammarAccess.getApplyTailRule()) {
-					sequence_ApplyTail(context, (ApplyFunctionAlpha) semanticObject); 
+					sequence_ApplyTail(context, (ApplyTail) semanticObject); 
 					return; 
 				}
 				else break;
@@ -81,20 +83,17 @@ public class AbstractMiniScriptSemanticSequencer extends AbstractSemanticSequenc
 					return; 
 				}
 				else break;
-			case MiniScriptPackage.BODY_TAIL:
-				if(context == grammarAccess.getBodyTailRule()) {
-					sequence_BodyTail(context, (BodyTail) semanticObject); 
-					return; 
-				}
-				else break;
-			case MiniScriptPackage.EXPR_TAIL:
-				if(context == grammarAccess.getExprTailRule()) {
-					sequence_ExprTail(context, (ExprTail) semanticObject); 
-					return; 
-				}
-				else break;
 			case MiniScriptPackage.FACTOR:
-				if(context == grammarAccess.getFactorRule()) {
+				if(context == grammarAccess.getApplyRule() ||
+				   context == grammarAccess.getApplyAccess().getApplyFunctorAction_1_0() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getFactorRule() ||
+				   context == grammarAccess.getFactorAccess().getFactorTermAction_1_0() ||
+				   context == grammarAccess.getFunctorRule() ||
+				   context == grammarAccess.getNumericExpressionRule() ||
+				   context == grammarAccess.getNumericExpressionAccess().getNumericExpressionFactorAction_1_0() ||
+				   context == grammarAccess.getParenthesisExpressionRule() ||
+				   context == grammarAccess.getTermRule()) {
 					sequence_Factor(context, (Factor) semanticObject); 
 					return; 
 				}
@@ -105,51 +104,55 @@ public class AbstractMiniScriptSemanticSequencer extends AbstractSemanticSequenc
 					return; 
 				}
 				else break;
-			case MiniScriptPackage.FUNCTION_ARGUMENTS:
-				if(context == grammarAccess.getFunctionArgumentsRule()) {
-					sequence_FunctionArguments(context, (FunctionArguments) semanticObject); 
-					return; 
-				}
-				else break;
-			case MiniScriptPackage.FUNCTION_ARGUMENTS_TAIL:
-				if(context == grammarAccess.getFunctionArgumentsTailRule()) {
-					sequence_FunctionArgumentsTail(context, (FunctionArgumentsTail) semanticObject); 
-					return; 
-				}
-				else break;
 			case MiniScriptPackage.FUNCTION_DECLARATION:
-				if(context == grammarAccess.getExpressionRule() ||
+				if(context == grammarAccess.getApplyRule() ||
+				   context == grammarAccess.getApplyAccess().getApplyFunctorAction_1_0() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getFactorRule() ||
+				   context == grammarAccess.getFactorAccess().getFactorTermAction_1_0() ||
 				   context == grammarAccess.getFunctionDeclarationRule() ||
 				   context == grammarAccess.getFunctorRule() ||
-				   context == grammarAccess.getParenthesisExpressionRule()) {
+				   context == grammarAccess.getNumericExpressionRule() ||
+				   context == grammarAccess.getNumericExpressionAccess().getNumericExpressionFactorAction_1_0() ||
+				   context == grammarAccess.getParenthesisExpressionRule() ||
+				   context == grammarAccess.getTermRule()) {
 					sequence_FunctionDeclaration(context, (FunctionDeclaration) semanticObject); 
 					return; 
 				}
 				else break;
-			case MiniScriptPackage.FUNCTION_PARAMETERS:
-				if(context == grammarAccess.getFunctionParametersRule()) {
-					sequence_FunctionParameters(context, (FunctionParameters) semanticObject); 
-					return; 
-				}
-				else break;
-			case MiniScriptPackage.FUNCTION_PARAMETERS_TAIL:
-				if(context == grammarAccess.getFunctionParametersTailRule()) {
-					sequence_FunctionParametersTail(context, (FunctionParametersTail) semanticObject); 
-					return; 
-				}
-				else break;
 			case MiniScriptPackage.LITERAL_EXPR:
-				if(context == grammarAccess.getLiteralExprRule() ||
+				if(context == grammarAccess.getApplyRule() ||
+				   context == grammarAccess.getApplyAccess().getApplyFunctorAction_1_0() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getFactorRule() ||
+				   context == grammarAccess.getFactorAccess().getFactorTermAction_1_0() ||
+				   context == grammarAccess.getFunctorRule() ||
+				   context == grammarAccess.getLiteralExprRule() ||
+				   context == grammarAccess.getNumericExpressionRule() ||
+				   context == grammarAccess.getNumericExpressionAccess().getNumericExpressionFactorAction_1_0() ||
+				   context == grammarAccess.getParenthesisExpressionRule() ||
 				   context == grammarAccess.getTermRule()) {
 					sequence_LiteralExpr(context, (LiteralExpr) semanticObject); 
 					return; 
 				}
 				else break;
+			case MiniScriptPackage.NUM_EXPR_TAIL:
+				if(context == grammarAccess.getNumExprTailRule()) {
+					sequence_NumExprTail(context, (NumExprTail) semanticObject); 
+					return; 
+				}
+				else break;
 			case MiniScriptPackage.NUMERIC_EXPRESSION:
-				if(context == grammarAccess.getExpressionRule() ||
+				if(context == grammarAccess.getApplyRule() ||
+				   context == grammarAccess.getApplyAccess().getApplyFunctorAction_1_0() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getFactorRule() ||
+				   context == grammarAccess.getFactorAccess().getFactorTermAction_1_0() ||
 				   context == grammarAccess.getFunctorRule() ||
 				   context == grammarAccess.getNumericExpressionRule() ||
-				   context == grammarAccess.getParenthesisExpressionRule()) {
+				   context == grammarAccess.getNumericExpressionAccess().getNumericExpressionFactorAction_1_0() ||
+				   context == grammarAccess.getParenthesisExpressionRule() ||
+				   context == grammarAccess.getTermRule()) {
 					sequence_NumericExpression(context, (NumericExpression) semanticObject); 
 					return; 
 				}
@@ -161,23 +164,33 @@ public class AbstractMiniScriptSemanticSequencer extends AbstractSemanticSequenc
 					return; 
 				}
 				else break;
-			case MiniScriptPackage.PROGRAM_TAIL:
-				if(context == grammarAccess.getProgramTailRule()) {
-					sequence_ProgramTail(context, (ProgramTail) semanticObject); 
-					return; 
-				}
-				else break;
 			case MiniScriptPackage.SYMBOL_REFERENCE:
-				if(context == grammarAccess.getFunctorRule() ||
-				   context == grammarAccess.getSymbolReferenceRule()) {
+				if(context == grammarAccess.getApplyRule() ||
+				   context == grammarAccess.getApplyAccess().getApplyFunctorAction_1_0() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getFactorRule() ||
+				   context == grammarAccess.getFactorAccess().getFactorTermAction_1_0() ||
+				   context == grammarAccess.getFunctorRule() ||
+				   context == grammarAccess.getNumericExpressionRule() ||
+				   context == grammarAccess.getNumericExpressionAccess().getNumericExpressionFactorAction_1_0() ||
+				   context == grammarAccess.getParenthesisExpressionRule() ||
+				   context == grammarAccess.getSymbolReferenceRule() ||
+				   context == grammarAccess.getTermRule()) {
 					sequence_SymbolReference(context, (SymbolReference) semanticObject); 
 					return; 
 				}
 				else break;
 			case MiniScriptPackage.VARIABLE_ASSIGNMENT:
-				if(context == grammarAccess.getExpressionRule() ||
+				if(context == grammarAccess.getApplyRule() ||
+				   context == grammarAccess.getApplyAccess().getApplyFunctorAction_1_0() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getFactorRule() ||
+				   context == grammarAccess.getFactorAccess().getFactorTermAction_1_0() ||
 				   context == grammarAccess.getFunctorRule() ||
+				   context == grammarAccess.getNumericExpressionRule() ||
+				   context == grammarAccess.getNumericExpressionAccess().getNumericExpressionFactorAction_1_0() ||
 				   context == grammarAccess.getParenthesisExpressionRule() ||
+				   context == grammarAccess.getTermRule() ||
 				   context == grammarAccess.getVariableAssignmentRule()) {
 					sequence_VariableAssignment(context, (VariableAssignment) semanticObject); 
 					return; 
@@ -189,34 +202,35 @@ public class AbstractMiniScriptSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (args=FunctionArguments? nextCall=ApplyTail?)
+	 *     ((arguments+=Expression arguments+=Expression*)? nextCall=ApplyTail?)
 	 */
-	protected void sequence_ApplyTail(EObject context, ApplyFunctionAlpha semanticObject) {
+	protected void sequence_ApplyTail(EObject context, ApplyTail semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (functor=Functor arguments=ApplyTail?)
+	 *     (functor=Apply_Apply_1_0 arguments=ApplyTail)
 	 */
 	protected void sequence_Apply(EObject context, Apply semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.APPLY__FUNCTOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.APPLY__FUNCTOR));
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.APPLY__ARGUMENTS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.APPLY__ARGUMENTS));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getApplyAccess().getApplyFunctorAction_1_0(), semanticObject.getFunctor());
+		feeder.accept(grammarAccess.getApplyAccess().getArgumentsApplyTailParserRuleCall_1_1_0(), semanticObject.getArguments());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (expression=Expression tail=BodyTail?)
-	 */
-	protected void sequence_BodyTail(EObject context, BodyTail semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (expression=Expression | (expressions=Expression tail=BodyTail?))
+	 *     (expressions+=Expression*)
 	 */
 	protected void sequence_Body(EObject context, Body semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -225,16 +239,7 @@ public class AbstractMiniScriptSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     ((factor=Factor exprTail=ExprTail?) | (factor=Factor exprTail=ExprTail?))
-	 */
-	protected void sequence_ExprTail(EObject context, ExprTail semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     ((term=Term factorTail=FactorTail?) | (term=Term factorTail=FactorTail?))
+	 *     ((operator='*' | operator='/') term=Term factorTail=FactorTail?)
 	 */
 	protected void sequence_FactorTail(EObject context, FactorTail semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -243,54 +248,28 @@ public class AbstractMiniScriptSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (term=Term factorTail=FactorTail?)
+	 *     (term=Factor_Factor_1_0 factorTail=FactorTail)
 	 */
 	protected void sequence_Factor(EObject context, Factor semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.FACTOR__TERM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.FACTOR__TERM));
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.FACTOR__FACTOR_TAIL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.FACTOR__FACTOR_TAIL));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getFactorAccess().getFactorTermAction_1_0(), semanticObject.getTerm());
+		feeder.accept(grammarAccess.getFactorAccess().getFactorTailFactorTailParserRuleCall_1_1_0(), semanticObject.getFactorTail());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (argument=Expression nextArguments=FunctionArgumentsTail?)
-	 */
-	protected void sequence_FunctionArgumentsTail(EObject context, FunctionArgumentsTail semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (argument=Expression nextArguments=FunctionArgumentsTail?)
-	 */
-	protected void sequence_FunctionArguments(EObject context, FunctionArguments semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (parameters=FunctionParameters? body=Body)
+	 *     ((parameters+=ID parameters+=ID*)? body=Body)
 	 */
 	protected void sequence_FunctionDeclaration(EObject context, FunctionDeclaration semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (parameter=ID nextParameters=FunctionParametersTail?)
-	 */
-	protected void sequence_FunctionParametersTail(EObject context, FunctionParametersTail semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (parameter=ID nextParameters=FunctionParametersTail?)
-	 */
-	protected void sequence_FunctionParameters(EObject context, FunctionParameters semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -313,25 +292,35 @@ public class AbstractMiniScriptSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (factor=Factor exprTail=ExprTail?)
+	 *     ((operator='+' | operator='-') factor=Factor exprTail=NumExprTail?)
+	 */
+	protected void sequence_NumExprTail(EObject context, NumExprTail semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (factor=NumericExpression_NumericExpression_1_0 numExprTail=NumExprTail)
 	 */
 	protected void sequence_NumericExpression(EObject context, NumericExpression semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.NUMERIC_EXPRESSION__FACTOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.NUMERIC_EXPRESSION__FACTOR));
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.NUMERIC_EXPRESSION__NUM_EXPR_TAIL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.NUMERIC_EXPRESSION__NUM_EXPR_TAIL));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getNumericExpressionAccess().getNumericExpressionFactorAction_1_0(), semanticObject.getFactor());
+		feeder.accept(grammarAccess.getNumericExpressionAccess().getNumExprTailNumExprTailParserRuleCall_1_1_0(), semanticObject.getNumExprTail());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (expression=Expression tail=ProgramTail?)
-	 */
-	protected void sequence_ProgramTail(EObject context, ProgramTail semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (expressions+=Expression tail=ProgramTail?)
+	 *     (expressions+=Expression expressions+=Expression*)
 	 */
 	protected void sequence_Program(EObject context, Program semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

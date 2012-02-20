@@ -88,11 +88,6 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
         return createProgramAdapter();
       }
       @Override
-      public Adapter caseProgramTail(ProgramTail object)
-      {
-        return createProgramTailAdapter();
-      }
-      @Override
       public Adapter caseExpression(Expression object)
       {
         return createExpressionAdapter();
@@ -108,44 +103,9 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
         return createBodyAdapter();
       }
       @Override
-      public Adapter caseBodyTail(BodyTail object)
-      {
-        return createBodyTailAdapter();
-      }
-      @Override
-      public Adapter caseFunctionParameters(FunctionParameters object)
-      {
-        return createFunctionParametersAdapter();
-      }
-      @Override
-      public Adapter caseFunctionParametersTail(FunctionParametersTail object)
-      {
-        return createFunctionParametersTailAdapter();
-      }
-      @Override
-      public Adapter caseApply(Apply object)
-      {
-        return createApplyAdapter();
-      }
-      @Override
-      public Adapter caseFunctor(Functor object)
-      {
-        return createFunctorAdapter();
-      }
-      @Override
       public Adapter caseApplyTail(ApplyTail object)
       {
         return createApplyTailAdapter();
-      }
-      @Override
-      public Adapter caseFunctionArguments(FunctionArguments object)
-      {
-        return createFunctionArgumentsAdapter();
-      }
-      @Override
-      public Adapter caseFunctionArgumentsTail(FunctionArgumentsTail object)
-      {
-        return createFunctionArgumentsTailAdapter();
       }
       @Override
       public Adapter caseLiteralExpr(LiteralExpr object)
@@ -158,19 +118,9 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
         return createSymbolReferenceAdapter();
       }
       @Override
-      public Adapter caseNumericExpression(NumericExpression object)
+      public Adapter caseNumExprTail(NumExprTail object)
       {
-        return createNumericExpressionAdapter();
-      }
-      @Override
-      public Adapter caseExprTail(ExprTail object)
-      {
-        return createExprTailAdapter();
-      }
-      @Override
-      public Adapter caseFactor(Factor object)
-      {
-        return createFactorAdapter();
+        return createNumExprTailAdapter();
       }
       @Override
       public Adapter caseFactorTail(FactorTail object)
@@ -178,24 +128,24 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
         return createFactorTailAdapter();
       }
       @Override
-      public Adapter caseTerm(Term object)
-      {
-        return createTermAdapter();
-      }
-      @Override
       public Adapter caseVariableAssignment(VariableAssignment object)
       {
         return createVariableAssignmentAdapter();
       }
       @Override
-      public Adapter caseParenthesisExpression(ParenthesisExpression object)
+      public Adapter caseApply(Apply object)
       {
-        return createParenthesisExpressionAdapter();
+        return createApplyAdapter();
       }
       @Override
-      public Adapter caseApplyFunctionAlpha(ApplyFunctionAlpha object)
+      public Adapter caseNumericExpression(NumericExpression object)
       {
-        return createApplyFunctionAlphaAdapter();
+        return createNumericExpressionAdapter();
+      }
+      @Override
+      public Adapter caseFactor(Factor object)
+      {
+        return createFactorAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -250,21 +200,6 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.arz.miniScript.ProgramTail <em>Program Tail</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.arz.miniScript.ProgramTail
-   * @generated
-   */
-  public Adapter createProgramTailAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.arz.miniScript.Expression <em>Expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -310,81 +245,6 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.arz.miniScript.BodyTail <em>Body Tail</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.arz.miniScript.BodyTail
-   * @generated
-   */
-  public Adapter createBodyTailAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.arz.miniScript.FunctionParameters <em>Function Parameters</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.arz.miniScript.FunctionParameters
-   * @generated
-   */
-  public Adapter createFunctionParametersAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.arz.miniScript.FunctionParametersTail <em>Function Parameters Tail</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.arz.miniScript.FunctionParametersTail
-   * @generated
-   */
-  public Adapter createFunctionParametersTailAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.arz.miniScript.Apply <em>Apply</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.arz.miniScript.Apply
-   * @generated
-   */
-  public Adapter createApplyAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.arz.miniScript.Functor <em>Functor</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.arz.miniScript.Functor
-   * @generated
-   */
-  public Adapter createFunctorAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.arz.miniScript.ApplyTail <em>Apply Tail</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -395,36 +255,6 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createApplyTailAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.arz.miniScript.FunctionArguments <em>Function Arguments</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.arz.miniScript.FunctionArguments
-   * @generated
-   */
-  public Adapter createFunctionArgumentsAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.arz.miniScript.FunctionArgumentsTail <em>Function Arguments Tail</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.arz.miniScript.FunctionArgumentsTail
-   * @generated
-   */
-  public Adapter createFunctionArgumentsTailAdapter()
   {
     return null;
   }
@@ -460,46 +290,16 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.arz.miniScript.NumericExpression <em>Numeric Expression</em>}'.
+   * Creates a new adapter for an object of class '{@link org.arz.miniScript.NumExprTail <em>Num Expr Tail</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.arz.miniScript.NumericExpression
+   * @see org.arz.miniScript.NumExprTail
    * @generated
    */
-  public Adapter createNumericExpressionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.arz.miniScript.ExprTail <em>Expr Tail</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.arz.miniScript.ExprTail
-   * @generated
-   */
-  public Adapter createExprTailAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.arz.miniScript.Factor <em>Factor</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.arz.miniScript.Factor
-   * @generated
-   */
-  public Adapter createFactorAdapter()
+  public Adapter createNumExprTailAdapter()
   {
     return null;
   }
@@ -520,21 +320,6 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.arz.miniScript.Term <em>Term</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.arz.miniScript.Term
-   * @generated
-   */
-  public Adapter createTermAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.arz.miniScript.VariableAssignment <em>Variable Assignment</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -550,31 +335,46 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.arz.miniScript.ParenthesisExpression <em>Parenthesis Expression</em>}'.
+   * Creates a new adapter for an object of class '{@link org.arz.miniScript.Apply <em>Apply</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.arz.miniScript.ParenthesisExpression
+   * @see org.arz.miniScript.Apply
    * @generated
    */
-  public Adapter createParenthesisExpressionAdapter()
+  public Adapter createApplyAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.arz.miniScript.ApplyFunctionAlpha <em>Apply Function Alpha</em>}'.
+   * Creates a new adapter for an object of class '{@link org.arz.miniScript.NumericExpression <em>Numeric Expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.arz.miniScript.ApplyFunctionAlpha
+   * @see org.arz.miniScript.NumericExpression
    * @generated
    */
-  public Adapter createApplyFunctionAlphaAdapter()
+  public Adapter createNumericExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.arz.miniScript.Factor <em>Factor</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.arz.miniScript.Factor
+   * @generated
+   */
+  public Adapter createFactorAdapter()
   {
     return null;
   }

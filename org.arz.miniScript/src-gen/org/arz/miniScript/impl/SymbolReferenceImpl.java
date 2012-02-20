@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class SymbolReferenceImpl extends FunctorImpl implements SymbolReference
+public class SymbolReferenceImpl extends ExpressionImpl implements SymbolReference
 {
   /**
    * The default value of the '{@link #getId() <em>Id</em>}' attribute.

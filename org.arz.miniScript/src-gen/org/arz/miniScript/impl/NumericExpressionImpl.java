@@ -5,9 +5,9 @@
  */
 package org.arz.miniScript.impl;
 
-import org.arz.miniScript.ExprTail;
-import org.arz.miniScript.Factor;
+import org.arz.miniScript.Expression;
 import org.arz.miniScript.MiniScriptPackage;
+import org.arz.miniScript.NumExprTail;
 import org.arz.miniScript.NumericExpression;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.arz.miniScript.impl.NumericExpressionImpl#getFactor <em>Factor</em>}</li>
- *   <li>{@link org.arz.miniScript.impl.NumericExpressionImpl#getExprTail <em>Expr Tail</em>}</li>
+ *   <li>{@link org.arz.miniScript.impl.NumericExpressionImpl#getNumExprTail <em>Num Expr Tail</em>}</li>
  * </ul>
  * </p>
  *
@@ -42,17 +42,17 @@ public class NumericExpressionImpl extends ExpressionImpl implements NumericExpr
    * @generated
    * @ordered
    */
-  protected Factor factor;
+  protected Expression factor;
 
   /**
-   * The cached value of the '{@link #getExprTail() <em>Expr Tail</em>}' containment reference.
+   * The cached value of the '{@link #getNumExprTail() <em>Num Expr Tail</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getExprTail()
+   * @see #getNumExprTail()
    * @generated
    * @ordered
    */
-  protected ExprTail exprTail;
+  protected NumExprTail numExprTail;
 
   /**
    * <!-- begin-user-doc -->
@@ -80,7 +80,7 @@ public class NumericExpressionImpl extends ExpressionImpl implements NumericExpr
    * <!-- end-user-doc -->
    * @generated
    */
-  public Factor getFactor()
+  public Expression getFactor()
   {
     return factor;
   }
@@ -90,9 +90,9 @@ public class NumericExpressionImpl extends ExpressionImpl implements NumericExpr
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetFactor(Factor newFactor, NotificationChain msgs)
+  public NotificationChain basicSetFactor(Expression newFactor, NotificationChain msgs)
   {
-    Factor oldFactor = factor;
+    Expression oldFactor = factor;
     factor = newFactor;
     if (eNotificationRequired())
     {
@@ -107,7 +107,7 @@ public class NumericExpressionImpl extends ExpressionImpl implements NumericExpr
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setFactor(Factor newFactor)
+  public void setFactor(Expression newFactor)
   {
     if (newFactor != factor)
     {
@@ -128,9 +128,9 @@ public class NumericExpressionImpl extends ExpressionImpl implements NumericExpr
    * <!-- end-user-doc -->
    * @generated
    */
-  public ExprTail getExprTail()
+  public NumExprTail getNumExprTail()
   {
-    return exprTail;
+    return numExprTail;
   }
 
   /**
@@ -138,13 +138,13 @@ public class NumericExpressionImpl extends ExpressionImpl implements NumericExpr
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetExprTail(ExprTail newExprTail, NotificationChain msgs)
+  public NotificationChain basicSetNumExprTail(NumExprTail newNumExprTail, NotificationChain msgs)
   {
-    ExprTail oldExprTail = exprTail;
-    exprTail = newExprTail;
+    NumExprTail oldNumExprTail = numExprTail;
+    numExprTail = newNumExprTail;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.NUMERIC_EXPRESSION__EXPR_TAIL, oldExprTail, newExprTail);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.NUMERIC_EXPRESSION__NUM_EXPR_TAIL, oldNumExprTail, newNumExprTail);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -155,20 +155,20 @@ public class NumericExpressionImpl extends ExpressionImpl implements NumericExpr
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setExprTail(ExprTail newExprTail)
+  public void setNumExprTail(NumExprTail newNumExprTail)
   {
-    if (newExprTail != exprTail)
+    if (newNumExprTail != numExprTail)
     {
       NotificationChain msgs = null;
-      if (exprTail != null)
-        msgs = ((InternalEObject)exprTail).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.NUMERIC_EXPRESSION__EXPR_TAIL, null, msgs);
-      if (newExprTail != null)
-        msgs = ((InternalEObject)newExprTail).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.NUMERIC_EXPRESSION__EXPR_TAIL, null, msgs);
-      msgs = basicSetExprTail(newExprTail, msgs);
+      if (numExprTail != null)
+        msgs = ((InternalEObject)numExprTail).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.NUMERIC_EXPRESSION__NUM_EXPR_TAIL, null, msgs);
+      if (newNumExprTail != null)
+        msgs = ((InternalEObject)newNumExprTail).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.NUMERIC_EXPRESSION__NUM_EXPR_TAIL, null, msgs);
+      msgs = basicSetNumExprTail(newNumExprTail, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.NUMERIC_EXPRESSION__EXPR_TAIL, newExprTail, newExprTail));
+      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.NUMERIC_EXPRESSION__NUM_EXPR_TAIL, newNumExprTail, newNumExprTail));
   }
 
   /**
@@ -183,8 +183,8 @@ public class NumericExpressionImpl extends ExpressionImpl implements NumericExpr
     {
       case MiniScriptPackage.NUMERIC_EXPRESSION__FACTOR:
         return basicSetFactor(null, msgs);
-      case MiniScriptPackage.NUMERIC_EXPRESSION__EXPR_TAIL:
-        return basicSetExprTail(null, msgs);
+      case MiniScriptPackage.NUMERIC_EXPRESSION__NUM_EXPR_TAIL:
+        return basicSetNumExprTail(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -201,8 +201,8 @@ public class NumericExpressionImpl extends ExpressionImpl implements NumericExpr
     {
       case MiniScriptPackage.NUMERIC_EXPRESSION__FACTOR:
         return getFactor();
-      case MiniScriptPackage.NUMERIC_EXPRESSION__EXPR_TAIL:
-        return getExprTail();
+      case MiniScriptPackage.NUMERIC_EXPRESSION__NUM_EXPR_TAIL:
+        return getNumExprTail();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -218,10 +218,10 @@ public class NumericExpressionImpl extends ExpressionImpl implements NumericExpr
     switch (featureID)
     {
       case MiniScriptPackage.NUMERIC_EXPRESSION__FACTOR:
-        setFactor((Factor)newValue);
+        setFactor((Expression)newValue);
         return;
-      case MiniScriptPackage.NUMERIC_EXPRESSION__EXPR_TAIL:
-        setExprTail((ExprTail)newValue);
+      case MiniScriptPackage.NUMERIC_EXPRESSION__NUM_EXPR_TAIL:
+        setNumExprTail((NumExprTail)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -238,10 +238,10 @@ public class NumericExpressionImpl extends ExpressionImpl implements NumericExpr
     switch (featureID)
     {
       case MiniScriptPackage.NUMERIC_EXPRESSION__FACTOR:
-        setFactor((Factor)null);
+        setFactor((Expression)null);
         return;
-      case MiniScriptPackage.NUMERIC_EXPRESSION__EXPR_TAIL:
-        setExprTail((ExprTail)null);
+      case MiniScriptPackage.NUMERIC_EXPRESSION__NUM_EXPR_TAIL:
+        setNumExprTail((NumExprTail)null);
         return;
     }
     super.eUnset(featureID);
@@ -259,8 +259,8 @@ public class NumericExpressionImpl extends ExpressionImpl implements NumericExpr
     {
       case MiniScriptPackage.NUMERIC_EXPRESSION__FACTOR:
         return factor != null;
-      case MiniScriptPackage.NUMERIC_EXPRESSION__EXPR_TAIL:
-        return exprTail != null;
+      case MiniScriptPackage.NUMERIC_EXPRESSION__NUM_EXPR_TAIL:
+        return numExprTail != null;
     }
     return super.eIsSet(featureID);
   }

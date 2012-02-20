@@ -2,208 +2,156 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xtext="http://www.eclipse.org/2008/Xtext">
   <xtext:Grammar name="org.arz.MiniScript" usedGrammars="/1">
     <metamodelDeclarations xsi:type="xtext:GeneratedMetamodel" name="miniScript">
-      <ePackage href="http://www.arz.org/MiniScript#/"/>
+      <ePackage href="http://www.arz.org/miniScript#/"/>
     </metamodelDeclarations>
     <rules xsi:type="xtext:ParserRule" name="Model">
       <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/MiniScript#//Model"/>
+        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//Model"/>
       </type>
       <alternatives xsi:type="xtext:RuleCall" rule="/0/@rules.1"/>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Program">
       <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/MiniScript#//Program"/>
+        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//Program"/>
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Assignment" feature="expressions" operator="+=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
-        </elements>
-        <elements xsi:type="xtext:Assignment" cardinality="?" feature="tail" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
         </elements>
-      </alternatives>
-    </rules>
-    <rules xsi:type="xtext:ParserRule" name="ProgramTail">
-      <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/MiniScript#//ProgramTail"/>
-      </type>
-      <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Keyword" value=";"/>
-        <elements xsi:type="xtext:Assignment" feature="expression" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
-        </elements>
-        <elements xsi:type="xtext:Assignment" cardinality="?" feature="tail" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
+        <elements xsi:type="xtext:Group" cardinality="*">
+          <elements xsi:type="xtext:Assignment" feature="expressions" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=";"/>
         </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Expression">
       <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/MiniScript#//Expression"/>
+        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//Expression"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.21"/>
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.16"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.15"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="FunctionDeclaration">
       <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/MiniScript#//FunctionDeclaration"/>
+        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//FunctionDeclaration"/>
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Keyword" value="func"/>
         <elements xsi:type="xtext:Keyword" value="("/>
-        <elements xsi:type="xtext:Assignment" cardinality="?" feature="parameters" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Assignment" feature="parameters" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="parameters" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+            </elements>
+          </elements>
         </elements>
         <elements xsi:type="xtext:Keyword" value=")"/>
         <elements xsi:type="xtext:Assignment" feature="body" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.5"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
         </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Body">
       <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/MiniScript#//Body"/>
+        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//Body"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:Assignment" feature="expression" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+        <elements xsi:type="xtext:Assignment" feature="expressions" operator="+=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
         </elements>
         <elements xsi:type="xtext:Group">
-          <elements xsi:type="xtext:Keyword" value="{"/>
-          <elements xsi:type="xtext:Assignment" feature="expressions" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+          <elements xsi:type="xtext:Action">
+            <type metamodel="/0/@metamodelDeclarations.0">
+              <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//Body"/>
+            </type>
           </elements>
-          <elements xsi:type="xtext:Assignment" cardinality="?" feature="tail" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.6"/>
+          <elements xsi:type="xtext:Keyword" value="{"/>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Assignment" feature="expressions" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
+            </elements>
+            <elements xsi:type="xtext:Keyword" value=";"/>
           </elements>
           <elements xsi:type="xtext:Keyword" value="}"/>
         </elements>
       </alternatives>
     </rules>
-    <rules xsi:type="xtext:ParserRule" name="BodyTail">
-      <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/MiniScript#//BodyTail"/>
-      </type>
-      <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value=";"/>
-        <elements xsi:type="xtext:Assignment" feature="expression" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
-        </elements>
-        <elements xsi:type="xtext:Assignment" cardinality="?" feature="tail" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.6"/>
-        </elements>
-      </alternatives>
-    </rules>
-    <rules xsi:type="xtext:ParserRule" name="FunctionParameters">
-      <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/MiniScript#//FunctionParameters"/>
-      </type>
-      <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Assignment" feature="parameter" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-        </elements>
-        <elements xsi:type="xtext:Assignment" cardinality="?" feature="nextParameters" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
-        </elements>
-      </alternatives>
-    </rules>
-    <rules xsi:type="xtext:ParserRule" name="FunctionParametersTail">
-      <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/MiniScript#//FunctionParametersTail"/>
-      </type>
-      <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value=","/>
-        <elements xsi:type="xtext:Assignment" feature="parameter" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-        </elements>
-        <elements xsi:type="xtext:Assignment" cardinality="?" feature="nextParameters" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
-        </elements>
-      </alternatives>
-    </rules>
     <rules xsi:type="xtext:ParserRule" name="Apply">
       <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/MiniScript#//Apply"/>
+        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//Expression"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Assignment" feature="functor" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
-        </elements>
-        <elements xsi:type="xtext:Assignment" cardinality="?" feature="arguments" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.6"/>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Action" feature="functor" operator="=">
+            <type metamodel="/0/@metamodelDeclarations.0">
+              <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//Apply"/>
+            </type>
+          </elements>
+          <elements xsi:type="xtext:Assignment" feature="arguments" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
+          </elements>
         </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Functor">
       <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/MiniScript#//Functor"/>
+        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//Expression"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.15"/>
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.22"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.16"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="ApplyTail">
       <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/MiniScript#//ApplyTail"/>
+        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//ApplyTail"/>
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Action">
           <type metamodel="/0/@metamodelDeclarations.0">
-            <classifier xsi:type="ecore:EClass" href="http://www.arz.org/MiniScript#//ApplyFunctionAlpha"/>
+            <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//ApplyTail"/>
           </type>
         </elements>
         <elements xsi:type="xtext:Keyword" value="("/>
-        <elements xsi:type="xtext:Assignment" cardinality="?" feature="args" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Assignment" feature="arguments" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
+          </elements>
+          <elements xsi:type="xtext:Group" cardinality="*">
+            <elements xsi:type="xtext:Keyword" value=","/>
+            <elements xsi:type="xtext:Assignment" feature="arguments" operator="+=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
+            </elements>
+          </elements>
         </elements>
         <elements xsi:type="xtext:Keyword" value=")"/>
         <elements xsi:type="xtext:Assignment" cardinality="?" feature="nextCall" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
-        </elements>
-      </alternatives>
-    </rules>
-    <rules xsi:type="xtext:ParserRule" name="FunctionArguments">
-      <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/MiniScript#//FunctionArguments"/>
-      </type>
-      <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Assignment" feature="argument" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
-        </elements>
-        <elements xsi:type="xtext:Assignment" cardinality="?" feature="nextArguments" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.13"/>
-        </elements>
-      </alternatives>
-    </rules>
-    <rules xsi:type="xtext:ParserRule" name="FunctionArgumentsTail">
-      <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/MiniScript#//FunctionArgumentsTail"/>
-      </type>
-      <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value=","/>
-        <elements xsi:type="xtext:Assignment" feature="argument" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
-        </elements>
-        <elements xsi:type="xtext:Assignment" cardinality="?" feature="nextArguments" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.13"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
         </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="LiteralExpr">
       <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/MiniScript#//LiteralExpr"/>
+        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//LiteralExpr"/>
       </type>
       <alternatives xsi:type="xtext:Assignment" feature="value" operator="=">
-        <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.23"/>
+        <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.17"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="SymbolReference">
       <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/MiniScript#//SymbolReference"/>
+        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//SymbolReference"/>
       </type>
       <alternatives xsi:type="xtext:Assignment" feature="id" operator="=">
         <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
@@ -211,92 +159,90 @@
     </rules>
     <rules xsi:type="xtext:ParserRule" name="NumericExpression">
       <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/MiniScript#//NumericExpression"/>
+        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//Expression"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Assignment" feature="factor" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.18"/>
-        </elements>
-        <elements xsi:type="xtext:Assignment" cardinality="?" feature="exprTail" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.17"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Action" feature="factor" operator="=">
+            <type metamodel="/0/@metamodelDeclarations.0">
+              <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//NumericExpression"/>
+            </type>
+          </elements>
+          <elements xsi:type="xtext:Assignment" feature="numExprTail" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
+          </elements>
         </elements>
       </alternatives>
     </rules>
-    <rules xsi:type="xtext:ParserRule" name="ExprTail">
+    <rules xsi:type="xtext:ParserRule" name="NumExprTail">
       <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/MiniScript#//ExprTail"/>
+        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//NumExprTail"/>
       </type>
-      <alternatives xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:Group">
-          <elements xsi:type="xtext:Keyword" value="+"/>
-          <elements xsi:type="xtext:Assignment" feature="factor" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.18"/>
-          </elements>
-          <elements xsi:type="xtext:Assignment" cardinality="?" feature="exprTail" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.17"/>
-          </elements>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" feature="operator" operator="=">
+          <terminal xsi:type="xtext:Alternatives">
+            <elements xsi:type="xtext:Keyword" value="+"/>
+            <elements xsi:type="xtext:Keyword" value="-"/>
+          </terminal>
         </elements>
-        <elements xsi:type="xtext:Group">
-          <elements xsi:type="xtext:Keyword" value="-"/>
-          <elements xsi:type="xtext:Assignment" feature="factor" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.18"/>
-          </elements>
-          <elements xsi:type="xtext:Assignment" cardinality="?" feature="exprTail" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.17"/>
-          </elements>
+        <elements xsi:type="xtext:Assignment" feature="factor" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="exprTail" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
         </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Factor">
       <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/MiniScript#//Factor"/>
+        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//Expression"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Assignment" feature="term" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.20"/>
-        </elements>
-        <elements xsi:type="xtext:Assignment" cardinality="?" feature="factorTail" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.14"/>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Action" feature="term" operator="=">
+            <type metamodel="/0/@metamodelDeclarations.0">
+              <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//Factor"/>
+            </type>
+          </elements>
+          <elements xsi:type="xtext:Assignment" feature="factorTail" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.13"/>
+          </elements>
         </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="FactorTail">
       <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/MiniScript#//FactorTail"/>
+        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//FactorTail"/>
       </type>
-      <alternatives xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:Group">
-          <elements xsi:type="xtext:Keyword" value="*"/>
-          <elements xsi:type="xtext:Assignment" feature="term" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.20"/>
-          </elements>
-          <elements xsi:type="xtext:Assignment" cardinality="?" feature="factorTail" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
-          </elements>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" feature="operator" operator="=">
+          <terminal xsi:type="xtext:Alternatives">
+            <elements xsi:type="xtext:Keyword" value="*"/>
+            <elements xsi:type="xtext:Keyword" value="/"/>
+          </terminal>
         </elements>
-        <elements xsi:type="xtext:Group">
-          <elements xsi:type="xtext:Keyword" value="/"/>
-          <elements xsi:type="xtext:Assignment" feature="term" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.20"/>
-          </elements>
-          <elements xsi:type="xtext:Assignment" cardinality="?" feature="factorTail" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
-          </elements>
+        <elements xsi:type="xtext:Assignment" feature="term" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.14"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="factorTail" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.13"/>
         </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Term">
       <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/MiniScript#//Term"/>
+        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//Expression"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.14"/>
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.8"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.5"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="VariableAssignment">
       <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/MiniScript#//VariableAssignment"/>
+        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//VariableAssignment"/>
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Assignment" feature="id" operator="=">
@@ -304,17 +250,17 @@
         </elements>
         <elements xsi:type="xtext:Keyword" value="="/>
         <elements xsi:type="xtext:Assignment" feature="expression" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
         </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="ParenthesisExpression">
       <type metamodel="/0/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/MiniScript#//ParenthesisExpression"/>
+        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//Expression"/>
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Keyword" value="("/>
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
         <elements xsi:type="xtext:Keyword" value=")"/>
       </alternatives>
     </rules>

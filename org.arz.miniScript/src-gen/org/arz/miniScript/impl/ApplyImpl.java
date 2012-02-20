@@ -7,7 +7,7 @@ package org.arz.miniScript.impl;
 
 import org.arz.miniScript.Apply;
 import org.arz.miniScript.ApplyTail;
-import org.arz.miniScript.Functor;
+import org.arz.miniScript.Expression;
 import org.arz.miniScript.MiniScriptPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ApplyImpl extends TermImpl implements Apply
+public class ApplyImpl extends ExpressionImpl implements Apply
 {
   /**
    * The cached value of the '{@link #getFunctor() <em>Functor</em>}' containment reference.
@@ -42,7 +42,7 @@ public class ApplyImpl extends TermImpl implements Apply
    * @generated
    * @ordered
    */
-  protected Functor functor;
+  protected Expression functor;
 
   /**
    * The cached value of the '{@link #getArguments() <em>Arguments</em>}' containment reference.
@@ -80,7 +80,7 @@ public class ApplyImpl extends TermImpl implements Apply
    * <!-- end-user-doc -->
    * @generated
    */
-  public Functor getFunctor()
+  public Expression getFunctor()
   {
     return functor;
   }
@@ -90,9 +90,9 @@ public class ApplyImpl extends TermImpl implements Apply
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetFunctor(Functor newFunctor, NotificationChain msgs)
+  public NotificationChain basicSetFunctor(Expression newFunctor, NotificationChain msgs)
   {
-    Functor oldFunctor = functor;
+    Expression oldFunctor = functor;
     functor = newFunctor;
     if (eNotificationRequired())
     {
@@ -107,7 +107,7 @@ public class ApplyImpl extends TermImpl implements Apply
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setFunctor(Functor newFunctor)
+  public void setFunctor(Expression newFunctor)
   {
     if (newFunctor != functor)
     {
@@ -218,7 +218,7 @@ public class ApplyImpl extends TermImpl implements Apply
     switch (featureID)
     {
       case MiniScriptPackage.APPLY__FUNCTOR:
-        setFunctor((Functor)newValue);
+        setFunctor((Expression)newValue);
         return;
       case MiniScriptPackage.APPLY__ARGUMENTS:
         setArguments((ApplyTail)newValue);
@@ -238,7 +238,7 @@ public class ApplyImpl extends TermImpl implements Apply
     switch (featureID)
     {
       case MiniScriptPackage.APPLY__FUNCTOR:
-        setFunctor((Functor)null);
+        setFunctor((Expression)null);
         return;
       case MiniScriptPackage.APPLY__ARGUMENTS:
         setArguments((ApplyTail)null);

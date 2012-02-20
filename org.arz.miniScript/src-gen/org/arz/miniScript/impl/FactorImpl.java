@@ -5,10 +5,10 @@
  */
 package org.arz.miniScript.impl;
 
+import org.arz.miniScript.Expression;
 import org.arz.miniScript.Factor;
 import org.arz.miniScript.FactorTail;
 import org.arz.miniScript.MiniScriptPackage;
-import org.arz.miniScript.Term;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +32,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class FactorImpl extends MinimalEObjectImpl.Container implements Factor
+public class FactorImpl extends ExpressionImpl implements Factor
 {
   /**
    * The cached value of the '{@link #getTerm() <em>Term</em>}' containment reference.
@@ -43,7 +42,7 @@ public class FactorImpl extends MinimalEObjectImpl.Container implements Factor
    * @generated
    * @ordered
    */
-  protected Term term;
+  protected Expression term;
 
   /**
    * The cached value of the '{@link #getFactorTail() <em>Factor Tail</em>}' containment reference.
@@ -81,7 +80,7 @@ public class FactorImpl extends MinimalEObjectImpl.Container implements Factor
    * <!-- end-user-doc -->
    * @generated
    */
-  public Term getTerm()
+  public Expression getTerm()
   {
     return term;
   }
@@ -91,9 +90,9 @@ public class FactorImpl extends MinimalEObjectImpl.Container implements Factor
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetTerm(Term newTerm, NotificationChain msgs)
+  public NotificationChain basicSetTerm(Expression newTerm, NotificationChain msgs)
   {
-    Term oldTerm = term;
+    Expression oldTerm = term;
     term = newTerm;
     if (eNotificationRequired())
     {
@@ -108,7 +107,7 @@ public class FactorImpl extends MinimalEObjectImpl.Container implements Factor
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setTerm(Term newTerm)
+  public void setTerm(Expression newTerm)
   {
     if (newTerm != term)
     {
@@ -219,7 +218,7 @@ public class FactorImpl extends MinimalEObjectImpl.Container implements Factor
     switch (featureID)
     {
       case MiniScriptPackage.FACTOR__TERM:
-        setTerm((Term)newValue);
+        setTerm((Expression)newValue);
         return;
       case MiniScriptPackage.FACTOR__FACTOR_TAIL:
         setFactorTail((FactorTail)newValue);
@@ -239,7 +238,7 @@ public class FactorImpl extends MinimalEObjectImpl.Container implements Factor
     switch (featureID)
     {
       case MiniScriptPackage.FACTOR__TERM:
-        setTerm((Term)null);
+        setTerm((Expression)null);
         return;
       case MiniScriptPackage.FACTOR__FACTOR_TAIL:
         setFactorTail((FactorTail)null);

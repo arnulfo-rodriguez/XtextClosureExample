@@ -1,0 +1,75 @@
+grammar org.arz.MiniScript with org.eclipse.xtext.common.Terminals
+
+generate miniScript "http://www.arz.org/miniScript"
+
+Model:
+	Program;
+
+Program:
+	expressions+=Expression ';' (expressions+=Expression ';')*
+;
+
+Expression:
+ 	FunctionDeclaration  | 
+    VariableAssignment |
+	NumericExpression
+;
+
+
+FunctionDeclaration:
+	'func' '(' (parameters+=ID (',' parameters+=ID)*)? ')' body=Body
+;
+
+Body :
+ 	expressions+=Expression |
+    {Body}'{' ( expressions+=Expression ';')* '}'
+;
+
+Apply returns Expression:
+	Functor ({Apply.functor=current} arguments=ApplyTail)?
+;
+
+Functor returns Expression:
+	SymbolReference |
+	ParenthesisExpression
+;
+
+
+ApplyTail:
+	{ApplyTail}'(' (arguments+=Expression (',' arguments+=Expression)*)? ')' nextCall=ApplyTail?
+;
+
+LiteralExpr :
+	value=Num
+;
+
+SymbolReference :
+	id=ID
+;
+
+NumericExpression returns Expression:
+	Factor ({NumericExpression.factor=current} exprTail=NumExprTail)?
+;
+
+NumExprTail:
+	operator=('+'|'-') factor=Factor exprTail=NumExprTail? ; 
+
+Factor returns Expression: 
+	Term ({Factor.term=current} factorTail=FactorTail)?
+;
+
+FactorTail:
+	operator=('*'|'/') term=Term factorTail=FactorTail? ;
+
+Term returns Expression:
+ 	LiteralExpr | Apply ;
+
+VariableAssignment :
+	id=ID '=' expression=Expression
+;
+
+ParenthesisExpression returns Expression:
+	'(' Expression ')'
+;
+
+terminal Num: '0'..'9';

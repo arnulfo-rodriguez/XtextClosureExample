@@ -3,7 +3,6 @@
 */
 package org.arz.ui.contentassist;
 
-import org.arz.ui.contentassist.AbstractMiniScriptProposalProvider;
 /**
  * see http://www.eclipse.org/Xtext/documentation/latest/xtext.html#contentAssist on how to customize content assistant
  */

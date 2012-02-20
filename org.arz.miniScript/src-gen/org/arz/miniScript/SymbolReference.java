@@ -22,7 +22,7 @@ package org.arz.miniScript;
  * @model
  * @generated
  */
-public interface SymbolReference extends Functor
+public interface SymbolReference extends Expression
 {
   /**
    * Returns the value of the '<em><b>Id</b></em>' attribute.

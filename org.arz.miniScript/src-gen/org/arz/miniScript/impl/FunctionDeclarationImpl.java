@@ -5,18 +5,23 @@
  */
 package org.arz.miniScript.impl;
 
+import java.util.Collection;
+
 import org.arz.miniScript.Body;
 import org.arz.miniScript.FunctionDeclaration;
-import org.arz.miniScript.FunctionParameters;
 import org.arz.miniScript.MiniScriptPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,14 +40,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class FunctionDeclarationImpl extends ExpressionImpl implements FunctionDeclaration
 {
   /**
-   * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference.
+   * The cached value of the '{@link #getParameters() <em>Parameters</em>}' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getParameters()
    * @generated
    * @ordered
    */
-  protected FunctionParameters parameters;
+  protected EList<String> parameters;
 
   /**
    * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
@@ -80,47 +85,13 @@ public class FunctionDeclarationImpl extends ExpressionImpl implements FunctionD
    * <!-- end-user-doc -->
    * @generated
    */
-  public FunctionParameters getParameters()
+  public EList<String> getParameters()
   {
+    if (parameters == null)
+    {
+      parameters = new EDataTypeEList<String>(String.class, this, MiniScriptPackage.FUNCTION_DECLARATION__PARAMETERS);
+    }
     return parameters;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetParameters(FunctionParameters newParameters, NotificationChain msgs)
-  {
-    FunctionParameters oldParameters = parameters;
-    parameters = newParameters;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FUNCTION_DECLARATION__PARAMETERS, oldParameters, newParameters);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setParameters(FunctionParameters newParameters)
-  {
-    if (newParameters != parameters)
-    {
-      NotificationChain msgs = null;
-      if (parameters != null)
-        msgs = ((InternalEObject)parameters).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FUNCTION_DECLARATION__PARAMETERS, null, msgs);
-      if (newParameters != null)
-        msgs = ((InternalEObject)newParameters).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FUNCTION_DECLARATION__PARAMETERS, null, msgs);
-      msgs = basicSetParameters(newParameters, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FUNCTION_DECLARATION__PARAMETERS, newParameters, newParameters));
   }
 
   /**
@@ -181,8 +152,6 @@ public class FunctionDeclarationImpl extends ExpressionImpl implements FunctionD
   {
     switch (featureID)
     {
-      case MiniScriptPackage.FUNCTION_DECLARATION__PARAMETERS:
-        return basicSetParameters(null, msgs);
       case MiniScriptPackage.FUNCTION_DECLARATION__BODY:
         return basicSetBody(null, msgs);
     }
@@ -212,13 +181,15 @@ public class FunctionDeclarationImpl extends ExpressionImpl implements FunctionD
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
       case MiniScriptPackage.FUNCTION_DECLARATION__PARAMETERS:
-        setParameters((FunctionParameters)newValue);
+        getParameters().clear();
+        getParameters().addAll((Collection<? extends String>)newValue);
         return;
       case MiniScriptPackage.FUNCTION_DECLARATION__BODY:
         setBody((Body)newValue);
@@ -238,7 +209,7 @@ public class FunctionDeclarationImpl extends ExpressionImpl implements FunctionD
     switch (featureID)
     {
       case MiniScriptPackage.FUNCTION_DECLARATION__PARAMETERS:
-        setParameters((FunctionParameters)null);
+        getParameters().clear();
         return;
       case MiniScriptPackage.FUNCTION_DECLARATION__BODY:
         setBody((Body)null);
@@ -258,11 +229,28 @@ public class FunctionDeclarationImpl extends ExpressionImpl implements FunctionD
     switch (featureID)
     {
       case MiniScriptPackage.FUNCTION_DECLARATION__PARAMETERS:
-        return parameters != null;
+        return parameters != null && !parameters.isEmpty();
       case MiniScriptPackage.FUNCTION_DECLARATION__BODY:
         return body != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (parameters: ");
+    result.append(parameters);
+    result.append(')');
+    return result.toString();
   }
 
 } //FunctionDeclarationImpl

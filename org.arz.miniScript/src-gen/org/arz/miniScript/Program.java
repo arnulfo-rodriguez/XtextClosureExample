@@ -16,7 +16,6 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.arz.miniScript.Program#getExpressions <em>Expressions</em>}</li>
- *   <li>{@link org.arz.miniScript.Program#getTail <em>Tail</em>}</li>
  * </ul>
  * </p>
  *
@@ -41,31 +40,5 @@ public interface Program extends Model
    * @generated
    */
   EList<Expression> getExpressions();
-
-  /**
-   * Returns the value of the '<em><b>Tail</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Tail</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Tail</em>' containment reference.
-   * @see #setTail(ProgramTail)
-   * @see org.arz.miniScript.MiniScriptPackage#getProgram_Tail()
-   * @model containment="true"
-   * @generated
-   */
-  ProgramTail getTail();
-
-  /**
-   * Sets the value of the '{@link org.arz.miniScript.Program#getTail <em>Tail</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Tail</em>' containment reference.
-   * @see #getTail()
-   * @generated
-   */
-  void setTail(ProgramTail value);
 
 } // Program

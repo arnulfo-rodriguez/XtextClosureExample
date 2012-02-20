@@ -22,7 +22,7 @@ package org.arz.miniScript;
  * @model
  * @generated
  */
-public interface LiteralExpr extends Term
+public interface LiteralExpr extends Expression
 {
   /**
    * Returns the value of the '<em><b>Value</b></em>' attribute.

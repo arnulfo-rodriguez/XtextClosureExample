@@ -6,8 +6,8 @@
 package org.arz.miniScript.impl;
 
 import org.arz.miniScript.Expression;
-import org.arz.miniScript.FactorTail;
 import org.arz.miniScript.MiniScriptPackage;
+import org.arz.miniScript.NumExprTail;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -20,20 +20,20 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Factor Tail</b></em>'.
+ * An implementation of the model object '<em><b>Num Expr Tail</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.arz.miniScript.impl.FactorTailImpl#getOperator <em>Operator</em>}</li>
- *   <li>{@link org.arz.miniScript.impl.FactorTailImpl#getTerm <em>Term</em>}</li>
- *   <li>{@link org.arz.miniScript.impl.FactorTailImpl#getFactorTail <em>Factor Tail</em>}</li>
+ *   <li>{@link org.arz.miniScript.impl.NumExprTailImpl#getOperator <em>Operator</em>}</li>
+ *   <li>{@link org.arz.miniScript.impl.NumExprTailImpl#getFactor <em>Factor</em>}</li>
+ *   <li>{@link org.arz.miniScript.impl.NumExprTailImpl#getExprTail <em>Expr Tail</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class FactorTailImpl extends MinimalEObjectImpl.Container implements FactorTail
+public class NumExprTailImpl extends MinimalEObjectImpl.Container implements NumExprTail
 {
   /**
    * The default value of the '{@link #getOperator() <em>Operator</em>}' attribute.
@@ -56,31 +56,31 @@ public class FactorTailImpl extends MinimalEObjectImpl.Container implements Fact
   protected String operator = OPERATOR_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getTerm() <em>Term</em>}' containment reference.
+   * The cached value of the '{@link #getFactor() <em>Factor</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTerm()
+   * @see #getFactor()
    * @generated
    * @ordered
    */
-  protected Expression term;
+  protected Expression factor;
 
   /**
-   * The cached value of the '{@link #getFactorTail() <em>Factor Tail</em>}' containment reference.
+   * The cached value of the '{@link #getExprTail() <em>Expr Tail</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFactorTail()
+   * @see #getExprTail()
    * @generated
    * @ordered
    */
-  protected FactorTail factorTail;
+  protected NumExprTail exprTail;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected FactorTailImpl()
+  protected NumExprTailImpl()
   {
     super();
   }
@@ -93,7 +93,7 @@ public class FactorTailImpl extends MinimalEObjectImpl.Container implements Fact
   @Override
   protected EClass eStaticClass()
   {
-    return MiniScriptPackage.Literals.FACTOR_TAIL;
+    return MiniScriptPackage.Literals.NUM_EXPR_TAIL;
   }
 
   /**
@@ -116,7 +116,7 @@ public class FactorTailImpl extends MinimalEObjectImpl.Container implements Fact
     String oldOperator = operator;
     operator = newOperator;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FACTOR_TAIL__OPERATOR, oldOperator, operator));
+      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.NUM_EXPR_TAIL__OPERATOR, oldOperator, operator));
   }
 
   /**
@@ -124,9 +124,9 @@ public class FactorTailImpl extends MinimalEObjectImpl.Container implements Fact
    * <!-- end-user-doc -->
    * @generated
    */
-  public Expression getTerm()
+  public Expression getFactor()
   {
-    return term;
+    return factor;
   }
 
   /**
@@ -134,13 +134,13 @@ public class FactorTailImpl extends MinimalEObjectImpl.Container implements Fact
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetTerm(Expression newTerm, NotificationChain msgs)
+  public NotificationChain basicSetFactor(Expression newFactor, NotificationChain msgs)
   {
-    Expression oldTerm = term;
-    term = newTerm;
+    Expression oldFactor = factor;
+    factor = newFactor;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FACTOR_TAIL__TERM, oldTerm, newTerm);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.NUM_EXPR_TAIL__FACTOR, oldFactor, newFactor);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -151,20 +151,20 @@ public class FactorTailImpl extends MinimalEObjectImpl.Container implements Fact
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setTerm(Expression newTerm)
+  public void setFactor(Expression newFactor)
   {
-    if (newTerm != term)
+    if (newFactor != factor)
     {
       NotificationChain msgs = null;
-      if (term != null)
-        msgs = ((InternalEObject)term).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FACTOR_TAIL__TERM, null, msgs);
-      if (newTerm != null)
-        msgs = ((InternalEObject)newTerm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FACTOR_TAIL__TERM, null, msgs);
-      msgs = basicSetTerm(newTerm, msgs);
+      if (factor != null)
+        msgs = ((InternalEObject)factor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.NUM_EXPR_TAIL__FACTOR, null, msgs);
+      if (newFactor != null)
+        msgs = ((InternalEObject)newFactor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.NUM_EXPR_TAIL__FACTOR, null, msgs);
+      msgs = basicSetFactor(newFactor, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FACTOR_TAIL__TERM, newTerm, newTerm));
+      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.NUM_EXPR_TAIL__FACTOR, newFactor, newFactor));
   }
 
   /**
@@ -172,9 +172,9 @@ public class FactorTailImpl extends MinimalEObjectImpl.Container implements Fact
    * <!-- end-user-doc -->
    * @generated
    */
-  public FactorTail getFactorTail()
+  public NumExprTail getExprTail()
   {
-    return factorTail;
+    return exprTail;
   }
 
   /**
@@ -182,13 +182,13 @@ public class FactorTailImpl extends MinimalEObjectImpl.Container implements Fact
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetFactorTail(FactorTail newFactorTail, NotificationChain msgs)
+  public NotificationChain basicSetExprTail(NumExprTail newExprTail, NotificationChain msgs)
   {
-    FactorTail oldFactorTail = factorTail;
-    factorTail = newFactorTail;
+    NumExprTail oldExprTail = exprTail;
+    exprTail = newExprTail;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FACTOR_TAIL__FACTOR_TAIL, oldFactorTail, newFactorTail);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.NUM_EXPR_TAIL__EXPR_TAIL, oldExprTail, newExprTail);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -199,20 +199,20 @@ public class FactorTailImpl extends MinimalEObjectImpl.Container implements Fact
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setFactorTail(FactorTail newFactorTail)
+  public void setExprTail(NumExprTail newExprTail)
   {
-    if (newFactorTail != factorTail)
+    if (newExprTail != exprTail)
     {
       NotificationChain msgs = null;
-      if (factorTail != null)
-        msgs = ((InternalEObject)factorTail).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FACTOR_TAIL__FACTOR_TAIL, null, msgs);
-      if (newFactorTail != null)
-        msgs = ((InternalEObject)newFactorTail).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FACTOR_TAIL__FACTOR_TAIL, null, msgs);
-      msgs = basicSetFactorTail(newFactorTail, msgs);
+      if (exprTail != null)
+        msgs = ((InternalEObject)exprTail).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.NUM_EXPR_TAIL__EXPR_TAIL, null, msgs);
+      if (newExprTail != null)
+        msgs = ((InternalEObject)newExprTail).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.NUM_EXPR_TAIL__EXPR_TAIL, null, msgs);
+      msgs = basicSetExprTail(newExprTail, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FACTOR_TAIL__FACTOR_TAIL, newFactorTail, newFactorTail));
+      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.NUM_EXPR_TAIL__EXPR_TAIL, newExprTail, newExprTail));
   }
 
   /**
@@ -225,10 +225,10 @@ public class FactorTailImpl extends MinimalEObjectImpl.Container implements Fact
   {
     switch (featureID)
     {
-      case MiniScriptPackage.FACTOR_TAIL__TERM:
-        return basicSetTerm(null, msgs);
-      case MiniScriptPackage.FACTOR_TAIL__FACTOR_TAIL:
-        return basicSetFactorTail(null, msgs);
+      case MiniScriptPackage.NUM_EXPR_TAIL__FACTOR:
+        return basicSetFactor(null, msgs);
+      case MiniScriptPackage.NUM_EXPR_TAIL__EXPR_TAIL:
+        return basicSetExprTail(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -243,12 +243,12 @@ public class FactorTailImpl extends MinimalEObjectImpl.Container implements Fact
   {
     switch (featureID)
     {
-      case MiniScriptPackage.FACTOR_TAIL__OPERATOR:
+      case MiniScriptPackage.NUM_EXPR_TAIL__OPERATOR:
         return getOperator();
-      case MiniScriptPackage.FACTOR_TAIL__TERM:
-        return getTerm();
-      case MiniScriptPackage.FACTOR_TAIL__FACTOR_TAIL:
-        return getFactorTail();
+      case MiniScriptPackage.NUM_EXPR_TAIL__FACTOR:
+        return getFactor();
+      case MiniScriptPackage.NUM_EXPR_TAIL__EXPR_TAIL:
+        return getExprTail();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -263,14 +263,14 @@ public class FactorTailImpl extends MinimalEObjectImpl.Container implements Fact
   {
     switch (featureID)
     {
-      case MiniScriptPackage.FACTOR_TAIL__OPERATOR:
+      case MiniScriptPackage.NUM_EXPR_TAIL__OPERATOR:
         setOperator((String)newValue);
         return;
-      case MiniScriptPackage.FACTOR_TAIL__TERM:
-        setTerm((Expression)newValue);
+      case MiniScriptPackage.NUM_EXPR_TAIL__FACTOR:
+        setFactor((Expression)newValue);
         return;
-      case MiniScriptPackage.FACTOR_TAIL__FACTOR_TAIL:
-        setFactorTail((FactorTail)newValue);
+      case MiniScriptPackage.NUM_EXPR_TAIL__EXPR_TAIL:
+        setExprTail((NumExprTail)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -286,14 +286,14 @@ public class FactorTailImpl extends MinimalEObjectImpl.Container implements Fact
   {
     switch (featureID)
     {
-      case MiniScriptPackage.FACTOR_TAIL__OPERATOR:
+      case MiniScriptPackage.NUM_EXPR_TAIL__OPERATOR:
         setOperator(OPERATOR_EDEFAULT);
         return;
-      case MiniScriptPackage.FACTOR_TAIL__TERM:
-        setTerm((Expression)null);
+      case MiniScriptPackage.NUM_EXPR_TAIL__FACTOR:
+        setFactor((Expression)null);
         return;
-      case MiniScriptPackage.FACTOR_TAIL__FACTOR_TAIL:
-        setFactorTail((FactorTail)null);
+      case MiniScriptPackage.NUM_EXPR_TAIL__EXPR_TAIL:
+        setExprTail((NumExprTail)null);
         return;
     }
     super.eUnset(featureID);
@@ -309,12 +309,12 @@ public class FactorTailImpl extends MinimalEObjectImpl.Container implements Fact
   {
     switch (featureID)
     {
-      case MiniScriptPackage.FACTOR_TAIL__OPERATOR:
+      case MiniScriptPackage.NUM_EXPR_TAIL__OPERATOR:
         return OPERATOR_EDEFAULT == null ? operator != null : !OPERATOR_EDEFAULT.equals(operator);
-      case MiniScriptPackage.FACTOR_TAIL__TERM:
-        return term != null;
-      case MiniScriptPackage.FACTOR_TAIL__FACTOR_TAIL:
-        return factorTail != null;
+      case MiniScriptPackage.NUM_EXPR_TAIL__FACTOR:
+        return factor != null;
+      case MiniScriptPackage.NUM_EXPR_TAIL__EXPR_TAIL:
+        return exprTail != null;
     }
     return super.eIsSet(featureID);
   }
@@ -336,4 +336,4 @@ public class FactorTailImpl extends MinimalEObjectImpl.Container implements Fact
     return result.toString();
   }
 
-} //FactorTailImpl
+} //NumExprTailImpl

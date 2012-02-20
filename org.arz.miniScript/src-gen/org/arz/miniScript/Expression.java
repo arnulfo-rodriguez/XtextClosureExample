@@ -5,6 +5,7 @@
  */
 package org.arz.miniScript;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,6 +17,6 @@ package org.arz.miniScript;
  * @model
  * @generated
  */
-public interface Expression extends ParenthesisExpression
+public interface Expression extends EObject
 {
 } // Expression

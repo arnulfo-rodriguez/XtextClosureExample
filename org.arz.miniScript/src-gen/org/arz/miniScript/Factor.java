@@ -5,7 +5,6 @@
  */
 package org.arz.miniScript;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Factor extends EObject
+public interface Factor extends Expression
 {
   /**
    * Returns the value of the '<em><b>Term</b></em>' containment reference.
@@ -35,12 +34,12 @@ public interface Factor extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Term</em>' containment reference.
-   * @see #setTerm(Term)
+   * @see #setTerm(Expression)
    * @see org.arz.miniScript.MiniScriptPackage#getFactor_Term()
    * @model containment="true"
    * @generated
    */
-  Term getTerm();
+  Expression getTerm();
 
   /**
    * Sets the value of the '{@link org.arz.miniScript.Factor#getTerm <em>Term</em>}' containment reference.
@@ -50,7 +49,7 @@ public interface Factor extends EObject
    * @see #getTerm()
    * @generated
    */
-  void setTerm(Term value);
+  void setTerm(Expression value);
 
   /**
    * Returns the value of the '<em><b>Factor Tail</b></em>' containment reference.

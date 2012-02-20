@@ -27,8 +27,8 @@ public class MiniScriptStandaloneSetupGenerated implements ISetup {
 	}
 	
 	public void register(Injector injector) {
-	if (!EPackage.Registry.INSTANCE.containsKey("http://www.arz.org/MiniScript")) {
-		EPackage.Registry.INSTANCE.put("http://www.arz.org/MiniScript", org.arz.miniScript.MiniScriptPackage.eINSTANCE);
+	if (!EPackage.Registry.INSTANCE.containsKey("http://www.arz.org/miniScript")) {
+		EPackage.Registry.INSTANCE.put("http://www.arz.org/miniScript", org.arz.miniScript.MiniScriptPackage.eINSTANCE);
 	}
 
 		org.eclipse.xtext.resource.IResourceFactory resourceFactory = injector.getInstance(org.eclipse.xtext.resource.IResourceFactory.class);
