@@ -211,30 +211,58 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cFunctorParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Action cApplyFunctorAction_1_0 = (Action)cGroup_1.eContents().get(0);
-		private final Assignment cArgumentsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cArgumentsApplyTailParserRuleCall_1_1_0 = (RuleCall)cArgumentsAssignment_1_1.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
+		private final Assignment cArgumentsAssignment_1_2_0 = (Assignment)cGroup_1_2.eContents().get(0);
+		private final RuleCall cArgumentsExpressionParserRuleCall_1_2_0_0 = (RuleCall)cArgumentsAssignment_1_2_0.eContents().get(0);
+		private final Group cGroup_1_2_1 = (Group)cGroup_1_2.eContents().get(1);
+		private final Keyword cCommaKeyword_1_2_1_0 = (Keyword)cGroup_1_2_1.eContents().get(0);
+		private final Assignment cArgumentsAssignment_1_2_1_1 = (Assignment)cGroup_1_2_1.eContents().get(1);
+		private final RuleCall cArgumentsExpressionParserRuleCall_1_2_1_1_0 = (RuleCall)cArgumentsAssignment_1_2_1_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
 		
 		//Apply returns Expression:
-		//	Functor ({Apply.functor=current} arguments=ApplyTail)?;
+		//	Functor ({Apply.functor=current} "(" (arguments+=Expression ("," arguments+=Expression)*)? ")")*;
 		public ParserRule getRule() { return rule; }
 
-		//Functor ({Apply.functor=current} arguments=ApplyTail)?
+		//Functor ({Apply.functor=current} "(" (arguments+=Expression ("," arguments+=Expression)*)? ")")*
 		public Group getGroup() { return cGroup; }
 
 		//Functor
 		public RuleCall getFunctorParserRuleCall_0() { return cFunctorParserRuleCall_0; }
 
-		//({Apply.functor=current} arguments=ApplyTail)?
+		//({Apply.functor=current} "(" (arguments+=Expression ("," arguments+=Expression)*)? ")")*
 		public Group getGroup_1() { return cGroup_1; }
 
 		//{Apply.functor=current}
 		public Action getApplyFunctorAction_1_0() { return cApplyFunctorAction_1_0; }
 
-		//arguments=ApplyTail
-		public Assignment getArgumentsAssignment_1_1() { return cArgumentsAssignment_1_1; }
+		//"("
+		public Keyword getLeftParenthesisKeyword_1_1() { return cLeftParenthesisKeyword_1_1; }
 
-		//ApplyTail
-		public RuleCall getArgumentsApplyTailParserRuleCall_1_1_0() { return cArgumentsApplyTailParserRuleCall_1_1_0; }
+		//(arguments+=Expression ("," arguments+=Expression)*)?
+		public Group getGroup_1_2() { return cGroup_1_2; }
+
+		//arguments+=Expression
+		public Assignment getArgumentsAssignment_1_2_0() { return cArgumentsAssignment_1_2_0; }
+
+		//Expression
+		public RuleCall getArgumentsExpressionParserRuleCall_1_2_0_0() { return cArgumentsExpressionParserRuleCall_1_2_0_0; }
+
+		//("," arguments+=Expression)*
+		public Group getGroup_1_2_1() { return cGroup_1_2_1; }
+
+		//","
+		public Keyword getCommaKeyword_1_2_1_0() { return cCommaKeyword_1_2_1_0; }
+
+		//arguments+=Expression
+		public Assignment getArgumentsAssignment_1_2_1_1() { return cArgumentsAssignment_1_2_1_1; }
+
+		//Expression
+		public RuleCall getArgumentsExpressionParserRuleCall_1_2_1_1_0() { return cArgumentsExpressionParserRuleCall_1_2_1_1_0; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_1_3() { return cRightParenthesisKeyword_1_3; }
 	}
 
 	public class FunctorElements extends AbstractParserRuleElementFinder {
@@ -255,66 +283,6 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ParenthesisExpression
 		public RuleCall getParenthesisExpressionParserRuleCall_1() { return cParenthesisExpressionParserRuleCall_1; }
-	}
-
-	public class ApplyTailElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ApplyTail");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cApplyTailAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Assignment cArgumentsAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
-		private final RuleCall cArgumentsExpressionParserRuleCall_2_0_0 = (RuleCall)cArgumentsAssignment_2_0.eContents().get(0);
-		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
-		private final Keyword cCommaKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
-		private final Assignment cArgumentsAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
-		private final RuleCall cArgumentsExpressionParserRuleCall_2_1_1_0 = (RuleCall)cArgumentsAssignment_2_1_1.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cNextCallAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cNextCallApplyTailParserRuleCall_4_0 = (RuleCall)cNextCallAssignment_4.eContents().get(0);
-		
-		//ApplyTail:
-		//	{ApplyTail} "(" (arguments+=Expression ("," arguments+=Expression)*)? ")" nextCall=ApplyTail?;
-		public ParserRule getRule() { return rule; }
-
-		//{ApplyTail} "(" (arguments+=Expression ("," arguments+=Expression)*)? ")" nextCall=ApplyTail?
-		public Group getGroup() { return cGroup; }
-
-		//{ApplyTail}
-		public Action getApplyTailAction_0() { return cApplyTailAction_0; }
-
-		//"("
-		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
-
-		//(arguments+=Expression ("," arguments+=Expression)*)?
-		public Group getGroup_2() { return cGroup_2; }
-
-		//arguments+=Expression
-		public Assignment getArgumentsAssignment_2_0() { return cArgumentsAssignment_2_0; }
-
-		//Expression
-		public RuleCall getArgumentsExpressionParserRuleCall_2_0_0() { return cArgumentsExpressionParserRuleCall_2_0_0; }
-
-		//("," arguments+=Expression)*
-		public Group getGroup_2_1() { return cGroup_2_1; }
-
-		//","
-		public Keyword getCommaKeyword_2_1_0() { return cCommaKeyword_2_1_0; }
-
-		//arguments+=Expression
-		public Assignment getArgumentsAssignment_2_1_1() { return cArgumentsAssignment_2_1_1; }
-
-		//Expression
-		public RuleCall getArgumentsExpressionParserRuleCall_2_1_1_0() { return cArgumentsExpressionParserRuleCall_2_1_1_0; }
-
-		//")"
-		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
-
-		//nextCall=ApplyTail?
-		public Assignment getNextCallAssignment_4() { return cNextCallAssignment_4; }
-
-		//ApplyTail
-		public RuleCall getNextCallApplyTailParserRuleCall_4_0() { return cNextCallApplyTailParserRuleCall_4_0; }
 	}
 
 	public class LiteralExprElements extends AbstractParserRuleElementFinder {
@@ -355,30 +323,30 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cFactorParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Action cNumericExpressionFactorAction_1_0 = (Action)cGroup_1.eContents().get(0);
-		private final Assignment cNumExprTailAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cNumExprTailNumExprTailParserRuleCall_1_1_0 = (RuleCall)cNumExprTailAssignment_1_1.eContents().get(0);
+		private final Assignment cExprTailAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cExprTailNumExprTailParserRuleCall_1_1_0 = (RuleCall)cExprTailAssignment_1_1.eContents().get(0);
 		
 		//NumericExpression returns Expression:
-		//	Factor ({NumericExpression.factor=current} numExprTail=NumExprTail)?;
+		//	Factor ({NumericExpression.factor=current} exprTail=NumExprTail)?;
 		public ParserRule getRule() { return rule; }
 
-		//Factor ({NumericExpression.factor=current} numExprTail=NumExprTail)?
+		//Factor ({NumericExpression.factor=current} exprTail=NumExprTail)?
 		public Group getGroup() { return cGroup; }
 
 		//Factor
 		public RuleCall getFactorParserRuleCall_0() { return cFactorParserRuleCall_0; }
 
-		//({NumericExpression.factor=current} numExprTail=NumExprTail)?
+		//({NumericExpression.factor=current} exprTail=NumExprTail)?
 		public Group getGroup_1() { return cGroup_1; }
 
 		//{NumericExpression.factor=current}
 		public Action getNumericExpressionFactorAction_1_0() { return cNumericExpressionFactorAction_1_0; }
 
-		//numExprTail=NumExprTail
-		public Assignment getNumExprTailAssignment_1_1() { return cNumExprTailAssignment_1_1; }
+		//exprTail=NumExprTail
+		public Assignment getExprTailAssignment_1_1() { return cExprTailAssignment_1_1; }
 
 		//NumExprTail
-		public RuleCall getNumExprTailNumExprTailParserRuleCall_1_1_0() { return cNumExprTailNumExprTailParserRuleCall_1_1_0; }
+		public RuleCall getExprTailNumExprTailParserRuleCall_1_1_0() { return cExprTailNumExprTailParserRuleCall_1_1_0; }
 	}
 
 	public class NumExprTailElements extends AbstractParserRuleElementFinder {
@@ -585,7 +553,6 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 	private BodyElements pBody;
 	private ApplyElements pApply;
 	private FunctorElements pFunctor;
-	private ApplyTailElements pApplyTail;
 	private LiteralExprElements pLiteralExpr;
 	private SymbolReferenceElements pSymbolReference;
 	private NumericExpressionElements pNumericExpression;
@@ -669,7 +636,7 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Apply returns Expression:
-	//	Functor ({Apply.functor=current} arguments=ApplyTail)?;
+	//	Functor ({Apply.functor=current} "(" (arguments+=Expression ("," arguments+=Expression)*)? ")")*;
 	public ApplyElements getApplyAccess() {
 		return (pApply != null) ? pApply : (pApply = new ApplyElements());
 	}
@@ -686,16 +653,6 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getFunctorRule() {
 		return getFunctorAccess().getRule();
-	}
-
-	//ApplyTail:
-	//	{ApplyTail} "(" (arguments+=Expression ("," arguments+=Expression)*)? ")" nextCall=ApplyTail?;
-	public ApplyTailElements getApplyTailAccess() {
-		return (pApplyTail != null) ? pApplyTail : (pApplyTail = new ApplyTailElements());
-	}
-	
-	public ParserRule getApplyTailRule() {
-		return getApplyTailAccess().getRule();
 	}
 
 	//LiteralExpr:
@@ -719,7 +676,7 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//NumericExpression returns Expression:
-	//	Factor ({NumericExpression.factor=current} numExprTail=NumExprTail)?;
+	//	Factor ({NumericExpression.factor=current} exprTail=NumExprTail)?;
 	public NumericExpressionElements getNumericExpressionAccess() {
 		return (pNumericExpression != null) ? pNumericExpression : (pNumericExpression = new NumericExpressionElements());
 	}

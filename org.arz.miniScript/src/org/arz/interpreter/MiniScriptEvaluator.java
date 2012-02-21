@@ -1,8 +1,6 @@
 package org.arz.interpreter;
 
-import org.arz.interpreter.AbstractMiniScriptExpressionEvaluator;
 import org.arz.miniScript.Apply;
-import org.arz.miniScript.ApplyTail;
 import org.arz.miniScript.Factor;
 import org.arz.miniScript.FactorTail;
 import org.arz.miniScript.FunctionDeclaration;
@@ -61,29 +59,19 @@ public class MiniScriptEvaluator extends AbstractMiniScriptExpressionEvaluator {
 	@Override
 	protected Object evalApply(Apply expr, LogEntry log)
 			throws InterpreterException {
-		 return evalApplyRec(log, (Closure)eval(expr.getFunctor(),log), expr.getArguments());
-	}
-
-	
-	private Object evalApplyRec(LogEntry log, Closure function,
-			ApplyTail tail) {
-		  FunctionDeclaration functionDeclaration = function.getDeclaration();
+		  Closure closure = (Closure)eval(expr.getFunctor(),log);
+		  FunctionDeclaration functionDeclaration = closure.getDeclaration();
 		  EList<String> pList = functionDeclaration.getParameters();
 		  MyEnvironment childEnv = pushEnv("function");
 		  int index = 0;
 		  for (String p : pList)
 		  {
-			  childEnv.set(p,eval(tail.getArguments().get(index),log));
+			  childEnv.set(p,eval(expr.getArguments().get(index),log));
 			  index++;
 		  }
-		  Object result = eval(function.getDeclaration().getBody(),log);
+		  Object result = eval(closure.getDeclaration().getBody(),log);
 		  popEnv();
-		  if (tail.getNextCall() != null)
-		  {
-			  return evalApplyRec(log,(Closure)result,tail.getNextCall());
-		  }else{
-			  return result;
-		  }
+		  return result;
 	}
 
 	
@@ -103,9 +91,9 @@ public class MiniScriptEvaluator extends AbstractMiniScriptExpressionEvaluator {
 	protected Object evalNumericExpression( NumericExpression expr, LogEntry log )  throws InterpreterException {
 		Integer termResult = (Integer)eval(expr.getFactor(),log);
 		Object result = termResult;
-		if (expr.getNumExprTail() != null)
+		if (expr.getExprTail() != null)
 		{
-			result = evalNumExprTail(termResult,expr.getNumExprTail(),log);
+			result = evalNumExprTail(termResult,expr.getExprTail(),log);
 		}
 		return result;
 	} 

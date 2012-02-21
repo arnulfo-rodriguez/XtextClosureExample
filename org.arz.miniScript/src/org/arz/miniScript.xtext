@@ -26,7 +26,7 @@ Body :
 ;
 
 Apply returns Expression:
-	Functor ({Apply.functor=current} arguments=ApplyTail)?
+	Functor ({Apply.functor=current} '(' (arguments+=Expression (',' arguments+=Expression)*)? ')')*
 ;
 
 Functor returns Expression:
@@ -34,10 +34,6 @@ Functor returns Expression:
 	ParenthesisExpression
 ;
 
-
-ApplyTail:
-	{ApplyTail}'(' (arguments+=Expression (',' arguments+=Expression)*)? ')' nextCall=ApplyTail?
-;
 
 LiteralExpr :
 	value=Num

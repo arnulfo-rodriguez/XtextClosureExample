@@ -112,13 +112,6 @@ public class MiniScriptSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case MiniScriptPackage.APPLY_TAIL:
-      {
-        ApplyTail applyTail = (ApplyTail)theEObject;
-        T result = caseApplyTail(applyTail);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case MiniScriptPackage.LITERAL_EXPR:
       {
         LiteralExpr literalExpr = (LiteralExpr)theEObject;
@@ -261,22 +254,6 @@ public class MiniScriptSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseBody(Body object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Apply Tail</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Apply Tail</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseApplyTail(ApplyTail object)
   {
     return null;
   }

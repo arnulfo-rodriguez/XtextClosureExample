@@ -673,102 +673,17 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
     // $ANTLR end "ruleFunctor"
 
 
-    // $ANTLR start "entryRuleApplyTail"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:257:1: entryRuleApplyTail : ruleApplyTail EOF ;
-    public final void entryRuleApplyTail() throws RecognitionException {
-        try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:258:1: ( ruleApplyTail EOF )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:259:1: ruleApplyTail EOF
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getApplyTailRule()); 
-            }
-            pushFollow(FOLLOW_ruleApplyTail_in_entryRuleApplyTail486);
-            ruleApplyTail();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getApplyTailRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleApplyTail493); if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-        }
-        return ;
-    }
-    // $ANTLR end "entryRuleApplyTail"
-
-
-    // $ANTLR start "ruleApplyTail"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:266:1: ruleApplyTail : ( ( rule__ApplyTail__Group__0 ) ) ;
-    public final void ruleApplyTail() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:270:2: ( ( ( rule__ApplyTail__Group__0 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:271:1: ( ( rule__ApplyTail__Group__0 ) )
-            {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:271:1: ( ( rule__ApplyTail__Group__0 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:272:1: ( rule__ApplyTail__Group__0 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getApplyTailAccess().getGroup()); 
-            }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:273:1: ( rule__ApplyTail__Group__0 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:273:2: rule__ApplyTail__Group__0
-            {
-            pushFollow(FOLLOW_rule__ApplyTail__Group__0_in_ruleApplyTail519);
-            rule__ApplyTail__Group__0();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getApplyTailAccess().getGroup()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "ruleApplyTail"
-
-
     // $ANTLR start "entryRuleLiteralExpr"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:285:1: entryRuleLiteralExpr : ruleLiteralExpr EOF ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:257:1: entryRuleLiteralExpr : ruleLiteralExpr EOF ;
     public final void entryRuleLiteralExpr() throws RecognitionException {
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:286:1: ( ruleLiteralExpr EOF )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:287:1: ruleLiteralExpr EOF
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:258:1: ( ruleLiteralExpr EOF )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:259:1: ruleLiteralExpr EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLiteralExprRule()); 
             }
-            pushFollow(FOLLOW_ruleLiteralExpr_in_entryRuleLiteralExpr546);
+            pushFollow(FOLLOW_ruleLiteralExpr_in_entryRuleLiteralExpr486);
             ruleLiteralExpr();
 
             state._fsp--;
@@ -776,7 +691,7 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLiteralExprRule()); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLiteralExpr553); if (state.failed) return ;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLiteralExpr493); if (state.failed) return ;
 
             }
 
@@ -793,25 +708,25 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleLiteralExpr"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:294:1: ruleLiteralExpr : ( ( rule__LiteralExpr__ValueAssignment ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:266:1: ruleLiteralExpr : ( ( rule__LiteralExpr__ValueAssignment ) ) ;
     public final void ruleLiteralExpr() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:298:2: ( ( ( rule__LiteralExpr__ValueAssignment ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:299:1: ( ( rule__LiteralExpr__ValueAssignment ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:270:2: ( ( ( rule__LiteralExpr__ValueAssignment ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:271:1: ( ( rule__LiteralExpr__ValueAssignment ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:299:1: ( ( rule__LiteralExpr__ValueAssignment ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:300:1: ( rule__LiteralExpr__ValueAssignment )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:271:1: ( ( rule__LiteralExpr__ValueAssignment ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:272:1: ( rule__LiteralExpr__ValueAssignment )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLiteralExprAccess().getValueAssignment()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:301:1: ( rule__LiteralExpr__ValueAssignment )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:301:2: rule__LiteralExpr__ValueAssignment
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:273:1: ( rule__LiteralExpr__ValueAssignment )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:273:2: rule__LiteralExpr__ValueAssignment
             {
-            pushFollow(FOLLOW_rule__LiteralExpr__ValueAssignment_in_ruleLiteralExpr579);
+            pushFollow(FOLLOW_rule__LiteralExpr__ValueAssignment_in_ruleLiteralExpr519);
             rule__LiteralExpr__ValueAssignment();
 
             state._fsp--;
@@ -844,16 +759,16 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleSymbolReference"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:313:1: entryRuleSymbolReference : ruleSymbolReference EOF ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:285:1: entryRuleSymbolReference : ruleSymbolReference EOF ;
     public final void entryRuleSymbolReference() throws RecognitionException {
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:314:1: ( ruleSymbolReference EOF )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:315:1: ruleSymbolReference EOF
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:286:1: ( ruleSymbolReference EOF )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:287:1: ruleSymbolReference EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSymbolReferenceRule()); 
             }
-            pushFollow(FOLLOW_ruleSymbolReference_in_entryRuleSymbolReference606);
+            pushFollow(FOLLOW_ruleSymbolReference_in_entryRuleSymbolReference546);
             ruleSymbolReference();
 
             state._fsp--;
@@ -861,7 +776,7 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSymbolReferenceRule()); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSymbolReference613); if (state.failed) return ;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSymbolReference553); if (state.failed) return ;
 
             }
 
@@ -878,25 +793,25 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleSymbolReference"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:322:1: ruleSymbolReference : ( ( rule__SymbolReference__IdAssignment ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:294:1: ruleSymbolReference : ( ( rule__SymbolReference__IdAssignment ) ) ;
     public final void ruleSymbolReference() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:326:2: ( ( ( rule__SymbolReference__IdAssignment ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:327:1: ( ( rule__SymbolReference__IdAssignment ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:298:2: ( ( ( rule__SymbolReference__IdAssignment ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:299:1: ( ( rule__SymbolReference__IdAssignment ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:327:1: ( ( rule__SymbolReference__IdAssignment ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:328:1: ( rule__SymbolReference__IdAssignment )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:299:1: ( ( rule__SymbolReference__IdAssignment ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:300:1: ( rule__SymbolReference__IdAssignment )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSymbolReferenceAccess().getIdAssignment()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:329:1: ( rule__SymbolReference__IdAssignment )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:329:2: rule__SymbolReference__IdAssignment
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:301:1: ( rule__SymbolReference__IdAssignment )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:301:2: rule__SymbolReference__IdAssignment
             {
-            pushFollow(FOLLOW_rule__SymbolReference__IdAssignment_in_ruleSymbolReference639);
+            pushFollow(FOLLOW_rule__SymbolReference__IdAssignment_in_ruleSymbolReference579);
             rule__SymbolReference__IdAssignment();
 
             state._fsp--;
@@ -929,16 +844,16 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleNumericExpression"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:341:1: entryRuleNumericExpression : ruleNumericExpression EOF ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:313:1: entryRuleNumericExpression : ruleNumericExpression EOF ;
     public final void entryRuleNumericExpression() throws RecognitionException {
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:342:1: ( ruleNumericExpression EOF )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:343:1: ruleNumericExpression EOF
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:314:1: ( ruleNumericExpression EOF )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:315:1: ruleNumericExpression EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumericExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleNumericExpression_in_entryRuleNumericExpression666);
+            pushFollow(FOLLOW_ruleNumericExpression_in_entryRuleNumericExpression606);
             ruleNumericExpression();
 
             state._fsp--;
@@ -946,7 +861,7 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNumericExpressionRule()); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNumericExpression673); if (state.failed) return ;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNumericExpression613); if (state.failed) return ;
 
             }
 
@@ -963,25 +878,25 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleNumericExpression"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:350:1: ruleNumericExpression : ( ( rule__NumericExpression__Group__0 ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:322:1: ruleNumericExpression : ( ( rule__NumericExpression__Group__0 ) ) ;
     public final void ruleNumericExpression() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:354:2: ( ( ( rule__NumericExpression__Group__0 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:355:1: ( ( rule__NumericExpression__Group__0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:326:2: ( ( ( rule__NumericExpression__Group__0 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:327:1: ( ( rule__NumericExpression__Group__0 ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:355:1: ( ( rule__NumericExpression__Group__0 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:356:1: ( rule__NumericExpression__Group__0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:327:1: ( ( rule__NumericExpression__Group__0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:328:1: ( rule__NumericExpression__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumericExpressionAccess().getGroup()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:357:1: ( rule__NumericExpression__Group__0 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:357:2: rule__NumericExpression__Group__0
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:329:1: ( rule__NumericExpression__Group__0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:329:2: rule__NumericExpression__Group__0
             {
-            pushFollow(FOLLOW_rule__NumericExpression__Group__0_in_ruleNumericExpression699);
+            pushFollow(FOLLOW_rule__NumericExpression__Group__0_in_ruleNumericExpression639);
             rule__NumericExpression__Group__0();
 
             state._fsp--;
@@ -1014,16 +929,16 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleNumExprTail"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:369:1: entryRuleNumExprTail : ruleNumExprTail EOF ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:341:1: entryRuleNumExprTail : ruleNumExprTail EOF ;
     public final void entryRuleNumExprTail() throws RecognitionException {
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:370:1: ( ruleNumExprTail EOF )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:371:1: ruleNumExprTail EOF
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:342:1: ( ruleNumExprTail EOF )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:343:1: ruleNumExprTail EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumExprTailRule()); 
             }
-            pushFollow(FOLLOW_ruleNumExprTail_in_entryRuleNumExprTail726);
+            pushFollow(FOLLOW_ruleNumExprTail_in_entryRuleNumExprTail666);
             ruleNumExprTail();
 
             state._fsp--;
@@ -1031,7 +946,7 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNumExprTailRule()); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNumExprTail733); if (state.failed) return ;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNumExprTail673); if (state.failed) return ;
 
             }
 
@@ -1048,25 +963,25 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleNumExprTail"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:378:1: ruleNumExprTail : ( ( rule__NumExprTail__Group__0 ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:350:1: ruleNumExprTail : ( ( rule__NumExprTail__Group__0 ) ) ;
     public final void ruleNumExprTail() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:382:2: ( ( ( rule__NumExprTail__Group__0 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:383:1: ( ( rule__NumExprTail__Group__0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:354:2: ( ( ( rule__NumExprTail__Group__0 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:355:1: ( ( rule__NumExprTail__Group__0 ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:383:1: ( ( rule__NumExprTail__Group__0 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:384:1: ( rule__NumExprTail__Group__0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:355:1: ( ( rule__NumExprTail__Group__0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:356:1: ( rule__NumExprTail__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumExprTailAccess().getGroup()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:385:1: ( rule__NumExprTail__Group__0 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:385:2: rule__NumExprTail__Group__0
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:357:1: ( rule__NumExprTail__Group__0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:357:2: rule__NumExprTail__Group__0
             {
-            pushFollow(FOLLOW_rule__NumExprTail__Group__0_in_ruleNumExprTail759);
+            pushFollow(FOLLOW_rule__NumExprTail__Group__0_in_ruleNumExprTail699);
             rule__NumExprTail__Group__0();
 
             state._fsp--;
@@ -1099,16 +1014,16 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleFactor"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:397:1: entryRuleFactor : ruleFactor EOF ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:369:1: entryRuleFactor : ruleFactor EOF ;
     public final void entryRuleFactor() throws RecognitionException {
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:398:1: ( ruleFactor EOF )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:399:1: ruleFactor EOF
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:370:1: ( ruleFactor EOF )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:371:1: ruleFactor EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFactorRule()); 
             }
-            pushFollow(FOLLOW_ruleFactor_in_entryRuleFactor786);
+            pushFollow(FOLLOW_ruleFactor_in_entryRuleFactor726);
             ruleFactor();
 
             state._fsp--;
@@ -1116,7 +1031,7 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFactorRule()); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFactor793); if (state.failed) return ;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFactor733); if (state.failed) return ;
 
             }
 
@@ -1133,25 +1048,25 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleFactor"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:406:1: ruleFactor : ( ( rule__Factor__Group__0 ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:378:1: ruleFactor : ( ( rule__Factor__Group__0 ) ) ;
     public final void ruleFactor() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:410:2: ( ( ( rule__Factor__Group__0 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:411:1: ( ( rule__Factor__Group__0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:382:2: ( ( ( rule__Factor__Group__0 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:383:1: ( ( rule__Factor__Group__0 ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:411:1: ( ( rule__Factor__Group__0 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:412:1: ( rule__Factor__Group__0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:383:1: ( ( rule__Factor__Group__0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:384:1: ( rule__Factor__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFactorAccess().getGroup()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:413:1: ( rule__Factor__Group__0 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:413:2: rule__Factor__Group__0
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:385:1: ( rule__Factor__Group__0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:385:2: rule__Factor__Group__0
             {
-            pushFollow(FOLLOW_rule__Factor__Group__0_in_ruleFactor819);
+            pushFollow(FOLLOW_rule__Factor__Group__0_in_ruleFactor759);
             rule__Factor__Group__0();
 
             state._fsp--;
@@ -1184,16 +1099,16 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleFactorTail"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:425:1: entryRuleFactorTail : ruleFactorTail EOF ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:397:1: entryRuleFactorTail : ruleFactorTail EOF ;
     public final void entryRuleFactorTail() throws RecognitionException {
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:426:1: ( ruleFactorTail EOF )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:427:1: ruleFactorTail EOF
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:398:1: ( ruleFactorTail EOF )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:399:1: ruleFactorTail EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFactorTailRule()); 
             }
-            pushFollow(FOLLOW_ruleFactorTail_in_entryRuleFactorTail846);
+            pushFollow(FOLLOW_ruleFactorTail_in_entryRuleFactorTail786);
             ruleFactorTail();
 
             state._fsp--;
@@ -1201,7 +1116,7 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFactorTailRule()); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFactorTail853); if (state.failed) return ;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFactorTail793); if (state.failed) return ;
 
             }
 
@@ -1218,25 +1133,25 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleFactorTail"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:434:1: ruleFactorTail : ( ( rule__FactorTail__Group__0 ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:406:1: ruleFactorTail : ( ( rule__FactorTail__Group__0 ) ) ;
     public final void ruleFactorTail() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:438:2: ( ( ( rule__FactorTail__Group__0 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:439:1: ( ( rule__FactorTail__Group__0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:410:2: ( ( ( rule__FactorTail__Group__0 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:411:1: ( ( rule__FactorTail__Group__0 ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:439:1: ( ( rule__FactorTail__Group__0 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:440:1: ( rule__FactorTail__Group__0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:411:1: ( ( rule__FactorTail__Group__0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:412:1: ( rule__FactorTail__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFactorTailAccess().getGroup()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:441:1: ( rule__FactorTail__Group__0 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:441:2: rule__FactorTail__Group__0
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:413:1: ( rule__FactorTail__Group__0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:413:2: rule__FactorTail__Group__0
             {
-            pushFollow(FOLLOW_rule__FactorTail__Group__0_in_ruleFactorTail879);
+            pushFollow(FOLLOW_rule__FactorTail__Group__0_in_ruleFactorTail819);
             rule__FactorTail__Group__0();
 
             state._fsp--;
@@ -1269,16 +1184,16 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleTerm"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:453:1: entryRuleTerm : ruleTerm EOF ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:425:1: entryRuleTerm : ruleTerm EOF ;
     public final void entryRuleTerm() throws RecognitionException {
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:454:1: ( ruleTerm EOF )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:455:1: ruleTerm EOF
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:426:1: ( ruleTerm EOF )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:427:1: ruleTerm EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTermRule()); 
             }
-            pushFollow(FOLLOW_ruleTerm_in_entryRuleTerm906);
+            pushFollow(FOLLOW_ruleTerm_in_entryRuleTerm846);
             ruleTerm();
 
             state._fsp--;
@@ -1286,7 +1201,7 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTermRule()); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTerm913); if (state.failed) return ;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTerm853); if (state.failed) return ;
 
             }
 
@@ -1303,25 +1218,25 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleTerm"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:462:1: ruleTerm : ( ( rule__Term__Alternatives ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:434:1: ruleTerm : ( ( rule__Term__Alternatives ) ) ;
     public final void ruleTerm() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:466:2: ( ( ( rule__Term__Alternatives ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:467:1: ( ( rule__Term__Alternatives ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:438:2: ( ( ( rule__Term__Alternatives ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:439:1: ( ( rule__Term__Alternatives ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:467:1: ( ( rule__Term__Alternatives ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:468:1: ( rule__Term__Alternatives )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:439:1: ( ( rule__Term__Alternatives ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:440:1: ( rule__Term__Alternatives )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTermAccess().getAlternatives()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:469:1: ( rule__Term__Alternatives )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:469:2: rule__Term__Alternatives
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:441:1: ( rule__Term__Alternatives )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:441:2: rule__Term__Alternatives
             {
-            pushFollow(FOLLOW_rule__Term__Alternatives_in_ruleTerm939);
+            pushFollow(FOLLOW_rule__Term__Alternatives_in_ruleTerm879);
             rule__Term__Alternatives();
 
             state._fsp--;
@@ -1354,16 +1269,16 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleVariableAssignment"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:481:1: entryRuleVariableAssignment : ruleVariableAssignment EOF ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:453:1: entryRuleVariableAssignment : ruleVariableAssignment EOF ;
     public final void entryRuleVariableAssignment() throws RecognitionException {
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:482:1: ( ruleVariableAssignment EOF )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:483:1: ruleVariableAssignment EOF
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:454:1: ( ruleVariableAssignment EOF )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:455:1: ruleVariableAssignment EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariableAssignmentRule()); 
             }
-            pushFollow(FOLLOW_ruleVariableAssignment_in_entryRuleVariableAssignment966);
+            pushFollow(FOLLOW_ruleVariableAssignment_in_entryRuleVariableAssignment906);
             ruleVariableAssignment();
 
             state._fsp--;
@@ -1371,7 +1286,7 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                after(grammarAccess.getVariableAssignmentRule()); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleVariableAssignment973); if (state.failed) return ;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVariableAssignment913); if (state.failed) return ;
 
             }
 
@@ -1388,25 +1303,25 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleVariableAssignment"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:490:1: ruleVariableAssignment : ( ( rule__VariableAssignment__Group__0 ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:462:1: ruleVariableAssignment : ( ( rule__VariableAssignment__Group__0 ) ) ;
     public final void ruleVariableAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:494:2: ( ( ( rule__VariableAssignment__Group__0 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:495:1: ( ( rule__VariableAssignment__Group__0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:466:2: ( ( ( rule__VariableAssignment__Group__0 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:467:1: ( ( rule__VariableAssignment__Group__0 ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:495:1: ( ( rule__VariableAssignment__Group__0 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:496:1: ( rule__VariableAssignment__Group__0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:467:1: ( ( rule__VariableAssignment__Group__0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:468:1: ( rule__VariableAssignment__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariableAssignmentAccess().getGroup()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:497:1: ( rule__VariableAssignment__Group__0 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:497:2: rule__VariableAssignment__Group__0
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:469:1: ( rule__VariableAssignment__Group__0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:469:2: rule__VariableAssignment__Group__0
             {
-            pushFollow(FOLLOW_rule__VariableAssignment__Group__0_in_ruleVariableAssignment999);
+            pushFollow(FOLLOW_rule__VariableAssignment__Group__0_in_ruleVariableAssignment939);
             rule__VariableAssignment__Group__0();
 
             state._fsp--;
@@ -1439,16 +1354,16 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleParenthesisExpression"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:509:1: entryRuleParenthesisExpression : ruleParenthesisExpression EOF ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:481:1: entryRuleParenthesisExpression : ruleParenthesisExpression EOF ;
     public final void entryRuleParenthesisExpression() throws RecognitionException {
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:510:1: ( ruleParenthesisExpression EOF )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:511:1: ruleParenthesisExpression EOF
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:482:1: ( ruleParenthesisExpression EOF )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:483:1: ruleParenthesisExpression EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParenthesisExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleParenthesisExpression_in_entryRuleParenthesisExpression1026);
+            pushFollow(FOLLOW_ruleParenthesisExpression_in_entryRuleParenthesisExpression966);
             ruleParenthesisExpression();
 
             state._fsp--;
@@ -1456,7 +1371,7 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
             if ( state.backtracking==0 ) {
                after(grammarAccess.getParenthesisExpressionRule()); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleParenthesisExpression1033); if (state.failed) return ;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleParenthesisExpression973); if (state.failed) return ;
 
             }
 
@@ -1473,25 +1388,25 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleParenthesisExpression"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:518:1: ruleParenthesisExpression : ( ( rule__ParenthesisExpression__Group__0 ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:490:1: ruleParenthesisExpression : ( ( rule__ParenthesisExpression__Group__0 ) ) ;
     public final void ruleParenthesisExpression() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:522:2: ( ( ( rule__ParenthesisExpression__Group__0 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:523:1: ( ( rule__ParenthesisExpression__Group__0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:494:2: ( ( ( rule__ParenthesisExpression__Group__0 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:495:1: ( ( rule__ParenthesisExpression__Group__0 ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:523:1: ( ( rule__ParenthesisExpression__Group__0 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:524:1: ( rule__ParenthesisExpression__Group__0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:495:1: ( ( rule__ParenthesisExpression__Group__0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:496:1: ( rule__ParenthesisExpression__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParenthesisExpressionAccess().getGroup()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:525:1: ( rule__ParenthesisExpression__Group__0 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:525:2: rule__ParenthesisExpression__Group__0
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:497:1: ( rule__ParenthesisExpression__Group__0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:497:2: rule__ParenthesisExpression__Group__0
             {
-            pushFollow(FOLLOW_rule__ParenthesisExpression__Group__0_in_ruleParenthesisExpression1059);
+            pushFollow(FOLLOW_rule__ParenthesisExpression__Group__0_in_ruleParenthesisExpression999);
             rule__ParenthesisExpression__Group__0();
 
             state._fsp--;
@@ -1524,13 +1439,13 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression__Alternatives"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:537:1: rule__Expression__Alternatives : ( ( ruleFunctionDeclaration ) | ( ruleVariableAssignment ) | ( ruleNumericExpression ) );
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:509:1: rule__Expression__Alternatives : ( ( ruleFunctionDeclaration ) | ( ruleVariableAssignment ) | ( ruleNumericExpression ) );
     public final void rule__Expression__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:541:1: ( ( ruleFunctionDeclaration ) | ( ruleVariableAssignment ) | ( ruleNumericExpression ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:513:1: ( ( ruleFunctionDeclaration ) | ( ruleVariableAssignment ) | ( ruleNumericExpression ) )
             int alt1=3;
             switch ( input.LA(1) ) {
             case 17:
@@ -1573,15 +1488,15 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
             switch (alt1) {
                 case 1 :
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:542:1: ( ruleFunctionDeclaration )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:514:1: ( ruleFunctionDeclaration )
                     {
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:542:1: ( ruleFunctionDeclaration )
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:543:1: ruleFunctionDeclaration
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:514:1: ( ruleFunctionDeclaration )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:515:1: ruleFunctionDeclaration
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getExpressionAccess().getFunctionDeclarationParserRuleCall_0()); 
                     }
-                    pushFollow(FOLLOW_ruleFunctionDeclaration_in_rule__Expression__Alternatives1095);
+                    pushFollow(FOLLOW_ruleFunctionDeclaration_in_rule__Expression__Alternatives1035);
                     ruleFunctionDeclaration();
 
                     state._fsp--;
@@ -1596,15 +1511,15 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:548:6: ( ruleVariableAssignment )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:520:6: ( ruleVariableAssignment )
                     {
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:548:6: ( ruleVariableAssignment )
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:549:1: ruleVariableAssignment
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:520:6: ( ruleVariableAssignment )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:521:1: ruleVariableAssignment
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getExpressionAccess().getVariableAssignmentParserRuleCall_1()); 
                     }
-                    pushFollow(FOLLOW_ruleVariableAssignment_in_rule__Expression__Alternatives1112);
+                    pushFollow(FOLLOW_ruleVariableAssignment_in_rule__Expression__Alternatives1052);
                     ruleVariableAssignment();
 
                     state._fsp--;
@@ -1619,15 +1534,15 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:554:6: ( ruleNumericExpression )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:526:6: ( ruleNumericExpression )
                     {
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:554:6: ( ruleNumericExpression )
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:555:1: ruleNumericExpression
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:526:6: ( ruleNumericExpression )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:527:1: ruleNumericExpression
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getExpressionAccess().getNumericExpressionParserRuleCall_2()); 
                     }
-                    pushFollow(FOLLOW_ruleNumericExpression_in_rule__Expression__Alternatives1129);
+                    pushFollow(FOLLOW_ruleNumericExpression_in_rule__Expression__Alternatives1069);
                     ruleNumericExpression();
 
                     state._fsp--;
@@ -1659,13 +1574,13 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Body__Alternatives"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:565:1: rule__Body__Alternatives : ( ( ( rule__Body__ExpressionsAssignment_0 ) ) | ( ( rule__Body__Group_1__0 ) ) );
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:537:1: rule__Body__Alternatives : ( ( ( rule__Body__ExpressionsAssignment_0 ) ) | ( ( rule__Body__Group_1__0 ) ) );
     public final void rule__Body__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:569:1: ( ( ( rule__Body__ExpressionsAssignment_0 ) ) | ( ( rule__Body__Group_1__0 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:541:1: ( ( ( rule__Body__ExpressionsAssignment_0 ) ) | ( ( rule__Body__Group_1__0 ) ) )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -1684,18 +1599,18 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
             }
             switch (alt2) {
                 case 1 :
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:570:1: ( ( rule__Body__ExpressionsAssignment_0 ) )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:542:1: ( ( rule__Body__ExpressionsAssignment_0 ) )
                     {
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:570:1: ( ( rule__Body__ExpressionsAssignment_0 ) )
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:571:1: ( rule__Body__ExpressionsAssignment_0 )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:542:1: ( ( rule__Body__ExpressionsAssignment_0 ) )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:543:1: ( rule__Body__ExpressionsAssignment_0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getBodyAccess().getExpressionsAssignment_0()); 
                     }
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:572:1: ( rule__Body__ExpressionsAssignment_0 )
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:572:2: rule__Body__ExpressionsAssignment_0
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:544:1: ( rule__Body__ExpressionsAssignment_0 )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:544:2: rule__Body__ExpressionsAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__Body__ExpressionsAssignment_0_in_rule__Body__Alternatives1161);
+                    pushFollow(FOLLOW_rule__Body__ExpressionsAssignment_0_in_rule__Body__Alternatives1101);
                     rule__Body__ExpressionsAssignment_0();
 
                     state._fsp--;
@@ -1713,18 +1628,18 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:576:6: ( ( rule__Body__Group_1__0 ) )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:548:6: ( ( rule__Body__Group_1__0 ) )
                     {
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:576:6: ( ( rule__Body__Group_1__0 ) )
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:577:1: ( rule__Body__Group_1__0 )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:548:6: ( ( rule__Body__Group_1__0 ) )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:549:1: ( rule__Body__Group_1__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getBodyAccess().getGroup_1()); 
                     }
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:578:1: ( rule__Body__Group_1__0 )
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:578:2: rule__Body__Group_1__0
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:550:1: ( rule__Body__Group_1__0 )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:550:2: rule__Body__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__Body__Group_1__0_in_rule__Body__Alternatives1179);
+                    pushFollow(FOLLOW_rule__Body__Group_1__0_in_rule__Body__Alternatives1119);
                     rule__Body__Group_1__0();
 
                     state._fsp--;
@@ -1759,13 +1674,13 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Functor__Alternatives"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:587:1: rule__Functor__Alternatives : ( ( ruleSymbolReference ) | ( ruleParenthesisExpression ) );
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:559:1: rule__Functor__Alternatives : ( ( ruleSymbolReference ) | ( ruleParenthesisExpression ) );
     public final void rule__Functor__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:591:1: ( ( ruleSymbolReference ) | ( ruleParenthesisExpression ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:563:1: ( ( ruleSymbolReference ) | ( ruleParenthesisExpression ) )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -1784,15 +1699,15 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
             }
             switch (alt3) {
                 case 1 :
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:592:1: ( ruleSymbolReference )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:564:1: ( ruleSymbolReference )
                     {
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:592:1: ( ruleSymbolReference )
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:593:1: ruleSymbolReference
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:564:1: ( ruleSymbolReference )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:565:1: ruleSymbolReference
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getFunctorAccess().getSymbolReferenceParserRuleCall_0()); 
                     }
-                    pushFollow(FOLLOW_ruleSymbolReference_in_rule__Functor__Alternatives1212);
+                    pushFollow(FOLLOW_ruleSymbolReference_in_rule__Functor__Alternatives1152);
                     ruleSymbolReference();
 
                     state._fsp--;
@@ -1807,15 +1722,15 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:598:6: ( ruleParenthesisExpression )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:570:6: ( ruleParenthesisExpression )
                     {
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:598:6: ( ruleParenthesisExpression )
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:599:1: ruleParenthesisExpression
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:570:6: ( ruleParenthesisExpression )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:571:1: ruleParenthesisExpression
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getFunctorAccess().getParenthesisExpressionParserRuleCall_1()); 
                     }
-                    pushFollow(FOLLOW_ruleParenthesisExpression_in_rule__Functor__Alternatives1229);
+                    pushFollow(FOLLOW_ruleParenthesisExpression_in_rule__Functor__Alternatives1169);
                     ruleParenthesisExpression();
 
                     state._fsp--;
@@ -1847,13 +1762,13 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__NumExprTail__OperatorAlternatives_0_0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:609:1: rule__NumExprTail__OperatorAlternatives_0_0 : ( ( '+' ) | ( '-' ) );
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:581:1: rule__NumExprTail__OperatorAlternatives_0_0 : ( ( '+' ) | ( '-' ) );
     public final void rule__NumExprTail__OperatorAlternatives_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:613:1: ( ( '+' ) | ( '-' ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:585:1: ( ( '+' ) | ( '-' ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -1872,15 +1787,15 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
             }
             switch (alt4) {
                 case 1 :
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:614:1: ( '+' )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:586:1: ( '+' )
                     {
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:614:1: ( '+' )
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:615:1: '+'
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:586:1: ( '+' )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:587:1: '+'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getNumExprTailAccess().getOperatorPlusSignKeyword_0_0_0()); 
                     }
-                    match(input,12,FOLLOW_12_in_rule__NumExprTail__OperatorAlternatives_0_01262); if (state.failed) return ;
+                    match(input,12,FOLLOW_12_in_rule__NumExprTail__OperatorAlternatives_0_01202); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getNumExprTailAccess().getOperatorPlusSignKeyword_0_0_0()); 
                     }
@@ -1891,15 +1806,15 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:622:6: ( '-' )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:594:6: ( '-' )
                     {
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:622:6: ( '-' )
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:623:1: '-'
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:594:6: ( '-' )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:595:1: '-'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getNumExprTailAccess().getOperatorHyphenMinusKeyword_0_0_1()); 
                     }
-                    match(input,13,FOLLOW_13_in_rule__NumExprTail__OperatorAlternatives_0_01282); if (state.failed) return ;
+                    match(input,13,FOLLOW_13_in_rule__NumExprTail__OperatorAlternatives_0_01222); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getNumExprTailAccess().getOperatorHyphenMinusKeyword_0_0_1()); 
                     }
@@ -1927,13 +1842,13 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FactorTail__OperatorAlternatives_0_0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:635:1: rule__FactorTail__OperatorAlternatives_0_0 : ( ( '*' ) | ( '/' ) );
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:607:1: rule__FactorTail__OperatorAlternatives_0_0 : ( ( '*' ) | ( '/' ) );
     public final void rule__FactorTail__OperatorAlternatives_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:639:1: ( ( '*' ) | ( '/' ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:611:1: ( ( '*' ) | ( '/' ) )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -1952,15 +1867,15 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
             }
             switch (alt5) {
                 case 1 :
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:640:1: ( '*' )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:612:1: ( '*' )
                     {
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:640:1: ( '*' )
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:641:1: '*'
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:612:1: ( '*' )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:613:1: '*'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getFactorTailAccess().getOperatorAsteriskKeyword_0_0_0()); 
                     }
-                    match(input,14,FOLLOW_14_in_rule__FactorTail__OperatorAlternatives_0_01317); if (state.failed) return ;
+                    match(input,14,FOLLOW_14_in_rule__FactorTail__OperatorAlternatives_0_01257); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getFactorTailAccess().getOperatorAsteriskKeyword_0_0_0()); 
                     }
@@ -1971,15 +1886,15 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:648:6: ( '/' )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:620:6: ( '/' )
                     {
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:648:6: ( '/' )
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:649:1: '/'
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:620:6: ( '/' )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:621:1: '/'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getFactorTailAccess().getOperatorSolidusKeyword_0_0_1()); 
                     }
-                    match(input,15,FOLLOW_15_in_rule__FactorTail__OperatorAlternatives_0_01337); if (state.failed) return ;
+                    match(input,15,FOLLOW_15_in_rule__FactorTail__OperatorAlternatives_0_01277); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getFactorTailAccess().getOperatorSolidusKeyword_0_0_1()); 
                     }
@@ -2007,13 +1922,13 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Term__Alternatives"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:661:1: rule__Term__Alternatives : ( ( ruleLiteralExpr ) | ( ruleApply ) );
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:633:1: rule__Term__Alternatives : ( ( ruleLiteralExpr ) | ( ruleApply ) );
     public final void rule__Term__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:665:1: ( ( ruleLiteralExpr ) | ( ruleApply ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:637:1: ( ( ruleLiteralExpr ) | ( ruleApply ) )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -2032,15 +1947,15 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
             }
             switch (alt6) {
                 case 1 :
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:666:1: ( ruleLiteralExpr )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:638:1: ( ruleLiteralExpr )
                     {
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:666:1: ( ruleLiteralExpr )
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:667:1: ruleLiteralExpr
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:638:1: ( ruleLiteralExpr )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:639:1: ruleLiteralExpr
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getTermAccess().getLiteralExprParserRuleCall_0()); 
                     }
-                    pushFollow(FOLLOW_ruleLiteralExpr_in_rule__Term__Alternatives1371);
+                    pushFollow(FOLLOW_ruleLiteralExpr_in_rule__Term__Alternatives1311);
                     ruleLiteralExpr();
 
                     state._fsp--;
@@ -2055,15 +1970,15 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:672:6: ( ruleApply )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:644:6: ( ruleApply )
                     {
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:672:6: ( ruleApply )
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:673:1: ruleApply
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:644:6: ( ruleApply )
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:645:1: ruleApply
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getTermAccess().getApplyParserRuleCall_1()); 
                     }
-                    pushFollow(FOLLOW_ruleApply_in_rule__Term__Alternatives1388);
+                    pushFollow(FOLLOW_ruleApply_in_rule__Term__Alternatives1328);
                     ruleApply();
 
                     state._fsp--;
@@ -2095,21 +2010,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Program__Group__0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:685:1: rule__Program__Group__0 : rule__Program__Group__0__Impl rule__Program__Group__1 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:657:1: rule__Program__Group__0 : rule__Program__Group__0__Impl rule__Program__Group__1 ;
     public final void rule__Program__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:689:1: ( rule__Program__Group__0__Impl rule__Program__Group__1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:690:2: rule__Program__Group__0__Impl rule__Program__Group__1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:661:1: ( rule__Program__Group__0__Impl rule__Program__Group__1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:662:2: rule__Program__Group__0__Impl rule__Program__Group__1
             {
-            pushFollow(FOLLOW_rule__Program__Group__0__Impl_in_rule__Program__Group__01418);
+            pushFollow(FOLLOW_rule__Program__Group__0__Impl_in_rule__Program__Group__01358);
             rule__Program__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Program__Group__1_in_rule__Program__Group__01421);
+            pushFollow(FOLLOW_rule__Program__Group__1_in_rule__Program__Group__01361);
             rule__Program__Group__1();
 
             state._fsp--;
@@ -2133,25 +2048,25 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Program__Group__0__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:697:1: rule__Program__Group__0__Impl : ( ( rule__Program__ExpressionsAssignment_0 ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:669:1: rule__Program__Group__0__Impl : ( ( rule__Program__ExpressionsAssignment_0 ) ) ;
     public final void rule__Program__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:701:1: ( ( ( rule__Program__ExpressionsAssignment_0 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:702:1: ( ( rule__Program__ExpressionsAssignment_0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:673:1: ( ( ( rule__Program__ExpressionsAssignment_0 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:674:1: ( ( rule__Program__ExpressionsAssignment_0 ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:702:1: ( ( rule__Program__ExpressionsAssignment_0 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:703:1: ( rule__Program__ExpressionsAssignment_0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:674:1: ( ( rule__Program__ExpressionsAssignment_0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:675:1: ( rule__Program__ExpressionsAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProgramAccess().getExpressionsAssignment_0()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:704:1: ( rule__Program__ExpressionsAssignment_0 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:704:2: rule__Program__ExpressionsAssignment_0
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:676:1: ( rule__Program__ExpressionsAssignment_0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:676:2: rule__Program__ExpressionsAssignment_0
             {
-            pushFollow(FOLLOW_rule__Program__ExpressionsAssignment_0_in_rule__Program__Group__0__Impl1448);
+            pushFollow(FOLLOW_rule__Program__ExpressionsAssignment_0_in_rule__Program__Group__0__Impl1388);
             rule__Program__ExpressionsAssignment_0();
 
             state._fsp--;
@@ -2184,21 +2099,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Program__Group__1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:714:1: rule__Program__Group__1 : rule__Program__Group__1__Impl rule__Program__Group__2 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:686:1: rule__Program__Group__1 : rule__Program__Group__1__Impl rule__Program__Group__2 ;
     public final void rule__Program__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:718:1: ( rule__Program__Group__1__Impl rule__Program__Group__2 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:719:2: rule__Program__Group__1__Impl rule__Program__Group__2
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:690:1: ( rule__Program__Group__1__Impl rule__Program__Group__2 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:691:2: rule__Program__Group__1__Impl rule__Program__Group__2
             {
-            pushFollow(FOLLOW_rule__Program__Group__1__Impl_in_rule__Program__Group__11478);
+            pushFollow(FOLLOW_rule__Program__Group__1__Impl_in_rule__Program__Group__11418);
             rule__Program__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Program__Group__2_in_rule__Program__Group__11481);
+            pushFollow(FOLLOW_rule__Program__Group__2_in_rule__Program__Group__11421);
             rule__Program__Group__2();
 
             state._fsp--;
@@ -2222,22 +2137,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Program__Group__1__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:726:1: rule__Program__Group__1__Impl : ( ';' ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:698:1: rule__Program__Group__1__Impl : ( ';' ) ;
     public final void rule__Program__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:730:1: ( ( ';' ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:731:1: ( ';' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:702:1: ( ( ';' ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:703:1: ( ';' )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:731:1: ( ';' )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:732:1: ';'
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:703:1: ( ';' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:704:1: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProgramAccess().getSemicolonKeyword_1()); 
             }
-            match(input,16,FOLLOW_16_in_rule__Program__Group__1__Impl1509); if (state.failed) return ;
+            match(input,16,FOLLOW_16_in_rule__Program__Group__1__Impl1449); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getProgramAccess().getSemicolonKeyword_1()); 
             }
@@ -2263,16 +2178,16 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Program__Group__2"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:745:1: rule__Program__Group__2 : rule__Program__Group__2__Impl ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:717:1: rule__Program__Group__2 : rule__Program__Group__2__Impl ;
     public final void rule__Program__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:749:1: ( rule__Program__Group__2__Impl )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:750:2: rule__Program__Group__2__Impl
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:721:1: ( rule__Program__Group__2__Impl )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:722:2: rule__Program__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Program__Group__2__Impl_in_rule__Program__Group__21540);
+            pushFollow(FOLLOW_rule__Program__Group__2__Impl_in_rule__Program__Group__21480);
             rule__Program__Group__2__Impl();
 
             state._fsp--;
@@ -2296,22 +2211,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Program__Group__2__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:756:1: rule__Program__Group__2__Impl : ( ( rule__Program__Group_2__0 )* ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:728:1: rule__Program__Group__2__Impl : ( ( rule__Program__Group_2__0 )* ) ;
     public final void rule__Program__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:760:1: ( ( ( rule__Program__Group_2__0 )* ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:761:1: ( ( rule__Program__Group_2__0 )* )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:732:1: ( ( ( rule__Program__Group_2__0 )* ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:733:1: ( ( rule__Program__Group_2__0 )* )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:761:1: ( ( rule__Program__Group_2__0 )* )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:762:1: ( rule__Program__Group_2__0 )*
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:733:1: ( ( rule__Program__Group_2__0 )* )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:734:1: ( rule__Program__Group_2__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProgramAccess().getGroup_2()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:763:1: ( rule__Program__Group_2__0 )*
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:735:1: ( rule__Program__Group_2__0 )*
             loop7:
             do {
                 int alt7=2;
@@ -2324,9 +2239,9 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
                 switch (alt7) {
             	case 1 :
-            	    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:763:2: rule__Program__Group_2__0
+            	    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:735:2: rule__Program__Group_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__Program__Group_2__0_in_rule__Program__Group__2__Impl1567);
+            	    pushFollow(FOLLOW_rule__Program__Group_2__0_in_rule__Program__Group__2__Impl1507);
             	    rule__Program__Group_2__0();
 
             	    state._fsp--;
@@ -2365,21 +2280,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Program__Group_2__0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:779:1: rule__Program__Group_2__0 : rule__Program__Group_2__0__Impl rule__Program__Group_2__1 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:751:1: rule__Program__Group_2__0 : rule__Program__Group_2__0__Impl rule__Program__Group_2__1 ;
     public final void rule__Program__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:783:1: ( rule__Program__Group_2__0__Impl rule__Program__Group_2__1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:784:2: rule__Program__Group_2__0__Impl rule__Program__Group_2__1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:755:1: ( rule__Program__Group_2__0__Impl rule__Program__Group_2__1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:756:2: rule__Program__Group_2__0__Impl rule__Program__Group_2__1
             {
-            pushFollow(FOLLOW_rule__Program__Group_2__0__Impl_in_rule__Program__Group_2__01604);
+            pushFollow(FOLLOW_rule__Program__Group_2__0__Impl_in_rule__Program__Group_2__01544);
             rule__Program__Group_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Program__Group_2__1_in_rule__Program__Group_2__01607);
+            pushFollow(FOLLOW_rule__Program__Group_2__1_in_rule__Program__Group_2__01547);
             rule__Program__Group_2__1();
 
             state._fsp--;
@@ -2403,25 +2318,25 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Program__Group_2__0__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:791:1: rule__Program__Group_2__0__Impl : ( ( rule__Program__ExpressionsAssignment_2_0 ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:763:1: rule__Program__Group_2__0__Impl : ( ( rule__Program__ExpressionsAssignment_2_0 ) ) ;
     public final void rule__Program__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:795:1: ( ( ( rule__Program__ExpressionsAssignment_2_0 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:796:1: ( ( rule__Program__ExpressionsAssignment_2_0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:767:1: ( ( ( rule__Program__ExpressionsAssignment_2_0 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:768:1: ( ( rule__Program__ExpressionsAssignment_2_0 ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:796:1: ( ( rule__Program__ExpressionsAssignment_2_0 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:797:1: ( rule__Program__ExpressionsAssignment_2_0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:768:1: ( ( rule__Program__ExpressionsAssignment_2_0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:769:1: ( rule__Program__ExpressionsAssignment_2_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProgramAccess().getExpressionsAssignment_2_0()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:798:1: ( rule__Program__ExpressionsAssignment_2_0 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:798:2: rule__Program__ExpressionsAssignment_2_0
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:770:1: ( rule__Program__ExpressionsAssignment_2_0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:770:2: rule__Program__ExpressionsAssignment_2_0
             {
-            pushFollow(FOLLOW_rule__Program__ExpressionsAssignment_2_0_in_rule__Program__Group_2__0__Impl1634);
+            pushFollow(FOLLOW_rule__Program__ExpressionsAssignment_2_0_in_rule__Program__Group_2__0__Impl1574);
             rule__Program__ExpressionsAssignment_2_0();
 
             state._fsp--;
@@ -2454,16 +2369,16 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Program__Group_2__1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:808:1: rule__Program__Group_2__1 : rule__Program__Group_2__1__Impl ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:780:1: rule__Program__Group_2__1 : rule__Program__Group_2__1__Impl ;
     public final void rule__Program__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:812:1: ( rule__Program__Group_2__1__Impl )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:813:2: rule__Program__Group_2__1__Impl
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:784:1: ( rule__Program__Group_2__1__Impl )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:785:2: rule__Program__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Program__Group_2__1__Impl_in_rule__Program__Group_2__11664);
+            pushFollow(FOLLOW_rule__Program__Group_2__1__Impl_in_rule__Program__Group_2__11604);
             rule__Program__Group_2__1__Impl();
 
             state._fsp--;
@@ -2487,22 +2402,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Program__Group_2__1__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:819:1: rule__Program__Group_2__1__Impl : ( ';' ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:791:1: rule__Program__Group_2__1__Impl : ( ';' ) ;
     public final void rule__Program__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:823:1: ( ( ';' ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:824:1: ( ';' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:795:1: ( ( ';' ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:796:1: ( ';' )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:824:1: ( ';' )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:825:1: ';'
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:796:1: ( ';' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:797:1: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProgramAccess().getSemicolonKeyword_2_1()); 
             }
-            match(input,16,FOLLOW_16_in_rule__Program__Group_2__1__Impl1692); if (state.failed) return ;
+            match(input,16,FOLLOW_16_in_rule__Program__Group_2__1__Impl1632); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getProgramAccess().getSemicolonKeyword_2_1()); 
             }
@@ -2528,21 +2443,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionDeclaration__Group__0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:842:1: rule__FunctionDeclaration__Group__0 : rule__FunctionDeclaration__Group__0__Impl rule__FunctionDeclaration__Group__1 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:814:1: rule__FunctionDeclaration__Group__0 : rule__FunctionDeclaration__Group__0__Impl rule__FunctionDeclaration__Group__1 ;
     public final void rule__FunctionDeclaration__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:846:1: ( rule__FunctionDeclaration__Group__0__Impl rule__FunctionDeclaration__Group__1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:847:2: rule__FunctionDeclaration__Group__0__Impl rule__FunctionDeclaration__Group__1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:818:1: ( rule__FunctionDeclaration__Group__0__Impl rule__FunctionDeclaration__Group__1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:819:2: rule__FunctionDeclaration__Group__0__Impl rule__FunctionDeclaration__Group__1
             {
-            pushFollow(FOLLOW_rule__FunctionDeclaration__Group__0__Impl_in_rule__FunctionDeclaration__Group__01727);
+            pushFollow(FOLLOW_rule__FunctionDeclaration__Group__0__Impl_in_rule__FunctionDeclaration__Group__01667);
             rule__FunctionDeclaration__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__FunctionDeclaration__Group__1_in_rule__FunctionDeclaration__Group__01730);
+            pushFollow(FOLLOW_rule__FunctionDeclaration__Group__1_in_rule__FunctionDeclaration__Group__01670);
             rule__FunctionDeclaration__Group__1();
 
             state._fsp--;
@@ -2566,22 +2481,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionDeclaration__Group__0__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:854:1: rule__FunctionDeclaration__Group__0__Impl : ( 'func' ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:826:1: rule__FunctionDeclaration__Group__0__Impl : ( 'func' ) ;
     public final void rule__FunctionDeclaration__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:858:1: ( ( 'func' ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:859:1: ( 'func' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:830:1: ( ( 'func' ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:831:1: ( 'func' )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:859:1: ( 'func' )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:860:1: 'func'
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:831:1: ( 'func' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:832:1: 'func'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFunctionDeclarationAccess().getFuncKeyword_0()); 
             }
-            match(input,17,FOLLOW_17_in_rule__FunctionDeclaration__Group__0__Impl1758); if (state.failed) return ;
+            match(input,17,FOLLOW_17_in_rule__FunctionDeclaration__Group__0__Impl1698); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFunctionDeclarationAccess().getFuncKeyword_0()); 
             }
@@ -2607,21 +2522,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionDeclaration__Group__1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:873:1: rule__FunctionDeclaration__Group__1 : rule__FunctionDeclaration__Group__1__Impl rule__FunctionDeclaration__Group__2 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:845:1: rule__FunctionDeclaration__Group__1 : rule__FunctionDeclaration__Group__1__Impl rule__FunctionDeclaration__Group__2 ;
     public final void rule__FunctionDeclaration__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:877:1: ( rule__FunctionDeclaration__Group__1__Impl rule__FunctionDeclaration__Group__2 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:878:2: rule__FunctionDeclaration__Group__1__Impl rule__FunctionDeclaration__Group__2
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:849:1: ( rule__FunctionDeclaration__Group__1__Impl rule__FunctionDeclaration__Group__2 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:850:2: rule__FunctionDeclaration__Group__1__Impl rule__FunctionDeclaration__Group__2
             {
-            pushFollow(FOLLOW_rule__FunctionDeclaration__Group__1__Impl_in_rule__FunctionDeclaration__Group__11789);
+            pushFollow(FOLLOW_rule__FunctionDeclaration__Group__1__Impl_in_rule__FunctionDeclaration__Group__11729);
             rule__FunctionDeclaration__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__FunctionDeclaration__Group__2_in_rule__FunctionDeclaration__Group__11792);
+            pushFollow(FOLLOW_rule__FunctionDeclaration__Group__2_in_rule__FunctionDeclaration__Group__11732);
             rule__FunctionDeclaration__Group__2();
 
             state._fsp--;
@@ -2645,22 +2560,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionDeclaration__Group__1__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:885:1: rule__FunctionDeclaration__Group__1__Impl : ( '(' ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:857:1: rule__FunctionDeclaration__Group__1__Impl : ( '(' ) ;
     public final void rule__FunctionDeclaration__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:889:1: ( ( '(' ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:890:1: ( '(' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:861:1: ( ( '(' ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:862:1: ( '(' )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:890:1: ( '(' )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:891:1: '('
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:862:1: ( '(' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:863:1: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFunctionDeclarationAccess().getLeftParenthesisKeyword_1()); 
             }
-            match(input,18,FOLLOW_18_in_rule__FunctionDeclaration__Group__1__Impl1820); if (state.failed) return ;
+            match(input,18,FOLLOW_18_in_rule__FunctionDeclaration__Group__1__Impl1760); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFunctionDeclarationAccess().getLeftParenthesisKeyword_1()); 
             }
@@ -2686,21 +2601,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionDeclaration__Group__2"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:904:1: rule__FunctionDeclaration__Group__2 : rule__FunctionDeclaration__Group__2__Impl rule__FunctionDeclaration__Group__3 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:876:1: rule__FunctionDeclaration__Group__2 : rule__FunctionDeclaration__Group__2__Impl rule__FunctionDeclaration__Group__3 ;
     public final void rule__FunctionDeclaration__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:908:1: ( rule__FunctionDeclaration__Group__2__Impl rule__FunctionDeclaration__Group__3 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:909:2: rule__FunctionDeclaration__Group__2__Impl rule__FunctionDeclaration__Group__3
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:880:1: ( rule__FunctionDeclaration__Group__2__Impl rule__FunctionDeclaration__Group__3 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:881:2: rule__FunctionDeclaration__Group__2__Impl rule__FunctionDeclaration__Group__3
             {
-            pushFollow(FOLLOW_rule__FunctionDeclaration__Group__2__Impl_in_rule__FunctionDeclaration__Group__21851);
+            pushFollow(FOLLOW_rule__FunctionDeclaration__Group__2__Impl_in_rule__FunctionDeclaration__Group__21791);
             rule__FunctionDeclaration__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__FunctionDeclaration__Group__3_in_rule__FunctionDeclaration__Group__21854);
+            pushFollow(FOLLOW_rule__FunctionDeclaration__Group__3_in_rule__FunctionDeclaration__Group__21794);
             rule__FunctionDeclaration__Group__3();
 
             state._fsp--;
@@ -2724,22 +2639,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionDeclaration__Group__2__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:916:1: rule__FunctionDeclaration__Group__2__Impl : ( ( rule__FunctionDeclaration__Group_2__0 )? ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:888:1: rule__FunctionDeclaration__Group__2__Impl : ( ( rule__FunctionDeclaration__Group_2__0 )? ) ;
     public final void rule__FunctionDeclaration__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:920:1: ( ( ( rule__FunctionDeclaration__Group_2__0 )? ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:921:1: ( ( rule__FunctionDeclaration__Group_2__0 )? )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:892:1: ( ( ( rule__FunctionDeclaration__Group_2__0 )? ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:893:1: ( ( rule__FunctionDeclaration__Group_2__0 )? )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:921:1: ( ( rule__FunctionDeclaration__Group_2__0 )? )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:922:1: ( rule__FunctionDeclaration__Group_2__0 )?
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:893:1: ( ( rule__FunctionDeclaration__Group_2__0 )? )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:894:1: ( rule__FunctionDeclaration__Group_2__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFunctionDeclarationAccess().getGroup_2()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:923:1: ( rule__FunctionDeclaration__Group_2__0 )?
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:895:1: ( rule__FunctionDeclaration__Group_2__0 )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -2748,9 +2663,9 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
             }
             switch (alt8) {
                 case 1 :
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:923:2: rule__FunctionDeclaration__Group_2__0
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:895:2: rule__FunctionDeclaration__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__FunctionDeclaration__Group_2__0_in_rule__FunctionDeclaration__Group__2__Impl1881);
+                    pushFollow(FOLLOW_rule__FunctionDeclaration__Group_2__0_in_rule__FunctionDeclaration__Group__2__Impl1821);
                     rule__FunctionDeclaration__Group_2__0();
 
                     state._fsp--;
@@ -2786,21 +2701,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionDeclaration__Group__3"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:933:1: rule__FunctionDeclaration__Group__3 : rule__FunctionDeclaration__Group__3__Impl rule__FunctionDeclaration__Group__4 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:905:1: rule__FunctionDeclaration__Group__3 : rule__FunctionDeclaration__Group__3__Impl rule__FunctionDeclaration__Group__4 ;
     public final void rule__FunctionDeclaration__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:937:1: ( rule__FunctionDeclaration__Group__3__Impl rule__FunctionDeclaration__Group__4 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:938:2: rule__FunctionDeclaration__Group__3__Impl rule__FunctionDeclaration__Group__4
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:909:1: ( rule__FunctionDeclaration__Group__3__Impl rule__FunctionDeclaration__Group__4 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:910:2: rule__FunctionDeclaration__Group__3__Impl rule__FunctionDeclaration__Group__4
             {
-            pushFollow(FOLLOW_rule__FunctionDeclaration__Group__3__Impl_in_rule__FunctionDeclaration__Group__31912);
+            pushFollow(FOLLOW_rule__FunctionDeclaration__Group__3__Impl_in_rule__FunctionDeclaration__Group__31852);
             rule__FunctionDeclaration__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__FunctionDeclaration__Group__4_in_rule__FunctionDeclaration__Group__31915);
+            pushFollow(FOLLOW_rule__FunctionDeclaration__Group__4_in_rule__FunctionDeclaration__Group__31855);
             rule__FunctionDeclaration__Group__4();
 
             state._fsp--;
@@ -2824,22 +2739,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionDeclaration__Group__3__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:945:1: rule__FunctionDeclaration__Group__3__Impl : ( ')' ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:917:1: rule__FunctionDeclaration__Group__3__Impl : ( ')' ) ;
     public final void rule__FunctionDeclaration__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:949:1: ( ( ')' ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:950:1: ( ')' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:921:1: ( ( ')' ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:922:1: ( ')' )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:950:1: ( ')' )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:951:1: ')'
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:922:1: ( ')' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:923:1: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFunctionDeclarationAccess().getRightParenthesisKeyword_3()); 
             }
-            match(input,19,FOLLOW_19_in_rule__FunctionDeclaration__Group__3__Impl1943); if (state.failed) return ;
+            match(input,19,FOLLOW_19_in_rule__FunctionDeclaration__Group__3__Impl1883); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFunctionDeclarationAccess().getRightParenthesisKeyword_3()); 
             }
@@ -2865,16 +2780,16 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionDeclaration__Group__4"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:964:1: rule__FunctionDeclaration__Group__4 : rule__FunctionDeclaration__Group__4__Impl ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:936:1: rule__FunctionDeclaration__Group__4 : rule__FunctionDeclaration__Group__4__Impl ;
     public final void rule__FunctionDeclaration__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:968:1: ( rule__FunctionDeclaration__Group__4__Impl )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:969:2: rule__FunctionDeclaration__Group__4__Impl
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:940:1: ( rule__FunctionDeclaration__Group__4__Impl )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:941:2: rule__FunctionDeclaration__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__FunctionDeclaration__Group__4__Impl_in_rule__FunctionDeclaration__Group__41974);
+            pushFollow(FOLLOW_rule__FunctionDeclaration__Group__4__Impl_in_rule__FunctionDeclaration__Group__41914);
             rule__FunctionDeclaration__Group__4__Impl();
 
             state._fsp--;
@@ -2898,25 +2813,25 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionDeclaration__Group__4__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:975:1: rule__FunctionDeclaration__Group__4__Impl : ( ( rule__FunctionDeclaration__BodyAssignment_4 ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:947:1: rule__FunctionDeclaration__Group__4__Impl : ( ( rule__FunctionDeclaration__BodyAssignment_4 ) ) ;
     public final void rule__FunctionDeclaration__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:979:1: ( ( ( rule__FunctionDeclaration__BodyAssignment_4 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:980:1: ( ( rule__FunctionDeclaration__BodyAssignment_4 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:951:1: ( ( ( rule__FunctionDeclaration__BodyAssignment_4 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:952:1: ( ( rule__FunctionDeclaration__BodyAssignment_4 ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:980:1: ( ( rule__FunctionDeclaration__BodyAssignment_4 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:981:1: ( rule__FunctionDeclaration__BodyAssignment_4 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:952:1: ( ( rule__FunctionDeclaration__BodyAssignment_4 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:953:1: ( rule__FunctionDeclaration__BodyAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFunctionDeclarationAccess().getBodyAssignment_4()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:982:1: ( rule__FunctionDeclaration__BodyAssignment_4 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:982:2: rule__FunctionDeclaration__BodyAssignment_4
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:954:1: ( rule__FunctionDeclaration__BodyAssignment_4 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:954:2: rule__FunctionDeclaration__BodyAssignment_4
             {
-            pushFollow(FOLLOW_rule__FunctionDeclaration__BodyAssignment_4_in_rule__FunctionDeclaration__Group__4__Impl2001);
+            pushFollow(FOLLOW_rule__FunctionDeclaration__BodyAssignment_4_in_rule__FunctionDeclaration__Group__4__Impl1941);
             rule__FunctionDeclaration__BodyAssignment_4();
 
             state._fsp--;
@@ -2949,21 +2864,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionDeclaration__Group_2__0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1002:1: rule__FunctionDeclaration__Group_2__0 : rule__FunctionDeclaration__Group_2__0__Impl rule__FunctionDeclaration__Group_2__1 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:974:1: rule__FunctionDeclaration__Group_2__0 : rule__FunctionDeclaration__Group_2__0__Impl rule__FunctionDeclaration__Group_2__1 ;
     public final void rule__FunctionDeclaration__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1006:1: ( rule__FunctionDeclaration__Group_2__0__Impl rule__FunctionDeclaration__Group_2__1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1007:2: rule__FunctionDeclaration__Group_2__0__Impl rule__FunctionDeclaration__Group_2__1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:978:1: ( rule__FunctionDeclaration__Group_2__0__Impl rule__FunctionDeclaration__Group_2__1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:979:2: rule__FunctionDeclaration__Group_2__0__Impl rule__FunctionDeclaration__Group_2__1
             {
-            pushFollow(FOLLOW_rule__FunctionDeclaration__Group_2__0__Impl_in_rule__FunctionDeclaration__Group_2__02041);
+            pushFollow(FOLLOW_rule__FunctionDeclaration__Group_2__0__Impl_in_rule__FunctionDeclaration__Group_2__01981);
             rule__FunctionDeclaration__Group_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__FunctionDeclaration__Group_2__1_in_rule__FunctionDeclaration__Group_2__02044);
+            pushFollow(FOLLOW_rule__FunctionDeclaration__Group_2__1_in_rule__FunctionDeclaration__Group_2__01984);
             rule__FunctionDeclaration__Group_2__1();
 
             state._fsp--;
@@ -2987,25 +2902,25 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionDeclaration__Group_2__0__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1014:1: rule__FunctionDeclaration__Group_2__0__Impl : ( ( rule__FunctionDeclaration__ParametersAssignment_2_0 ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:986:1: rule__FunctionDeclaration__Group_2__0__Impl : ( ( rule__FunctionDeclaration__ParametersAssignment_2_0 ) ) ;
     public final void rule__FunctionDeclaration__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1018:1: ( ( ( rule__FunctionDeclaration__ParametersAssignment_2_0 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1019:1: ( ( rule__FunctionDeclaration__ParametersAssignment_2_0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:990:1: ( ( ( rule__FunctionDeclaration__ParametersAssignment_2_0 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:991:1: ( ( rule__FunctionDeclaration__ParametersAssignment_2_0 ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1019:1: ( ( rule__FunctionDeclaration__ParametersAssignment_2_0 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1020:1: ( rule__FunctionDeclaration__ParametersAssignment_2_0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:991:1: ( ( rule__FunctionDeclaration__ParametersAssignment_2_0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:992:1: ( rule__FunctionDeclaration__ParametersAssignment_2_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFunctionDeclarationAccess().getParametersAssignment_2_0()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1021:1: ( rule__FunctionDeclaration__ParametersAssignment_2_0 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1021:2: rule__FunctionDeclaration__ParametersAssignment_2_0
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:993:1: ( rule__FunctionDeclaration__ParametersAssignment_2_0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:993:2: rule__FunctionDeclaration__ParametersAssignment_2_0
             {
-            pushFollow(FOLLOW_rule__FunctionDeclaration__ParametersAssignment_2_0_in_rule__FunctionDeclaration__Group_2__0__Impl2071);
+            pushFollow(FOLLOW_rule__FunctionDeclaration__ParametersAssignment_2_0_in_rule__FunctionDeclaration__Group_2__0__Impl2011);
             rule__FunctionDeclaration__ParametersAssignment_2_0();
 
             state._fsp--;
@@ -3038,16 +2953,16 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionDeclaration__Group_2__1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1031:1: rule__FunctionDeclaration__Group_2__1 : rule__FunctionDeclaration__Group_2__1__Impl ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1003:1: rule__FunctionDeclaration__Group_2__1 : rule__FunctionDeclaration__Group_2__1__Impl ;
     public final void rule__FunctionDeclaration__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1035:1: ( rule__FunctionDeclaration__Group_2__1__Impl )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1036:2: rule__FunctionDeclaration__Group_2__1__Impl
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1007:1: ( rule__FunctionDeclaration__Group_2__1__Impl )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1008:2: rule__FunctionDeclaration__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__FunctionDeclaration__Group_2__1__Impl_in_rule__FunctionDeclaration__Group_2__12101);
+            pushFollow(FOLLOW_rule__FunctionDeclaration__Group_2__1__Impl_in_rule__FunctionDeclaration__Group_2__12041);
             rule__FunctionDeclaration__Group_2__1__Impl();
 
             state._fsp--;
@@ -3071,22 +2986,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionDeclaration__Group_2__1__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1042:1: rule__FunctionDeclaration__Group_2__1__Impl : ( ( rule__FunctionDeclaration__Group_2_1__0 )* ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1014:1: rule__FunctionDeclaration__Group_2__1__Impl : ( ( rule__FunctionDeclaration__Group_2_1__0 )* ) ;
     public final void rule__FunctionDeclaration__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1046:1: ( ( ( rule__FunctionDeclaration__Group_2_1__0 )* ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1047:1: ( ( rule__FunctionDeclaration__Group_2_1__0 )* )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1018:1: ( ( ( rule__FunctionDeclaration__Group_2_1__0 )* ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1019:1: ( ( rule__FunctionDeclaration__Group_2_1__0 )* )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1047:1: ( ( rule__FunctionDeclaration__Group_2_1__0 )* )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1048:1: ( rule__FunctionDeclaration__Group_2_1__0 )*
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1019:1: ( ( rule__FunctionDeclaration__Group_2_1__0 )* )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1020:1: ( rule__FunctionDeclaration__Group_2_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFunctionDeclarationAccess().getGroup_2_1()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1049:1: ( rule__FunctionDeclaration__Group_2_1__0 )*
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1021:1: ( rule__FunctionDeclaration__Group_2_1__0 )*
             loop9:
             do {
                 int alt9=2;
@@ -3099,9 +3014,9 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
                 switch (alt9) {
             	case 1 :
-            	    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1049:2: rule__FunctionDeclaration__Group_2_1__0
+            	    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1021:2: rule__FunctionDeclaration__Group_2_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__FunctionDeclaration__Group_2_1__0_in_rule__FunctionDeclaration__Group_2__1__Impl2128);
+            	    pushFollow(FOLLOW_rule__FunctionDeclaration__Group_2_1__0_in_rule__FunctionDeclaration__Group_2__1__Impl2068);
             	    rule__FunctionDeclaration__Group_2_1__0();
 
             	    state._fsp--;
@@ -3140,21 +3055,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionDeclaration__Group_2_1__0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1063:1: rule__FunctionDeclaration__Group_2_1__0 : rule__FunctionDeclaration__Group_2_1__0__Impl rule__FunctionDeclaration__Group_2_1__1 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1035:1: rule__FunctionDeclaration__Group_2_1__0 : rule__FunctionDeclaration__Group_2_1__0__Impl rule__FunctionDeclaration__Group_2_1__1 ;
     public final void rule__FunctionDeclaration__Group_2_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1067:1: ( rule__FunctionDeclaration__Group_2_1__0__Impl rule__FunctionDeclaration__Group_2_1__1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1068:2: rule__FunctionDeclaration__Group_2_1__0__Impl rule__FunctionDeclaration__Group_2_1__1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1039:1: ( rule__FunctionDeclaration__Group_2_1__0__Impl rule__FunctionDeclaration__Group_2_1__1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1040:2: rule__FunctionDeclaration__Group_2_1__0__Impl rule__FunctionDeclaration__Group_2_1__1
             {
-            pushFollow(FOLLOW_rule__FunctionDeclaration__Group_2_1__0__Impl_in_rule__FunctionDeclaration__Group_2_1__02163);
+            pushFollow(FOLLOW_rule__FunctionDeclaration__Group_2_1__0__Impl_in_rule__FunctionDeclaration__Group_2_1__02103);
             rule__FunctionDeclaration__Group_2_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__FunctionDeclaration__Group_2_1__1_in_rule__FunctionDeclaration__Group_2_1__02166);
+            pushFollow(FOLLOW_rule__FunctionDeclaration__Group_2_1__1_in_rule__FunctionDeclaration__Group_2_1__02106);
             rule__FunctionDeclaration__Group_2_1__1();
 
             state._fsp--;
@@ -3178,22 +3093,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionDeclaration__Group_2_1__0__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1075:1: rule__FunctionDeclaration__Group_2_1__0__Impl : ( ',' ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1047:1: rule__FunctionDeclaration__Group_2_1__0__Impl : ( ',' ) ;
     public final void rule__FunctionDeclaration__Group_2_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1079:1: ( ( ',' ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1080:1: ( ',' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1051:1: ( ( ',' ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1052:1: ( ',' )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1080:1: ( ',' )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1081:1: ','
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1052:1: ( ',' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1053:1: ','
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFunctionDeclarationAccess().getCommaKeyword_2_1_0()); 
             }
-            match(input,20,FOLLOW_20_in_rule__FunctionDeclaration__Group_2_1__0__Impl2194); if (state.failed) return ;
+            match(input,20,FOLLOW_20_in_rule__FunctionDeclaration__Group_2_1__0__Impl2134); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFunctionDeclarationAccess().getCommaKeyword_2_1_0()); 
             }
@@ -3219,16 +3134,16 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionDeclaration__Group_2_1__1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1094:1: rule__FunctionDeclaration__Group_2_1__1 : rule__FunctionDeclaration__Group_2_1__1__Impl ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1066:1: rule__FunctionDeclaration__Group_2_1__1 : rule__FunctionDeclaration__Group_2_1__1__Impl ;
     public final void rule__FunctionDeclaration__Group_2_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1098:1: ( rule__FunctionDeclaration__Group_2_1__1__Impl )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1099:2: rule__FunctionDeclaration__Group_2_1__1__Impl
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1070:1: ( rule__FunctionDeclaration__Group_2_1__1__Impl )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1071:2: rule__FunctionDeclaration__Group_2_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__FunctionDeclaration__Group_2_1__1__Impl_in_rule__FunctionDeclaration__Group_2_1__12225);
+            pushFollow(FOLLOW_rule__FunctionDeclaration__Group_2_1__1__Impl_in_rule__FunctionDeclaration__Group_2_1__12165);
             rule__FunctionDeclaration__Group_2_1__1__Impl();
 
             state._fsp--;
@@ -3252,25 +3167,25 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionDeclaration__Group_2_1__1__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1105:1: rule__FunctionDeclaration__Group_2_1__1__Impl : ( ( rule__FunctionDeclaration__ParametersAssignment_2_1_1 ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1077:1: rule__FunctionDeclaration__Group_2_1__1__Impl : ( ( rule__FunctionDeclaration__ParametersAssignment_2_1_1 ) ) ;
     public final void rule__FunctionDeclaration__Group_2_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1109:1: ( ( ( rule__FunctionDeclaration__ParametersAssignment_2_1_1 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1110:1: ( ( rule__FunctionDeclaration__ParametersAssignment_2_1_1 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1081:1: ( ( ( rule__FunctionDeclaration__ParametersAssignment_2_1_1 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1082:1: ( ( rule__FunctionDeclaration__ParametersAssignment_2_1_1 ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1110:1: ( ( rule__FunctionDeclaration__ParametersAssignment_2_1_1 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1111:1: ( rule__FunctionDeclaration__ParametersAssignment_2_1_1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1082:1: ( ( rule__FunctionDeclaration__ParametersAssignment_2_1_1 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1083:1: ( rule__FunctionDeclaration__ParametersAssignment_2_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFunctionDeclarationAccess().getParametersAssignment_2_1_1()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1112:1: ( rule__FunctionDeclaration__ParametersAssignment_2_1_1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1112:2: rule__FunctionDeclaration__ParametersAssignment_2_1_1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1084:1: ( rule__FunctionDeclaration__ParametersAssignment_2_1_1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1084:2: rule__FunctionDeclaration__ParametersAssignment_2_1_1
             {
-            pushFollow(FOLLOW_rule__FunctionDeclaration__ParametersAssignment_2_1_1_in_rule__FunctionDeclaration__Group_2_1__1__Impl2252);
+            pushFollow(FOLLOW_rule__FunctionDeclaration__ParametersAssignment_2_1_1_in_rule__FunctionDeclaration__Group_2_1__1__Impl2192);
             rule__FunctionDeclaration__ParametersAssignment_2_1_1();
 
             state._fsp--;
@@ -3303,21 +3218,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Body__Group_1__0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1126:1: rule__Body__Group_1__0 : rule__Body__Group_1__0__Impl rule__Body__Group_1__1 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1098:1: rule__Body__Group_1__0 : rule__Body__Group_1__0__Impl rule__Body__Group_1__1 ;
     public final void rule__Body__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1130:1: ( rule__Body__Group_1__0__Impl rule__Body__Group_1__1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1131:2: rule__Body__Group_1__0__Impl rule__Body__Group_1__1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1102:1: ( rule__Body__Group_1__0__Impl rule__Body__Group_1__1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1103:2: rule__Body__Group_1__0__Impl rule__Body__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Body__Group_1__0__Impl_in_rule__Body__Group_1__02286);
+            pushFollow(FOLLOW_rule__Body__Group_1__0__Impl_in_rule__Body__Group_1__02226);
             rule__Body__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Body__Group_1__1_in_rule__Body__Group_1__02289);
+            pushFollow(FOLLOW_rule__Body__Group_1__1_in_rule__Body__Group_1__02229);
             rule__Body__Group_1__1();
 
             state._fsp--;
@@ -3341,23 +3256,23 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Body__Group_1__0__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1138:1: rule__Body__Group_1__0__Impl : ( () ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1110:1: rule__Body__Group_1__0__Impl : ( () ) ;
     public final void rule__Body__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1142:1: ( ( () ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1143:1: ( () )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1114:1: ( ( () ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1115:1: ( () )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1143:1: ( () )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1144:1: ()
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1115:1: ( () )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1116:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBodyAccess().getBodyAction_1_0()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1145:1: ()
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1147:1: 
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1117:1: ()
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1119:1: 
             {
             }
 
@@ -3382,21 +3297,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Body__Group_1__1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1157:1: rule__Body__Group_1__1 : rule__Body__Group_1__1__Impl rule__Body__Group_1__2 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1129:1: rule__Body__Group_1__1 : rule__Body__Group_1__1__Impl rule__Body__Group_1__2 ;
     public final void rule__Body__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1161:1: ( rule__Body__Group_1__1__Impl rule__Body__Group_1__2 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1162:2: rule__Body__Group_1__1__Impl rule__Body__Group_1__2
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1133:1: ( rule__Body__Group_1__1__Impl rule__Body__Group_1__2 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1134:2: rule__Body__Group_1__1__Impl rule__Body__Group_1__2
             {
-            pushFollow(FOLLOW_rule__Body__Group_1__1__Impl_in_rule__Body__Group_1__12347);
+            pushFollow(FOLLOW_rule__Body__Group_1__1__Impl_in_rule__Body__Group_1__12287);
             rule__Body__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Body__Group_1__2_in_rule__Body__Group_1__12350);
+            pushFollow(FOLLOW_rule__Body__Group_1__2_in_rule__Body__Group_1__12290);
             rule__Body__Group_1__2();
 
             state._fsp--;
@@ -3420,22 +3335,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Body__Group_1__1__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1169:1: rule__Body__Group_1__1__Impl : ( '{' ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1141:1: rule__Body__Group_1__1__Impl : ( '{' ) ;
     public final void rule__Body__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1173:1: ( ( '{' ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1174:1: ( '{' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1145:1: ( ( '{' ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1146:1: ( '{' )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1174:1: ( '{' )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1175:1: '{'
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1146:1: ( '{' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1147:1: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBodyAccess().getLeftCurlyBracketKeyword_1_1()); 
             }
-            match(input,21,FOLLOW_21_in_rule__Body__Group_1__1__Impl2378); if (state.failed) return ;
+            match(input,21,FOLLOW_21_in_rule__Body__Group_1__1__Impl2318); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBodyAccess().getLeftCurlyBracketKeyword_1_1()); 
             }
@@ -3461,21 +3376,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Body__Group_1__2"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1188:1: rule__Body__Group_1__2 : rule__Body__Group_1__2__Impl rule__Body__Group_1__3 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1160:1: rule__Body__Group_1__2 : rule__Body__Group_1__2__Impl rule__Body__Group_1__3 ;
     public final void rule__Body__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1192:1: ( rule__Body__Group_1__2__Impl rule__Body__Group_1__3 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1193:2: rule__Body__Group_1__2__Impl rule__Body__Group_1__3
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1164:1: ( rule__Body__Group_1__2__Impl rule__Body__Group_1__3 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1165:2: rule__Body__Group_1__2__Impl rule__Body__Group_1__3
             {
-            pushFollow(FOLLOW_rule__Body__Group_1__2__Impl_in_rule__Body__Group_1__22409);
+            pushFollow(FOLLOW_rule__Body__Group_1__2__Impl_in_rule__Body__Group_1__22349);
             rule__Body__Group_1__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Body__Group_1__3_in_rule__Body__Group_1__22412);
+            pushFollow(FOLLOW_rule__Body__Group_1__3_in_rule__Body__Group_1__22352);
             rule__Body__Group_1__3();
 
             state._fsp--;
@@ -3499,22 +3414,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Body__Group_1__2__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1200:1: rule__Body__Group_1__2__Impl : ( ( rule__Body__Group_1_2__0 )* ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1172:1: rule__Body__Group_1__2__Impl : ( ( rule__Body__Group_1_2__0 )* ) ;
     public final void rule__Body__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1204:1: ( ( ( rule__Body__Group_1_2__0 )* ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1205:1: ( ( rule__Body__Group_1_2__0 )* )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1176:1: ( ( ( rule__Body__Group_1_2__0 )* ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1177:1: ( ( rule__Body__Group_1_2__0 )* )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1205:1: ( ( rule__Body__Group_1_2__0 )* )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1206:1: ( rule__Body__Group_1_2__0 )*
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1177:1: ( ( rule__Body__Group_1_2__0 )* )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1178:1: ( rule__Body__Group_1_2__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBodyAccess().getGroup_1_2()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1207:1: ( rule__Body__Group_1_2__0 )*
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1179:1: ( rule__Body__Group_1_2__0 )*
             loop10:
             do {
                 int alt10=2;
@@ -3527,9 +3442,9 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
                 switch (alt10) {
             	case 1 :
-            	    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1207:2: rule__Body__Group_1_2__0
+            	    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1179:2: rule__Body__Group_1_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__Body__Group_1_2__0_in_rule__Body__Group_1__2__Impl2439);
+            	    pushFollow(FOLLOW_rule__Body__Group_1_2__0_in_rule__Body__Group_1__2__Impl2379);
             	    rule__Body__Group_1_2__0();
 
             	    state._fsp--;
@@ -3568,16 +3483,16 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Body__Group_1__3"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1217:1: rule__Body__Group_1__3 : rule__Body__Group_1__3__Impl ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1189:1: rule__Body__Group_1__3 : rule__Body__Group_1__3__Impl ;
     public final void rule__Body__Group_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1221:1: ( rule__Body__Group_1__3__Impl )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1222:2: rule__Body__Group_1__3__Impl
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1193:1: ( rule__Body__Group_1__3__Impl )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1194:2: rule__Body__Group_1__3__Impl
             {
-            pushFollow(FOLLOW_rule__Body__Group_1__3__Impl_in_rule__Body__Group_1__32470);
+            pushFollow(FOLLOW_rule__Body__Group_1__3__Impl_in_rule__Body__Group_1__32410);
             rule__Body__Group_1__3__Impl();
 
             state._fsp--;
@@ -3601,22 +3516,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Body__Group_1__3__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1228:1: rule__Body__Group_1__3__Impl : ( '}' ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1200:1: rule__Body__Group_1__3__Impl : ( '}' ) ;
     public final void rule__Body__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1232:1: ( ( '}' ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1233:1: ( '}' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1204:1: ( ( '}' ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1205:1: ( '}' )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1233:1: ( '}' )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1234:1: '}'
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1205:1: ( '}' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1206:1: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBodyAccess().getRightCurlyBracketKeyword_1_3()); 
             }
-            match(input,22,FOLLOW_22_in_rule__Body__Group_1__3__Impl2498); if (state.failed) return ;
+            match(input,22,FOLLOW_22_in_rule__Body__Group_1__3__Impl2438); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBodyAccess().getRightCurlyBracketKeyword_1_3()); 
             }
@@ -3642,21 +3557,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Body__Group_1_2__0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1255:1: rule__Body__Group_1_2__0 : rule__Body__Group_1_2__0__Impl rule__Body__Group_1_2__1 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1227:1: rule__Body__Group_1_2__0 : rule__Body__Group_1_2__0__Impl rule__Body__Group_1_2__1 ;
     public final void rule__Body__Group_1_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1259:1: ( rule__Body__Group_1_2__0__Impl rule__Body__Group_1_2__1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1260:2: rule__Body__Group_1_2__0__Impl rule__Body__Group_1_2__1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1231:1: ( rule__Body__Group_1_2__0__Impl rule__Body__Group_1_2__1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1232:2: rule__Body__Group_1_2__0__Impl rule__Body__Group_1_2__1
             {
-            pushFollow(FOLLOW_rule__Body__Group_1_2__0__Impl_in_rule__Body__Group_1_2__02537);
+            pushFollow(FOLLOW_rule__Body__Group_1_2__0__Impl_in_rule__Body__Group_1_2__02477);
             rule__Body__Group_1_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Body__Group_1_2__1_in_rule__Body__Group_1_2__02540);
+            pushFollow(FOLLOW_rule__Body__Group_1_2__1_in_rule__Body__Group_1_2__02480);
             rule__Body__Group_1_2__1();
 
             state._fsp--;
@@ -3680,25 +3595,25 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Body__Group_1_2__0__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1267:1: rule__Body__Group_1_2__0__Impl : ( ( rule__Body__ExpressionsAssignment_1_2_0 ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1239:1: rule__Body__Group_1_2__0__Impl : ( ( rule__Body__ExpressionsAssignment_1_2_0 ) ) ;
     public final void rule__Body__Group_1_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1271:1: ( ( ( rule__Body__ExpressionsAssignment_1_2_0 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1272:1: ( ( rule__Body__ExpressionsAssignment_1_2_0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1243:1: ( ( ( rule__Body__ExpressionsAssignment_1_2_0 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1244:1: ( ( rule__Body__ExpressionsAssignment_1_2_0 ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1272:1: ( ( rule__Body__ExpressionsAssignment_1_2_0 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1273:1: ( rule__Body__ExpressionsAssignment_1_2_0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1244:1: ( ( rule__Body__ExpressionsAssignment_1_2_0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1245:1: ( rule__Body__ExpressionsAssignment_1_2_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBodyAccess().getExpressionsAssignment_1_2_0()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1274:1: ( rule__Body__ExpressionsAssignment_1_2_0 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1274:2: rule__Body__ExpressionsAssignment_1_2_0
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1246:1: ( rule__Body__ExpressionsAssignment_1_2_0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1246:2: rule__Body__ExpressionsAssignment_1_2_0
             {
-            pushFollow(FOLLOW_rule__Body__ExpressionsAssignment_1_2_0_in_rule__Body__Group_1_2__0__Impl2567);
+            pushFollow(FOLLOW_rule__Body__ExpressionsAssignment_1_2_0_in_rule__Body__Group_1_2__0__Impl2507);
             rule__Body__ExpressionsAssignment_1_2_0();
 
             state._fsp--;
@@ -3731,16 +3646,16 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Body__Group_1_2__1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1284:1: rule__Body__Group_1_2__1 : rule__Body__Group_1_2__1__Impl ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1256:1: rule__Body__Group_1_2__1 : rule__Body__Group_1_2__1__Impl ;
     public final void rule__Body__Group_1_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1288:1: ( rule__Body__Group_1_2__1__Impl )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1289:2: rule__Body__Group_1_2__1__Impl
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1260:1: ( rule__Body__Group_1_2__1__Impl )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1261:2: rule__Body__Group_1_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Body__Group_1_2__1__Impl_in_rule__Body__Group_1_2__12597);
+            pushFollow(FOLLOW_rule__Body__Group_1_2__1__Impl_in_rule__Body__Group_1_2__12537);
             rule__Body__Group_1_2__1__Impl();
 
             state._fsp--;
@@ -3764,22 +3679,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Body__Group_1_2__1__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1295:1: rule__Body__Group_1_2__1__Impl : ( ';' ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1267:1: rule__Body__Group_1_2__1__Impl : ( ';' ) ;
     public final void rule__Body__Group_1_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1299:1: ( ( ';' ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1300:1: ( ';' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1271:1: ( ( ';' ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1272:1: ( ';' )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1300:1: ( ';' )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1301:1: ';'
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1272:1: ( ';' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1273:1: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBodyAccess().getSemicolonKeyword_1_2_1()); 
             }
-            match(input,16,FOLLOW_16_in_rule__Body__Group_1_2__1__Impl2625); if (state.failed) return ;
+            match(input,16,FOLLOW_16_in_rule__Body__Group_1_2__1__Impl2565); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBodyAccess().getSemicolonKeyword_1_2_1()); 
             }
@@ -3805,21 +3720,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Apply__Group__0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1318:1: rule__Apply__Group__0 : rule__Apply__Group__0__Impl rule__Apply__Group__1 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1290:1: rule__Apply__Group__0 : rule__Apply__Group__0__Impl rule__Apply__Group__1 ;
     public final void rule__Apply__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1322:1: ( rule__Apply__Group__0__Impl rule__Apply__Group__1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1323:2: rule__Apply__Group__0__Impl rule__Apply__Group__1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1294:1: ( rule__Apply__Group__0__Impl rule__Apply__Group__1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1295:2: rule__Apply__Group__0__Impl rule__Apply__Group__1
             {
-            pushFollow(FOLLOW_rule__Apply__Group__0__Impl_in_rule__Apply__Group__02660);
+            pushFollow(FOLLOW_rule__Apply__Group__0__Impl_in_rule__Apply__Group__02600);
             rule__Apply__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Apply__Group__1_in_rule__Apply__Group__02663);
+            pushFollow(FOLLOW_rule__Apply__Group__1_in_rule__Apply__Group__02603);
             rule__Apply__Group__1();
 
             state._fsp--;
@@ -3843,22 +3758,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Apply__Group__0__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1330:1: rule__Apply__Group__0__Impl : ( ruleFunctor ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1302:1: rule__Apply__Group__0__Impl : ( ruleFunctor ) ;
     public final void rule__Apply__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1334:1: ( ( ruleFunctor ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1335:1: ( ruleFunctor )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1306:1: ( ( ruleFunctor ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1307:1: ( ruleFunctor )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1335:1: ( ruleFunctor )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1336:1: ruleFunctor
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1307:1: ( ruleFunctor )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1308:1: ruleFunctor
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getApplyAccess().getFunctorParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleFunctor_in_rule__Apply__Group__0__Impl2690);
+            pushFollow(FOLLOW_ruleFunctor_in_rule__Apply__Group__0__Impl2630);
             ruleFunctor();
 
             state._fsp--;
@@ -3888,16 +3803,16 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Apply__Group__1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1347:1: rule__Apply__Group__1 : rule__Apply__Group__1__Impl ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1319:1: rule__Apply__Group__1 : rule__Apply__Group__1__Impl ;
     public final void rule__Apply__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1351:1: ( rule__Apply__Group__1__Impl )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1352:2: rule__Apply__Group__1__Impl
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1323:1: ( rule__Apply__Group__1__Impl )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1324:2: rule__Apply__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Apply__Group__1__Impl_in_rule__Apply__Group__12719);
+            pushFollow(FOLLOW_rule__Apply__Group__1__Impl_in_rule__Apply__Group__12659);
             rule__Apply__Group__1__Impl();
 
             state._fsp--;
@@ -3921,42 +3836,49 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Apply__Group__1__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1358:1: rule__Apply__Group__1__Impl : ( ( rule__Apply__Group_1__0 )? ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1330:1: rule__Apply__Group__1__Impl : ( ( rule__Apply__Group_1__0 )* ) ;
     public final void rule__Apply__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1362:1: ( ( ( rule__Apply__Group_1__0 )? ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1363:1: ( ( rule__Apply__Group_1__0 )? )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1334:1: ( ( ( rule__Apply__Group_1__0 )* ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1335:1: ( ( rule__Apply__Group_1__0 )* )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1363:1: ( ( rule__Apply__Group_1__0 )? )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1364:1: ( rule__Apply__Group_1__0 )?
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1335:1: ( ( rule__Apply__Group_1__0 )* )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1336:1: ( rule__Apply__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getApplyAccess().getGroup_1()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1365:1: ( rule__Apply__Group_1__0 )?
-            int alt11=2;
-            int LA11_0 = input.LA(1);
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1337:1: ( rule__Apply__Group_1__0 )*
+            loop11:
+            do {
+                int alt11=2;
+                int LA11_0 = input.LA(1);
 
-            if ( (LA11_0==18) ) {
-                alt11=1;
-            }
-            switch (alt11) {
-                case 1 :
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1365:2: rule__Apply__Group_1__0
-                    {
-                    pushFollow(FOLLOW_rule__Apply__Group_1__0_in_rule__Apply__Group__1__Impl2746);
-                    rule__Apply__Group_1__0();
+                if ( (LA11_0==18) ) {
+                    alt11=1;
+                }
 
-                    state._fsp--;
-                    if (state.failed) return ;
 
-                    }
-                    break;
+                switch (alt11) {
+            	case 1 :
+            	    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1337:2: rule__Apply__Group_1__0
+            	    {
+            	    pushFollow(FOLLOW_rule__Apply__Group_1__0_in_rule__Apply__Group__1__Impl2686);
+            	    rule__Apply__Group_1__0();
 
-            }
+            	    state._fsp--;
+            	    if (state.failed) return ;
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop11;
+                }
+            } while (true);
 
             if ( state.backtracking==0 ) {
                after(grammarAccess.getApplyAccess().getGroup_1()); 
@@ -3983,21 +3905,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Apply__Group_1__0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1379:1: rule__Apply__Group_1__0 : rule__Apply__Group_1__0__Impl rule__Apply__Group_1__1 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1351:1: rule__Apply__Group_1__0 : rule__Apply__Group_1__0__Impl rule__Apply__Group_1__1 ;
     public final void rule__Apply__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1383:1: ( rule__Apply__Group_1__0__Impl rule__Apply__Group_1__1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1384:2: rule__Apply__Group_1__0__Impl rule__Apply__Group_1__1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1355:1: ( rule__Apply__Group_1__0__Impl rule__Apply__Group_1__1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1356:2: rule__Apply__Group_1__0__Impl rule__Apply__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Apply__Group_1__0__Impl_in_rule__Apply__Group_1__02781);
+            pushFollow(FOLLOW_rule__Apply__Group_1__0__Impl_in_rule__Apply__Group_1__02721);
             rule__Apply__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Apply__Group_1__1_in_rule__Apply__Group_1__02784);
+            pushFollow(FOLLOW_rule__Apply__Group_1__1_in_rule__Apply__Group_1__02724);
             rule__Apply__Group_1__1();
 
             state._fsp--;
@@ -4021,23 +3943,23 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Apply__Group_1__0__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1391:1: rule__Apply__Group_1__0__Impl : ( () ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1363:1: rule__Apply__Group_1__0__Impl : ( () ) ;
     public final void rule__Apply__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1395:1: ( ( () ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1396:1: ( () )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1367:1: ( ( () ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1368:1: ( () )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1396:1: ( () )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1397:1: ()
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1368:1: ( () )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1369:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getApplyAccess().getApplyFunctorAction_1_0()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1398:1: ()
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1400:1: 
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1370:1: ()
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1372:1: 
             {
             }
 
@@ -4062,17 +3984,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Apply__Group_1__1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1410:1: rule__Apply__Group_1__1 : rule__Apply__Group_1__1__Impl ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1382:1: rule__Apply__Group_1__1 : rule__Apply__Group_1__1__Impl rule__Apply__Group_1__2 ;
     public final void rule__Apply__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1414:1: ( rule__Apply__Group_1__1__Impl )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1415:2: rule__Apply__Group_1__1__Impl
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1386:1: ( rule__Apply__Group_1__1__Impl rule__Apply__Group_1__2 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1387:2: rule__Apply__Group_1__1__Impl rule__Apply__Group_1__2
             {
-            pushFollow(FOLLOW_rule__Apply__Group_1__1__Impl_in_rule__Apply__Group_1__12842);
+            pushFollow(FOLLOW_rule__Apply__Group_1__1__Impl_in_rule__Apply__Group_1__12782);
             rule__Apply__Group_1__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__Apply__Group_1__2_in_rule__Apply__Group_1__12785);
+            rule__Apply__Group_1__2();
 
             state._fsp--;
             if (state.failed) return ;
@@ -4095,34 +4022,24 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Apply__Group_1__1__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1421:1: rule__Apply__Group_1__1__Impl : ( ( rule__Apply__ArgumentsAssignment_1_1 ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1394:1: rule__Apply__Group_1__1__Impl : ( '(' ) ;
     public final void rule__Apply__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1425:1: ( ( ( rule__Apply__ArgumentsAssignment_1_1 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1426:1: ( ( rule__Apply__ArgumentsAssignment_1_1 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1398:1: ( ( '(' ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1399:1: ( '(' )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1426:1: ( ( rule__Apply__ArgumentsAssignment_1_1 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1427:1: ( rule__Apply__ArgumentsAssignment_1_1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1399:1: ( '(' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1400:1: '('
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getApplyAccess().getArgumentsAssignment_1_1()); 
+               before(grammarAccess.getApplyAccess().getLeftParenthesisKeyword_1_1()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1428:1: ( rule__Apply__ArgumentsAssignment_1_1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1428:2: rule__Apply__ArgumentsAssignment_1_1
-            {
-            pushFollow(FOLLOW_rule__Apply__ArgumentsAssignment_1_1_in_rule__Apply__Group_1__1__Impl2869);
-            rule__Apply__ArgumentsAssignment_1_1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
+            match(input,18,FOLLOW_18_in_rule__Apply__Group_1__1__Impl2813); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getApplyAccess().getArgumentsAssignment_1_1()); 
+               after(grammarAccess.getApplyAccess().getLeftParenthesisKeyword_1_1()); 
             }
 
             }
@@ -4145,102 +4062,23 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Apply__Group_1__1__Impl"
 
 
-    // $ANTLR start "rule__ApplyTail__Group__0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1442:1: rule__ApplyTail__Group__0 : rule__ApplyTail__Group__0__Impl rule__ApplyTail__Group__1 ;
-    public final void rule__ApplyTail__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__Apply__Group_1__2"
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1413:1: rule__Apply__Group_1__2 : rule__Apply__Group_1__2__Impl rule__Apply__Group_1__3 ;
+    public final void rule__Apply__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1446:1: ( rule__ApplyTail__Group__0__Impl rule__ApplyTail__Group__1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1447:2: rule__ApplyTail__Group__0__Impl rule__ApplyTail__Group__1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1417:1: ( rule__Apply__Group_1__2__Impl rule__Apply__Group_1__3 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1418:2: rule__Apply__Group_1__2__Impl rule__Apply__Group_1__3
             {
-            pushFollow(FOLLOW_rule__ApplyTail__Group__0__Impl_in_rule__ApplyTail__Group__02903);
-            rule__ApplyTail__Group__0__Impl();
+            pushFollow(FOLLOW_rule__Apply__Group_1__2__Impl_in_rule__Apply__Group_1__22844);
+            rule__Apply__Group_1__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ApplyTail__Group__1_in_rule__ApplyTail__Group__02906);
-            rule__ApplyTail__Group__1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ApplyTail__Group__0"
-
-
-    // $ANTLR start "rule__ApplyTail__Group__0__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1454:1: rule__ApplyTail__Group__0__Impl : ( () ) ;
-    public final void rule__ApplyTail__Group__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1458:1: ( ( () ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1459:1: ( () )
-            {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1459:1: ( () )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1460:1: ()
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getApplyTailAccess().getApplyTailAction_0()); 
-            }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1461:1: ()
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1463:1: 
-            {
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getApplyTailAccess().getApplyTailAction_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ApplyTail__Group__0__Impl"
-
-
-    // $ANTLR start "rule__ApplyTail__Group__1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1473:1: rule__ApplyTail__Group__1 : rule__ApplyTail__Group__1__Impl rule__ApplyTail__Group__2 ;
-    public final void rule__ApplyTail__Group__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1477:1: ( rule__ApplyTail__Group__1__Impl rule__ApplyTail__Group__2 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1478:2: rule__ApplyTail__Group__1__Impl rule__ApplyTail__Group__2
-            {
-            pushFollow(FOLLOW_rule__ApplyTail__Group__1__Impl_in_rule__ApplyTail__Group__12964);
-            rule__ApplyTail__Group__1__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ApplyTail__Group__2_in_rule__ApplyTail__Group__12967);
-            rule__ApplyTail__Group__2();
+            pushFollow(FOLLOW_rule__Apply__Group_1__3_in_rule__Apply__Group_1__22847);
+            rule__Apply__Group_1__3();
 
             state._fsp--;
             if (state.failed) return ;
@@ -4259,105 +4097,26 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__ApplyTail__Group__1"
+    // $ANTLR end "rule__Apply__Group_1__2"
 
 
-    // $ANTLR start "rule__ApplyTail__Group__1__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1485:1: rule__ApplyTail__Group__1__Impl : ( '(' ) ;
-    public final void rule__ApplyTail__Group__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1489:1: ( ( '(' ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1490:1: ( '(' )
-            {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1490:1: ( '(' )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1491:1: '('
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getApplyTailAccess().getLeftParenthesisKeyword_1()); 
-            }
-            match(input,18,FOLLOW_18_in_rule__ApplyTail__Group__1__Impl2995); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getApplyTailAccess().getLeftParenthesisKeyword_1()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ApplyTail__Group__1__Impl"
-
-
-    // $ANTLR start "rule__ApplyTail__Group__2"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1504:1: rule__ApplyTail__Group__2 : rule__ApplyTail__Group__2__Impl rule__ApplyTail__Group__3 ;
-    public final void rule__ApplyTail__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__Apply__Group_1__2__Impl"
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1425:1: rule__Apply__Group_1__2__Impl : ( ( rule__Apply__Group_1_2__0 )? ) ;
+    public final void rule__Apply__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1508:1: ( rule__ApplyTail__Group__2__Impl rule__ApplyTail__Group__3 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1509:2: rule__ApplyTail__Group__2__Impl rule__ApplyTail__Group__3
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1429:1: ( ( ( rule__Apply__Group_1_2__0 )? ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1430:1: ( ( rule__Apply__Group_1_2__0 )? )
             {
-            pushFollow(FOLLOW_rule__ApplyTail__Group__2__Impl_in_rule__ApplyTail__Group__23026);
-            rule__ApplyTail__Group__2__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ApplyTail__Group__3_in_rule__ApplyTail__Group__23029);
-            rule__ApplyTail__Group__3();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ApplyTail__Group__2"
-
-
-    // $ANTLR start "rule__ApplyTail__Group__2__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1516:1: rule__ApplyTail__Group__2__Impl : ( ( rule__ApplyTail__Group_2__0 )? ) ;
-    public final void rule__ApplyTail__Group__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1520:1: ( ( ( rule__ApplyTail__Group_2__0 )? ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1521:1: ( ( rule__ApplyTail__Group_2__0 )? )
-            {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1521:1: ( ( rule__ApplyTail__Group_2__0 )? )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1522:1: ( rule__ApplyTail__Group_2__0 )?
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1430:1: ( ( rule__Apply__Group_1_2__0 )? )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1431:1: ( rule__Apply__Group_1_2__0 )?
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getApplyTailAccess().getGroup_2()); 
+               before(grammarAccess.getApplyAccess().getGroup_1_2()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1523:1: ( rule__ApplyTail__Group_2__0 )?
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1432:1: ( rule__Apply__Group_1_2__0 )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -4366,10 +4125,10 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
             }
             switch (alt12) {
                 case 1 :
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1523:2: rule__ApplyTail__Group_2__0
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1432:2: rule__Apply__Group_1_2__0
                     {
-                    pushFollow(FOLLOW_rule__ApplyTail__Group_2__0_in_rule__ApplyTail__Group__2__Impl3056);
-                    rule__ApplyTail__Group_2__0();
+                    pushFollow(FOLLOW_rule__Apply__Group_1_2__0_in_rule__Apply__Group_1__2__Impl2874);
+                    rule__Apply__Group_1_2__0();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -4380,7 +4139,7 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getApplyTailAccess().getGroup_2()); 
+               after(grammarAccess.getApplyAccess().getGroup_1_2()); 
             }
 
             }
@@ -4400,26 +4159,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__ApplyTail__Group__2__Impl"
+    // $ANTLR end "rule__Apply__Group_1__2__Impl"
 
 
-    // $ANTLR start "rule__ApplyTail__Group__3"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1533:1: rule__ApplyTail__Group__3 : rule__ApplyTail__Group__3__Impl rule__ApplyTail__Group__4 ;
-    public final void rule__ApplyTail__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__Apply__Group_1__3"
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1442:1: rule__Apply__Group_1__3 : rule__Apply__Group_1__3__Impl ;
+    public final void rule__Apply__Group_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1537:1: ( rule__ApplyTail__Group__3__Impl rule__ApplyTail__Group__4 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1538:2: rule__ApplyTail__Group__3__Impl rule__ApplyTail__Group__4
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1446:1: ( rule__Apply__Group_1__3__Impl )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1447:2: rule__Apply__Group_1__3__Impl
             {
-            pushFollow(FOLLOW_rule__ApplyTail__Group__3__Impl_in_rule__ApplyTail__Group__33087);
-            rule__ApplyTail__Group__3__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ApplyTail__Group__4_in_rule__ApplyTail__Group__33090);
-            rule__ApplyTail__Group__4();
+            pushFollow(FOLLOW_rule__Apply__Group_1__3__Impl_in_rule__Apply__Group_1__32905);
+            rule__Apply__Group_1__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
@@ -4438,28 +4192,28 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__ApplyTail__Group__3"
+    // $ANTLR end "rule__Apply__Group_1__3"
 
 
-    // $ANTLR start "rule__ApplyTail__Group__3__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1545:1: rule__ApplyTail__Group__3__Impl : ( ')' ) ;
-    public final void rule__ApplyTail__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Apply__Group_1__3__Impl"
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1453:1: rule__Apply__Group_1__3__Impl : ( ')' ) ;
+    public final void rule__Apply__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1549:1: ( ( ')' ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1550:1: ( ')' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1457:1: ( ( ')' ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1458:1: ( ')' )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1550:1: ( ')' )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1551:1: ')'
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1458:1: ( ')' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1459:1: ')'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getApplyTailAccess().getRightParenthesisKeyword_3()); 
+               before(grammarAccess.getApplyAccess().getRightParenthesisKeyword_1_3()); 
             }
-            match(input,19,FOLLOW_19_in_rule__ApplyTail__Group__3__Impl3118); if (state.failed) return ;
+            match(input,19,FOLLOW_19_in_rule__Apply__Group_1__3__Impl2933); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getApplyTailAccess().getRightParenthesisKeyword_3()); 
+               after(grammarAccess.getApplyAccess().getRightParenthesisKeyword_1_3()); 
             }
 
             }
@@ -4479,21 +4233,26 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__ApplyTail__Group__3__Impl"
+    // $ANTLR end "rule__Apply__Group_1__3__Impl"
 
 
-    // $ANTLR start "rule__ApplyTail__Group__4"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1564:1: rule__ApplyTail__Group__4 : rule__ApplyTail__Group__4__Impl ;
-    public final void rule__ApplyTail__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__Apply__Group_1_2__0"
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1480:1: rule__Apply__Group_1_2__0 : rule__Apply__Group_1_2__0__Impl rule__Apply__Group_1_2__1 ;
+    public final void rule__Apply__Group_1_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1568:1: ( rule__ApplyTail__Group__4__Impl )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1569:2: rule__ApplyTail__Group__4__Impl
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1484:1: ( rule__Apply__Group_1_2__0__Impl rule__Apply__Group_1_2__1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1485:2: rule__Apply__Group_1_2__0__Impl rule__Apply__Group_1_2__1
             {
-            pushFollow(FOLLOW_rule__ApplyTail__Group__4__Impl_in_rule__ApplyTail__Group__43149);
-            rule__ApplyTail__Group__4__Impl();
+            pushFollow(FOLLOW_rule__Apply__Group_1_2__0__Impl_in_rule__Apply__Group_1_2__02972);
+            rule__Apply__Group_1_2__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__Apply__Group_1_2__1_in_rule__Apply__Group_1_2__02975);
+            rule__Apply__Group_1_2__1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -4512,49 +4271,38 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__ApplyTail__Group__4"
+    // $ANTLR end "rule__Apply__Group_1_2__0"
 
 
-    // $ANTLR start "rule__ApplyTail__Group__4__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1575:1: rule__ApplyTail__Group__4__Impl : ( ( rule__ApplyTail__NextCallAssignment_4 )? ) ;
-    public final void rule__ApplyTail__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Apply__Group_1_2__0__Impl"
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1492:1: rule__Apply__Group_1_2__0__Impl : ( ( rule__Apply__ArgumentsAssignment_1_2_0 ) ) ;
+    public final void rule__Apply__Group_1_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1579:1: ( ( ( rule__ApplyTail__NextCallAssignment_4 )? ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1580:1: ( ( rule__ApplyTail__NextCallAssignment_4 )? )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1496:1: ( ( ( rule__Apply__ArgumentsAssignment_1_2_0 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1497:1: ( ( rule__Apply__ArgumentsAssignment_1_2_0 ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1580:1: ( ( rule__ApplyTail__NextCallAssignment_4 )? )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1581:1: ( rule__ApplyTail__NextCallAssignment_4 )?
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1497:1: ( ( rule__Apply__ArgumentsAssignment_1_2_0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1498:1: ( rule__Apply__ArgumentsAssignment_1_2_0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getApplyTailAccess().getNextCallAssignment_4()); 
+               before(grammarAccess.getApplyAccess().getArgumentsAssignment_1_2_0()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1582:1: ( rule__ApplyTail__NextCallAssignment_4 )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1499:1: ( rule__Apply__ArgumentsAssignment_1_2_0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1499:2: rule__Apply__ArgumentsAssignment_1_2_0
+            {
+            pushFollow(FOLLOW_rule__Apply__ArgumentsAssignment_1_2_0_in_rule__Apply__Group_1_2__0__Impl3002);
+            rule__Apply__ArgumentsAssignment_1_2_0();
 
-            if ( (LA13_0==18) ) {
-                alt13=1;
-            }
-            switch (alt13) {
-                case 1 :
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1582:2: rule__ApplyTail__NextCallAssignment_4
-                    {
-                    pushFollow(FOLLOW_rule__ApplyTail__NextCallAssignment_4_in_rule__ApplyTail__Group__4__Impl3176);
-                    rule__ApplyTail__NextCallAssignment_4();
-
-                    state._fsp--;
-                    if (state.failed) return ;
-
-                    }
-                    break;
+            state._fsp--;
+            if (state.failed) return ;
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getApplyTailAccess().getNextCallAssignment_4()); 
+               after(grammarAccess.getApplyAccess().getArgumentsAssignment_1_2_0()); 
             }
 
             }
@@ -4574,26 +4322,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__ApplyTail__Group__4__Impl"
+    // $ANTLR end "rule__Apply__Group_1_2__0__Impl"
 
 
-    // $ANTLR start "rule__ApplyTail__Group_2__0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1602:1: rule__ApplyTail__Group_2__0 : rule__ApplyTail__Group_2__0__Impl rule__ApplyTail__Group_2__1 ;
-    public final void rule__ApplyTail__Group_2__0() throws RecognitionException {
+    // $ANTLR start "rule__Apply__Group_1_2__1"
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1509:1: rule__Apply__Group_1_2__1 : rule__Apply__Group_1_2__1__Impl ;
+    public final void rule__Apply__Group_1_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1606:1: ( rule__ApplyTail__Group_2__0__Impl rule__ApplyTail__Group_2__1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1607:2: rule__ApplyTail__Group_2__0__Impl rule__ApplyTail__Group_2__1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1513:1: ( rule__Apply__Group_1_2__1__Impl )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1514:2: rule__Apply__Group_1_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__ApplyTail__Group_2__0__Impl_in_rule__ApplyTail__Group_2__03217);
-            rule__ApplyTail__Group_2__0__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ApplyTail__Group_2__1_in_rule__ApplyTail__Group_2__03220);
-            rule__ApplyTail__Group_2__1();
+            pushFollow(FOLLOW_rule__Apply__Group_1_2__1__Impl_in_rule__Apply__Group_1_2__13032);
+            rule__Apply__Group_1_2__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
@@ -4612,126 +4355,42 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__ApplyTail__Group_2__0"
+    // $ANTLR end "rule__Apply__Group_1_2__1"
 
 
-    // $ANTLR start "rule__ApplyTail__Group_2__0__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1614:1: rule__ApplyTail__Group_2__0__Impl : ( ( rule__ApplyTail__ArgumentsAssignment_2_0 ) ) ;
-    public final void rule__ApplyTail__Group_2__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1618:1: ( ( ( rule__ApplyTail__ArgumentsAssignment_2_0 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1619:1: ( ( rule__ApplyTail__ArgumentsAssignment_2_0 ) )
-            {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1619:1: ( ( rule__ApplyTail__ArgumentsAssignment_2_0 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1620:1: ( rule__ApplyTail__ArgumentsAssignment_2_0 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getApplyTailAccess().getArgumentsAssignment_2_0()); 
-            }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1621:1: ( rule__ApplyTail__ArgumentsAssignment_2_0 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1621:2: rule__ApplyTail__ArgumentsAssignment_2_0
-            {
-            pushFollow(FOLLOW_rule__ApplyTail__ArgumentsAssignment_2_0_in_rule__ApplyTail__Group_2__0__Impl3247);
-            rule__ApplyTail__ArgumentsAssignment_2_0();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getApplyTailAccess().getArgumentsAssignment_2_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ApplyTail__Group_2__0__Impl"
-
-
-    // $ANTLR start "rule__ApplyTail__Group_2__1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1631:1: rule__ApplyTail__Group_2__1 : rule__ApplyTail__Group_2__1__Impl ;
-    public final void rule__ApplyTail__Group_2__1() throws RecognitionException {
+    // $ANTLR start "rule__Apply__Group_1_2__1__Impl"
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1520:1: rule__Apply__Group_1_2__1__Impl : ( ( rule__Apply__Group_1_2_1__0 )* ) ;
+    public final void rule__Apply__Group_1_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1635:1: ( rule__ApplyTail__Group_2__1__Impl )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1636:2: rule__ApplyTail__Group_2__1__Impl
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1524:1: ( ( ( rule__Apply__Group_1_2_1__0 )* ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1525:1: ( ( rule__Apply__Group_1_2_1__0 )* )
             {
-            pushFollow(FOLLOW_rule__ApplyTail__Group_2__1__Impl_in_rule__ApplyTail__Group_2__13277);
-            rule__ApplyTail__Group_2__1__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ApplyTail__Group_2__1"
-
-
-    // $ANTLR start "rule__ApplyTail__Group_2__1__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1642:1: rule__ApplyTail__Group_2__1__Impl : ( ( rule__ApplyTail__Group_2_1__0 )* ) ;
-    public final void rule__ApplyTail__Group_2__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1646:1: ( ( ( rule__ApplyTail__Group_2_1__0 )* ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1647:1: ( ( rule__ApplyTail__Group_2_1__0 )* )
-            {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1647:1: ( ( rule__ApplyTail__Group_2_1__0 )* )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1648:1: ( rule__ApplyTail__Group_2_1__0 )*
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1525:1: ( ( rule__Apply__Group_1_2_1__0 )* )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1526:1: ( rule__Apply__Group_1_2_1__0 )*
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getApplyTailAccess().getGroup_2_1()); 
+               before(grammarAccess.getApplyAccess().getGroup_1_2_1()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1649:1: ( rule__ApplyTail__Group_2_1__0 )*
-            loop14:
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1527:1: ( rule__Apply__Group_1_2_1__0 )*
+            loop13:
             do {
-                int alt14=2;
-                int LA14_0 = input.LA(1);
+                int alt13=2;
+                int LA13_0 = input.LA(1);
 
-                if ( (LA14_0==20) ) {
-                    alt14=1;
+                if ( (LA13_0==20) ) {
+                    alt13=1;
                 }
 
 
-                switch (alt14) {
+                switch (alt13) {
             	case 1 :
-            	    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1649:2: rule__ApplyTail__Group_2_1__0
+            	    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1527:2: rule__Apply__Group_1_2_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__ApplyTail__Group_2_1__0_in_rule__ApplyTail__Group_2__1__Impl3304);
-            	    rule__ApplyTail__Group_2_1__0();
+            	    pushFollow(FOLLOW_rule__Apply__Group_1_2_1__0_in_rule__Apply__Group_1_2__1__Impl3059);
+            	    rule__Apply__Group_1_2_1__0();
 
             	    state._fsp--;
             	    if (state.failed) return ;
@@ -4740,12 +4399,12 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
             	    break;
 
             	default :
-            	    break loop14;
+            	    break loop13;
                 }
             } while (true);
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getApplyTailAccess().getGroup_2_1()); 
+               after(grammarAccess.getApplyAccess().getGroup_1_2_1()); 
             }
 
             }
@@ -4765,100 +4424,26 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__ApplyTail__Group_2__1__Impl"
+    // $ANTLR end "rule__Apply__Group_1_2__1__Impl"
 
 
-    // $ANTLR start "rule__ApplyTail__Group_2_1__0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1663:1: rule__ApplyTail__Group_2_1__0 : rule__ApplyTail__Group_2_1__0__Impl rule__ApplyTail__Group_2_1__1 ;
-    public final void rule__ApplyTail__Group_2_1__0() throws RecognitionException {
+    // $ANTLR start "rule__Apply__Group_1_2_1__0"
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1541:1: rule__Apply__Group_1_2_1__0 : rule__Apply__Group_1_2_1__0__Impl rule__Apply__Group_1_2_1__1 ;
+    public final void rule__Apply__Group_1_2_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1667:1: ( rule__ApplyTail__Group_2_1__0__Impl rule__ApplyTail__Group_2_1__1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1668:2: rule__ApplyTail__Group_2_1__0__Impl rule__ApplyTail__Group_2_1__1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1545:1: ( rule__Apply__Group_1_2_1__0__Impl rule__Apply__Group_1_2_1__1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1546:2: rule__Apply__Group_1_2_1__0__Impl rule__Apply__Group_1_2_1__1
             {
-            pushFollow(FOLLOW_rule__ApplyTail__Group_2_1__0__Impl_in_rule__ApplyTail__Group_2_1__03339);
-            rule__ApplyTail__Group_2_1__0__Impl();
+            pushFollow(FOLLOW_rule__Apply__Group_1_2_1__0__Impl_in_rule__Apply__Group_1_2_1__03094);
+            rule__Apply__Group_1_2_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ApplyTail__Group_2_1__1_in_rule__ApplyTail__Group_2_1__03342);
-            rule__ApplyTail__Group_2_1__1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ApplyTail__Group_2_1__0"
-
-
-    // $ANTLR start "rule__ApplyTail__Group_2_1__0__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1675:1: rule__ApplyTail__Group_2_1__0__Impl : ( ',' ) ;
-    public final void rule__ApplyTail__Group_2_1__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1679:1: ( ( ',' ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1680:1: ( ',' )
-            {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1680:1: ( ',' )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1681:1: ','
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getApplyTailAccess().getCommaKeyword_2_1_0()); 
-            }
-            match(input,20,FOLLOW_20_in_rule__ApplyTail__Group_2_1__0__Impl3370); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getApplyTailAccess().getCommaKeyword_2_1_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ApplyTail__Group_2_1__0__Impl"
-
-
-    // $ANTLR start "rule__ApplyTail__Group_2_1__1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1694:1: rule__ApplyTail__Group_2_1__1 : rule__ApplyTail__Group_2_1__1__Impl ;
-    public final void rule__ApplyTail__Group_2_1__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1698:1: ( rule__ApplyTail__Group_2_1__1__Impl )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1699:2: rule__ApplyTail__Group_2_1__1__Impl
-            {
-            pushFollow(FOLLOW_rule__ApplyTail__Group_2_1__1__Impl_in_rule__ApplyTail__Group_2_1__13401);
-            rule__ApplyTail__Group_2_1__1__Impl();
+            pushFollow(FOLLOW_rule__Apply__Group_1_2_1__1_in_rule__Apply__Group_1_2_1__03097);
+            rule__Apply__Group_1_2_1__1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -4877,38 +4462,28 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__ApplyTail__Group_2_1__1"
+    // $ANTLR end "rule__Apply__Group_1_2_1__0"
 
 
-    // $ANTLR start "rule__ApplyTail__Group_2_1__1__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1705:1: rule__ApplyTail__Group_2_1__1__Impl : ( ( rule__ApplyTail__ArgumentsAssignment_2_1_1 ) ) ;
-    public final void rule__ApplyTail__Group_2_1__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Apply__Group_1_2_1__0__Impl"
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1553:1: rule__Apply__Group_1_2_1__0__Impl : ( ',' ) ;
+    public final void rule__Apply__Group_1_2_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1709:1: ( ( ( rule__ApplyTail__ArgumentsAssignment_2_1_1 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1710:1: ( ( rule__ApplyTail__ArgumentsAssignment_2_1_1 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1557:1: ( ( ',' ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1558:1: ( ',' )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1710:1: ( ( rule__ApplyTail__ArgumentsAssignment_2_1_1 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1711:1: ( rule__ApplyTail__ArgumentsAssignment_2_1_1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1558:1: ( ',' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1559:1: ','
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getApplyTailAccess().getArgumentsAssignment_2_1_1()); 
+               before(grammarAccess.getApplyAccess().getCommaKeyword_1_2_1_0()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1712:1: ( rule__ApplyTail__ArgumentsAssignment_2_1_1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1712:2: rule__ApplyTail__ArgumentsAssignment_2_1_1
-            {
-            pushFollow(FOLLOW_rule__ApplyTail__ArgumentsAssignment_2_1_1_in_rule__ApplyTail__Group_2_1__1__Impl3428);
-            rule__ApplyTail__ArgumentsAssignment_2_1_1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
+            match(input,20,FOLLOW_20_in_rule__Apply__Group_1_2_1__0__Impl3125); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getApplyTailAccess().getArgumentsAssignment_2_1_1()); 
+               after(grammarAccess.getApplyAccess().getCommaKeyword_1_2_1_0()); 
             }
 
             }
@@ -4928,25 +4503,109 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__ApplyTail__Group_2_1__1__Impl"
+    // $ANTLR end "rule__Apply__Group_1_2_1__0__Impl"
+
+
+    // $ANTLR start "rule__Apply__Group_1_2_1__1"
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1572:1: rule__Apply__Group_1_2_1__1 : rule__Apply__Group_1_2_1__1__Impl ;
+    public final void rule__Apply__Group_1_2_1__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1576:1: ( rule__Apply__Group_1_2_1__1__Impl )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1577:2: rule__Apply__Group_1_2_1__1__Impl
+            {
+            pushFollow(FOLLOW_rule__Apply__Group_1_2_1__1__Impl_in_rule__Apply__Group_1_2_1__13156);
+            rule__Apply__Group_1_2_1__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Apply__Group_1_2_1__1"
+
+
+    // $ANTLR start "rule__Apply__Group_1_2_1__1__Impl"
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1583:1: rule__Apply__Group_1_2_1__1__Impl : ( ( rule__Apply__ArgumentsAssignment_1_2_1_1 ) ) ;
+    public final void rule__Apply__Group_1_2_1__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1587:1: ( ( ( rule__Apply__ArgumentsAssignment_1_2_1_1 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1588:1: ( ( rule__Apply__ArgumentsAssignment_1_2_1_1 ) )
+            {
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1588:1: ( ( rule__Apply__ArgumentsAssignment_1_2_1_1 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1589:1: ( rule__Apply__ArgumentsAssignment_1_2_1_1 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getApplyAccess().getArgumentsAssignment_1_2_1_1()); 
+            }
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1590:1: ( rule__Apply__ArgumentsAssignment_1_2_1_1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1590:2: rule__Apply__ArgumentsAssignment_1_2_1_1
+            {
+            pushFollow(FOLLOW_rule__Apply__ArgumentsAssignment_1_2_1_1_in_rule__Apply__Group_1_2_1__1__Impl3183);
+            rule__Apply__ArgumentsAssignment_1_2_1_1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getApplyAccess().getArgumentsAssignment_1_2_1_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Apply__Group_1_2_1__1__Impl"
 
 
     // $ANTLR start "rule__NumericExpression__Group__0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1726:1: rule__NumericExpression__Group__0 : rule__NumericExpression__Group__0__Impl rule__NumericExpression__Group__1 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1604:1: rule__NumericExpression__Group__0 : rule__NumericExpression__Group__0__Impl rule__NumericExpression__Group__1 ;
     public final void rule__NumericExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1730:1: ( rule__NumericExpression__Group__0__Impl rule__NumericExpression__Group__1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1731:2: rule__NumericExpression__Group__0__Impl rule__NumericExpression__Group__1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1608:1: ( rule__NumericExpression__Group__0__Impl rule__NumericExpression__Group__1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1609:2: rule__NumericExpression__Group__0__Impl rule__NumericExpression__Group__1
             {
-            pushFollow(FOLLOW_rule__NumericExpression__Group__0__Impl_in_rule__NumericExpression__Group__03462);
+            pushFollow(FOLLOW_rule__NumericExpression__Group__0__Impl_in_rule__NumericExpression__Group__03217);
             rule__NumericExpression__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__NumericExpression__Group__1_in_rule__NumericExpression__Group__03465);
+            pushFollow(FOLLOW_rule__NumericExpression__Group__1_in_rule__NumericExpression__Group__03220);
             rule__NumericExpression__Group__1();
 
             state._fsp--;
@@ -4970,22 +4629,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__NumericExpression__Group__0__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1738:1: rule__NumericExpression__Group__0__Impl : ( ruleFactor ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1616:1: rule__NumericExpression__Group__0__Impl : ( ruleFactor ) ;
     public final void rule__NumericExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1742:1: ( ( ruleFactor ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1743:1: ( ruleFactor )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1620:1: ( ( ruleFactor ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1621:1: ( ruleFactor )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1743:1: ( ruleFactor )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1744:1: ruleFactor
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1621:1: ( ruleFactor )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1622:1: ruleFactor
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumericExpressionAccess().getFactorParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleFactor_in_rule__NumericExpression__Group__0__Impl3492);
+            pushFollow(FOLLOW_ruleFactor_in_rule__NumericExpression__Group__0__Impl3247);
             ruleFactor();
 
             state._fsp--;
@@ -5015,16 +4674,16 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__NumericExpression__Group__1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1755:1: rule__NumericExpression__Group__1 : rule__NumericExpression__Group__1__Impl ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1633:1: rule__NumericExpression__Group__1 : rule__NumericExpression__Group__1__Impl ;
     public final void rule__NumericExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1759:1: ( rule__NumericExpression__Group__1__Impl )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1760:2: rule__NumericExpression__Group__1__Impl
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1637:1: ( rule__NumericExpression__Group__1__Impl )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1638:2: rule__NumericExpression__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__NumericExpression__Group__1__Impl_in_rule__NumericExpression__Group__13521);
+            pushFollow(FOLLOW_rule__NumericExpression__Group__1__Impl_in_rule__NumericExpression__Group__13276);
             rule__NumericExpression__Group__1__Impl();
 
             state._fsp--;
@@ -5048,33 +4707,33 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__NumericExpression__Group__1__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1766:1: rule__NumericExpression__Group__1__Impl : ( ( rule__NumericExpression__Group_1__0 )? ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1644:1: rule__NumericExpression__Group__1__Impl : ( ( rule__NumericExpression__Group_1__0 )? ) ;
     public final void rule__NumericExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1770:1: ( ( ( rule__NumericExpression__Group_1__0 )? ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1771:1: ( ( rule__NumericExpression__Group_1__0 )? )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1648:1: ( ( ( rule__NumericExpression__Group_1__0 )? ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1649:1: ( ( rule__NumericExpression__Group_1__0 )? )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1771:1: ( ( rule__NumericExpression__Group_1__0 )? )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1772:1: ( rule__NumericExpression__Group_1__0 )?
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1649:1: ( ( rule__NumericExpression__Group_1__0 )? )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1650:1: ( rule__NumericExpression__Group_1__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumericExpressionAccess().getGroup_1()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1773:1: ( rule__NumericExpression__Group_1__0 )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1651:1: ( rule__NumericExpression__Group_1__0 )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( ((LA15_0>=12 && LA15_0<=13)) ) {
-                alt15=1;
+            if ( ((LA14_0>=12 && LA14_0<=13)) ) {
+                alt14=1;
             }
-            switch (alt15) {
+            switch (alt14) {
                 case 1 :
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1773:2: rule__NumericExpression__Group_1__0
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1651:2: rule__NumericExpression__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__NumericExpression__Group_1__0_in_rule__NumericExpression__Group__1__Impl3548);
+                    pushFollow(FOLLOW_rule__NumericExpression__Group_1__0_in_rule__NumericExpression__Group__1__Impl3303);
                     rule__NumericExpression__Group_1__0();
 
                     state._fsp--;
@@ -5110,21 +4769,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__NumericExpression__Group_1__0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1787:1: rule__NumericExpression__Group_1__0 : rule__NumericExpression__Group_1__0__Impl rule__NumericExpression__Group_1__1 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1665:1: rule__NumericExpression__Group_1__0 : rule__NumericExpression__Group_1__0__Impl rule__NumericExpression__Group_1__1 ;
     public final void rule__NumericExpression__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1791:1: ( rule__NumericExpression__Group_1__0__Impl rule__NumericExpression__Group_1__1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1792:2: rule__NumericExpression__Group_1__0__Impl rule__NumericExpression__Group_1__1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1669:1: ( rule__NumericExpression__Group_1__0__Impl rule__NumericExpression__Group_1__1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1670:2: rule__NumericExpression__Group_1__0__Impl rule__NumericExpression__Group_1__1
             {
-            pushFollow(FOLLOW_rule__NumericExpression__Group_1__0__Impl_in_rule__NumericExpression__Group_1__03583);
+            pushFollow(FOLLOW_rule__NumericExpression__Group_1__0__Impl_in_rule__NumericExpression__Group_1__03338);
             rule__NumericExpression__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__NumericExpression__Group_1__1_in_rule__NumericExpression__Group_1__03586);
+            pushFollow(FOLLOW_rule__NumericExpression__Group_1__1_in_rule__NumericExpression__Group_1__03341);
             rule__NumericExpression__Group_1__1();
 
             state._fsp--;
@@ -5148,23 +4807,23 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__NumericExpression__Group_1__0__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1799:1: rule__NumericExpression__Group_1__0__Impl : ( () ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1677:1: rule__NumericExpression__Group_1__0__Impl : ( () ) ;
     public final void rule__NumericExpression__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1803:1: ( ( () ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1804:1: ( () )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1681:1: ( ( () ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1682:1: ( () )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1804:1: ( () )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1805:1: ()
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1682:1: ( () )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1683:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumericExpressionAccess().getNumericExpressionFactorAction_1_0()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1806:1: ()
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1808:1: 
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1684:1: ()
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1686:1: 
             {
             }
 
@@ -5189,16 +4848,16 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__NumericExpression__Group_1__1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1818:1: rule__NumericExpression__Group_1__1 : rule__NumericExpression__Group_1__1__Impl ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1696:1: rule__NumericExpression__Group_1__1 : rule__NumericExpression__Group_1__1__Impl ;
     public final void rule__NumericExpression__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1822:1: ( rule__NumericExpression__Group_1__1__Impl )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1823:2: rule__NumericExpression__Group_1__1__Impl
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1700:1: ( rule__NumericExpression__Group_1__1__Impl )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1701:2: rule__NumericExpression__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__NumericExpression__Group_1__1__Impl_in_rule__NumericExpression__Group_1__13644);
+            pushFollow(FOLLOW_rule__NumericExpression__Group_1__1__Impl_in_rule__NumericExpression__Group_1__13399);
             rule__NumericExpression__Group_1__1__Impl();
 
             state._fsp--;
@@ -5222,26 +4881,26 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__NumericExpression__Group_1__1__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1829:1: rule__NumericExpression__Group_1__1__Impl : ( ( rule__NumericExpression__NumExprTailAssignment_1_1 ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1707:1: rule__NumericExpression__Group_1__1__Impl : ( ( rule__NumericExpression__ExprTailAssignment_1_1 ) ) ;
     public final void rule__NumericExpression__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1833:1: ( ( ( rule__NumericExpression__NumExprTailAssignment_1_1 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1834:1: ( ( rule__NumericExpression__NumExprTailAssignment_1_1 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1711:1: ( ( ( rule__NumericExpression__ExprTailAssignment_1_1 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1712:1: ( ( rule__NumericExpression__ExprTailAssignment_1_1 ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1834:1: ( ( rule__NumericExpression__NumExprTailAssignment_1_1 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1835:1: ( rule__NumericExpression__NumExprTailAssignment_1_1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1712:1: ( ( rule__NumericExpression__ExprTailAssignment_1_1 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1713:1: ( rule__NumericExpression__ExprTailAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNumericExpressionAccess().getNumExprTailAssignment_1_1()); 
+               before(grammarAccess.getNumericExpressionAccess().getExprTailAssignment_1_1()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1836:1: ( rule__NumericExpression__NumExprTailAssignment_1_1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1836:2: rule__NumericExpression__NumExprTailAssignment_1_1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1714:1: ( rule__NumericExpression__ExprTailAssignment_1_1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1714:2: rule__NumericExpression__ExprTailAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__NumericExpression__NumExprTailAssignment_1_1_in_rule__NumericExpression__Group_1__1__Impl3671);
-            rule__NumericExpression__NumExprTailAssignment_1_1();
+            pushFollow(FOLLOW_rule__NumericExpression__ExprTailAssignment_1_1_in_rule__NumericExpression__Group_1__1__Impl3426);
+            rule__NumericExpression__ExprTailAssignment_1_1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -5249,7 +4908,7 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNumericExpressionAccess().getNumExprTailAssignment_1_1()); 
+               after(grammarAccess.getNumericExpressionAccess().getExprTailAssignment_1_1()); 
             }
 
             }
@@ -5273,21 +4932,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__NumExprTail__Group__0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1850:1: rule__NumExprTail__Group__0 : rule__NumExprTail__Group__0__Impl rule__NumExprTail__Group__1 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1728:1: rule__NumExprTail__Group__0 : rule__NumExprTail__Group__0__Impl rule__NumExprTail__Group__1 ;
     public final void rule__NumExprTail__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1854:1: ( rule__NumExprTail__Group__0__Impl rule__NumExprTail__Group__1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1855:2: rule__NumExprTail__Group__0__Impl rule__NumExprTail__Group__1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1732:1: ( rule__NumExprTail__Group__0__Impl rule__NumExprTail__Group__1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1733:2: rule__NumExprTail__Group__0__Impl rule__NumExprTail__Group__1
             {
-            pushFollow(FOLLOW_rule__NumExprTail__Group__0__Impl_in_rule__NumExprTail__Group__03705);
+            pushFollow(FOLLOW_rule__NumExprTail__Group__0__Impl_in_rule__NumExprTail__Group__03460);
             rule__NumExprTail__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__NumExprTail__Group__1_in_rule__NumExprTail__Group__03708);
+            pushFollow(FOLLOW_rule__NumExprTail__Group__1_in_rule__NumExprTail__Group__03463);
             rule__NumExprTail__Group__1();
 
             state._fsp--;
@@ -5311,25 +4970,25 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__NumExprTail__Group__0__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1862:1: rule__NumExprTail__Group__0__Impl : ( ( rule__NumExprTail__OperatorAssignment_0 ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1740:1: rule__NumExprTail__Group__0__Impl : ( ( rule__NumExprTail__OperatorAssignment_0 ) ) ;
     public final void rule__NumExprTail__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1866:1: ( ( ( rule__NumExprTail__OperatorAssignment_0 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1867:1: ( ( rule__NumExprTail__OperatorAssignment_0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1744:1: ( ( ( rule__NumExprTail__OperatorAssignment_0 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1745:1: ( ( rule__NumExprTail__OperatorAssignment_0 ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1867:1: ( ( rule__NumExprTail__OperatorAssignment_0 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1868:1: ( rule__NumExprTail__OperatorAssignment_0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1745:1: ( ( rule__NumExprTail__OperatorAssignment_0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1746:1: ( rule__NumExprTail__OperatorAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumExprTailAccess().getOperatorAssignment_0()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1869:1: ( rule__NumExprTail__OperatorAssignment_0 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1869:2: rule__NumExprTail__OperatorAssignment_0
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1747:1: ( rule__NumExprTail__OperatorAssignment_0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1747:2: rule__NumExprTail__OperatorAssignment_0
             {
-            pushFollow(FOLLOW_rule__NumExprTail__OperatorAssignment_0_in_rule__NumExprTail__Group__0__Impl3735);
+            pushFollow(FOLLOW_rule__NumExprTail__OperatorAssignment_0_in_rule__NumExprTail__Group__0__Impl3490);
             rule__NumExprTail__OperatorAssignment_0();
 
             state._fsp--;
@@ -5362,21 +5021,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__NumExprTail__Group__1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1879:1: rule__NumExprTail__Group__1 : rule__NumExprTail__Group__1__Impl rule__NumExprTail__Group__2 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1757:1: rule__NumExprTail__Group__1 : rule__NumExprTail__Group__1__Impl rule__NumExprTail__Group__2 ;
     public final void rule__NumExprTail__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1883:1: ( rule__NumExprTail__Group__1__Impl rule__NumExprTail__Group__2 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1884:2: rule__NumExprTail__Group__1__Impl rule__NumExprTail__Group__2
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1761:1: ( rule__NumExprTail__Group__1__Impl rule__NumExprTail__Group__2 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1762:2: rule__NumExprTail__Group__1__Impl rule__NumExprTail__Group__2
             {
-            pushFollow(FOLLOW_rule__NumExprTail__Group__1__Impl_in_rule__NumExprTail__Group__13765);
+            pushFollow(FOLLOW_rule__NumExprTail__Group__1__Impl_in_rule__NumExprTail__Group__13520);
             rule__NumExprTail__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__NumExprTail__Group__2_in_rule__NumExprTail__Group__13768);
+            pushFollow(FOLLOW_rule__NumExprTail__Group__2_in_rule__NumExprTail__Group__13523);
             rule__NumExprTail__Group__2();
 
             state._fsp--;
@@ -5400,25 +5059,25 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__NumExprTail__Group__1__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1891:1: rule__NumExprTail__Group__1__Impl : ( ( rule__NumExprTail__FactorAssignment_1 ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1769:1: rule__NumExprTail__Group__1__Impl : ( ( rule__NumExprTail__FactorAssignment_1 ) ) ;
     public final void rule__NumExprTail__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1895:1: ( ( ( rule__NumExprTail__FactorAssignment_1 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1896:1: ( ( rule__NumExprTail__FactorAssignment_1 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1773:1: ( ( ( rule__NumExprTail__FactorAssignment_1 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1774:1: ( ( rule__NumExprTail__FactorAssignment_1 ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1896:1: ( ( rule__NumExprTail__FactorAssignment_1 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1897:1: ( rule__NumExprTail__FactorAssignment_1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1774:1: ( ( rule__NumExprTail__FactorAssignment_1 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1775:1: ( rule__NumExprTail__FactorAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumExprTailAccess().getFactorAssignment_1()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1898:1: ( rule__NumExprTail__FactorAssignment_1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1898:2: rule__NumExprTail__FactorAssignment_1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1776:1: ( rule__NumExprTail__FactorAssignment_1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1776:2: rule__NumExprTail__FactorAssignment_1
             {
-            pushFollow(FOLLOW_rule__NumExprTail__FactorAssignment_1_in_rule__NumExprTail__Group__1__Impl3795);
+            pushFollow(FOLLOW_rule__NumExprTail__FactorAssignment_1_in_rule__NumExprTail__Group__1__Impl3550);
             rule__NumExprTail__FactorAssignment_1();
 
             state._fsp--;
@@ -5451,16 +5110,16 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__NumExprTail__Group__2"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1908:1: rule__NumExprTail__Group__2 : rule__NumExprTail__Group__2__Impl ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1786:1: rule__NumExprTail__Group__2 : rule__NumExprTail__Group__2__Impl ;
     public final void rule__NumExprTail__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1912:1: ( rule__NumExprTail__Group__2__Impl )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1913:2: rule__NumExprTail__Group__2__Impl
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1790:1: ( rule__NumExprTail__Group__2__Impl )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1791:2: rule__NumExprTail__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__NumExprTail__Group__2__Impl_in_rule__NumExprTail__Group__23825);
+            pushFollow(FOLLOW_rule__NumExprTail__Group__2__Impl_in_rule__NumExprTail__Group__23580);
             rule__NumExprTail__Group__2__Impl();
 
             state._fsp--;
@@ -5484,33 +5143,33 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__NumExprTail__Group__2__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1919:1: rule__NumExprTail__Group__2__Impl : ( ( rule__NumExprTail__ExprTailAssignment_2 )? ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1797:1: rule__NumExprTail__Group__2__Impl : ( ( rule__NumExprTail__ExprTailAssignment_2 )? ) ;
     public final void rule__NumExprTail__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1923:1: ( ( ( rule__NumExprTail__ExprTailAssignment_2 )? ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1924:1: ( ( rule__NumExprTail__ExprTailAssignment_2 )? )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1801:1: ( ( ( rule__NumExprTail__ExprTailAssignment_2 )? ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1802:1: ( ( rule__NumExprTail__ExprTailAssignment_2 )? )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1924:1: ( ( rule__NumExprTail__ExprTailAssignment_2 )? )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1925:1: ( rule__NumExprTail__ExprTailAssignment_2 )?
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1802:1: ( ( rule__NumExprTail__ExprTailAssignment_2 )? )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1803:1: ( rule__NumExprTail__ExprTailAssignment_2 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumExprTailAccess().getExprTailAssignment_2()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1926:1: ( rule__NumExprTail__ExprTailAssignment_2 )?
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1804:1: ( rule__NumExprTail__ExprTailAssignment_2 )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( ((LA16_0>=12 && LA16_0<=13)) ) {
-                alt16=1;
+            if ( ((LA15_0>=12 && LA15_0<=13)) ) {
+                alt15=1;
             }
-            switch (alt16) {
+            switch (alt15) {
                 case 1 :
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1926:2: rule__NumExprTail__ExprTailAssignment_2
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1804:2: rule__NumExprTail__ExprTailAssignment_2
                     {
-                    pushFollow(FOLLOW_rule__NumExprTail__ExprTailAssignment_2_in_rule__NumExprTail__Group__2__Impl3852);
+                    pushFollow(FOLLOW_rule__NumExprTail__ExprTailAssignment_2_in_rule__NumExprTail__Group__2__Impl3607);
                     rule__NumExprTail__ExprTailAssignment_2();
 
                     state._fsp--;
@@ -5546,21 +5205,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Factor__Group__0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1942:1: rule__Factor__Group__0 : rule__Factor__Group__0__Impl rule__Factor__Group__1 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1820:1: rule__Factor__Group__0 : rule__Factor__Group__0__Impl rule__Factor__Group__1 ;
     public final void rule__Factor__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1946:1: ( rule__Factor__Group__0__Impl rule__Factor__Group__1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1947:2: rule__Factor__Group__0__Impl rule__Factor__Group__1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1824:1: ( rule__Factor__Group__0__Impl rule__Factor__Group__1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1825:2: rule__Factor__Group__0__Impl rule__Factor__Group__1
             {
-            pushFollow(FOLLOW_rule__Factor__Group__0__Impl_in_rule__Factor__Group__03889);
+            pushFollow(FOLLOW_rule__Factor__Group__0__Impl_in_rule__Factor__Group__03644);
             rule__Factor__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Factor__Group__1_in_rule__Factor__Group__03892);
+            pushFollow(FOLLOW_rule__Factor__Group__1_in_rule__Factor__Group__03647);
             rule__Factor__Group__1();
 
             state._fsp--;
@@ -5584,22 +5243,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Factor__Group__0__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1954:1: rule__Factor__Group__0__Impl : ( ruleTerm ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1832:1: rule__Factor__Group__0__Impl : ( ruleTerm ) ;
     public final void rule__Factor__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1958:1: ( ( ruleTerm ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1959:1: ( ruleTerm )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1836:1: ( ( ruleTerm ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1837:1: ( ruleTerm )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1959:1: ( ruleTerm )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1960:1: ruleTerm
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1837:1: ( ruleTerm )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1838:1: ruleTerm
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFactorAccess().getTermParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleTerm_in_rule__Factor__Group__0__Impl3919);
+            pushFollow(FOLLOW_ruleTerm_in_rule__Factor__Group__0__Impl3674);
             ruleTerm();
 
             state._fsp--;
@@ -5629,16 +5288,16 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Factor__Group__1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1971:1: rule__Factor__Group__1 : rule__Factor__Group__1__Impl ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1849:1: rule__Factor__Group__1 : rule__Factor__Group__1__Impl ;
     public final void rule__Factor__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1975:1: ( rule__Factor__Group__1__Impl )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1976:2: rule__Factor__Group__1__Impl
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1853:1: ( rule__Factor__Group__1__Impl )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1854:2: rule__Factor__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Factor__Group__1__Impl_in_rule__Factor__Group__13948);
+            pushFollow(FOLLOW_rule__Factor__Group__1__Impl_in_rule__Factor__Group__13703);
             rule__Factor__Group__1__Impl();
 
             state._fsp--;
@@ -5662,33 +5321,33 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Factor__Group__1__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1982:1: rule__Factor__Group__1__Impl : ( ( rule__Factor__Group_1__0 )? ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1860:1: rule__Factor__Group__1__Impl : ( ( rule__Factor__Group_1__0 )? ) ;
     public final void rule__Factor__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1986:1: ( ( ( rule__Factor__Group_1__0 )? ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1987:1: ( ( rule__Factor__Group_1__0 )? )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1864:1: ( ( ( rule__Factor__Group_1__0 )? ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1865:1: ( ( rule__Factor__Group_1__0 )? )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1987:1: ( ( rule__Factor__Group_1__0 )? )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1988:1: ( rule__Factor__Group_1__0 )?
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1865:1: ( ( rule__Factor__Group_1__0 )? )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1866:1: ( rule__Factor__Group_1__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFactorAccess().getGroup_1()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1989:1: ( rule__Factor__Group_1__0 )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1867:1: ( rule__Factor__Group_1__0 )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( ((LA17_0>=14 && LA17_0<=15)) ) {
-                alt17=1;
+            if ( ((LA16_0>=14 && LA16_0<=15)) ) {
+                alt16=1;
             }
-            switch (alt17) {
+            switch (alt16) {
                 case 1 :
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1989:2: rule__Factor__Group_1__0
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1867:2: rule__Factor__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__Factor__Group_1__0_in_rule__Factor__Group__1__Impl3975);
+                    pushFollow(FOLLOW_rule__Factor__Group_1__0_in_rule__Factor__Group__1__Impl3730);
                     rule__Factor__Group_1__0();
 
                     state._fsp--;
@@ -5724,21 +5383,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Factor__Group_1__0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2003:1: rule__Factor__Group_1__0 : rule__Factor__Group_1__0__Impl rule__Factor__Group_1__1 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1881:1: rule__Factor__Group_1__0 : rule__Factor__Group_1__0__Impl rule__Factor__Group_1__1 ;
     public final void rule__Factor__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2007:1: ( rule__Factor__Group_1__0__Impl rule__Factor__Group_1__1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2008:2: rule__Factor__Group_1__0__Impl rule__Factor__Group_1__1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1885:1: ( rule__Factor__Group_1__0__Impl rule__Factor__Group_1__1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1886:2: rule__Factor__Group_1__0__Impl rule__Factor__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Factor__Group_1__0__Impl_in_rule__Factor__Group_1__04010);
+            pushFollow(FOLLOW_rule__Factor__Group_1__0__Impl_in_rule__Factor__Group_1__03765);
             rule__Factor__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Factor__Group_1__1_in_rule__Factor__Group_1__04013);
+            pushFollow(FOLLOW_rule__Factor__Group_1__1_in_rule__Factor__Group_1__03768);
             rule__Factor__Group_1__1();
 
             state._fsp--;
@@ -5762,23 +5421,23 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Factor__Group_1__0__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2015:1: rule__Factor__Group_1__0__Impl : ( () ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1893:1: rule__Factor__Group_1__0__Impl : ( () ) ;
     public final void rule__Factor__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2019:1: ( ( () ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2020:1: ( () )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1897:1: ( ( () ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1898:1: ( () )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2020:1: ( () )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2021:1: ()
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1898:1: ( () )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1899:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFactorAccess().getFactorTermAction_1_0()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2022:1: ()
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2024:1: 
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1900:1: ()
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1902:1: 
             {
             }
 
@@ -5803,16 +5462,16 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Factor__Group_1__1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2034:1: rule__Factor__Group_1__1 : rule__Factor__Group_1__1__Impl ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1912:1: rule__Factor__Group_1__1 : rule__Factor__Group_1__1__Impl ;
     public final void rule__Factor__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2038:1: ( rule__Factor__Group_1__1__Impl )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2039:2: rule__Factor__Group_1__1__Impl
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1916:1: ( rule__Factor__Group_1__1__Impl )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1917:2: rule__Factor__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Factor__Group_1__1__Impl_in_rule__Factor__Group_1__14071);
+            pushFollow(FOLLOW_rule__Factor__Group_1__1__Impl_in_rule__Factor__Group_1__13826);
             rule__Factor__Group_1__1__Impl();
 
             state._fsp--;
@@ -5836,25 +5495,25 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Factor__Group_1__1__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2045:1: rule__Factor__Group_1__1__Impl : ( ( rule__Factor__FactorTailAssignment_1_1 ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1923:1: rule__Factor__Group_1__1__Impl : ( ( rule__Factor__FactorTailAssignment_1_1 ) ) ;
     public final void rule__Factor__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2049:1: ( ( ( rule__Factor__FactorTailAssignment_1_1 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2050:1: ( ( rule__Factor__FactorTailAssignment_1_1 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1927:1: ( ( ( rule__Factor__FactorTailAssignment_1_1 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1928:1: ( ( rule__Factor__FactorTailAssignment_1_1 ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2050:1: ( ( rule__Factor__FactorTailAssignment_1_1 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2051:1: ( rule__Factor__FactorTailAssignment_1_1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1928:1: ( ( rule__Factor__FactorTailAssignment_1_1 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1929:1: ( rule__Factor__FactorTailAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFactorAccess().getFactorTailAssignment_1_1()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2052:1: ( rule__Factor__FactorTailAssignment_1_1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2052:2: rule__Factor__FactorTailAssignment_1_1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1930:1: ( rule__Factor__FactorTailAssignment_1_1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1930:2: rule__Factor__FactorTailAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__Factor__FactorTailAssignment_1_1_in_rule__Factor__Group_1__1__Impl4098);
+            pushFollow(FOLLOW_rule__Factor__FactorTailAssignment_1_1_in_rule__Factor__Group_1__1__Impl3853);
             rule__Factor__FactorTailAssignment_1_1();
 
             state._fsp--;
@@ -5887,21 +5546,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FactorTail__Group__0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2066:1: rule__FactorTail__Group__0 : rule__FactorTail__Group__0__Impl rule__FactorTail__Group__1 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1944:1: rule__FactorTail__Group__0 : rule__FactorTail__Group__0__Impl rule__FactorTail__Group__1 ;
     public final void rule__FactorTail__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2070:1: ( rule__FactorTail__Group__0__Impl rule__FactorTail__Group__1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2071:2: rule__FactorTail__Group__0__Impl rule__FactorTail__Group__1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1948:1: ( rule__FactorTail__Group__0__Impl rule__FactorTail__Group__1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1949:2: rule__FactorTail__Group__0__Impl rule__FactorTail__Group__1
             {
-            pushFollow(FOLLOW_rule__FactorTail__Group__0__Impl_in_rule__FactorTail__Group__04132);
+            pushFollow(FOLLOW_rule__FactorTail__Group__0__Impl_in_rule__FactorTail__Group__03887);
             rule__FactorTail__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__FactorTail__Group__1_in_rule__FactorTail__Group__04135);
+            pushFollow(FOLLOW_rule__FactorTail__Group__1_in_rule__FactorTail__Group__03890);
             rule__FactorTail__Group__1();
 
             state._fsp--;
@@ -5925,25 +5584,25 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FactorTail__Group__0__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2078:1: rule__FactorTail__Group__0__Impl : ( ( rule__FactorTail__OperatorAssignment_0 ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1956:1: rule__FactorTail__Group__0__Impl : ( ( rule__FactorTail__OperatorAssignment_0 ) ) ;
     public final void rule__FactorTail__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2082:1: ( ( ( rule__FactorTail__OperatorAssignment_0 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2083:1: ( ( rule__FactorTail__OperatorAssignment_0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1960:1: ( ( ( rule__FactorTail__OperatorAssignment_0 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1961:1: ( ( rule__FactorTail__OperatorAssignment_0 ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2083:1: ( ( rule__FactorTail__OperatorAssignment_0 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2084:1: ( rule__FactorTail__OperatorAssignment_0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1961:1: ( ( rule__FactorTail__OperatorAssignment_0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1962:1: ( rule__FactorTail__OperatorAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFactorTailAccess().getOperatorAssignment_0()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2085:1: ( rule__FactorTail__OperatorAssignment_0 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2085:2: rule__FactorTail__OperatorAssignment_0
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1963:1: ( rule__FactorTail__OperatorAssignment_0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1963:2: rule__FactorTail__OperatorAssignment_0
             {
-            pushFollow(FOLLOW_rule__FactorTail__OperatorAssignment_0_in_rule__FactorTail__Group__0__Impl4162);
+            pushFollow(FOLLOW_rule__FactorTail__OperatorAssignment_0_in_rule__FactorTail__Group__0__Impl3917);
             rule__FactorTail__OperatorAssignment_0();
 
             state._fsp--;
@@ -5976,21 +5635,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FactorTail__Group__1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2095:1: rule__FactorTail__Group__1 : rule__FactorTail__Group__1__Impl rule__FactorTail__Group__2 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1973:1: rule__FactorTail__Group__1 : rule__FactorTail__Group__1__Impl rule__FactorTail__Group__2 ;
     public final void rule__FactorTail__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2099:1: ( rule__FactorTail__Group__1__Impl rule__FactorTail__Group__2 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2100:2: rule__FactorTail__Group__1__Impl rule__FactorTail__Group__2
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1977:1: ( rule__FactorTail__Group__1__Impl rule__FactorTail__Group__2 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1978:2: rule__FactorTail__Group__1__Impl rule__FactorTail__Group__2
             {
-            pushFollow(FOLLOW_rule__FactorTail__Group__1__Impl_in_rule__FactorTail__Group__14192);
+            pushFollow(FOLLOW_rule__FactorTail__Group__1__Impl_in_rule__FactorTail__Group__13947);
             rule__FactorTail__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__FactorTail__Group__2_in_rule__FactorTail__Group__14195);
+            pushFollow(FOLLOW_rule__FactorTail__Group__2_in_rule__FactorTail__Group__13950);
             rule__FactorTail__Group__2();
 
             state._fsp--;
@@ -6014,25 +5673,25 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FactorTail__Group__1__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2107:1: rule__FactorTail__Group__1__Impl : ( ( rule__FactorTail__TermAssignment_1 ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1985:1: rule__FactorTail__Group__1__Impl : ( ( rule__FactorTail__TermAssignment_1 ) ) ;
     public final void rule__FactorTail__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2111:1: ( ( ( rule__FactorTail__TermAssignment_1 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2112:1: ( ( rule__FactorTail__TermAssignment_1 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1989:1: ( ( ( rule__FactorTail__TermAssignment_1 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1990:1: ( ( rule__FactorTail__TermAssignment_1 ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2112:1: ( ( rule__FactorTail__TermAssignment_1 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2113:1: ( rule__FactorTail__TermAssignment_1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1990:1: ( ( rule__FactorTail__TermAssignment_1 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1991:1: ( rule__FactorTail__TermAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFactorTailAccess().getTermAssignment_1()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2114:1: ( rule__FactorTail__TermAssignment_1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2114:2: rule__FactorTail__TermAssignment_1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1992:1: ( rule__FactorTail__TermAssignment_1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:1992:2: rule__FactorTail__TermAssignment_1
             {
-            pushFollow(FOLLOW_rule__FactorTail__TermAssignment_1_in_rule__FactorTail__Group__1__Impl4222);
+            pushFollow(FOLLOW_rule__FactorTail__TermAssignment_1_in_rule__FactorTail__Group__1__Impl3977);
             rule__FactorTail__TermAssignment_1();
 
             state._fsp--;
@@ -6065,16 +5724,16 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FactorTail__Group__2"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2124:1: rule__FactorTail__Group__2 : rule__FactorTail__Group__2__Impl ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2002:1: rule__FactorTail__Group__2 : rule__FactorTail__Group__2__Impl ;
     public final void rule__FactorTail__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2128:1: ( rule__FactorTail__Group__2__Impl )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2129:2: rule__FactorTail__Group__2__Impl
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2006:1: ( rule__FactorTail__Group__2__Impl )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2007:2: rule__FactorTail__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__FactorTail__Group__2__Impl_in_rule__FactorTail__Group__24252);
+            pushFollow(FOLLOW_rule__FactorTail__Group__2__Impl_in_rule__FactorTail__Group__24007);
             rule__FactorTail__Group__2__Impl();
 
             state._fsp--;
@@ -6098,33 +5757,33 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FactorTail__Group__2__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2135:1: rule__FactorTail__Group__2__Impl : ( ( rule__FactorTail__FactorTailAssignment_2 )? ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2013:1: rule__FactorTail__Group__2__Impl : ( ( rule__FactorTail__FactorTailAssignment_2 )? ) ;
     public final void rule__FactorTail__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2139:1: ( ( ( rule__FactorTail__FactorTailAssignment_2 )? ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2140:1: ( ( rule__FactorTail__FactorTailAssignment_2 )? )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2017:1: ( ( ( rule__FactorTail__FactorTailAssignment_2 )? ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2018:1: ( ( rule__FactorTail__FactorTailAssignment_2 )? )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2140:1: ( ( rule__FactorTail__FactorTailAssignment_2 )? )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2141:1: ( rule__FactorTail__FactorTailAssignment_2 )?
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2018:1: ( ( rule__FactorTail__FactorTailAssignment_2 )? )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2019:1: ( rule__FactorTail__FactorTailAssignment_2 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFactorTailAccess().getFactorTailAssignment_2()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2142:1: ( rule__FactorTail__FactorTailAssignment_2 )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2020:1: ( rule__FactorTail__FactorTailAssignment_2 )?
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            if ( ((LA18_0>=14 && LA18_0<=15)) ) {
-                alt18=1;
+            if ( ((LA17_0>=14 && LA17_0<=15)) ) {
+                alt17=1;
             }
-            switch (alt18) {
+            switch (alt17) {
                 case 1 :
-                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2142:2: rule__FactorTail__FactorTailAssignment_2
+                    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2020:2: rule__FactorTail__FactorTailAssignment_2
                     {
-                    pushFollow(FOLLOW_rule__FactorTail__FactorTailAssignment_2_in_rule__FactorTail__Group__2__Impl4279);
+                    pushFollow(FOLLOW_rule__FactorTail__FactorTailAssignment_2_in_rule__FactorTail__Group__2__Impl4034);
                     rule__FactorTail__FactorTailAssignment_2();
 
                     state._fsp--;
@@ -6160,21 +5819,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__VariableAssignment__Group__0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2158:1: rule__VariableAssignment__Group__0 : rule__VariableAssignment__Group__0__Impl rule__VariableAssignment__Group__1 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2036:1: rule__VariableAssignment__Group__0 : rule__VariableAssignment__Group__0__Impl rule__VariableAssignment__Group__1 ;
     public final void rule__VariableAssignment__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2162:1: ( rule__VariableAssignment__Group__0__Impl rule__VariableAssignment__Group__1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2163:2: rule__VariableAssignment__Group__0__Impl rule__VariableAssignment__Group__1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2040:1: ( rule__VariableAssignment__Group__0__Impl rule__VariableAssignment__Group__1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2041:2: rule__VariableAssignment__Group__0__Impl rule__VariableAssignment__Group__1
             {
-            pushFollow(FOLLOW_rule__VariableAssignment__Group__0__Impl_in_rule__VariableAssignment__Group__04316);
+            pushFollow(FOLLOW_rule__VariableAssignment__Group__0__Impl_in_rule__VariableAssignment__Group__04071);
             rule__VariableAssignment__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__VariableAssignment__Group__1_in_rule__VariableAssignment__Group__04319);
+            pushFollow(FOLLOW_rule__VariableAssignment__Group__1_in_rule__VariableAssignment__Group__04074);
             rule__VariableAssignment__Group__1();
 
             state._fsp--;
@@ -6198,25 +5857,25 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__VariableAssignment__Group__0__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2170:1: rule__VariableAssignment__Group__0__Impl : ( ( rule__VariableAssignment__IdAssignment_0 ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2048:1: rule__VariableAssignment__Group__0__Impl : ( ( rule__VariableAssignment__IdAssignment_0 ) ) ;
     public final void rule__VariableAssignment__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2174:1: ( ( ( rule__VariableAssignment__IdAssignment_0 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2175:1: ( ( rule__VariableAssignment__IdAssignment_0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2052:1: ( ( ( rule__VariableAssignment__IdAssignment_0 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2053:1: ( ( rule__VariableAssignment__IdAssignment_0 ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2175:1: ( ( rule__VariableAssignment__IdAssignment_0 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2176:1: ( rule__VariableAssignment__IdAssignment_0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2053:1: ( ( rule__VariableAssignment__IdAssignment_0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2054:1: ( rule__VariableAssignment__IdAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariableAssignmentAccess().getIdAssignment_0()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2177:1: ( rule__VariableAssignment__IdAssignment_0 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2177:2: rule__VariableAssignment__IdAssignment_0
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2055:1: ( rule__VariableAssignment__IdAssignment_0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2055:2: rule__VariableAssignment__IdAssignment_0
             {
-            pushFollow(FOLLOW_rule__VariableAssignment__IdAssignment_0_in_rule__VariableAssignment__Group__0__Impl4346);
+            pushFollow(FOLLOW_rule__VariableAssignment__IdAssignment_0_in_rule__VariableAssignment__Group__0__Impl4101);
             rule__VariableAssignment__IdAssignment_0();
 
             state._fsp--;
@@ -6249,21 +5908,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__VariableAssignment__Group__1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2187:1: rule__VariableAssignment__Group__1 : rule__VariableAssignment__Group__1__Impl rule__VariableAssignment__Group__2 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2065:1: rule__VariableAssignment__Group__1 : rule__VariableAssignment__Group__1__Impl rule__VariableAssignment__Group__2 ;
     public final void rule__VariableAssignment__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2191:1: ( rule__VariableAssignment__Group__1__Impl rule__VariableAssignment__Group__2 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2192:2: rule__VariableAssignment__Group__1__Impl rule__VariableAssignment__Group__2
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2069:1: ( rule__VariableAssignment__Group__1__Impl rule__VariableAssignment__Group__2 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2070:2: rule__VariableAssignment__Group__1__Impl rule__VariableAssignment__Group__2
             {
-            pushFollow(FOLLOW_rule__VariableAssignment__Group__1__Impl_in_rule__VariableAssignment__Group__14376);
+            pushFollow(FOLLOW_rule__VariableAssignment__Group__1__Impl_in_rule__VariableAssignment__Group__14131);
             rule__VariableAssignment__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__VariableAssignment__Group__2_in_rule__VariableAssignment__Group__14379);
+            pushFollow(FOLLOW_rule__VariableAssignment__Group__2_in_rule__VariableAssignment__Group__14134);
             rule__VariableAssignment__Group__2();
 
             state._fsp--;
@@ -6287,22 +5946,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__VariableAssignment__Group__1__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2199:1: rule__VariableAssignment__Group__1__Impl : ( '=' ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2077:1: rule__VariableAssignment__Group__1__Impl : ( '=' ) ;
     public final void rule__VariableAssignment__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2203:1: ( ( '=' ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2204:1: ( '=' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2081:1: ( ( '=' ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2082:1: ( '=' )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2204:1: ( '=' )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2205:1: '='
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2082:1: ( '=' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2083:1: '='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariableAssignmentAccess().getEqualsSignKeyword_1()); 
             }
-            match(input,23,FOLLOW_23_in_rule__VariableAssignment__Group__1__Impl4407); if (state.failed) return ;
+            match(input,23,FOLLOW_23_in_rule__VariableAssignment__Group__1__Impl4162); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getVariableAssignmentAccess().getEqualsSignKeyword_1()); 
             }
@@ -6328,16 +5987,16 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__VariableAssignment__Group__2"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2218:1: rule__VariableAssignment__Group__2 : rule__VariableAssignment__Group__2__Impl ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2096:1: rule__VariableAssignment__Group__2 : rule__VariableAssignment__Group__2__Impl ;
     public final void rule__VariableAssignment__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2222:1: ( rule__VariableAssignment__Group__2__Impl )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2223:2: rule__VariableAssignment__Group__2__Impl
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2100:1: ( rule__VariableAssignment__Group__2__Impl )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2101:2: rule__VariableAssignment__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__VariableAssignment__Group__2__Impl_in_rule__VariableAssignment__Group__24438);
+            pushFollow(FOLLOW_rule__VariableAssignment__Group__2__Impl_in_rule__VariableAssignment__Group__24193);
             rule__VariableAssignment__Group__2__Impl();
 
             state._fsp--;
@@ -6361,25 +6020,25 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__VariableAssignment__Group__2__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2229:1: rule__VariableAssignment__Group__2__Impl : ( ( rule__VariableAssignment__ExpressionAssignment_2 ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2107:1: rule__VariableAssignment__Group__2__Impl : ( ( rule__VariableAssignment__ExpressionAssignment_2 ) ) ;
     public final void rule__VariableAssignment__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2233:1: ( ( ( rule__VariableAssignment__ExpressionAssignment_2 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2234:1: ( ( rule__VariableAssignment__ExpressionAssignment_2 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2111:1: ( ( ( rule__VariableAssignment__ExpressionAssignment_2 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2112:1: ( ( rule__VariableAssignment__ExpressionAssignment_2 ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2234:1: ( ( rule__VariableAssignment__ExpressionAssignment_2 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2235:1: ( rule__VariableAssignment__ExpressionAssignment_2 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2112:1: ( ( rule__VariableAssignment__ExpressionAssignment_2 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2113:1: ( rule__VariableAssignment__ExpressionAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariableAssignmentAccess().getExpressionAssignment_2()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2236:1: ( rule__VariableAssignment__ExpressionAssignment_2 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2236:2: rule__VariableAssignment__ExpressionAssignment_2
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2114:1: ( rule__VariableAssignment__ExpressionAssignment_2 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2114:2: rule__VariableAssignment__ExpressionAssignment_2
             {
-            pushFollow(FOLLOW_rule__VariableAssignment__ExpressionAssignment_2_in_rule__VariableAssignment__Group__2__Impl4465);
+            pushFollow(FOLLOW_rule__VariableAssignment__ExpressionAssignment_2_in_rule__VariableAssignment__Group__2__Impl4220);
             rule__VariableAssignment__ExpressionAssignment_2();
 
             state._fsp--;
@@ -6412,21 +6071,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ParenthesisExpression__Group__0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2252:1: rule__ParenthesisExpression__Group__0 : rule__ParenthesisExpression__Group__0__Impl rule__ParenthesisExpression__Group__1 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2130:1: rule__ParenthesisExpression__Group__0 : rule__ParenthesisExpression__Group__0__Impl rule__ParenthesisExpression__Group__1 ;
     public final void rule__ParenthesisExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2256:1: ( rule__ParenthesisExpression__Group__0__Impl rule__ParenthesisExpression__Group__1 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2257:2: rule__ParenthesisExpression__Group__0__Impl rule__ParenthesisExpression__Group__1
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2134:1: ( rule__ParenthesisExpression__Group__0__Impl rule__ParenthesisExpression__Group__1 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2135:2: rule__ParenthesisExpression__Group__0__Impl rule__ParenthesisExpression__Group__1
             {
-            pushFollow(FOLLOW_rule__ParenthesisExpression__Group__0__Impl_in_rule__ParenthesisExpression__Group__04501);
+            pushFollow(FOLLOW_rule__ParenthesisExpression__Group__0__Impl_in_rule__ParenthesisExpression__Group__04256);
             rule__ParenthesisExpression__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ParenthesisExpression__Group__1_in_rule__ParenthesisExpression__Group__04504);
+            pushFollow(FOLLOW_rule__ParenthesisExpression__Group__1_in_rule__ParenthesisExpression__Group__04259);
             rule__ParenthesisExpression__Group__1();
 
             state._fsp--;
@@ -6450,22 +6109,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ParenthesisExpression__Group__0__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2264:1: rule__ParenthesisExpression__Group__0__Impl : ( '(' ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2142:1: rule__ParenthesisExpression__Group__0__Impl : ( '(' ) ;
     public final void rule__ParenthesisExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2268:1: ( ( '(' ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2269:1: ( '(' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2146:1: ( ( '(' ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2147:1: ( '(' )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2269:1: ( '(' )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2270:1: '('
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2147:1: ( '(' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2148:1: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParenthesisExpressionAccess().getLeftParenthesisKeyword_0()); 
             }
-            match(input,18,FOLLOW_18_in_rule__ParenthesisExpression__Group__0__Impl4532); if (state.failed) return ;
+            match(input,18,FOLLOW_18_in_rule__ParenthesisExpression__Group__0__Impl4287); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getParenthesisExpressionAccess().getLeftParenthesisKeyword_0()); 
             }
@@ -6491,21 +6150,21 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ParenthesisExpression__Group__1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2283:1: rule__ParenthesisExpression__Group__1 : rule__ParenthesisExpression__Group__1__Impl rule__ParenthesisExpression__Group__2 ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2161:1: rule__ParenthesisExpression__Group__1 : rule__ParenthesisExpression__Group__1__Impl rule__ParenthesisExpression__Group__2 ;
     public final void rule__ParenthesisExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2287:1: ( rule__ParenthesisExpression__Group__1__Impl rule__ParenthesisExpression__Group__2 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2288:2: rule__ParenthesisExpression__Group__1__Impl rule__ParenthesisExpression__Group__2
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2165:1: ( rule__ParenthesisExpression__Group__1__Impl rule__ParenthesisExpression__Group__2 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2166:2: rule__ParenthesisExpression__Group__1__Impl rule__ParenthesisExpression__Group__2
             {
-            pushFollow(FOLLOW_rule__ParenthesisExpression__Group__1__Impl_in_rule__ParenthesisExpression__Group__14563);
+            pushFollow(FOLLOW_rule__ParenthesisExpression__Group__1__Impl_in_rule__ParenthesisExpression__Group__14318);
             rule__ParenthesisExpression__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ParenthesisExpression__Group__2_in_rule__ParenthesisExpression__Group__14566);
+            pushFollow(FOLLOW_rule__ParenthesisExpression__Group__2_in_rule__ParenthesisExpression__Group__14321);
             rule__ParenthesisExpression__Group__2();
 
             state._fsp--;
@@ -6529,22 +6188,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ParenthesisExpression__Group__1__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2295:1: rule__ParenthesisExpression__Group__1__Impl : ( ruleExpression ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2173:1: rule__ParenthesisExpression__Group__1__Impl : ( ruleExpression ) ;
     public final void rule__ParenthesisExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2299:1: ( ( ruleExpression ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2300:1: ( ruleExpression )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2177:1: ( ( ruleExpression ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2178:1: ( ruleExpression )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2300:1: ( ruleExpression )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2301:1: ruleExpression
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2178:1: ( ruleExpression )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2179:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParenthesisExpressionAccess().getExpressionParserRuleCall_1()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__ParenthesisExpression__Group__1__Impl4593);
+            pushFollow(FOLLOW_ruleExpression_in_rule__ParenthesisExpression__Group__1__Impl4348);
             ruleExpression();
 
             state._fsp--;
@@ -6574,16 +6233,16 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ParenthesisExpression__Group__2"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2312:1: rule__ParenthesisExpression__Group__2 : rule__ParenthesisExpression__Group__2__Impl ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2190:1: rule__ParenthesisExpression__Group__2 : rule__ParenthesisExpression__Group__2__Impl ;
     public final void rule__ParenthesisExpression__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2316:1: ( rule__ParenthesisExpression__Group__2__Impl )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2317:2: rule__ParenthesisExpression__Group__2__Impl
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2194:1: ( rule__ParenthesisExpression__Group__2__Impl )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2195:2: rule__ParenthesisExpression__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__ParenthesisExpression__Group__2__Impl_in_rule__ParenthesisExpression__Group__24622);
+            pushFollow(FOLLOW_rule__ParenthesisExpression__Group__2__Impl_in_rule__ParenthesisExpression__Group__24377);
             rule__ParenthesisExpression__Group__2__Impl();
 
             state._fsp--;
@@ -6607,22 +6266,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ParenthesisExpression__Group__2__Impl"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2323:1: rule__ParenthesisExpression__Group__2__Impl : ( ')' ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2201:1: rule__ParenthesisExpression__Group__2__Impl : ( ')' ) ;
     public final void rule__ParenthesisExpression__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2327:1: ( ( ')' ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2328:1: ( ')' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2205:1: ( ( ')' ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2206:1: ( ')' )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2328:1: ( ')' )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2329:1: ')'
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2206:1: ( ')' )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2207:1: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParenthesisExpressionAccess().getRightParenthesisKeyword_2()); 
             }
-            match(input,19,FOLLOW_19_in_rule__ParenthesisExpression__Group__2__Impl4650); if (state.failed) return ;
+            match(input,19,FOLLOW_19_in_rule__ParenthesisExpression__Group__2__Impl4405); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getParenthesisExpressionAccess().getRightParenthesisKeyword_2()); 
             }
@@ -6648,22 +6307,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Program__ExpressionsAssignment_0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2349:1: rule__Program__ExpressionsAssignment_0 : ( ruleExpression ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2227:1: rule__Program__ExpressionsAssignment_0 : ( ruleExpression ) ;
     public final void rule__Program__ExpressionsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2353:1: ( ( ruleExpression ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2354:1: ( ruleExpression )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2231:1: ( ( ruleExpression ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2232:1: ( ruleExpression )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2354:1: ( ruleExpression )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2355:1: ruleExpression
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2232:1: ( ruleExpression )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2233:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProgramAccess().getExpressionsExpressionParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__Program__ExpressionsAssignment_04692);
+            pushFollow(FOLLOW_ruleExpression_in_rule__Program__ExpressionsAssignment_04447);
             ruleExpression();
 
             state._fsp--;
@@ -6693,22 +6352,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Program__ExpressionsAssignment_2_0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2364:1: rule__Program__ExpressionsAssignment_2_0 : ( ruleExpression ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2242:1: rule__Program__ExpressionsAssignment_2_0 : ( ruleExpression ) ;
     public final void rule__Program__ExpressionsAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2368:1: ( ( ruleExpression ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2369:1: ( ruleExpression )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2246:1: ( ( ruleExpression ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2247:1: ( ruleExpression )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2369:1: ( ruleExpression )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2370:1: ruleExpression
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2247:1: ( ruleExpression )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2248:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProgramAccess().getExpressionsExpressionParserRuleCall_2_0_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__Program__ExpressionsAssignment_2_04723);
+            pushFollow(FOLLOW_ruleExpression_in_rule__Program__ExpressionsAssignment_2_04478);
             ruleExpression();
 
             state._fsp--;
@@ -6738,22 +6397,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionDeclaration__ParametersAssignment_2_0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2379:1: rule__FunctionDeclaration__ParametersAssignment_2_0 : ( RULE_ID ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2257:1: rule__FunctionDeclaration__ParametersAssignment_2_0 : ( RULE_ID ) ;
     public final void rule__FunctionDeclaration__ParametersAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2383:1: ( ( RULE_ID ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2384:1: ( RULE_ID )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2261:1: ( ( RULE_ID ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2262:1: ( RULE_ID )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2384:1: ( RULE_ID )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2385:1: RULE_ID
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2262:1: ( RULE_ID )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2263:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFunctionDeclarationAccess().getParametersIDTerminalRuleCall_2_0_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__FunctionDeclaration__ParametersAssignment_2_04754); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__FunctionDeclaration__ParametersAssignment_2_04509); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFunctionDeclarationAccess().getParametersIDTerminalRuleCall_2_0_0()); 
             }
@@ -6779,22 +6438,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionDeclaration__ParametersAssignment_2_1_1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2394:1: rule__FunctionDeclaration__ParametersAssignment_2_1_1 : ( RULE_ID ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2272:1: rule__FunctionDeclaration__ParametersAssignment_2_1_1 : ( RULE_ID ) ;
     public final void rule__FunctionDeclaration__ParametersAssignment_2_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2398:1: ( ( RULE_ID ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2399:1: ( RULE_ID )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2276:1: ( ( RULE_ID ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2277:1: ( RULE_ID )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2399:1: ( RULE_ID )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2400:1: RULE_ID
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2277:1: ( RULE_ID )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2278:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFunctionDeclarationAccess().getParametersIDTerminalRuleCall_2_1_1_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__FunctionDeclaration__ParametersAssignment_2_1_14785); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__FunctionDeclaration__ParametersAssignment_2_1_14540); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFunctionDeclarationAccess().getParametersIDTerminalRuleCall_2_1_1_0()); 
             }
@@ -6820,22 +6479,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionDeclaration__BodyAssignment_4"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2409:1: rule__FunctionDeclaration__BodyAssignment_4 : ( ruleBody ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2287:1: rule__FunctionDeclaration__BodyAssignment_4 : ( ruleBody ) ;
     public final void rule__FunctionDeclaration__BodyAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2413:1: ( ( ruleBody ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2414:1: ( ruleBody )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2291:1: ( ( ruleBody ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2292:1: ( ruleBody )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2414:1: ( ruleBody )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2415:1: ruleBody
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2292:1: ( ruleBody )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2293:1: ruleBody
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFunctionDeclarationAccess().getBodyBodyParserRuleCall_4_0()); 
             }
-            pushFollow(FOLLOW_ruleBody_in_rule__FunctionDeclaration__BodyAssignment_44816);
+            pushFollow(FOLLOW_ruleBody_in_rule__FunctionDeclaration__BodyAssignment_44571);
             ruleBody();
 
             state._fsp--;
@@ -6865,22 +6524,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Body__ExpressionsAssignment_0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2424:1: rule__Body__ExpressionsAssignment_0 : ( ruleExpression ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2302:1: rule__Body__ExpressionsAssignment_0 : ( ruleExpression ) ;
     public final void rule__Body__ExpressionsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2428:1: ( ( ruleExpression ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2429:1: ( ruleExpression )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2306:1: ( ( ruleExpression ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2307:1: ( ruleExpression )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2429:1: ( ruleExpression )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2430:1: ruleExpression
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2307:1: ( ruleExpression )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2308:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBodyAccess().getExpressionsExpressionParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__Body__ExpressionsAssignment_04847);
+            pushFollow(FOLLOW_ruleExpression_in_rule__Body__ExpressionsAssignment_04602);
             ruleExpression();
 
             state._fsp--;
@@ -6910,22 +6569,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Body__ExpressionsAssignment_1_2_0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2439:1: rule__Body__ExpressionsAssignment_1_2_0 : ( ruleExpression ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2317:1: rule__Body__ExpressionsAssignment_1_2_0 : ( ruleExpression ) ;
     public final void rule__Body__ExpressionsAssignment_1_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2443:1: ( ( ruleExpression ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2444:1: ( ruleExpression )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2321:1: ( ( ruleExpression ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2322:1: ( ruleExpression )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2444:1: ( ruleExpression )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2445:1: ruleExpression
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2322:1: ( ruleExpression )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2323:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBodyAccess().getExpressionsExpressionParserRuleCall_1_2_0_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__Body__ExpressionsAssignment_1_2_04878);
+            pushFollow(FOLLOW_ruleExpression_in_rule__Body__ExpressionsAssignment_1_2_04633);
             ruleExpression();
 
             state._fsp--;
@@ -6954,74 +6613,29 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Body__ExpressionsAssignment_1_2_0"
 
 
-    // $ANTLR start "rule__Apply__ArgumentsAssignment_1_1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2454:1: rule__Apply__ArgumentsAssignment_1_1 : ( ruleApplyTail ) ;
-    public final void rule__Apply__ArgumentsAssignment_1_1() throws RecognitionException {
+    // $ANTLR start "rule__Apply__ArgumentsAssignment_1_2_0"
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2332:1: rule__Apply__ArgumentsAssignment_1_2_0 : ( ruleExpression ) ;
+    public final void rule__Apply__ArgumentsAssignment_1_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2458:1: ( ( ruleApplyTail ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2459:1: ( ruleApplyTail )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2336:1: ( ( ruleExpression ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2337:1: ( ruleExpression )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2459:1: ( ruleApplyTail )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2460:1: ruleApplyTail
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getApplyAccess().getArgumentsApplyTailParserRuleCall_1_1_0()); 
-            }
-            pushFollow(FOLLOW_ruleApplyTail_in_rule__Apply__ArgumentsAssignment_1_14909);
-            ruleApplyTail();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getApplyAccess().getArgumentsApplyTailParserRuleCall_1_1_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Apply__ArgumentsAssignment_1_1"
-
-
-    // $ANTLR start "rule__ApplyTail__ArgumentsAssignment_2_0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2469:1: rule__ApplyTail__ArgumentsAssignment_2_0 : ( ruleExpression ) ;
-    public final void rule__ApplyTail__ArgumentsAssignment_2_0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2473:1: ( ( ruleExpression ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2474:1: ( ruleExpression )
-            {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2474:1: ( ruleExpression )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2475:1: ruleExpression
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2337:1: ( ruleExpression )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2338:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getApplyTailAccess().getArgumentsExpressionParserRuleCall_2_0_0()); 
+               before(grammarAccess.getApplyAccess().getArgumentsExpressionParserRuleCall_1_2_0_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__ApplyTail__ArgumentsAssignment_2_04940);
+            pushFollow(FOLLOW_ruleExpression_in_rule__Apply__ArgumentsAssignment_1_2_04664);
             ruleExpression();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getApplyTailAccess().getArgumentsExpressionParserRuleCall_2_0_0()); 
+               after(grammarAccess.getApplyAccess().getArgumentsExpressionParserRuleCall_1_2_0_0()); 
             }
 
             }
@@ -7041,32 +6655,32 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__ApplyTail__ArgumentsAssignment_2_0"
+    // $ANTLR end "rule__Apply__ArgumentsAssignment_1_2_0"
 
 
-    // $ANTLR start "rule__ApplyTail__ArgumentsAssignment_2_1_1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2484:1: rule__ApplyTail__ArgumentsAssignment_2_1_1 : ( ruleExpression ) ;
-    public final void rule__ApplyTail__ArgumentsAssignment_2_1_1() throws RecognitionException {
+    // $ANTLR start "rule__Apply__ArgumentsAssignment_1_2_1_1"
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2347:1: rule__Apply__ArgumentsAssignment_1_2_1_1 : ( ruleExpression ) ;
+    public final void rule__Apply__ArgumentsAssignment_1_2_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2488:1: ( ( ruleExpression ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2489:1: ( ruleExpression )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2351:1: ( ( ruleExpression ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2352:1: ( ruleExpression )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2489:1: ( ruleExpression )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2490:1: ruleExpression
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2352:1: ( ruleExpression )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2353:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getApplyTailAccess().getArgumentsExpressionParserRuleCall_2_1_1_0()); 
+               before(grammarAccess.getApplyAccess().getArgumentsExpressionParserRuleCall_1_2_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__ApplyTail__ArgumentsAssignment_2_1_14971);
+            pushFollow(FOLLOW_ruleExpression_in_rule__Apply__ArgumentsAssignment_1_2_1_14695);
             ruleExpression();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getApplyTailAccess().getArgumentsExpressionParserRuleCall_2_1_1_0()); 
+               after(grammarAccess.getApplyAccess().getArgumentsExpressionParserRuleCall_1_2_1_1_0()); 
             }
 
             }
@@ -7086,71 +6700,26 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__ApplyTail__ArgumentsAssignment_2_1_1"
-
-
-    // $ANTLR start "rule__ApplyTail__NextCallAssignment_4"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2499:1: rule__ApplyTail__NextCallAssignment_4 : ( ruleApplyTail ) ;
-    public final void rule__ApplyTail__NextCallAssignment_4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2503:1: ( ( ruleApplyTail ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2504:1: ( ruleApplyTail )
-            {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2504:1: ( ruleApplyTail )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2505:1: ruleApplyTail
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getApplyTailAccess().getNextCallApplyTailParserRuleCall_4_0()); 
-            }
-            pushFollow(FOLLOW_ruleApplyTail_in_rule__ApplyTail__NextCallAssignment_45002);
-            ruleApplyTail();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getApplyTailAccess().getNextCallApplyTailParserRuleCall_4_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ApplyTail__NextCallAssignment_4"
+    // $ANTLR end "rule__Apply__ArgumentsAssignment_1_2_1_1"
 
 
     // $ANTLR start "rule__LiteralExpr__ValueAssignment"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2514:1: rule__LiteralExpr__ValueAssignment : ( RULE_NUM ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2362:1: rule__LiteralExpr__ValueAssignment : ( RULE_NUM ) ;
     public final void rule__LiteralExpr__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2518:1: ( ( RULE_NUM ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2519:1: ( RULE_NUM )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2366:1: ( ( RULE_NUM ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2367:1: ( RULE_NUM )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2519:1: ( RULE_NUM )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2520:1: RULE_NUM
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2367:1: ( RULE_NUM )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2368:1: RULE_NUM
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLiteralExprAccess().getValueNumTerminalRuleCall_0()); 
             }
-            match(input,RULE_NUM,FOLLOW_RULE_NUM_in_rule__LiteralExpr__ValueAssignment5033); if (state.failed) return ;
+            match(input,RULE_NUM,FOLLOW_RULE_NUM_in_rule__LiteralExpr__ValueAssignment4726); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLiteralExprAccess().getValueNumTerminalRuleCall_0()); 
             }
@@ -7176,22 +6745,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SymbolReference__IdAssignment"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2529:1: rule__SymbolReference__IdAssignment : ( RULE_ID ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2377:1: rule__SymbolReference__IdAssignment : ( RULE_ID ) ;
     public final void rule__SymbolReference__IdAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2533:1: ( ( RULE_ID ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2534:1: ( RULE_ID )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2381:1: ( ( RULE_ID ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2382:1: ( RULE_ID )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2534:1: ( RULE_ID )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2535:1: RULE_ID
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2382:1: ( RULE_ID )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2383:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSymbolReferenceAccess().getIdIDTerminalRuleCall_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SymbolReference__IdAssignment5064); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SymbolReference__IdAssignment4757); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSymbolReferenceAccess().getIdIDTerminalRuleCall_0()); 
             }
@@ -7216,29 +6785,29 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__SymbolReference__IdAssignment"
 
 
-    // $ANTLR start "rule__NumericExpression__NumExprTailAssignment_1_1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2544:1: rule__NumericExpression__NumExprTailAssignment_1_1 : ( ruleNumExprTail ) ;
-    public final void rule__NumericExpression__NumExprTailAssignment_1_1() throws RecognitionException {
+    // $ANTLR start "rule__NumericExpression__ExprTailAssignment_1_1"
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2392:1: rule__NumericExpression__ExprTailAssignment_1_1 : ( ruleNumExprTail ) ;
+    public final void rule__NumericExpression__ExprTailAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2548:1: ( ( ruleNumExprTail ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2549:1: ( ruleNumExprTail )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2396:1: ( ( ruleNumExprTail ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2397:1: ( ruleNumExprTail )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2549:1: ( ruleNumExprTail )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2550:1: ruleNumExprTail
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2397:1: ( ruleNumExprTail )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2398:1: ruleNumExprTail
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getNumericExpressionAccess().getNumExprTailNumExprTailParserRuleCall_1_1_0()); 
+               before(grammarAccess.getNumericExpressionAccess().getExprTailNumExprTailParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleNumExprTail_in_rule__NumericExpression__NumExprTailAssignment_1_15095);
+            pushFollow(FOLLOW_ruleNumExprTail_in_rule__NumericExpression__ExprTailAssignment_1_14788);
             ruleNumExprTail();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getNumericExpressionAccess().getNumExprTailNumExprTailParserRuleCall_1_1_0()); 
+               after(grammarAccess.getNumericExpressionAccess().getExprTailNumExprTailParserRuleCall_1_1_0()); 
             }
 
             }
@@ -7258,29 +6827,29 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__NumericExpression__NumExprTailAssignment_1_1"
+    // $ANTLR end "rule__NumericExpression__ExprTailAssignment_1_1"
 
 
     // $ANTLR start "rule__NumExprTail__OperatorAssignment_0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2559:1: rule__NumExprTail__OperatorAssignment_0 : ( ( rule__NumExprTail__OperatorAlternatives_0_0 ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2407:1: rule__NumExprTail__OperatorAssignment_0 : ( ( rule__NumExprTail__OperatorAlternatives_0_0 ) ) ;
     public final void rule__NumExprTail__OperatorAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2563:1: ( ( ( rule__NumExprTail__OperatorAlternatives_0_0 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2564:1: ( ( rule__NumExprTail__OperatorAlternatives_0_0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2411:1: ( ( ( rule__NumExprTail__OperatorAlternatives_0_0 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2412:1: ( ( rule__NumExprTail__OperatorAlternatives_0_0 ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2564:1: ( ( rule__NumExprTail__OperatorAlternatives_0_0 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2565:1: ( rule__NumExprTail__OperatorAlternatives_0_0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2412:1: ( ( rule__NumExprTail__OperatorAlternatives_0_0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2413:1: ( rule__NumExprTail__OperatorAlternatives_0_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumExprTailAccess().getOperatorAlternatives_0_0()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2566:1: ( rule__NumExprTail__OperatorAlternatives_0_0 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2566:2: rule__NumExprTail__OperatorAlternatives_0_0
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2414:1: ( rule__NumExprTail__OperatorAlternatives_0_0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2414:2: rule__NumExprTail__OperatorAlternatives_0_0
             {
-            pushFollow(FOLLOW_rule__NumExprTail__OperatorAlternatives_0_0_in_rule__NumExprTail__OperatorAssignment_05126);
+            pushFollow(FOLLOW_rule__NumExprTail__OperatorAlternatives_0_0_in_rule__NumExprTail__OperatorAssignment_04819);
             rule__NumExprTail__OperatorAlternatives_0_0();
 
             state._fsp--;
@@ -7313,22 +6882,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__NumExprTail__FactorAssignment_1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2575:1: rule__NumExprTail__FactorAssignment_1 : ( ruleFactor ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2423:1: rule__NumExprTail__FactorAssignment_1 : ( ruleFactor ) ;
     public final void rule__NumExprTail__FactorAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2579:1: ( ( ruleFactor ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2580:1: ( ruleFactor )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2427:1: ( ( ruleFactor ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2428:1: ( ruleFactor )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2580:1: ( ruleFactor )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2581:1: ruleFactor
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2428:1: ( ruleFactor )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2429:1: ruleFactor
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumExprTailAccess().getFactorFactorParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleFactor_in_rule__NumExprTail__FactorAssignment_15159);
+            pushFollow(FOLLOW_ruleFactor_in_rule__NumExprTail__FactorAssignment_14852);
             ruleFactor();
 
             state._fsp--;
@@ -7358,22 +6927,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__NumExprTail__ExprTailAssignment_2"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2590:1: rule__NumExprTail__ExprTailAssignment_2 : ( ruleNumExprTail ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2438:1: rule__NumExprTail__ExprTailAssignment_2 : ( ruleNumExprTail ) ;
     public final void rule__NumExprTail__ExprTailAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2594:1: ( ( ruleNumExprTail ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2595:1: ( ruleNumExprTail )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2442:1: ( ( ruleNumExprTail ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2443:1: ( ruleNumExprTail )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2595:1: ( ruleNumExprTail )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2596:1: ruleNumExprTail
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2443:1: ( ruleNumExprTail )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2444:1: ruleNumExprTail
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumExprTailAccess().getExprTailNumExprTailParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleNumExprTail_in_rule__NumExprTail__ExprTailAssignment_25190);
+            pushFollow(FOLLOW_ruleNumExprTail_in_rule__NumExprTail__ExprTailAssignment_24883);
             ruleNumExprTail();
 
             state._fsp--;
@@ -7403,22 +6972,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Factor__FactorTailAssignment_1_1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2605:1: rule__Factor__FactorTailAssignment_1_1 : ( ruleFactorTail ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2453:1: rule__Factor__FactorTailAssignment_1_1 : ( ruleFactorTail ) ;
     public final void rule__Factor__FactorTailAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2609:1: ( ( ruleFactorTail ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2610:1: ( ruleFactorTail )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2457:1: ( ( ruleFactorTail ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2458:1: ( ruleFactorTail )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2610:1: ( ruleFactorTail )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2611:1: ruleFactorTail
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2458:1: ( ruleFactorTail )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2459:1: ruleFactorTail
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFactorAccess().getFactorTailFactorTailParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleFactorTail_in_rule__Factor__FactorTailAssignment_1_15221);
+            pushFollow(FOLLOW_ruleFactorTail_in_rule__Factor__FactorTailAssignment_1_14914);
             ruleFactorTail();
 
             state._fsp--;
@@ -7448,25 +7017,25 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FactorTail__OperatorAssignment_0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2620:1: rule__FactorTail__OperatorAssignment_0 : ( ( rule__FactorTail__OperatorAlternatives_0_0 ) ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2468:1: rule__FactorTail__OperatorAssignment_0 : ( ( rule__FactorTail__OperatorAlternatives_0_0 ) ) ;
     public final void rule__FactorTail__OperatorAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2624:1: ( ( ( rule__FactorTail__OperatorAlternatives_0_0 ) ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2625:1: ( ( rule__FactorTail__OperatorAlternatives_0_0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2472:1: ( ( ( rule__FactorTail__OperatorAlternatives_0_0 ) ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2473:1: ( ( rule__FactorTail__OperatorAlternatives_0_0 ) )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2625:1: ( ( rule__FactorTail__OperatorAlternatives_0_0 ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2626:1: ( rule__FactorTail__OperatorAlternatives_0_0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2473:1: ( ( rule__FactorTail__OperatorAlternatives_0_0 ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2474:1: ( rule__FactorTail__OperatorAlternatives_0_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFactorTailAccess().getOperatorAlternatives_0_0()); 
             }
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2627:1: ( rule__FactorTail__OperatorAlternatives_0_0 )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2627:2: rule__FactorTail__OperatorAlternatives_0_0
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2475:1: ( rule__FactorTail__OperatorAlternatives_0_0 )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2475:2: rule__FactorTail__OperatorAlternatives_0_0
             {
-            pushFollow(FOLLOW_rule__FactorTail__OperatorAlternatives_0_0_in_rule__FactorTail__OperatorAssignment_05252);
+            pushFollow(FOLLOW_rule__FactorTail__OperatorAlternatives_0_0_in_rule__FactorTail__OperatorAssignment_04945);
             rule__FactorTail__OperatorAlternatives_0_0();
 
             state._fsp--;
@@ -7499,22 +7068,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FactorTail__TermAssignment_1"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2636:1: rule__FactorTail__TermAssignment_1 : ( ruleTerm ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2484:1: rule__FactorTail__TermAssignment_1 : ( ruleTerm ) ;
     public final void rule__FactorTail__TermAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2640:1: ( ( ruleTerm ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2641:1: ( ruleTerm )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2488:1: ( ( ruleTerm ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2489:1: ( ruleTerm )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2641:1: ( ruleTerm )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2642:1: ruleTerm
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2489:1: ( ruleTerm )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2490:1: ruleTerm
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFactorTailAccess().getTermTermParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleTerm_in_rule__FactorTail__TermAssignment_15285);
+            pushFollow(FOLLOW_ruleTerm_in_rule__FactorTail__TermAssignment_14978);
             ruleTerm();
 
             state._fsp--;
@@ -7544,22 +7113,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FactorTail__FactorTailAssignment_2"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2651:1: rule__FactorTail__FactorTailAssignment_2 : ( ruleFactorTail ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2499:1: rule__FactorTail__FactorTailAssignment_2 : ( ruleFactorTail ) ;
     public final void rule__FactorTail__FactorTailAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2655:1: ( ( ruleFactorTail ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2656:1: ( ruleFactorTail )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2503:1: ( ( ruleFactorTail ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2504:1: ( ruleFactorTail )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2656:1: ( ruleFactorTail )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2657:1: ruleFactorTail
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2504:1: ( ruleFactorTail )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2505:1: ruleFactorTail
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFactorTailAccess().getFactorTailFactorTailParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleFactorTail_in_rule__FactorTail__FactorTailAssignment_25316);
+            pushFollow(FOLLOW_ruleFactorTail_in_rule__FactorTail__FactorTailAssignment_25009);
             ruleFactorTail();
 
             state._fsp--;
@@ -7589,22 +7158,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__VariableAssignment__IdAssignment_0"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2666:1: rule__VariableAssignment__IdAssignment_0 : ( RULE_ID ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2514:1: rule__VariableAssignment__IdAssignment_0 : ( RULE_ID ) ;
     public final void rule__VariableAssignment__IdAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2670:1: ( ( RULE_ID ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2671:1: ( RULE_ID )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2518:1: ( ( RULE_ID ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2519:1: ( RULE_ID )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2671:1: ( RULE_ID )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2672:1: RULE_ID
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2519:1: ( RULE_ID )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2520:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariableAssignmentAccess().getIdIDTerminalRuleCall_0_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__VariableAssignment__IdAssignment_05347); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__VariableAssignment__IdAssignment_05040); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getVariableAssignmentAccess().getIdIDTerminalRuleCall_0_0()); 
             }
@@ -7630,22 +7199,22 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__VariableAssignment__ExpressionAssignment_2"
-    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2681:1: rule__VariableAssignment__ExpressionAssignment_2 : ( ruleExpression ) ;
+    // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2529:1: rule__VariableAssignment__ExpressionAssignment_2 : ( ruleExpression ) ;
     public final void rule__VariableAssignment__ExpressionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2685:1: ( ( ruleExpression ) )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2686:1: ( ruleExpression )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2533:1: ( ( ruleExpression ) )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2534:1: ( ruleExpression )
             {
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2686:1: ( ruleExpression )
-            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2687:1: ruleExpression
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2534:1: ( ruleExpression )
+            // ../org.arz.miniScript.ui/src-gen/org/arz/ui/contentassist/antlr/internal/InternalMiniScript.g:2535:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariableAssignmentAccess().getExpressionExpressionParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__VariableAssignment__ExpressionAssignment_25378);
+            pushFollow(FOLLOW_ruleExpression_in_rule__VariableAssignment__ExpressionAssignment_25071);
             ruleExpression();
 
             state._fsp--;
@@ -7699,205 +7268,193 @@ public class InternalMiniScriptParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_ruleFunctor_in_entryRuleFunctor426 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleFunctor433 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Functor__Alternatives_in_ruleFunctor459 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleApplyTail_in_entryRuleApplyTail486 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleApplyTail493 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ApplyTail__Group__0_in_ruleApplyTail519 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLiteralExpr_in_entryRuleLiteralExpr546 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLiteralExpr553 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LiteralExpr__ValueAssignment_in_ruleLiteralExpr579 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSymbolReference_in_entryRuleSymbolReference606 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSymbolReference613 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SymbolReference__IdAssignment_in_ruleSymbolReference639 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumericExpression_in_entryRuleNumericExpression666 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNumericExpression673 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NumericExpression__Group__0_in_ruleNumericExpression699 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumExprTail_in_entryRuleNumExprTail726 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNumExprTail733 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NumExprTail__Group__0_in_ruleNumExprTail759 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFactor_in_entryRuleFactor786 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFactor793 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Factor__Group__0_in_ruleFactor819 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFactorTail_in_entryRuleFactorTail846 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFactorTail853 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FactorTail__Group__0_in_ruleFactorTail879 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTerm_in_entryRuleTerm906 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTerm913 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Term__Alternatives_in_ruleTerm939 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariableAssignment_in_entryRuleVariableAssignment966 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleVariableAssignment973 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__VariableAssignment__Group__0_in_ruleVariableAssignment999 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParenthesisExpression_in_entryRuleParenthesisExpression1026 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleParenthesisExpression1033 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ParenthesisExpression__Group__0_in_ruleParenthesisExpression1059 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFunctionDeclaration_in_rule__Expression__Alternatives1095 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariableAssignment_in_rule__Expression__Alternatives1112 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumericExpression_in_rule__Expression__Alternatives1129 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__ExpressionsAssignment_0_in_rule__Body__Alternatives1161 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__Group_1__0_in_rule__Body__Alternatives1179 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSymbolReference_in_rule__Functor__Alternatives1212 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParenthesisExpression_in_rule__Functor__Alternatives1229 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__NumExprTail__OperatorAlternatives_0_01262 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__NumExprTail__OperatorAlternatives_0_01282 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__FactorTail__OperatorAlternatives_0_01317 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__FactorTail__OperatorAlternatives_0_01337 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLiteralExpr_in_rule__Term__Alternatives1371 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleApply_in_rule__Term__Alternatives1388 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Program__Group__0__Impl_in_rule__Program__Group__01418 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_rule__Program__Group__1_in_rule__Program__Group__01421 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Program__ExpressionsAssignment_0_in_rule__Program__Group__0__Impl1448 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Program__Group__1__Impl_in_rule__Program__Group__11478 = new BitSet(new long[]{0x0000000000060030L});
-    public static final BitSet FOLLOW_rule__Program__Group__2_in_rule__Program__Group__11481 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__Program__Group__1__Impl1509 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Program__Group__2__Impl_in_rule__Program__Group__21540 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Program__Group_2__0_in_rule__Program__Group__2__Impl1567 = new BitSet(new long[]{0x0000000000060032L});
-    public static final BitSet FOLLOW_rule__Program__Group_2__0__Impl_in_rule__Program__Group_2__01604 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_rule__Program__Group_2__1_in_rule__Program__Group_2__01607 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Program__ExpressionsAssignment_2_0_in_rule__Program__Group_2__0__Impl1634 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Program__Group_2__1__Impl_in_rule__Program__Group_2__11664 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__Program__Group_2__1__Impl1692 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group__0__Impl_in_rule__FunctionDeclaration__Group__01727 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group__1_in_rule__FunctionDeclaration__Group__01730 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__FunctionDeclaration__Group__0__Impl1758 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group__1__Impl_in_rule__FunctionDeclaration__Group__11789 = new BitSet(new long[]{0x0000000000080010L});
-    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group__2_in_rule__FunctionDeclaration__Group__11792 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__FunctionDeclaration__Group__1__Impl1820 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group__2__Impl_in_rule__FunctionDeclaration__Group__21851 = new BitSet(new long[]{0x0000000000080010L});
-    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group__3_in_rule__FunctionDeclaration__Group__21854 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group_2__0_in_rule__FunctionDeclaration__Group__2__Impl1881 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group__3__Impl_in_rule__FunctionDeclaration__Group__31912 = new BitSet(new long[]{0x0000000000260030L});
-    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group__4_in_rule__FunctionDeclaration__Group__31915 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__FunctionDeclaration__Group__3__Impl1943 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group__4__Impl_in_rule__FunctionDeclaration__Group__41974 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionDeclaration__BodyAssignment_4_in_rule__FunctionDeclaration__Group__4__Impl2001 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group_2__0__Impl_in_rule__FunctionDeclaration__Group_2__02041 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group_2__1_in_rule__FunctionDeclaration__Group_2__02044 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionDeclaration__ParametersAssignment_2_0_in_rule__FunctionDeclaration__Group_2__0__Impl2071 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group_2__1__Impl_in_rule__FunctionDeclaration__Group_2__12101 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group_2_1__0_in_rule__FunctionDeclaration__Group_2__1__Impl2128 = new BitSet(new long[]{0x0000000000100002L});
-    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group_2_1__0__Impl_in_rule__FunctionDeclaration__Group_2_1__02163 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group_2_1__1_in_rule__FunctionDeclaration__Group_2_1__02166 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__FunctionDeclaration__Group_2_1__0__Impl2194 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group_2_1__1__Impl_in_rule__FunctionDeclaration__Group_2_1__12225 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionDeclaration__ParametersAssignment_2_1_1_in_rule__FunctionDeclaration__Group_2_1__1__Impl2252 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__Group_1__0__Impl_in_rule__Body__Group_1__02286 = new BitSet(new long[]{0x0000000000260030L});
-    public static final BitSet FOLLOW_rule__Body__Group_1__1_in_rule__Body__Group_1__02289 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__Group_1__1__Impl_in_rule__Body__Group_1__12347 = new BitSet(new long[]{0x0000000000460030L});
-    public static final BitSet FOLLOW_rule__Body__Group_1__2_in_rule__Body__Group_1__12350 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__Body__Group_1__1__Impl2378 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__Group_1__2__Impl_in_rule__Body__Group_1__22409 = new BitSet(new long[]{0x0000000000460030L});
-    public static final BitSet FOLLOW_rule__Body__Group_1__3_in_rule__Body__Group_1__22412 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__Group_1_2__0_in_rule__Body__Group_1__2__Impl2439 = new BitSet(new long[]{0x0000000000060032L});
-    public static final BitSet FOLLOW_rule__Body__Group_1__3__Impl_in_rule__Body__Group_1__32470 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__Body__Group_1__3__Impl2498 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__Group_1_2__0__Impl_in_rule__Body__Group_1_2__02537 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_rule__Body__Group_1_2__1_in_rule__Body__Group_1_2__02540 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__ExpressionsAssignment_1_2_0_in_rule__Body__Group_1_2__0__Impl2567 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__Group_1_2__1__Impl_in_rule__Body__Group_1_2__12597 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__Body__Group_1_2__1__Impl2625 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Apply__Group__0__Impl_in_rule__Apply__Group__02660 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__Apply__Group__1_in_rule__Apply__Group__02663 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFunctor_in_rule__Apply__Group__0__Impl2690 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Apply__Group__1__Impl_in_rule__Apply__Group__12719 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Apply__Group_1__0_in_rule__Apply__Group__1__Impl2746 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Apply__Group_1__0__Impl_in_rule__Apply__Group_1__02781 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__Apply__Group_1__1_in_rule__Apply__Group_1__02784 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Apply__Group_1__1__Impl_in_rule__Apply__Group_1__12842 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Apply__ArgumentsAssignment_1_1_in_rule__Apply__Group_1__1__Impl2869 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ApplyTail__Group__0__Impl_in_rule__ApplyTail__Group__02903 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__ApplyTail__Group__1_in_rule__ApplyTail__Group__02906 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ApplyTail__Group__1__Impl_in_rule__ApplyTail__Group__12964 = new BitSet(new long[]{0x00000000000E0030L});
-    public static final BitSet FOLLOW_rule__ApplyTail__Group__2_in_rule__ApplyTail__Group__12967 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__ApplyTail__Group__1__Impl2995 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ApplyTail__Group__2__Impl_in_rule__ApplyTail__Group__23026 = new BitSet(new long[]{0x00000000000E0030L});
-    public static final BitSet FOLLOW_rule__ApplyTail__Group__3_in_rule__ApplyTail__Group__23029 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ApplyTail__Group_2__0_in_rule__ApplyTail__Group__2__Impl3056 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ApplyTail__Group__3__Impl_in_rule__ApplyTail__Group__33087 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__ApplyTail__Group__4_in_rule__ApplyTail__Group__33090 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__ApplyTail__Group__3__Impl3118 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ApplyTail__Group__4__Impl_in_rule__ApplyTail__Group__43149 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ApplyTail__NextCallAssignment_4_in_rule__ApplyTail__Group__4__Impl3176 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ApplyTail__Group_2__0__Impl_in_rule__ApplyTail__Group_2__03217 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_rule__ApplyTail__Group_2__1_in_rule__ApplyTail__Group_2__03220 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ApplyTail__ArgumentsAssignment_2_0_in_rule__ApplyTail__Group_2__0__Impl3247 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ApplyTail__Group_2__1__Impl_in_rule__ApplyTail__Group_2__13277 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ApplyTail__Group_2_1__0_in_rule__ApplyTail__Group_2__1__Impl3304 = new BitSet(new long[]{0x0000000000100002L});
-    public static final BitSet FOLLOW_rule__ApplyTail__Group_2_1__0__Impl_in_rule__ApplyTail__Group_2_1__03339 = new BitSet(new long[]{0x0000000000060030L});
-    public static final BitSet FOLLOW_rule__ApplyTail__Group_2_1__1_in_rule__ApplyTail__Group_2_1__03342 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__ApplyTail__Group_2_1__0__Impl3370 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ApplyTail__Group_2_1__1__Impl_in_rule__ApplyTail__Group_2_1__13401 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ApplyTail__ArgumentsAssignment_2_1_1_in_rule__ApplyTail__Group_2_1__1__Impl3428 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NumericExpression__Group__0__Impl_in_rule__NumericExpression__Group__03462 = new BitSet(new long[]{0x0000000000003000L});
-    public static final BitSet FOLLOW_rule__NumericExpression__Group__1_in_rule__NumericExpression__Group__03465 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFactor_in_rule__NumericExpression__Group__0__Impl3492 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NumericExpression__Group__1__Impl_in_rule__NumericExpression__Group__13521 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NumericExpression__Group_1__0_in_rule__NumericExpression__Group__1__Impl3548 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NumericExpression__Group_1__0__Impl_in_rule__NumericExpression__Group_1__03583 = new BitSet(new long[]{0x0000000000003000L});
-    public static final BitSet FOLLOW_rule__NumericExpression__Group_1__1_in_rule__NumericExpression__Group_1__03586 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NumericExpression__Group_1__1__Impl_in_rule__NumericExpression__Group_1__13644 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NumericExpression__NumExprTailAssignment_1_1_in_rule__NumericExpression__Group_1__1__Impl3671 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NumExprTail__Group__0__Impl_in_rule__NumExprTail__Group__03705 = new BitSet(new long[]{0x0000000000060030L});
-    public static final BitSet FOLLOW_rule__NumExprTail__Group__1_in_rule__NumExprTail__Group__03708 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NumExprTail__OperatorAssignment_0_in_rule__NumExprTail__Group__0__Impl3735 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NumExprTail__Group__1__Impl_in_rule__NumExprTail__Group__13765 = new BitSet(new long[]{0x0000000000003000L});
-    public static final BitSet FOLLOW_rule__NumExprTail__Group__2_in_rule__NumExprTail__Group__13768 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NumExprTail__FactorAssignment_1_in_rule__NumExprTail__Group__1__Impl3795 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NumExprTail__Group__2__Impl_in_rule__NumExprTail__Group__23825 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NumExprTail__ExprTailAssignment_2_in_rule__NumExprTail__Group__2__Impl3852 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Factor__Group__0__Impl_in_rule__Factor__Group__03889 = new BitSet(new long[]{0x000000000000C000L});
-    public static final BitSet FOLLOW_rule__Factor__Group__1_in_rule__Factor__Group__03892 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTerm_in_rule__Factor__Group__0__Impl3919 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Factor__Group__1__Impl_in_rule__Factor__Group__13948 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Factor__Group_1__0_in_rule__Factor__Group__1__Impl3975 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Factor__Group_1__0__Impl_in_rule__Factor__Group_1__04010 = new BitSet(new long[]{0x000000000000C000L});
-    public static final BitSet FOLLOW_rule__Factor__Group_1__1_in_rule__Factor__Group_1__04013 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Factor__Group_1__1__Impl_in_rule__Factor__Group_1__14071 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Factor__FactorTailAssignment_1_1_in_rule__Factor__Group_1__1__Impl4098 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FactorTail__Group__0__Impl_in_rule__FactorTail__Group__04132 = new BitSet(new long[]{0x0000000000060030L});
-    public static final BitSet FOLLOW_rule__FactorTail__Group__1_in_rule__FactorTail__Group__04135 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FactorTail__OperatorAssignment_0_in_rule__FactorTail__Group__0__Impl4162 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FactorTail__Group__1__Impl_in_rule__FactorTail__Group__14192 = new BitSet(new long[]{0x000000000000C000L});
-    public static final BitSet FOLLOW_rule__FactorTail__Group__2_in_rule__FactorTail__Group__14195 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FactorTail__TermAssignment_1_in_rule__FactorTail__Group__1__Impl4222 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FactorTail__Group__2__Impl_in_rule__FactorTail__Group__24252 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FactorTail__FactorTailAssignment_2_in_rule__FactorTail__Group__2__Impl4279 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__VariableAssignment__Group__0__Impl_in_rule__VariableAssignment__Group__04316 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__VariableAssignment__Group__1_in_rule__VariableAssignment__Group__04319 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__VariableAssignment__IdAssignment_0_in_rule__VariableAssignment__Group__0__Impl4346 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__VariableAssignment__Group__1__Impl_in_rule__VariableAssignment__Group__14376 = new BitSet(new long[]{0x0000000000060030L});
-    public static final BitSet FOLLOW_rule__VariableAssignment__Group__2_in_rule__VariableAssignment__Group__14379 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__VariableAssignment__Group__1__Impl4407 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__VariableAssignment__Group__2__Impl_in_rule__VariableAssignment__Group__24438 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__VariableAssignment__ExpressionAssignment_2_in_rule__VariableAssignment__Group__2__Impl4465 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ParenthesisExpression__Group__0__Impl_in_rule__ParenthesisExpression__Group__04501 = new BitSet(new long[]{0x0000000000060030L});
-    public static final BitSet FOLLOW_rule__ParenthesisExpression__Group__1_in_rule__ParenthesisExpression__Group__04504 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__ParenthesisExpression__Group__0__Impl4532 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ParenthesisExpression__Group__1__Impl_in_rule__ParenthesisExpression__Group__14563 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__ParenthesisExpression__Group__2_in_rule__ParenthesisExpression__Group__14566 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__ParenthesisExpression__Group__1__Impl4593 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ParenthesisExpression__Group__2__Impl_in_rule__ParenthesisExpression__Group__24622 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__ParenthesisExpression__Group__2__Impl4650 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__Program__ExpressionsAssignment_04692 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__Program__ExpressionsAssignment_2_04723 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__FunctionDeclaration__ParametersAssignment_2_04754 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__FunctionDeclaration__ParametersAssignment_2_1_14785 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBody_in_rule__FunctionDeclaration__BodyAssignment_44816 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__Body__ExpressionsAssignment_04847 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__Body__ExpressionsAssignment_1_2_04878 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleApplyTail_in_rule__Apply__ArgumentsAssignment_1_14909 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__ApplyTail__ArgumentsAssignment_2_04940 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__ApplyTail__ArgumentsAssignment_2_1_14971 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleApplyTail_in_rule__ApplyTail__NextCallAssignment_45002 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NUM_in_rule__LiteralExpr__ValueAssignment5033 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SymbolReference__IdAssignment5064 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumExprTail_in_rule__NumericExpression__NumExprTailAssignment_1_15095 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NumExprTail__OperatorAlternatives_0_0_in_rule__NumExprTail__OperatorAssignment_05126 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFactor_in_rule__NumExprTail__FactorAssignment_15159 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumExprTail_in_rule__NumExprTail__ExprTailAssignment_25190 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFactorTail_in_rule__Factor__FactorTailAssignment_1_15221 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FactorTail__OperatorAlternatives_0_0_in_rule__FactorTail__OperatorAssignment_05252 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTerm_in_rule__FactorTail__TermAssignment_15285 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFactorTail_in_rule__FactorTail__FactorTailAssignment_25316 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__VariableAssignment__IdAssignment_05347 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__VariableAssignment__ExpressionAssignment_25378 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLiteralExpr_in_entryRuleLiteralExpr486 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLiteralExpr493 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LiteralExpr__ValueAssignment_in_ruleLiteralExpr519 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSymbolReference_in_entryRuleSymbolReference546 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSymbolReference553 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SymbolReference__IdAssignment_in_ruleSymbolReference579 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumericExpression_in_entryRuleNumericExpression606 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNumericExpression613 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NumericExpression__Group__0_in_ruleNumericExpression639 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumExprTail_in_entryRuleNumExprTail666 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNumExprTail673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NumExprTail__Group__0_in_ruleNumExprTail699 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFactor_in_entryRuleFactor726 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFactor733 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Factor__Group__0_in_ruleFactor759 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFactorTail_in_entryRuleFactorTail786 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFactorTail793 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FactorTail__Group__0_in_ruleFactorTail819 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTerm_in_entryRuleTerm846 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTerm853 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Term__Alternatives_in_ruleTerm879 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariableAssignment_in_entryRuleVariableAssignment906 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVariableAssignment913 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__VariableAssignment__Group__0_in_ruleVariableAssignment939 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParenthesisExpression_in_entryRuleParenthesisExpression966 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleParenthesisExpression973 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ParenthesisExpression__Group__0_in_ruleParenthesisExpression999 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFunctionDeclaration_in_rule__Expression__Alternatives1035 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariableAssignment_in_rule__Expression__Alternatives1052 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumericExpression_in_rule__Expression__Alternatives1069 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__ExpressionsAssignment_0_in_rule__Body__Alternatives1101 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group_1__0_in_rule__Body__Alternatives1119 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSymbolReference_in_rule__Functor__Alternatives1152 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParenthesisExpression_in_rule__Functor__Alternatives1169 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__NumExprTail__OperatorAlternatives_0_01202 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__NumExprTail__OperatorAlternatives_0_01222 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__FactorTail__OperatorAlternatives_0_01257 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__FactorTail__OperatorAlternatives_0_01277 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLiteralExpr_in_rule__Term__Alternatives1311 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleApply_in_rule__Term__Alternatives1328 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Program__Group__0__Impl_in_rule__Program__Group__01358 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__Program__Group__1_in_rule__Program__Group__01361 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Program__ExpressionsAssignment_0_in_rule__Program__Group__0__Impl1388 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Program__Group__1__Impl_in_rule__Program__Group__11418 = new BitSet(new long[]{0x0000000000060030L});
+    public static final BitSet FOLLOW_rule__Program__Group__2_in_rule__Program__Group__11421 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Program__Group__1__Impl1449 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Program__Group__2__Impl_in_rule__Program__Group__21480 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Program__Group_2__0_in_rule__Program__Group__2__Impl1507 = new BitSet(new long[]{0x0000000000060032L});
+    public static final BitSet FOLLOW_rule__Program__Group_2__0__Impl_in_rule__Program__Group_2__01544 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__Program__Group_2__1_in_rule__Program__Group_2__01547 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Program__ExpressionsAssignment_2_0_in_rule__Program__Group_2__0__Impl1574 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Program__Group_2__1__Impl_in_rule__Program__Group_2__11604 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Program__Group_2__1__Impl1632 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group__0__Impl_in_rule__FunctionDeclaration__Group__01667 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group__1_in_rule__FunctionDeclaration__Group__01670 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__FunctionDeclaration__Group__0__Impl1698 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group__1__Impl_in_rule__FunctionDeclaration__Group__11729 = new BitSet(new long[]{0x0000000000080010L});
+    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group__2_in_rule__FunctionDeclaration__Group__11732 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__FunctionDeclaration__Group__1__Impl1760 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group__2__Impl_in_rule__FunctionDeclaration__Group__21791 = new BitSet(new long[]{0x0000000000080010L});
+    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group__3_in_rule__FunctionDeclaration__Group__21794 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group_2__0_in_rule__FunctionDeclaration__Group__2__Impl1821 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group__3__Impl_in_rule__FunctionDeclaration__Group__31852 = new BitSet(new long[]{0x0000000000260030L});
+    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group__4_in_rule__FunctionDeclaration__Group__31855 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__FunctionDeclaration__Group__3__Impl1883 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group__4__Impl_in_rule__FunctionDeclaration__Group__41914 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionDeclaration__BodyAssignment_4_in_rule__FunctionDeclaration__Group__4__Impl1941 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group_2__0__Impl_in_rule__FunctionDeclaration__Group_2__01981 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group_2__1_in_rule__FunctionDeclaration__Group_2__01984 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionDeclaration__ParametersAssignment_2_0_in_rule__FunctionDeclaration__Group_2__0__Impl2011 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group_2__1__Impl_in_rule__FunctionDeclaration__Group_2__12041 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group_2_1__0_in_rule__FunctionDeclaration__Group_2__1__Impl2068 = new BitSet(new long[]{0x0000000000100002L});
+    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group_2_1__0__Impl_in_rule__FunctionDeclaration__Group_2_1__02103 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group_2_1__1_in_rule__FunctionDeclaration__Group_2_1__02106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__FunctionDeclaration__Group_2_1__0__Impl2134 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionDeclaration__Group_2_1__1__Impl_in_rule__FunctionDeclaration__Group_2_1__12165 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionDeclaration__ParametersAssignment_2_1_1_in_rule__FunctionDeclaration__Group_2_1__1__Impl2192 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group_1__0__Impl_in_rule__Body__Group_1__02226 = new BitSet(new long[]{0x0000000000260030L});
+    public static final BitSet FOLLOW_rule__Body__Group_1__1_in_rule__Body__Group_1__02229 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group_1__1__Impl_in_rule__Body__Group_1__12287 = new BitSet(new long[]{0x0000000000460030L});
+    public static final BitSet FOLLOW_rule__Body__Group_1__2_in_rule__Body__Group_1__12290 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__Body__Group_1__1__Impl2318 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group_1__2__Impl_in_rule__Body__Group_1__22349 = new BitSet(new long[]{0x0000000000460030L});
+    public static final BitSet FOLLOW_rule__Body__Group_1__3_in_rule__Body__Group_1__22352 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group_1_2__0_in_rule__Body__Group_1__2__Impl2379 = new BitSet(new long[]{0x0000000000060032L});
+    public static final BitSet FOLLOW_rule__Body__Group_1__3__Impl_in_rule__Body__Group_1__32410 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__Body__Group_1__3__Impl2438 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group_1_2__0__Impl_in_rule__Body__Group_1_2__02477 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__Body__Group_1_2__1_in_rule__Body__Group_1_2__02480 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__ExpressionsAssignment_1_2_0_in_rule__Body__Group_1_2__0__Impl2507 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group_1_2__1__Impl_in_rule__Body__Group_1_2__12537 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Body__Group_1_2__1__Impl2565 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Apply__Group__0__Impl_in_rule__Apply__Group__02600 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_rule__Apply__Group__1_in_rule__Apply__Group__02603 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFunctor_in_rule__Apply__Group__0__Impl2630 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Apply__Group__1__Impl_in_rule__Apply__Group__12659 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Apply__Group_1__0_in_rule__Apply__Group__1__Impl2686 = new BitSet(new long[]{0x0000000000040002L});
+    public static final BitSet FOLLOW_rule__Apply__Group_1__0__Impl_in_rule__Apply__Group_1__02721 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_rule__Apply__Group_1__1_in_rule__Apply__Group_1__02724 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Apply__Group_1__1__Impl_in_rule__Apply__Group_1__12782 = new BitSet(new long[]{0x00000000000E0030L});
+    public static final BitSet FOLLOW_rule__Apply__Group_1__2_in_rule__Apply__Group_1__12785 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__Apply__Group_1__1__Impl2813 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Apply__Group_1__2__Impl_in_rule__Apply__Group_1__22844 = new BitSet(new long[]{0x00000000000E0030L});
+    public static final BitSet FOLLOW_rule__Apply__Group_1__3_in_rule__Apply__Group_1__22847 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Apply__Group_1_2__0_in_rule__Apply__Group_1__2__Impl2874 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Apply__Group_1__3__Impl_in_rule__Apply__Group_1__32905 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__Apply__Group_1__3__Impl2933 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Apply__Group_1_2__0__Impl_in_rule__Apply__Group_1_2__02972 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_rule__Apply__Group_1_2__1_in_rule__Apply__Group_1_2__02975 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Apply__ArgumentsAssignment_1_2_0_in_rule__Apply__Group_1_2__0__Impl3002 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Apply__Group_1_2__1__Impl_in_rule__Apply__Group_1_2__13032 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Apply__Group_1_2_1__0_in_rule__Apply__Group_1_2__1__Impl3059 = new BitSet(new long[]{0x0000000000100002L});
+    public static final BitSet FOLLOW_rule__Apply__Group_1_2_1__0__Impl_in_rule__Apply__Group_1_2_1__03094 = new BitSet(new long[]{0x0000000000060030L});
+    public static final BitSet FOLLOW_rule__Apply__Group_1_2_1__1_in_rule__Apply__Group_1_2_1__03097 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__Apply__Group_1_2_1__0__Impl3125 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Apply__Group_1_2_1__1__Impl_in_rule__Apply__Group_1_2_1__13156 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Apply__ArgumentsAssignment_1_2_1_1_in_rule__Apply__Group_1_2_1__1__Impl3183 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NumericExpression__Group__0__Impl_in_rule__NumericExpression__Group__03217 = new BitSet(new long[]{0x0000000000003000L});
+    public static final BitSet FOLLOW_rule__NumericExpression__Group__1_in_rule__NumericExpression__Group__03220 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFactor_in_rule__NumericExpression__Group__0__Impl3247 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NumericExpression__Group__1__Impl_in_rule__NumericExpression__Group__13276 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NumericExpression__Group_1__0_in_rule__NumericExpression__Group__1__Impl3303 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NumericExpression__Group_1__0__Impl_in_rule__NumericExpression__Group_1__03338 = new BitSet(new long[]{0x0000000000003000L});
+    public static final BitSet FOLLOW_rule__NumericExpression__Group_1__1_in_rule__NumericExpression__Group_1__03341 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NumericExpression__Group_1__1__Impl_in_rule__NumericExpression__Group_1__13399 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NumericExpression__ExprTailAssignment_1_1_in_rule__NumericExpression__Group_1__1__Impl3426 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NumExprTail__Group__0__Impl_in_rule__NumExprTail__Group__03460 = new BitSet(new long[]{0x0000000000060030L});
+    public static final BitSet FOLLOW_rule__NumExprTail__Group__1_in_rule__NumExprTail__Group__03463 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NumExprTail__OperatorAssignment_0_in_rule__NumExprTail__Group__0__Impl3490 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NumExprTail__Group__1__Impl_in_rule__NumExprTail__Group__13520 = new BitSet(new long[]{0x0000000000003000L});
+    public static final BitSet FOLLOW_rule__NumExprTail__Group__2_in_rule__NumExprTail__Group__13523 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NumExprTail__FactorAssignment_1_in_rule__NumExprTail__Group__1__Impl3550 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NumExprTail__Group__2__Impl_in_rule__NumExprTail__Group__23580 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NumExprTail__ExprTailAssignment_2_in_rule__NumExprTail__Group__2__Impl3607 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Factor__Group__0__Impl_in_rule__Factor__Group__03644 = new BitSet(new long[]{0x000000000000C000L});
+    public static final BitSet FOLLOW_rule__Factor__Group__1_in_rule__Factor__Group__03647 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTerm_in_rule__Factor__Group__0__Impl3674 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Factor__Group__1__Impl_in_rule__Factor__Group__13703 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Factor__Group_1__0_in_rule__Factor__Group__1__Impl3730 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Factor__Group_1__0__Impl_in_rule__Factor__Group_1__03765 = new BitSet(new long[]{0x000000000000C000L});
+    public static final BitSet FOLLOW_rule__Factor__Group_1__1_in_rule__Factor__Group_1__03768 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Factor__Group_1__1__Impl_in_rule__Factor__Group_1__13826 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Factor__FactorTailAssignment_1_1_in_rule__Factor__Group_1__1__Impl3853 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FactorTail__Group__0__Impl_in_rule__FactorTail__Group__03887 = new BitSet(new long[]{0x0000000000060030L});
+    public static final BitSet FOLLOW_rule__FactorTail__Group__1_in_rule__FactorTail__Group__03890 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FactorTail__OperatorAssignment_0_in_rule__FactorTail__Group__0__Impl3917 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FactorTail__Group__1__Impl_in_rule__FactorTail__Group__13947 = new BitSet(new long[]{0x000000000000C000L});
+    public static final BitSet FOLLOW_rule__FactorTail__Group__2_in_rule__FactorTail__Group__13950 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FactorTail__TermAssignment_1_in_rule__FactorTail__Group__1__Impl3977 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FactorTail__Group__2__Impl_in_rule__FactorTail__Group__24007 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FactorTail__FactorTailAssignment_2_in_rule__FactorTail__Group__2__Impl4034 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__VariableAssignment__Group__0__Impl_in_rule__VariableAssignment__Group__04071 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_rule__VariableAssignment__Group__1_in_rule__VariableAssignment__Group__04074 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__VariableAssignment__IdAssignment_0_in_rule__VariableAssignment__Group__0__Impl4101 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__VariableAssignment__Group__1__Impl_in_rule__VariableAssignment__Group__14131 = new BitSet(new long[]{0x0000000000060030L});
+    public static final BitSet FOLLOW_rule__VariableAssignment__Group__2_in_rule__VariableAssignment__Group__14134 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__VariableAssignment__Group__1__Impl4162 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__VariableAssignment__Group__2__Impl_in_rule__VariableAssignment__Group__24193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__VariableAssignment__ExpressionAssignment_2_in_rule__VariableAssignment__Group__2__Impl4220 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ParenthesisExpression__Group__0__Impl_in_rule__ParenthesisExpression__Group__04256 = new BitSet(new long[]{0x0000000000060030L});
+    public static final BitSet FOLLOW_rule__ParenthesisExpression__Group__1_in_rule__ParenthesisExpression__Group__04259 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__ParenthesisExpression__Group__0__Impl4287 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ParenthesisExpression__Group__1__Impl_in_rule__ParenthesisExpression__Group__14318 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__ParenthesisExpression__Group__2_in_rule__ParenthesisExpression__Group__14321 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__ParenthesisExpression__Group__1__Impl4348 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ParenthesisExpression__Group__2__Impl_in_rule__ParenthesisExpression__Group__24377 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__ParenthesisExpression__Group__2__Impl4405 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__Program__ExpressionsAssignment_04447 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__Program__ExpressionsAssignment_2_04478 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__FunctionDeclaration__ParametersAssignment_2_04509 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__FunctionDeclaration__ParametersAssignment_2_1_14540 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBody_in_rule__FunctionDeclaration__BodyAssignment_44571 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__Body__ExpressionsAssignment_04602 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__Body__ExpressionsAssignment_1_2_04633 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__Apply__ArgumentsAssignment_1_2_04664 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__Apply__ArgumentsAssignment_1_2_1_14695 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NUM_in_rule__LiteralExpr__ValueAssignment4726 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SymbolReference__IdAssignment4757 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumExprTail_in_rule__NumericExpression__ExprTailAssignment_1_14788 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NumExprTail__OperatorAlternatives_0_0_in_rule__NumExprTail__OperatorAssignment_04819 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFactor_in_rule__NumExprTail__FactorAssignment_14852 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumExprTail_in_rule__NumExprTail__ExprTailAssignment_24883 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFactorTail_in_rule__Factor__FactorTailAssignment_1_14914 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FactorTail__OperatorAlternatives_0_0_in_rule__FactorTail__OperatorAssignment_04945 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTerm_in_rule__FactorTail__TermAssignment_14978 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFactorTail_in_rule__FactorTail__FactorTailAssignment_25009 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__VariableAssignment__IdAssignment_05040 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__VariableAssignment__ExpressionAssignment_25071 = new BitSet(new long[]{0x0000000000000002L});
 
 }

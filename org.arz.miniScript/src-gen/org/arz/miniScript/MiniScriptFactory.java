@@ -71,15 +71,6 @@ public interface MiniScriptFactory extends EFactory
   Body createBody();
 
   /**
-   * Returns a new object of class '<em>Apply Tail</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Apply Tail</em>'.
-   * @generated
-   */
-  ApplyTail createApplyTail();
-
-  /**
    * Returns a new object of class '<em>Literal Expr</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

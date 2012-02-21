@@ -3,7 +3,6 @@ package org.arz.serializer;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import org.arz.miniScript.Apply;
-import org.arz.miniScript.ApplyTail;
 import org.arz.miniScript.Body;
 import org.arz.miniScript.Factor;
 import org.arz.miniScript.FactorTail;
@@ -68,12 +67,6 @@ public class AbstractMiniScriptSemanticSequencer extends AbstractSemanticSequenc
 				   context == grammarAccess.getParenthesisExpressionRule() ||
 				   context == grammarAccess.getTermRule()) {
 					sequence_Apply(context, (Apply) semanticObject); 
-					return; 
-				}
-				else break;
-			case MiniScriptPackage.APPLY_TAIL:
-				if(context == grammarAccess.getApplyTailRule()) {
-					sequence_ApplyTail(context, (ApplyTail) semanticObject); 
 					return; 
 				}
 				else break;
@@ -202,29 +195,10 @@ public class AbstractMiniScriptSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     ((arguments+=Expression arguments+=Expression*)? nextCall=ApplyTail?)
-	 */
-	protected void sequence_ApplyTail(EObject context, ApplyTail semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (functor=Apply_Apply_1_0 arguments=ApplyTail)
+	 *     ((functor=Apply_Apply_1_0 (arguments+=Expression arguments+=Expression*)?) | functor=Apply_Apply_1_0)
 	 */
 	protected void sequence_Apply(EObject context, Apply semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.APPLY__FUNCTOR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.APPLY__FUNCTOR));
-			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.APPLY__ARGUMENTS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.APPLY__ARGUMENTS));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getApplyAccess().getApplyFunctorAction_1_0(), semanticObject.getFunctor());
-		feeder.accept(grammarAccess.getApplyAccess().getArgumentsApplyTailParserRuleCall_1_1_0(), semanticObject.getArguments());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -301,19 +275,19 @@ public class AbstractMiniScriptSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (factor=NumericExpression_NumericExpression_1_0 numExprTail=NumExprTail)
+	 *     (factor=NumericExpression_NumericExpression_1_0 exprTail=NumExprTail)
 	 */
 	protected void sequence_NumericExpression(EObject context, NumericExpression semanticObject) {
 		if(errorAcceptor != null) {
 			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.NUMERIC_EXPRESSION__FACTOR) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.NUMERIC_EXPRESSION__FACTOR));
-			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.NUMERIC_EXPRESSION__NUM_EXPR_TAIL) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.NUMERIC_EXPRESSION__NUM_EXPR_TAIL));
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.NUMERIC_EXPRESSION__EXPR_TAIL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.NUMERIC_EXPRESSION__EXPR_TAIL));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getNumericExpressionAccess().getNumericExpressionFactorAction_1_0(), semanticObject.getFactor());
-		feeder.accept(grammarAccess.getNumericExpressionAccess().getNumExprTailNumExprTailParserRuleCall_1_1_0(), semanticObject.getNumExprTail());
+		feeder.accept(grammarAccess.getNumericExpressionAccess().getExprTailNumExprTailParserRuleCall_1_1_0(), semanticObject.getExprTail());
 		feeder.finish();
 	}
 	

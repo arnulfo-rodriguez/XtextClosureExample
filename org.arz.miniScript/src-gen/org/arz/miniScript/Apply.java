@@ -5,6 +5,7 @@
  */
 package org.arz.miniScript;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -52,29 +53,19 @@ public interface Apply extends Expression
   void setFunctor(Expression value);
 
   /**
-   * Returns the value of the '<em><b>Arguments</b></em>' containment reference.
+   * Returns the value of the '<em><b>Arguments</b></em>' containment reference list.
+   * The list contents are of type {@link org.arz.miniScript.Expression}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Arguments</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Arguments</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Arguments</em>' containment reference.
-   * @see #setArguments(ApplyTail)
+   * @return the value of the '<em>Arguments</em>' containment reference list.
    * @see org.arz.miniScript.MiniScriptPackage#getApply_Arguments()
    * @model containment="true"
    * @generated
    */
-  ApplyTail getArguments();
-
-  /**
-   * Sets the value of the '{@link org.arz.miniScript.Apply#getArguments <em>Arguments</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Arguments</em>' containment reference.
-   * @see #getArguments()
-   * @generated
-   */
-  void setArguments(ApplyTail value);
+  EList<Expression> getArguments();
 
 } // Apply

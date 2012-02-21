@@ -18,12 +18,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="expressions" upperBound="-1"
         eType="#//Expression" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ApplyTail">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="arguments" upperBound="-1"
-        eType="#//Expression" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nextCall" eType="#//ApplyTail"
-        containment="true"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LiteralExpr" eSuperTypes="#//Expression">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -52,13 +46,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="Apply" eSuperTypes="#//Expression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="functor" eType="#//Expression"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="arguments" eType="#//ApplyTail"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="arguments" upperBound="-1"
+        eType="#//Expression" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NumericExpression" eSuperTypes="#//Expression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="factor" eType="#//Expression"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="numExprTail" eType="#//NumExprTail"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exprTail" eType="#//NumExprTail"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Factor" eSuperTypes="#//Expression">

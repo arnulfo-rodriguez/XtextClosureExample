@@ -103,11 +103,6 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
         return createBodyAdapter();
       }
       @Override
-      public Adapter caseApplyTail(ApplyTail object)
-      {
-        return createApplyTailAdapter();
-      }
-      @Override
       public Adapter caseLiteralExpr(LiteralExpr object)
       {
         return createLiteralExprAdapter();
@@ -240,21 +235,6 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createBodyAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.arz.miniScript.ApplyTail <em>Apply Tail</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.arz.miniScript.ApplyTail
-   * @generated
-   */
-  public Adapter createApplyTailAdapter()
   {
     return null;
   }

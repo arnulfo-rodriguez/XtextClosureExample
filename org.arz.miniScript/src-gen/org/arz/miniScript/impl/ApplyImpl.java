@@ -5,18 +5,24 @@
  */
 package org.arz.miniScript.impl;
 
+import java.util.Collection;
+
 import org.arz.miniScript.Apply;
-import org.arz.miniScript.ApplyTail;
 import org.arz.miniScript.Expression;
 import org.arz.miniScript.MiniScriptPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -45,14 +51,14 @@ public class ApplyImpl extends ExpressionImpl implements Apply
   protected Expression functor;
 
   /**
-   * The cached value of the '{@link #getArguments() <em>Arguments</em>}' containment reference.
+   * The cached value of the '{@link #getArguments() <em>Arguments</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getArguments()
    * @generated
    * @ordered
    */
-  protected ApplyTail arguments;
+  protected EList<Expression> arguments;
 
   /**
    * <!-- begin-user-doc -->
@@ -128,47 +134,13 @@ public class ApplyImpl extends ExpressionImpl implements Apply
    * <!-- end-user-doc -->
    * @generated
    */
-  public ApplyTail getArguments()
+  public EList<Expression> getArguments()
   {
+    if (arguments == null)
+    {
+      arguments = new EObjectContainmentEList<Expression>(Expression.class, this, MiniScriptPackage.APPLY__ARGUMENTS);
+    }
     return arguments;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetArguments(ApplyTail newArguments, NotificationChain msgs)
-  {
-    ApplyTail oldArguments = arguments;
-    arguments = newArguments;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.APPLY__ARGUMENTS, oldArguments, newArguments);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setArguments(ApplyTail newArguments)
-  {
-    if (newArguments != arguments)
-    {
-      NotificationChain msgs = null;
-      if (arguments != null)
-        msgs = ((InternalEObject)arguments).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.APPLY__ARGUMENTS, null, msgs);
-      if (newArguments != null)
-        msgs = ((InternalEObject)newArguments).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.APPLY__ARGUMENTS, null, msgs);
-      msgs = basicSetArguments(newArguments, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.APPLY__ARGUMENTS, newArguments, newArguments));
   }
 
   /**
@@ -184,7 +156,7 @@ public class ApplyImpl extends ExpressionImpl implements Apply
       case MiniScriptPackage.APPLY__FUNCTOR:
         return basicSetFunctor(null, msgs);
       case MiniScriptPackage.APPLY__ARGUMENTS:
-        return basicSetArguments(null, msgs);
+        return ((InternalEList<?>)getArguments()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -212,6 +184,7 @@ public class ApplyImpl extends ExpressionImpl implements Apply
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -221,7 +194,8 @@ public class ApplyImpl extends ExpressionImpl implements Apply
         setFunctor((Expression)newValue);
         return;
       case MiniScriptPackage.APPLY__ARGUMENTS:
-        setArguments((ApplyTail)newValue);
+        getArguments().clear();
+        getArguments().addAll((Collection<? extends Expression>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -241,7 +215,7 @@ public class ApplyImpl extends ExpressionImpl implements Apply
         setFunctor((Expression)null);
         return;
       case MiniScriptPackage.APPLY__ARGUMENTS:
-        setArguments((ApplyTail)null);
+        getArguments().clear();
         return;
     }
     super.eUnset(featureID);
@@ -260,7 +234,7 @@ public class ApplyImpl extends ExpressionImpl implements Apply
       case MiniScriptPackage.APPLY__FUNCTOR:
         return functor != null;
       case MiniScriptPackage.APPLY__ARGUMENTS:
-        return arguments != null;
+        return arguments != null && !arguments.isEmpty();
     }
     return super.eIsSet(featureID);
   }

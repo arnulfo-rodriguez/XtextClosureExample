@@ -15,7 +15,7 @@ package org.arz.miniScript;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.arz.miniScript.NumericExpression#getFactor <em>Factor</em>}</li>
- *   <li>{@link org.arz.miniScript.NumericExpression#getNumExprTail <em>Num Expr Tail</em>}</li>
+ *   <li>{@link org.arz.miniScript.NumericExpression#getExprTail <em>Expr Tail</em>}</li>
  * </ul>
  * </p>
  *
@@ -52,29 +52,29 @@ public interface NumericExpression extends Expression
   void setFactor(Expression value);
 
   /**
-   * Returns the value of the '<em><b>Num Expr Tail</b></em>' containment reference.
+   * Returns the value of the '<em><b>Expr Tail</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Num Expr Tail</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Expr Tail</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Num Expr Tail</em>' containment reference.
-   * @see #setNumExprTail(NumExprTail)
-   * @see org.arz.miniScript.MiniScriptPackage#getNumericExpression_NumExprTail()
+   * @return the value of the '<em>Expr Tail</em>' containment reference.
+   * @see #setExprTail(NumExprTail)
+   * @see org.arz.miniScript.MiniScriptPackage#getNumericExpression_ExprTail()
    * @model containment="true"
    * @generated
    */
-  NumExprTail getNumExprTail();
+  NumExprTail getExprTail();
 
   /**
-   * Sets the value of the '{@link org.arz.miniScript.NumericExpression#getNumExprTail <em>Num Expr Tail</em>}' containment reference.
+   * Sets the value of the '{@link org.arz.miniScript.NumericExpression#getExprTail <em>Expr Tail</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Num Expr Tail</em>' containment reference.
-   * @see #getNumExprTail()
+   * @param value the new value of the '<em>Expr Tail</em>' containment reference.
+   * @see #getExprTail()
    * @generated
    */
-  void setNumExprTail(NumExprTail value);
+  void setExprTail(NumExprTail value);
 
 } // NumericExpression

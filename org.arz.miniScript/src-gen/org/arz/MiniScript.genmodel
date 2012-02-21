@@ -21,10 +21,6 @@
     <genClasses ecoreClass="MiniScript.ecore#//Body">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//Body/expressions"/>
     </genClasses>
-    <genClasses ecoreClass="MiniScript.ecore#//ApplyTail">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//ApplyTail/arguments"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//ApplyTail/nextCall"/>
-    </genClasses>
     <genClasses ecoreClass="MiniScript.ecore#//LiteralExpr">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MiniScript.ecore#//LiteralExpr/value"/>
     </genClasses>
@@ -51,7 +47,7 @@
     </genClasses>
     <genClasses ecoreClass="MiniScript.ecore#//NumericExpression">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//NumericExpression/factor"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//NumericExpression/numExprTail"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//NumericExpression/exprTail"/>
     </genClasses>
     <genClasses ecoreClass="MiniScript.ecore#//Factor">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//Factor/term"/>

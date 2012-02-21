@@ -6,7 +6,6 @@
 package org.arz.miniScript.impl;
 
 import org.arz.miniScript.Apply;
-import org.arz.miniScript.ApplyTail;
 import org.arz.miniScript.Body;
 import org.arz.miniScript.Expression;
 import org.arz.miniScript.Factor;
@@ -71,13 +70,6 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * @generated
    */
   private EClass bodyEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass applyTailEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -293,36 +285,6 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getApplyTail()
-  {
-    return applyTailEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getApplyTail_Arguments()
-  {
-    return (EReference)applyTailEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getApplyTail_NextCall()
-  {
-    return (EReference)applyTailEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getLiteralExpr()
   {
     return literalExprEClass;
@@ -523,7 +485,7 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getNumericExpression_NumExprTail()
+  public EReference getNumericExpression_ExprTail()
   {
     return (EReference)numericExpressionEClass.getEStructuralFeatures().get(1);
   }
@@ -602,10 +564,6 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
     bodyEClass = createEClass(BODY);
     createEReference(bodyEClass, BODY__EXPRESSIONS);
 
-    applyTailEClass = createEClass(APPLY_TAIL);
-    createEReference(applyTailEClass, APPLY_TAIL__ARGUMENTS);
-    createEReference(applyTailEClass, APPLY_TAIL__NEXT_CALL);
-
     literalExprEClass = createEClass(LITERAL_EXPR);
     createEAttribute(literalExprEClass, LITERAL_EXPR__VALUE);
 
@@ -632,7 +590,7 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
 
     numericExpressionEClass = createEClass(NUMERIC_EXPRESSION);
     createEReference(numericExpressionEClass, NUMERIC_EXPRESSION__FACTOR);
-    createEReference(numericExpressionEClass, NUMERIC_EXPRESSION__NUM_EXPR_TAIL);
+    createEReference(numericExpressionEClass, NUMERIC_EXPRESSION__EXPR_TAIL);
 
     factorEClass = createEClass(FACTOR);
     createEReference(factorEClass, FACTOR__TERM);
@@ -692,10 +650,6 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
     initEClass(bodyEClass, Body.class, "Body", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getBody_Expressions(), this.getExpression(), null, "expressions", null, 0, -1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(applyTailEClass, ApplyTail.class, "ApplyTail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getApplyTail_Arguments(), this.getExpression(), null, "arguments", null, 0, -1, ApplyTail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getApplyTail_NextCall(), this.getApplyTail(), null, "nextCall", null, 0, 1, ApplyTail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(literalExprEClass, LiteralExpr.class, "LiteralExpr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getLiteralExpr_Value(), ecorePackage.getEString(), "value", null, 0, 1, LiteralExpr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -718,11 +672,11 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
 
     initEClass(applyEClass, Apply.class, "Apply", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getApply_Functor(), this.getExpression(), null, "functor", null, 0, 1, Apply.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getApply_Arguments(), this.getApplyTail(), null, "arguments", null, 0, 1, Apply.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getApply_Arguments(), this.getExpression(), null, "arguments", null, 0, -1, Apply.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(numericExpressionEClass, NumericExpression.class, "NumericExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getNumericExpression_Factor(), this.getExpression(), null, "factor", null, 0, 1, NumericExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getNumericExpression_NumExprTail(), this.getNumExprTail(), null, "numExprTail", null, 0, 1, NumericExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getNumericExpression_ExprTail(), this.getNumExprTail(), null, "exprTail", null, 0, 1, NumericExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(factorEClass, Factor.class, "Factor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getFactor_Term(), this.getExpression(), null, "term", null, 0, 1, Factor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
