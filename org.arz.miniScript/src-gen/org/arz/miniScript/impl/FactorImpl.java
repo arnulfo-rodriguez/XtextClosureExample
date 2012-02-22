@@ -7,7 +7,6 @@ package org.arz.miniScript.impl;
 
 import org.arz.miniScript.Expression;
 import org.arz.miniScript.Factor;
-import org.arz.miniScript.FactorTail;
 import org.arz.miniScript.MiniScriptPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -25,8 +24,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.arz.miniScript.impl.FactorImpl#getTerm <em>Term</em>}</li>
- *   <li>{@link org.arz.miniScript.impl.FactorImpl#getFactorTail <em>Factor Tail</em>}</li>
+ *   <li>{@link org.arz.miniScript.impl.FactorImpl#getLeftTerm <em>Left Term</em>}</li>
+ *   <li>{@link org.arz.miniScript.impl.FactorImpl#getOperator <em>Operator</em>}</li>
+ *   <li>{@link org.arz.miniScript.impl.FactorImpl#getRightTerm <em>Right Term</em>}</li>
  * </ul>
  * </p>
  *
@@ -35,24 +35,44 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class FactorImpl extends ExpressionImpl implements Factor
 {
   /**
-   * The cached value of the '{@link #getTerm() <em>Term</em>}' containment reference.
+   * The cached value of the '{@link #getLeftTerm() <em>Left Term</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTerm()
+   * @see #getLeftTerm()
    * @generated
    * @ordered
    */
-  protected Expression term;
+  protected Expression leftTerm;
 
   /**
-   * The cached value of the '{@link #getFactorTail() <em>Factor Tail</em>}' containment reference.
+   * The default value of the '{@link #getOperator() <em>Operator</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFactorTail()
+   * @see #getOperator()
    * @generated
    * @ordered
    */
-  protected FactorTail factorTail;
+  protected static final String OPERATOR_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getOperator() <em>Operator</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getOperator()
+   * @generated
+   * @ordered
+   */
+  protected String operator = OPERATOR_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getRightTerm() <em>Right Term</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRightTerm()
+   * @generated
+   * @ordered
+   */
+  protected Expression rightTerm;
 
   /**
    * <!-- begin-user-doc -->
@@ -80,9 +100,9 @@ public class FactorImpl extends ExpressionImpl implements Factor
    * <!-- end-user-doc -->
    * @generated
    */
-  public Expression getTerm()
+  public Expression getLeftTerm()
   {
-    return term;
+    return leftTerm;
   }
 
   /**
@@ -90,13 +110,13 @@ public class FactorImpl extends ExpressionImpl implements Factor
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetTerm(Expression newTerm, NotificationChain msgs)
+  public NotificationChain basicSetLeftTerm(Expression newLeftTerm, NotificationChain msgs)
   {
-    Expression oldTerm = term;
-    term = newTerm;
+    Expression oldLeftTerm = leftTerm;
+    leftTerm = newLeftTerm;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FACTOR__TERM, oldTerm, newTerm);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FACTOR__LEFT_TERM, oldLeftTerm, newLeftTerm);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -107,20 +127,20 @@ public class FactorImpl extends ExpressionImpl implements Factor
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setTerm(Expression newTerm)
+  public void setLeftTerm(Expression newLeftTerm)
   {
-    if (newTerm != term)
+    if (newLeftTerm != leftTerm)
     {
       NotificationChain msgs = null;
-      if (term != null)
-        msgs = ((InternalEObject)term).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FACTOR__TERM, null, msgs);
-      if (newTerm != null)
-        msgs = ((InternalEObject)newTerm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FACTOR__TERM, null, msgs);
-      msgs = basicSetTerm(newTerm, msgs);
+      if (leftTerm != null)
+        msgs = ((InternalEObject)leftTerm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FACTOR__LEFT_TERM, null, msgs);
+      if (newLeftTerm != null)
+        msgs = ((InternalEObject)newLeftTerm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FACTOR__LEFT_TERM, null, msgs);
+      msgs = basicSetLeftTerm(newLeftTerm, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FACTOR__TERM, newTerm, newTerm));
+      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FACTOR__LEFT_TERM, newLeftTerm, newLeftTerm));
   }
 
   /**
@@ -128,9 +148,9 @@ public class FactorImpl extends ExpressionImpl implements Factor
    * <!-- end-user-doc -->
    * @generated
    */
-  public FactorTail getFactorTail()
+  public String getOperator()
   {
-    return factorTail;
+    return operator;
   }
 
   /**
@@ -138,13 +158,36 @@ public class FactorImpl extends ExpressionImpl implements Factor
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetFactorTail(FactorTail newFactorTail, NotificationChain msgs)
+  public void setOperator(String newOperator)
   {
-    FactorTail oldFactorTail = factorTail;
-    factorTail = newFactorTail;
+    String oldOperator = operator;
+    operator = newOperator;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FACTOR__OPERATOR, oldOperator, operator));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Expression getRightTerm()
+  {
+    return rightTerm;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetRightTerm(Expression newRightTerm, NotificationChain msgs)
+  {
+    Expression oldRightTerm = rightTerm;
+    rightTerm = newRightTerm;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FACTOR__FACTOR_TAIL, oldFactorTail, newFactorTail);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FACTOR__RIGHT_TERM, oldRightTerm, newRightTerm);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -155,20 +198,20 @@ public class FactorImpl extends ExpressionImpl implements Factor
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setFactorTail(FactorTail newFactorTail)
+  public void setRightTerm(Expression newRightTerm)
   {
-    if (newFactorTail != factorTail)
+    if (newRightTerm != rightTerm)
     {
       NotificationChain msgs = null;
-      if (factorTail != null)
-        msgs = ((InternalEObject)factorTail).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FACTOR__FACTOR_TAIL, null, msgs);
-      if (newFactorTail != null)
-        msgs = ((InternalEObject)newFactorTail).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FACTOR__FACTOR_TAIL, null, msgs);
-      msgs = basicSetFactorTail(newFactorTail, msgs);
+      if (rightTerm != null)
+        msgs = ((InternalEObject)rightTerm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FACTOR__RIGHT_TERM, null, msgs);
+      if (newRightTerm != null)
+        msgs = ((InternalEObject)newRightTerm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.FACTOR__RIGHT_TERM, null, msgs);
+      msgs = basicSetRightTerm(newRightTerm, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FACTOR__FACTOR_TAIL, newFactorTail, newFactorTail));
+      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FACTOR__RIGHT_TERM, newRightTerm, newRightTerm));
   }
 
   /**
@@ -181,10 +224,10 @@ public class FactorImpl extends ExpressionImpl implements Factor
   {
     switch (featureID)
     {
-      case MiniScriptPackage.FACTOR__TERM:
-        return basicSetTerm(null, msgs);
-      case MiniScriptPackage.FACTOR__FACTOR_TAIL:
-        return basicSetFactorTail(null, msgs);
+      case MiniScriptPackage.FACTOR__LEFT_TERM:
+        return basicSetLeftTerm(null, msgs);
+      case MiniScriptPackage.FACTOR__RIGHT_TERM:
+        return basicSetRightTerm(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -199,10 +242,12 @@ public class FactorImpl extends ExpressionImpl implements Factor
   {
     switch (featureID)
     {
-      case MiniScriptPackage.FACTOR__TERM:
-        return getTerm();
-      case MiniScriptPackage.FACTOR__FACTOR_TAIL:
-        return getFactorTail();
+      case MiniScriptPackage.FACTOR__LEFT_TERM:
+        return getLeftTerm();
+      case MiniScriptPackage.FACTOR__OPERATOR:
+        return getOperator();
+      case MiniScriptPackage.FACTOR__RIGHT_TERM:
+        return getRightTerm();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -217,11 +262,14 @@ public class FactorImpl extends ExpressionImpl implements Factor
   {
     switch (featureID)
     {
-      case MiniScriptPackage.FACTOR__TERM:
-        setTerm((Expression)newValue);
+      case MiniScriptPackage.FACTOR__LEFT_TERM:
+        setLeftTerm((Expression)newValue);
         return;
-      case MiniScriptPackage.FACTOR__FACTOR_TAIL:
-        setFactorTail((FactorTail)newValue);
+      case MiniScriptPackage.FACTOR__OPERATOR:
+        setOperator((String)newValue);
+        return;
+      case MiniScriptPackage.FACTOR__RIGHT_TERM:
+        setRightTerm((Expression)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -237,11 +285,14 @@ public class FactorImpl extends ExpressionImpl implements Factor
   {
     switch (featureID)
     {
-      case MiniScriptPackage.FACTOR__TERM:
-        setTerm((Expression)null);
+      case MiniScriptPackage.FACTOR__LEFT_TERM:
+        setLeftTerm((Expression)null);
         return;
-      case MiniScriptPackage.FACTOR__FACTOR_TAIL:
-        setFactorTail((FactorTail)null);
+      case MiniScriptPackage.FACTOR__OPERATOR:
+        setOperator(OPERATOR_EDEFAULT);
+        return;
+      case MiniScriptPackage.FACTOR__RIGHT_TERM:
+        setRightTerm((Expression)null);
         return;
     }
     super.eUnset(featureID);
@@ -257,12 +308,31 @@ public class FactorImpl extends ExpressionImpl implements Factor
   {
     switch (featureID)
     {
-      case MiniScriptPackage.FACTOR__TERM:
-        return term != null;
-      case MiniScriptPackage.FACTOR__FACTOR_TAIL:
-        return factorTail != null;
+      case MiniScriptPackage.FACTOR__LEFT_TERM:
+        return leftTerm != null;
+      case MiniScriptPackage.FACTOR__OPERATOR:
+        return OPERATOR_EDEFAULT == null ? operator != null : !OPERATOR_EDEFAULT.equals(operator);
+      case MiniScriptPackage.FACTOR__RIGHT_TERM:
+        return rightTerm != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (operator: ");
+    result.append(operator);
+    result.append(')');
+    return result.toString();
   }
 
 } //FactorImpl

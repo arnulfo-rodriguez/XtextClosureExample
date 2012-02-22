@@ -89,24 +89,6 @@ public interface MiniScriptFactory extends EFactory
   SymbolReference createSymbolReference();
 
   /**
-   * Returns a new object of class '<em>Num Expr Tail</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Num Expr Tail</em>'.
-   * @generated
-   */
-  NumExprTail createNumExprTail();
-
-  /**
-   * Returns a new object of class '<em>Factor Tail</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Factor Tail</em>'.
-   * @generated
-   */
-  FactorTail createFactorTail();
-
-  /**
    * Returns a new object of class '<em>Variable Assignment</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

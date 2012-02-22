@@ -322,75 +322,47 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final RuleCall cFactorParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Action cNumericExpressionFactorAction_1_0 = (Action)cGroup_1.eContents().get(0);
-		private final Assignment cExprTailAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cExprTailNumExprTailParserRuleCall_1_1_0 = (RuleCall)cExprTailAssignment_1_1.eContents().get(0);
+		private final Action cNumericExpressionLeftFactorAction_1_0 = (Action)cGroup_1.eContents().get(0);
+		private final Assignment cOperatorAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final Alternatives cOperatorAlternatives_1_1_0 = (Alternatives)cOperatorAssignment_1_1.eContents().get(0);
+		private final Keyword cOperatorPlusSignKeyword_1_1_0_0 = (Keyword)cOperatorAlternatives_1_1_0.eContents().get(0);
+		private final Keyword cOperatorHyphenMinusKeyword_1_1_0_1 = (Keyword)cOperatorAlternatives_1_1_0.eContents().get(1);
+		private final Assignment cRightFactorAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final RuleCall cRightFactorFactorParserRuleCall_1_2_0 = (RuleCall)cRightFactorAssignment_1_2.eContents().get(0);
 		
 		//NumericExpression returns Expression:
-		//	Factor ({NumericExpression.factor=current} exprTail=NumExprTail)?;
+		//	Factor ({NumericExpression.leftFactor=current} operator=("+" | "-") rightFactor=Factor)*;
 		public ParserRule getRule() { return rule; }
 
-		//Factor ({NumericExpression.factor=current} exprTail=NumExprTail)?
+		//Factor ({NumericExpression.leftFactor=current} operator=("+" | "-") rightFactor=Factor)*
 		public Group getGroup() { return cGroup; }
 
 		//Factor
 		public RuleCall getFactorParserRuleCall_0() { return cFactorParserRuleCall_0; }
 
-		//({NumericExpression.factor=current} exprTail=NumExprTail)?
+		//({NumericExpression.leftFactor=current} operator=("+" | "-") rightFactor=Factor)*
 		public Group getGroup_1() { return cGroup_1; }
 
-		//{NumericExpression.factor=current}
-		public Action getNumericExpressionFactorAction_1_0() { return cNumericExpressionFactorAction_1_0; }
-
-		//exprTail=NumExprTail
-		public Assignment getExprTailAssignment_1_1() { return cExprTailAssignment_1_1; }
-
-		//NumExprTail
-		public RuleCall getExprTailNumExprTailParserRuleCall_1_1_0() { return cExprTailNumExprTailParserRuleCall_1_1_0; }
-	}
-
-	public class NumExprTailElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "NumExprTail");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOperatorAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Alternatives cOperatorAlternatives_0_0 = (Alternatives)cOperatorAssignment_0.eContents().get(0);
-		private final Keyword cOperatorPlusSignKeyword_0_0_0 = (Keyword)cOperatorAlternatives_0_0.eContents().get(0);
-		private final Keyword cOperatorHyphenMinusKeyword_0_0_1 = (Keyword)cOperatorAlternatives_0_0.eContents().get(1);
-		private final Assignment cFactorAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cFactorFactorParserRuleCall_1_0 = (RuleCall)cFactorAssignment_1.eContents().get(0);
-		private final Assignment cExprTailAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cExprTailNumExprTailParserRuleCall_2_0 = (RuleCall)cExprTailAssignment_2.eContents().get(0);
-		
-		//NumExprTail:
-		//	operator=("+" | "-") factor=Factor exprTail=NumExprTail?;
-		public ParserRule getRule() { return rule; }
-
-		//operator=("+" | "-") factor=Factor exprTail=NumExprTail?
-		public Group getGroup() { return cGroup; }
+		//{NumericExpression.leftFactor=current}
+		public Action getNumericExpressionLeftFactorAction_1_0() { return cNumericExpressionLeftFactorAction_1_0; }
 
 		//operator=("+" | "-")
-		public Assignment getOperatorAssignment_0() { return cOperatorAssignment_0; }
+		public Assignment getOperatorAssignment_1_1() { return cOperatorAssignment_1_1; }
 
 		//"+" | "-"
-		public Alternatives getOperatorAlternatives_0_0() { return cOperatorAlternatives_0_0; }
+		public Alternatives getOperatorAlternatives_1_1_0() { return cOperatorAlternatives_1_1_0; }
 
 		//"+"
-		public Keyword getOperatorPlusSignKeyword_0_0_0() { return cOperatorPlusSignKeyword_0_0_0; }
+		public Keyword getOperatorPlusSignKeyword_1_1_0_0() { return cOperatorPlusSignKeyword_1_1_0_0; }
 
 		//"-"
-		public Keyword getOperatorHyphenMinusKeyword_0_0_1() { return cOperatorHyphenMinusKeyword_0_0_1; }
+		public Keyword getOperatorHyphenMinusKeyword_1_1_0_1() { return cOperatorHyphenMinusKeyword_1_1_0_1; }
 
-		//factor=Factor
-		public Assignment getFactorAssignment_1() { return cFactorAssignment_1; }
+		//rightFactor=Factor
+		public Assignment getRightFactorAssignment_1_2() { return cRightFactorAssignment_1_2; }
 
 		//Factor
-		public RuleCall getFactorFactorParserRuleCall_1_0() { return cFactorFactorParserRuleCall_1_0; }
-
-		//exprTail=NumExprTail?
-		public Assignment getExprTailAssignment_2() { return cExprTailAssignment_2; }
-
-		//NumExprTail
-		public RuleCall getExprTailNumExprTailParserRuleCall_2_0() { return cExprTailNumExprTailParserRuleCall_2_0; }
+		public RuleCall getRightFactorFactorParserRuleCall_1_2_0() { return cRightFactorFactorParserRuleCall_1_2_0; }
 	}
 
 	public class FactorElements extends AbstractParserRuleElementFinder {
@@ -398,75 +370,47 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final RuleCall cTermParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Action cFactorTermAction_1_0 = (Action)cGroup_1.eContents().get(0);
-		private final Assignment cFactorTailAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cFactorTailFactorTailParserRuleCall_1_1_0 = (RuleCall)cFactorTailAssignment_1_1.eContents().get(0);
+		private final Action cFactorLeftTermAction_1_0 = (Action)cGroup_1.eContents().get(0);
+		private final Assignment cOperatorAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final Alternatives cOperatorAlternatives_1_1_0 = (Alternatives)cOperatorAssignment_1_1.eContents().get(0);
+		private final Keyword cOperatorAsteriskKeyword_1_1_0_0 = (Keyword)cOperatorAlternatives_1_1_0.eContents().get(0);
+		private final Keyword cOperatorSolidusKeyword_1_1_0_1 = (Keyword)cOperatorAlternatives_1_1_0.eContents().get(1);
+		private final Assignment cRightTermAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final RuleCall cRightTermTermParserRuleCall_1_2_0 = (RuleCall)cRightTermAssignment_1_2.eContents().get(0);
 		
 		//Factor returns Expression:
-		//	Term ({Factor.term=current} factorTail=FactorTail)?;
+		//	Term ({Factor.leftTerm=current} operator=("*" | "/") rightTerm=Term)*;
 		public ParserRule getRule() { return rule; }
 
-		//Term ({Factor.term=current} factorTail=FactorTail)?
+		//Term ({Factor.leftTerm=current} operator=("*" | "/") rightTerm=Term)*
 		public Group getGroup() { return cGroup; }
 
 		//Term
 		public RuleCall getTermParserRuleCall_0() { return cTermParserRuleCall_0; }
 
-		//({Factor.term=current} factorTail=FactorTail)?
+		//({Factor.leftTerm=current} operator=("*" | "/") rightTerm=Term)*
 		public Group getGroup_1() { return cGroup_1; }
 
-		//{Factor.term=current}
-		public Action getFactorTermAction_1_0() { return cFactorTermAction_1_0; }
-
-		//factorTail=FactorTail
-		public Assignment getFactorTailAssignment_1_1() { return cFactorTailAssignment_1_1; }
-
-		//FactorTail
-		public RuleCall getFactorTailFactorTailParserRuleCall_1_1_0() { return cFactorTailFactorTailParserRuleCall_1_1_0; }
-	}
-
-	public class FactorTailElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "FactorTail");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cOperatorAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Alternatives cOperatorAlternatives_0_0 = (Alternatives)cOperatorAssignment_0.eContents().get(0);
-		private final Keyword cOperatorAsteriskKeyword_0_0_0 = (Keyword)cOperatorAlternatives_0_0.eContents().get(0);
-		private final Keyword cOperatorSolidusKeyword_0_0_1 = (Keyword)cOperatorAlternatives_0_0.eContents().get(1);
-		private final Assignment cTermAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cTermTermParserRuleCall_1_0 = (RuleCall)cTermAssignment_1.eContents().get(0);
-		private final Assignment cFactorTailAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cFactorTailFactorTailParserRuleCall_2_0 = (RuleCall)cFactorTailAssignment_2.eContents().get(0);
-		
-		//FactorTail:
-		//	operator=("*" | "/") term=Term factorTail=FactorTail?;
-		public ParserRule getRule() { return rule; }
-
-		//operator=("*" | "/") term=Term factorTail=FactorTail?
-		public Group getGroup() { return cGroup; }
+		//{Factor.leftTerm=current}
+		public Action getFactorLeftTermAction_1_0() { return cFactorLeftTermAction_1_0; }
 
 		//operator=("*" | "/")
-		public Assignment getOperatorAssignment_0() { return cOperatorAssignment_0; }
+		public Assignment getOperatorAssignment_1_1() { return cOperatorAssignment_1_1; }
 
 		//"*" | "/"
-		public Alternatives getOperatorAlternatives_0_0() { return cOperatorAlternatives_0_0; }
+		public Alternatives getOperatorAlternatives_1_1_0() { return cOperatorAlternatives_1_1_0; }
 
 		//"*"
-		public Keyword getOperatorAsteriskKeyword_0_0_0() { return cOperatorAsteriskKeyword_0_0_0; }
+		public Keyword getOperatorAsteriskKeyword_1_1_0_0() { return cOperatorAsteriskKeyword_1_1_0_0; }
 
 		//"/"
-		public Keyword getOperatorSolidusKeyword_0_0_1() { return cOperatorSolidusKeyword_0_0_1; }
+		public Keyword getOperatorSolidusKeyword_1_1_0_1() { return cOperatorSolidusKeyword_1_1_0_1; }
 
-		//term=Term
-		public Assignment getTermAssignment_1() { return cTermAssignment_1; }
+		//rightTerm=Term
+		public Assignment getRightTermAssignment_1_2() { return cRightTermAssignment_1_2; }
 
 		//Term
-		public RuleCall getTermTermParserRuleCall_1_0() { return cTermTermParserRuleCall_1_0; }
-
-		//factorTail=FactorTail?
-		public Assignment getFactorTailAssignment_2() { return cFactorTailAssignment_2; }
-
-		//FactorTail
-		public RuleCall getFactorTailFactorTailParserRuleCall_2_0() { return cFactorTailFactorTailParserRuleCall_2_0; }
+		public RuleCall getRightTermTermParserRuleCall_1_2_0() { return cRightTermTermParserRuleCall_1_2_0; }
 	}
 
 	public class TermElements extends AbstractParserRuleElementFinder {
@@ -556,9 +500,7 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 	private LiteralExprElements pLiteralExpr;
 	private SymbolReferenceElements pSymbolReference;
 	private NumericExpressionElements pNumericExpression;
-	private NumExprTailElements pNumExprTail;
 	private FactorElements pFactor;
-	private FactorTailElements pFactorTail;
 	private TermElements pTerm;
 	private VariableAssignmentElements pVariableAssignment;
 	private ParenthesisExpressionElements pParenthesisExpression;
@@ -676,7 +618,7 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//NumericExpression returns Expression:
-	//	Factor ({NumericExpression.factor=current} exprTail=NumExprTail)?;
+	//	Factor ({NumericExpression.leftFactor=current} operator=("+" | "-") rightFactor=Factor)*;
 	public NumericExpressionElements getNumericExpressionAccess() {
 		return (pNumericExpression != null) ? pNumericExpression : (pNumericExpression = new NumericExpressionElements());
 	}
@@ -685,34 +627,14 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 		return getNumericExpressionAccess().getRule();
 	}
 
-	//NumExprTail:
-	//	operator=("+" | "-") factor=Factor exprTail=NumExprTail?;
-	public NumExprTailElements getNumExprTailAccess() {
-		return (pNumExprTail != null) ? pNumExprTail : (pNumExprTail = new NumExprTailElements());
-	}
-	
-	public ParserRule getNumExprTailRule() {
-		return getNumExprTailAccess().getRule();
-	}
-
 	//Factor returns Expression:
-	//	Term ({Factor.term=current} factorTail=FactorTail)?;
+	//	Term ({Factor.leftTerm=current} operator=("*" | "/") rightTerm=Term)*;
 	public FactorElements getFactorAccess() {
 		return (pFactor != null) ? pFactor : (pFactor = new FactorElements());
 	}
 	
 	public ParserRule getFactorRule() {
 		return getFactorAccess().getRule();
-	}
-
-	//FactorTail:
-	//	operator=("*" | "/") term=Term factorTail=FactorTail?;
-	public FactorTailElements getFactorTailAccess() {
-		return (pFactorTail != null) ? pFactorTail : (pFactorTail = new FactorTailElements());
-	}
-	
-	public ParserRule getFactorTailRule() {
-		return getFactorTailAccess().getRule();
 	}
 
 	//Term returns Expression:

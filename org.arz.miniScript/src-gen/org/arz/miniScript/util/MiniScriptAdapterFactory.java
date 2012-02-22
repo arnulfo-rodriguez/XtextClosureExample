@@ -113,16 +113,6 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
         return createSymbolReferenceAdapter();
       }
       @Override
-      public Adapter caseNumExprTail(NumExprTail object)
-      {
-        return createNumExprTailAdapter();
-      }
-      @Override
-      public Adapter caseFactorTail(FactorTail object)
-      {
-        return createFactorTailAdapter();
-      }
-      @Override
       public Adapter caseVariableAssignment(VariableAssignment object)
       {
         return createVariableAssignmentAdapter();
@@ -265,36 +255,6 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createSymbolReferenceAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.arz.miniScript.NumExprTail <em>Num Expr Tail</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.arz.miniScript.NumExprTail
-   * @generated
-   */
-  public Adapter createNumExprTailAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.arz.miniScript.FactorTail <em>Factor Tail</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.arz.miniScript.FactorTail
-   * @generated
-   */
-  public Adapter createFactorTailAdapter()
   {
     return null;
   }

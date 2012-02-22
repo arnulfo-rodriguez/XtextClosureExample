@@ -44,18 +44,12 @@ SymbolReference :
 ;
 
 NumericExpression returns Expression:
-	Factor ({NumericExpression.factor=current} exprTail=NumExprTail)?
+	Factor ({NumericExpression.leftFactor=current} operator=('+'|'-') rightFactor=Factor)*
 ;
-
-NumExprTail:
-	operator=('+'|'-') factor=Factor exprTail=NumExprTail? ; 
 
 Factor returns Expression: 
-	Term ({Factor.term=current} factorTail=FactorTail)?
+	Term ({Factor.leftTerm=current} operator=('*'|'/') rightTerm=Term)*
 ;
-
-FactorTail:
-	operator=('*'|'/') term=Term factorTail=FactorTail? ;
 
 Term returns Expression:
  	LiteralExpr | Apply ;

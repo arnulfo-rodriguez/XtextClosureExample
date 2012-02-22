@@ -74,8 +74,6 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
       case MiniScriptPackage.BODY: return createBody();
       case MiniScriptPackage.LITERAL_EXPR: return createLiteralExpr();
       case MiniScriptPackage.SYMBOL_REFERENCE: return createSymbolReference();
-      case MiniScriptPackage.NUM_EXPR_TAIL: return createNumExprTail();
-      case MiniScriptPackage.FACTOR_TAIL: return createFactorTail();
       case MiniScriptPackage.VARIABLE_ASSIGNMENT: return createVariableAssignment();
       case MiniScriptPackage.APPLY: return createApply();
       case MiniScriptPackage.NUMERIC_EXPRESSION: return createNumericExpression();
@@ -160,28 +158,6 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
   {
     SymbolReferenceImpl symbolReference = new SymbolReferenceImpl();
     return symbolReference;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NumExprTail createNumExprTail()
-  {
-    NumExprTailImpl numExprTail = new NumExprTailImpl();
-    return numExprTail;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public FactorTail createFactorTail()
-  {
-    FactorTailImpl factorTail = new FactorTailImpl();
-    return factorTail;
   }
 
   /**

@@ -128,20 +128,6 @@ public class MiniScriptSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case MiniScriptPackage.NUM_EXPR_TAIL:
-      {
-        NumExprTail numExprTail = (NumExprTail)theEObject;
-        T result = caseNumExprTail(numExprTail);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case MiniScriptPackage.FACTOR_TAIL:
-      {
-        FactorTail factorTail = (FactorTail)theEObject;
-        T result = caseFactorTail(factorTail);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case MiniScriptPackage.VARIABLE_ASSIGNMENT:
       {
         VariableAssignment variableAssignment = (VariableAssignment)theEObject;
@@ -286,38 +272,6 @@ public class MiniScriptSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseSymbolReference(SymbolReference object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Num Expr Tail</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Num Expr Tail</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseNumExprTail(NumExprTail object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Factor Tail</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Factor Tail</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseFactorTail(FactorTail object)
   {
     return null;
   }

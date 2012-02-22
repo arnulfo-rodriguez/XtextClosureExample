@@ -9,13 +9,11 @@ import org.arz.miniScript.Apply;
 import org.arz.miniScript.Body;
 import org.arz.miniScript.Expression;
 import org.arz.miniScript.Factor;
-import org.arz.miniScript.FactorTail;
 import org.arz.miniScript.FunctionDeclaration;
 import org.arz.miniScript.LiteralExpr;
 import org.arz.miniScript.MiniScriptFactory;
 import org.arz.miniScript.MiniScriptPackage;
 import org.arz.miniScript.Model;
-import org.arz.miniScript.NumExprTail;
 import org.arz.miniScript.NumericExpression;
 import org.arz.miniScript.Program;
 import org.arz.miniScript.SymbolReference;
@@ -84,20 +82,6 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * @generated
    */
   private EClass symbolReferenceEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass numExprTailEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass factorTailEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -325,86 +309,6 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getNumExprTail()
-  {
-    return numExprTailEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getNumExprTail_Operator()
-  {
-    return (EAttribute)numExprTailEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getNumExprTail_Factor()
-  {
-    return (EReference)numExprTailEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getNumExprTail_ExprTail()
-  {
-    return (EReference)numExprTailEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getFactorTail()
-  {
-    return factorTailEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getFactorTail_Operator()
-  {
-    return (EAttribute)factorTailEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFactorTail_Term()
-  {
-    return (EReference)factorTailEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFactorTail_FactorTail()
-  {
-    return (EReference)factorTailEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getVariableAssignment()
   {
     return variableAssignmentEClass;
@@ -475,7 +379,7 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getNumericExpression_Factor()
+  public EReference getNumericExpression_LeftFactor()
   {
     return (EReference)numericExpressionEClass.getEStructuralFeatures().get(0);
   }
@@ -485,9 +389,19 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getNumericExpression_ExprTail()
+  public EAttribute getNumericExpression_Operator()
   {
-    return (EReference)numericExpressionEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)numericExpressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getNumericExpression_RightFactor()
+  {
+    return (EReference)numericExpressionEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -505,7 +419,7 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getFactor_Term()
+  public EReference getFactor_LeftTerm()
   {
     return (EReference)factorEClass.getEStructuralFeatures().get(0);
   }
@@ -515,9 +429,19 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getFactor_FactorTail()
+  public EAttribute getFactor_Operator()
   {
-    return (EReference)factorEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)factorEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFactor_RightTerm()
+  {
+    return (EReference)factorEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -570,16 +494,6 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
     symbolReferenceEClass = createEClass(SYMBOL_REFERENCE);
     createEAttribute(symbolReferenceEClass, SYMBOL_REFERENCE__ID);
 
-    numExprTailEClass = createEClass(NUM_EXPR_TAIL);
-    createEAttribute(numExprTailEClass, NUM_EXPR_TAIL__OPERATOR);
-    createEReference(numExprTailEClass, NUM_EXPR_TAIL__FACTOR);
-    createEReference(numExprTailEClass, NUM_EXPR_TAIL__EXPR_TAIL);
-
-    factorTailEClass = createEClass(FACTOR_TAIL);
-    createEAttribute(factorTailEClass, FACTOR_TAIL__OPERATOR);
-    createEReference(factorTailEClass, FACTOR_TAIL__TERM);
-    createEReference(factorTailEClass, FACTOR_TAIL__FACTOR_TAIL);
-
     variableAssignmentEClass = createEClass(VARIABLE_ASSIGNMENT);
     createEAttribute(variableAssignmentEClass, VARIABLE_ASSIGNMENT__ID);
     createEReference(variableAssignmentEClass, VARIABLE_ASSIGNMENT__EXPRESSION);
@@ -589,12 +503,14 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
     createEReference(applyEClass, APPLY__ARGUMENTS);
 
     numericExpressionEClass = createEClass(NUMERIC_EXPRESSION);
-    createEReference(numericExpressionEClass, NUMERIC_EXPRESSION__FACTOR);
-    createEReference(numericExpressionEClass, NUMERIC_EXPRESSION__EXPR_TAIL);
+    createEReference(numericExpressionEClass, NUMERIC_EXPRESSION__LEFT_FACTOR);
+    createEAttribute(numericExpressionEClass, NUMERIC_EXPRESSION__OPERATOR);
+    createEReference(numericExpressionEClass, NUMERIC_EXPRESSION__RIGHT_FACTOR);
 
     factorEClass = createEClass(FACTOR);
-    createEReference(factorEClass, FACTOR__TERM);
-    createEReference(factorEClass, FACTOR__FACTOR_TAIL);
+    createEReference(factorEClass, FACTOR__LEFT_TERM);
+    createEAttribute(factorEClass, FACTOR__OPERATOR);
+    createEReference(factorEClass, FACTOR__RIGHT_TERM);
   }
 
   /**
@@ -656,16 +572,6 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
     initEClass(symbolReferenceEClass, SymbolReference.class, "SymbolReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSymbolReference_Id(), ecorePackage.getEString(), "id", null, 0, 1, SymbolReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(numExprTailEClass, NumExprTail.class, "NumExprTail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getNumExprTail_Operator(), ecorePackage.getEString(), "operator", null, 0, 1, NumExprTail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getNumExprTail_Factor(), this.getExpression(), null, "factor", null, 0, 1, NumExprTail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getNumExprTail_ExprTail(), this.getNumExprTail(), null, "exprTail", null, 0, 1, NumExprTail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(factorTailEClass, FactorTail.class, "FactorTail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFactorTail_Operator(), ecorePackage.getEString(), "operator", null, 0, 1, FactorTail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFactorTail_Term(), this.getExpression(), null, "term", null, 0, 1, FactorTail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFactorTail_FactorTail(), this.getFactorTail(), null, "factorTail", null, 0, 1, FactorTail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(variableAssignmentEClass, VariableAssignment.class, "VariableAssignment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getVariableAssignment_Id(), ecorePackage.getEString(), "id", null, 0, 1, VariableAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getVariableAssignment_Expression(), this.getExpression(), null, "expression", null, 0, 1, VariableAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -675,12 +581,14 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
     initEReference(getApply_Arguments(), this.getExpression(), null, "arguments", null, 0, -1, Apply.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(numericExpressionEClass, NumericExpression.class, "NumericExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getNumericExpression_Factor(), this.getExpression(), null, "factor", null, 0, 1, NumericExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getNumericExpression_ExprTail(), this.getNumExprTail(), null, "exprTail", null, 0, 1, NumericExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getNumericExpression_LeftFactor(), this.getExpression(), null, "leftFactor", null, 0, 1, NumericExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getNumericExpression_Operator(), ecorePackage.getEString(), "operator", null, 0, 1, NumericExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getNumericExpression_RightFactor(), this.getExpression(), null, "rightFactor", null, 0, 1, NumericExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(factorEClass, Factor.class, "Factor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getFactor_Term(), this.getExpression(), null, "term", null, 0, 1, Factor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFactor_FactorTail(), this.getFactorTail(), null, "factorTail", null, 0, 1, Factor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFactor_LeftTerm(), this.getExpression(), null, "leftTerm", null, 0, 1, Factor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFactor_Operator(), ecorePackage.getEString(), "operator", null, 0, 1, Factor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFactor_RightTerm(), this.getExpression(), null, "rightTerm", null, 0, 1, Factor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

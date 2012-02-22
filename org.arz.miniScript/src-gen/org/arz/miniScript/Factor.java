@@ -14,8 +14,9 @@ package org.arz.miniScript;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.arz.miniScript.Factor#getTerm <em>Term</em>}</li>
- *   <li>{@link org.arz.miniScript.Factor#getFactorTail <em>Factor Tail</em>}</li>
+ *   <li>{@link org.arz.miniScript.Factor#getLeftTerm <em>Left Term</em>}</li>
+ *   <li>{@link org.arz.miniScript.Factor#getOperator <em>Operator</em>}</li>
+ *   <li>{@link org.arz.miniScript.Factor#getRightTerm <em>Right Term</em>}</li>
  * </ul>
  * </p>
  *
@@ -26,55 +27,81 @@ package org.arz.miniScript;
 public interface Factor extends Expression
 {
   /**
-   * Returns the value of the '<em><b>Term</b></em>' containment reference.
+   * Returns the value of the '<em><b>Left Term</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Term</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Left Term</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Term</em>' containment reference.
-   * @see #setTerm(Expression)
-   * @see org.arz.miniScript.MiniScriptPackage#getFactor_Term()
+   * @return the value of the '<em>Left Term</em>' containment reference.
+   * @see #setLeftTerm(Expression)
+   * @see org.arz.miniScript.MiniScriptPackage#getFactor_LeftTerm()
    * @model containment="true"
    * @generated
    */
-  Expression getTerm();
+  Expression getLeftTerm();
 
   /**
-   * Sets the value of the '{@link org.arz.miniScript.Factor#getTerm <em>Term</em>}' containment reference.
+   * Sets the value of the '{@link org.arz.miniScript.Factor#getLeftTerm <em>Left Term</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Term</em>' containment reference.
-   * @see #getTerm()
+   * @param value the new value of the '<em>Left Term</em>' containment reference.
+   * @see #getLeftTerm()
    * @generated
    */
-  void setTerm(Expression value);
+  void setLeftTerm(Expression value);
 
   /**
-   * Returns the value of the '<em><b>Factor Tail</b></em>' containment reference.
+   * Returns the value of the '<em><b>Operator</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Factor Tail</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Operator</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Factor Tail</em>' containment reference.
-   * @see #setFactorTail(FactorTail)
-   * @see org.arz.miniScript.MiniScriptPackage#getFactor_FactorTail()
+   * @return the value of the '<em>Operator</em>' attribute.
+   * @see #setOperator(String)
+   * @see org.arz.miniScript.MiniScriptPackage#getFactor_Operator()
+   * @model
+   * @generated
+   */
+  String getOperator();
+
+  /**
+   * Sets the value of the '{@link org.arz.miniScript.Factor#getOperator <em>Operator</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Operator</em>' attribute.
+   * @see #getOperator()
+   * @generated
+   */
+  void setOperator(String value);
+
+  /**
+   * Returns the value of the '<em><b>Right Term</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Right Term</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Right Term</em>' containment reference.
+   * @see #setRightTerm(Expression)
+   * @see org.arz.miniScript.MiniScriptPackage#getFactor_RightTerm()
    * @model containment="true"
    * @generated
    */
-  FactorTail getFactorTail();
+  Expression getRightTerm();
 
   /**
-   * Sets the value of the '{@link org.arz.miniScript.Factor#getFactorTail <em>Factor Tail</em>}' containment reference.
+   * Sets the value of the '{@link org.arz.miniScript.Factor#getRightTerm <em>Right Term</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Factor Tail</em>' containment reference.
-   * @see #getFactorTail()
+   * @param value the new value of the '<em>Right Term</em>' containment reference.
+   * @see #getRightTerm()
    * @generated
    */
-  void setFactorTail(FactorTail value);
+  void setRightTerm(Expression value);
 
 } // Factor
