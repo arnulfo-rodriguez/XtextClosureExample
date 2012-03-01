@@ -8,11 +8,13 @@ import org.arz.interpreter.MiniScriptTypeSystem;
 import de.itemis.xtext.typesystem.ITypesystem;
 
 /**
- * Use this class to register components to be used at runtime / without the Equinox extension registry.
+ * Use this class to register components to be used at runtime / without the
+ * Equinox extension registry.
  */
-public class MiniScriptRuntimeModule extends org.arz.AbstractMiniScriptRuntimeModule {
-	public Class<? extends ITypesystem> bindITypestem() { 
+public class MiniScriptRuntimeModule extends
+		org.arz.AbstractMiniScriptRuntimeModule {
+	public Class<? extends ITypesystem> bindITypestem() {
 		return MiniScriptTypeSystem.class;
 	}
-	
+
 }

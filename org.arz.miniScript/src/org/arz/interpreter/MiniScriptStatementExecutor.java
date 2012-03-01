@@ -23,6 +23,7 @@ public class MiniScriptStatementExecutor extends
 		Program p = (Program) statement;
 		for (Expression expr : p.getExpressions()) {
 			ctx.getEvaluator().eval(expr, localLog);
+
 		}
 	}
 

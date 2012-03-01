@@ -15,7 +15,7 @@ public class ExprModelInterpreter {
 		LogEntry log = LogEntry.root("running model " + m.toString());
 		LogEntry.setMostRecentRoot(log);
 		new MiniScriptEvaluator(ctx);
-		new MiniScriptStatementExecutor(ctx).execute(m,log);
+		new MiniScriptStatementExecutor(ctx).execute(m, log);
 		return ctx.messages;
 	}
 }
