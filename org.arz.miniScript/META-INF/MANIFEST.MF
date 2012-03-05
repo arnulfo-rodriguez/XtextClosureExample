@@ -27,14 +27,15 @@ Import-Package: org.apache.log4j,
  org.eclipse.xtext.xtend2.lib
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.arz,
- org.arz.services,
+ org.arz.formatting,
+ org.arz.generator,
+ org.arz.interpreter,
  org.arz.miniScript,
  org.arz.miniScript.impl,
  org.arz.miniScript.util,
- org.arz.serializer,
  org.arz.parser.antlr,
  org.arz.parser.antlr.internal,
- org.arz.validation,
  org.arz.scoping,
- org.arz.generator,
- org.arz.formatting
+ org.arz.serializer,
+ org.arz.services,
+ org.arz.validation
