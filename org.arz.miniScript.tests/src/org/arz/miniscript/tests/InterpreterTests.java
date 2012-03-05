@@ -108,5 +108,24 @@ public class InterpreterTests {
 		}
 	}
 	
+	@Test
+	public void testClosureApply() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("foo=func(x){func(){x*x;};}; a=foo(2)()+foo(3)()");
+		Program p;
+		try {
+			p = parserHelper.parse(builder.toString());
+			MyEnvironment m = runModel(p, null);
+			Object result = m.get("a");
+			Assert.assertNotNull(result);
+			Assert.assertNotNull(result);
+			Assert.assertTrue(result instanceof Integer);
+			Integer intResult = (Integer) result;
+			Assert.assertEquals(13, intResult.intValue());
+		} catch (Exception e) {
+			Assert.fail();
+		}
+	}
+	
 
 }

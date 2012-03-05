@@ -104,7 +104,7 @@ public class MiniScriptEvaluator extends AbstractMiniScriptExpressionEvaluator {
 		Integer rightResult = (Integer) evalCheckNullLog(factor.getRightTerm(),
 				log);
 		return new Integer((int) (((double) leftResult.intValue()) * ((factor
-				.getOperator().compareTo("/") == 0) ? rightResult.intValue()
+				.getOperator().compareTo("*") == 0) ? rightResult.intValue()
 				: (1 / (double) rightResult.intValue()))));
 	}
 
