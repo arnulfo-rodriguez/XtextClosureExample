@@ -3,9 +3,11 @@ package org.arz.miniscript.tests;
 import junit.framework.Assert;
 
 import org.arz.MiniScriptInjectorProvider;
+import org.arz.miniScript.AdditionOperator;
 import org.arz.miniScript.Apply;
 import org.arz.miniScript.Expression;
 import org.arz.miniScript.Factor;
+import org.arz.miniScript.FactorOperator;
 import org.arz.miniScript.FunctionDeclaration;
 import org.arz.miniScript.LiteralExpr;
 import org.arz.miniScript.NumericExpression;
@@ -121,7 +123,7 @@ public class ParsingTests {
 			Assert.assertTrue(expression instanceof NumericExpression);
 			NumericExpression f = (NumericExpression) expression;
 			Assert.assertTrue(f.getLeftFactor() instanceof SymbolReference);
-			Assert.assertTrue(f.getOperator().compareTo("+") == 0);
+			Assert.assertTrue(f.getOperator() == AdditionOperator.ADD);
 			Assert.assertTrue(f.getRightFactor() instanceof SymbolReference);
 		} catch (Exception e) {
 			Assert.fail();
@@ -139,7 +141,7 @@ public class ParsingTests {
 			Assert.assertTrue(expression instanceof NumericExpression);
 			NumericExpression f = (NumericExpression) expression;
 			Assert.assertTrue(f.getLeftFactor() instanceof SymbolReference);
-			Assert.assertTrue(f.getOperator().compareTo("-") == 0);
+			Assert.assertTrue(f.getOperator() == AdditionOperator.SUBTRACT);
 			Assert.assertTrue(f.getRightFactor() instanceof SymbolReference);
 
 		} catch (Exception e) {
@@ -158,7 +160,7 @@ public class ParsingTests {
 			Assert.assertTrue(expression instanceof Factor);
 			Factor f = (Factor) expression;
 			Assert.assertTrue(f.getLeftTerm() instanceof SymbolReference);
-			Assert.assertTrue(f.getOperator().compareTo("*") == 0);
+			Assert.assertTrue(f.getOperator() == FactorOperator.MULT);
 			Assert.assertTrue(f.getRightTerm() instanceof SymbolReference);
 		} catch (Exception e) {
 			Assert.fail();
@@ -176,7 +178,7 @@ public class ParsingTests {
 			Assert.assertTrue(expression instanceof Factor);
 			Factor f = (Factor) expression;
 			Assert.assertTrue(f.getLeftTerm() instanceof SymbolReference);
-			Assert.assertTrue(f.getOperator().compareTo("/") == 0);
+			Assert.assertTrue(f.getOperator() == FactorOperator.DIVISION);
 			Assert.assertTrue(f.getRightTerm() instanceof SymbolReference);
 		} catch (Exception e) {
 			Assert.fail();
@@ -196,7 +198,7 @@ public class ParsingTests {
 			Assert.assertTrue(f.getLeftFactor() instanceof Factor);
 			Assert.assertTrue(((Factor)f.getLeftFactor()).getLeftTerm() instanceof Factor);
 			Assert.assertTrue(((Factor)f.getLeftFactor()).getRightTerm() instanceof NumericExpression);
-			Assert.assertTrue(f.getOperator().compareTo("-") == 0);
+			Assert.assertTrue(f.getOperator() == AdditionOperator.SUBTRACT);
 			Assert.assertTrue(f.getRightFactor() instanceof LiteralExpr);
 		} catch (Exception e) {
 			Assert.fail();

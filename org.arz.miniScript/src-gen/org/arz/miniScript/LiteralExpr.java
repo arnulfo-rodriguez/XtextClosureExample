@@ -33,12 +33,12 @@ public interface LiteralExpr extends Expression
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Value</em>' attribute.
-   * @see #setValue(String)
+   * @see #setValue(int)
    * @see org.arz.miniScript.MiniScriptPackage#getLiteralExpr_Value()
    * @model
    * @generated
    */
-  String getValue();
+  int getValue();
 
   /**
    * Sets the value of the '{@link org.arz.miniScript.LiteralExpr#getValue <em>Value</em>}' attribute.
@@ -48,6 +48,6 @@ public interface LiteralExpr extends Expression
    * @see #getValue()
    * @generated
    */
-  void setValue(String value);
+  void setValue(int value);
 
 } // LiteralExpr

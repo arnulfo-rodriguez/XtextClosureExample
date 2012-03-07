@@ -1,9 +1,11 @@
 package org.arz.interpreter;
 
+import org.arz.miniScript.AdditionOperator;
 import org.arz.miniScript.Apply;
 import org.arz.miniScript.Body;
 import org.arz.miniScript.Expression;
 import org.arz.miniScript.Factor;
+import org.arz.miniScript.FactorOperator;
 import org.arz.miniScript.FunctionDeclaration;
 import org.arz.miniScript.LiteralExpr;
 import org.arz.miniScript.NumericExpression;
@@ -81,7 +83,7 @@ public class MiniScriptEvaluator extends AbstractMiniScriptExpressionEvaluator {
 	@Override
 	protected Object evalLiteralExpr(LiteralExpr expr, LogEntry log)
 			throws InterpreterException {
-		return Integer.parseInt(expr.getValue());
+		return expr.getValue();
 	}
 
 	@Override
@@ -92,7 +94,7 @@ public class MiniScriptEvaluator extends AbstractMiniScriptExpressionEvaluator {
 		Integer rightResult = (Integer) evalCheckNullLog(expr.getRightFactor(),
 				log);
 		return leftResult.intValue()
-				+ (rightResult.intValue() * ((expr.getOperator().compareTo("-") == 0) ? -1
+				+ (rightResult.intValue() * ((expr.getOperator() == AdditionOperator.SUBTRACT) ? -1
 						: 1));
 	}
 
@@ -104,7 +106,7 @@ public class MiniScriptEvaluator extends AbstractMiniScriptExpressionEvaluator {
 		Integer rightResult = (Integer) evalCheckNullLog(factor.getRightTerm(),
 				log);
 		return new Integer((int) (((double) leftResult.intValue()) * ((factor
-				.getOperator().compareTo("*") == 0) ? rightResult.intValue()
+				.getOperator()== FactorOperator.MULT) ? rightResult.intValue()
 				: (1 / (double) rightResult.intValue()))));
 	}
 

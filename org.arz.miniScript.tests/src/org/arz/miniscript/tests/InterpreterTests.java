@@ -72,7 +72,78 @@ public class InterpreterTests {
 			Assert.fail();
 		}
 	}
+	
+	@Test
+	public void testAddition() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("a=1+1;");
+		Program p;
+		try {
+			p = parserHelper.parse(builder.toString());
+			MyEnvironment m = runModel(p, null);
+			Object result = m.get("a");
+			Assert.assertNotNull(result);
+			Assert.assertTrue(result instanceof Integer);
+			Integer intResult = (Integer) result;
+			Assert.assertEquals(2, intResult.intValue());
+		} catch (Exception e) {
+			Assert.fail();
+		}
+	}
+	@Test
+	public void testSubtraction() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("a=1-1;");
+		Program p;
+		try {
+			p = parserHelper.parse(builder.toString());
+			MyEnvironment m = runModel(p, null);
+			Object result = m.get("a");
+			Assert.assertNotNull(result);
+			Assert.assertTrue(result instanceof Integer);
+			Integer intResult = (Integer) result;
+			Assert.assertEquals(0, intResult.intValue());
+		} catch (Exception e) {
+			Assert.fail();
+		}
+	}
+	@Test
+	public void testMultiplication() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("a=3*5;");
+		Program p;
+		try {
+			p = parserHelper.parse(builder.toString());
+			MyEnvironment m = runModel(p, null);
+			Object result = m.get("a");
+			Assert.assertNotNull(result);
+			Assert.assertTrue(result instanceof Integer);
+			Integer intResult = (Integer) result;
+			Assert.assertEquals(15, intResult.intValue());
+		} catch (Exception e) {
+			Assert.fail();
+		}
+	}
 
+	@Test
+	public void testDivision() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("a=15 / 3;");
+		Program p;
+		try {
+			p = parserHelper.parse(builder.toString());
+			MyEnvironment m = runModel(p, null);
+			Object result = m.get("a");
+			Assert.assertNotNull(result);
+			Assert.assertTrue(result instanceof Integer);
+			Integer intResult = (Integer) result;
+			Assert.assertEquals(5, intResult.intValue());
+		} catch (Exception e) {
+			Assert.fail();
+		}
+	}
+
+	
 	@Test
 	public void testFunctionAssignment() {
 		StringBuilder builder = new StringBuilder();
@@ -111,7 +182,7 @@ public class InterpreterTests {
 	@Test
 	public void testClosureApply() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("foo=func(x){func(){x*x;};}; a=foo(2)()+foo(3)()");
+		builder.append("foo=func(x){func(y){y*x;};}; goo=foo(2); a=goo(2)+goo(3);");
 		Program p;
 		try {
 			p = parserHelper.parse(builder.toString());
@@ -121,7 +192,7 @@ public class InterpreterTests {
 			Assert.assertNotNull(result);
 			Assert.assertTrue(result instanceof Integer);
 			Integer intResult = (Integer) result;
-			Assert.assertEquals(13, intResult.intValue());
+			Assert.assertEquals(10, intResult.intValue());
 		} catch (Exception e) {
 			Assert.fail();
 		}

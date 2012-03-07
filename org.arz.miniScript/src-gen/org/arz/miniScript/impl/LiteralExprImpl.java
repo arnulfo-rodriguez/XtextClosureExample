@@ -37,7 +37,7 @@ public class LiteralExprImpl extends ExpressionImpl implements LiteralExpr
    * @generated
    * @ordered
    */
-  protected static final String VALUE_EDEFAULT = null;
+  protected static final int VALUE_EDEFAULT = 0;
 
   /**
    * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -47,7 +47,7 @@ public class LiteralExprImpl extends ExpressionImpl implements LiteralExpr
    * @generated
    * @ordered
    */
-  protected String value = VALUE_EDEFAULT;
+  protected int value = VALUE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -75,7 +75,7 @@ public class LiteralExprImpl extends ExpressionImpl implements LiteralExpr
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getValue()
+  public int getValue()
   {
     return value;
   }
@@ -85,9 +85,9 @@ public class LiteralExprImpl extends ExpressionImpl implements LiteralExpr
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setValue(String newValue)
+  public void setValue(int newValue)
   {
-    String oldValue = value;
+    int oldValue = value;
     value = newValue;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.LITERAL_EXPR__VALUE, oldValue, value));
@@ -120,7 +120,7 @@ public class LiteralExprImpl extends ExpressionImpl implements LiteralExpr
     switch (featureID)
     {
       case MiniScriptPackage.LITERAL_EXPR__VALUE:
-        setValue((String)newValue);
+        setValue((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -154,7 +154,7 @@ public class LiteralExprImpl extends ExpressionImpl implements LiteralExpr
     switch (featureID)
     {
       case MiniScriptPackage.LITERAL_EXPR__VALUE:
-        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+        return value != VALUE_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }

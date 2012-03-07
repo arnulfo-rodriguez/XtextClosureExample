@@ -54,6 +54,7 @@ public interface NumericExpression extends Expression
 
   /**
    * Returns the value of the '<em><b>Operator</b></em>' attribute.
+   * The literals are from the enumeration {@link org.arz.miniScript.AdditionOperator}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Operator</em>' attribute isn't clear,
@@ -61,22 +62,24 @@ public interface NumericExpression extends Expression
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Operator</em>' attribute.
-   * @see #setOperator(String)
+   * @see org.arz.miniScript.AdditionOperator
+   * @see #setOperator(AdditionOperator)
    * @see org.arz.miniScript.MiniScriptPackage#getNumericExpression_Operator()
    * @model
    * @generated
    */
-  String getOperator();
+  AdditionOperator getOperator();
 
   /**
    * Sets the value of the '{@link org.arz.miniScript.NumericExpression#getOperator <em>Operator</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Operator</em>' attribute.
+   * @see org.arz.miniScript.AdditionOperator
    * @see #getOperator()
    * @generated
    */
-  void setOperator(String value);
+  void setOperator(AdditionOperator value);
 
   /**
    * Returns the value of the '<em><b>Right Factor</b></em>' containment reference.

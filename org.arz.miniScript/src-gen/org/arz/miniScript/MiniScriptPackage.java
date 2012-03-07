@@ -7,6 +7,7 @@ package org.arz.miniScript;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -412,6 +413,26 @@ public interface MiniScriptPackage extends EPackage
    */
   int FACTOR_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
 
+  /**
+   * The meta object id for the '{@link org.arz.miniScript.AdditionOperator <em>Addition Operator</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.arz.miniScript.AdditionOperator
+   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getAdditionOperator()
+   * @generated
+   */
+  int ADDITION_OPERATOR = 11;
+
+  /**
+   * The meta object id for the '{@link org.arz.miniScript.FactorOperator <em>Factor Operator</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.arz.miniScript.FactorOperator
+   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getFactorOperator()
+   * @generated
+   */
+  int FACTOR_OPERATOR = 12;
+
 
   /**
    * Returns the meta object for class '{@link org.arz.miniScript.Model <em>Model</em>}'.
@@ -700,6 +721,26 @@ public interface MiniScriptPackage extends EPackage
   EReference getFactor_RightTerm();
 
   /**
+   * Returns the meta object for enum '{@link org.arz.miniScript.AdditionOperator <em>Addition Operator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Addition Operator</em>'.
+   * @see org.arz.miniScript.AdditionOperator
+   * @generated
+   */
+  EEnum getAdditionOperator();
+
+  /**
+   * Returns the meta object for enum '{@link org.arz.miniScript.FactorOperator <em>Factor Operator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Factor Operator</em>'.
+   * @see org.arz.miniScript.FactorOperator
+   * @generated
+   */
+  EEnum getFactorOperator();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -959,6 +1000,26 @@ public interface MiniScriptPackage extends EPackage
      * @generated
      */
     EReference FACTOR__RIGHT_TERM = eINSTANCE.getFactor_RightTerm();
+
+    /**
+     * The meta object literal for the '{@link org.arz.miniScript.AdditionOperator <em>Addition Operator</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.arz.miniScript.AdditionOperator
+     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getAdditionOperator()
+     * @generated
+     */
+    EEnum ADDITION_OPERATOR = eINSTANCE.getAdditionOperator();
+
+    /**
+     * The meta object literal for the '{@link org.arz.miniScript.FactorOperator <em>Factor Operator</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.arz.miniScript.FactorOperator
+     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getFactorOperator()
+     * @generated
+     */
+    EEnum FACTOR_OPERATOR = eINSTANCE.getFactorOperator();
 
   }
 

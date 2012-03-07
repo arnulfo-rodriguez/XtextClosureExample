@@ -7,6 +7,7 @@ package org.arz.miniScript.impl;
 
 import org.arz.miniScript.Expression;
 import org.arz.miniScript.Factor;
+import org.arz.miniScript.FactorOperator;
 import org.arz.miniScript.MiniScriptPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -52,7 +53,7 @@ public class FactorImpl extends ExpressionImpl implements Factor
    * @generated
    * @ordered
    */
-  protected static final String OPERATOR_EDEFAULT = null;
+  protected static final FactorOperator OPERATOR_EDEFAULT = FactorOperator.MULT;
 
   /**
    * The cached value of the '{@link #getOperator() <em>Operator</em>}' attribute.
@@ -62,7 +63,7 @@ public class FactorImpl extends ExpressionImpl implements Factor
    * @generated
    * @ordered
    */
-  protected String operator = OPERATOR_EDEFAULT;
+  protected FactorOperator operator = OPERATOR_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getRightTerm() <em>Right Term</em>}' containment reference.
@@ -148,7 +149,7 @@ public class FactorImpl extends ExpressionImpl implements Factor
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getOperator()
+  public FactorOperator getOperator()
   {
     return operator;
   }
@@ -158,10 +159,10 @@ public class FactorImpl extends ExpressionImpl implements Factor
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setOperator(String newOperator)
+  public void setOperator(FactorOperator newOperator)
   {
-    String oldOperator = operator;
-    operator = newOperator;
+    FactorOperator oldOperator = operator;
+    operator = newOperator == null ? OPERATOR_EDEFAULT : newOperator;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.FACTOR__OPERATOR, oldOperator, operator));
   }
@@ -266,7 +267,7 @@ public class FactorImpl extends ExpressionImpl implements Factor
         setLeftTerm((Expression)newValue);
         return;
       case MiniScriptPackage.FACTOR__OPERATOR:
-        setOperator((String)newValue);
+        setOperator((FactorOperator)newValue);
         return;
       case MiniScriptPackage.FACTOR__RIGHT_TERM:
         setRightTerm((Expression)newValue);
@@ -311,7 +312,7 @@ public class FactorImpl extends ExpressionImpl implements Factor
       case MiniScriptPackage.FACTOR__LEFT_TERM:
         return leftTerm != null;
       case MiniScriptPackage.FACTOR__OPERATOR:
-        return OPERATOR_EDEFAULT == null ? operator != null : !OPERATOR_EDEFAULT.equals(operator);
+        return operator != OPERATOR_EDEFAULT;
       case MiniScriptPackage.FACTOR__RIGHT_TERM:
         return rightTerm != null;
     }

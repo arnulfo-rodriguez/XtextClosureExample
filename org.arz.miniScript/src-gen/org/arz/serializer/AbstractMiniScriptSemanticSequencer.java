@@ -199,10 +199,23 @@ public class AbstractMiniScriptSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (leftTerm=Factor_Factor_1_0 (operator='*' | operator='/') rightTerm=Term)
+	 *     (leftTerm=Factor_Factor_1_0 operator=FactorOperator rightTerm=Term)
 	 */
 	protected void sequence_Factor(EObject context, Factor semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.FACTOR__LEFT_TERM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.FACTOR__LEFT_TERM));
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.FACTOR__OPERATOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.FACTOR__OPERATOR));
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.FACTOR__RIGHT_TERM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.FACTOR__RIGHT_TERM));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getFactorAccess().getFactorLeftTermAction_1_0(), semanticObject.getLeftTerm());
+		feeder.accept(grammarAccess.getFactorAccess().getOperatorFactorOperatorEnumRuleCall_1_1_0(), semanticObject.getOperator());
+		feeder.accept(grammarAccess.getFactorAccess().getRightTermTermParserRuleCall_1_2_0(), semanticObject.getRightTerm());
+		feeder.finish();
 	}
 	
 	
@@ -217,7 +230,7 @@ public class AbstractMiniScriptSemanticSequencer extends AbstractSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     value=Num
+	 *     value=INT
 	 */
 	protected void sequence_LiteralExpr(EObject context, LiteralExpr semanticObject) {
 		if(errorAcceptor != null) {
@@ -226,17 +239,30 @@ public class AbstractMiniScriptSemanticSequencer extends AbstractSemanticSequenc
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getLiteralExprAccess().getValueNumTerminalRuleCall_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getLiteralExprAccess().getValueINTTerminalRuleCall_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (leftFactor=NumericExpression_NumericExpression_1_0 (operator='+' | operator='-') rightFactor=Factor)
+	 *     (leftFactor=NumericExpression_NumericExpression_1_0 operator=AdditionOperator rightFactor=Factor)
 	 */
 	protected void sequence_NumericExpression(EObject context, NumericExpression semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.NUMERIC_EXPRESSION__LEFT_FACTOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.NUMERIC_EXPRESSION__LEFT_FACTOR));
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.NUMERIC_EXPRESSION__OPERATOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.NUMERIC_EXPRESSION__OPERATOR));
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.NUMERIC_EXPRESSION__RIGHT_FACTOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.NUMERIC_EXPRESSION__RIGHT_FACTOR));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getNumericExpressionAccess().getNumericExpressionLeftFactorAction_1_0(), semanticObject.getLeftFactor());
+		feeder.accept(grammarAccess.getNumericExpressionAccess().getOperatorAdditionOperatorEnumRuleCall_1_1_0(), semanticObject.getOperator());
+		feeder.accept(grammarAccess.getNumericExpressionAccess().getRightFactorFactorParserRuleCall_1_2_0(), semanticObject.getRightFactor());
+		feeder.finish();
 	}
 	
 	

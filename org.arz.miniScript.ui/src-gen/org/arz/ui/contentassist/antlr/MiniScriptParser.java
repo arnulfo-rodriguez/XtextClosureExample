@@ -40,9 +40,9 @@ public class MiniScriptParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExpressionAccess().getAlternatives(), "rule__Expression__Alternatives");
 					put(grammarAccess.getBodyAccess().getAlternatives(), "rule__Body__Alternatives");
 					put(grammarAccess.getFunctorAccess().getAlternatives(), "rule__Functor__Alternatives");
-					put(grammarAccess.getNumericExpressionAccess().getOperatorAlternatives_1_1_0(), "rule__NumericExpression__OperatorAlternatives_1_1_0");
-					put(grammarAccess.getFactorAccess().getOperatorAlternatives_1_1_0(), "rule__Factor__OperatorAlternatives_1_1_0");
 					put(grammarAccess.getTermAccess().getAlternatives(), "rule__Term__Alternatives");
+					put(grammarAccess.getAdditionOperatorAccess().getAlternatives(), "rule__AdditionOperator__Alternatives");
+					put(grammarAccess.getFactorOperatorAccess().getAlternatives(), "rule__FactorOperator__Alternatives");
 					put(grammarAccess.getProgramAccess().getGroup(), "rule__Program__Group__0");
 					put(grammarAccess.getProgramAccess().getGroup_2(), "rule__Program__Group_2__0");
 					put(grammarAccess.getFunctionDeclarationAccess().getGroup(), "rule__FunctionDeclaration__Group__0");

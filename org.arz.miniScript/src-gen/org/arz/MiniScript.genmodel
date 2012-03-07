@@ -9,6 +9,14 @@
     editorPluginID="org.arz.miniScript.editor">
   <genPackages prefix="MiniScript" basePackage="org.arz" disposableProviderFactory="true"
       ecorePackage="MiniScript.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MiniScript.ecore#//AdditionOperator">
+      <genEnumLiterals ecoreEnumLiteral="MiniScript.ecore#//AdditionOperator/add"/>
+      <genEnumLiterals ecoreEnumLiteral="MiniScript.ecore#//AdditionOperator/subtract"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MiniScript.ecore#//FactorOperator">
+      <genEnumLiterals ecoreEnumLiteral="MiniScript.ecore#//FactorOperator/mult"/>
+      <genEnumLiterals ecoreEnumLiteral="MiniScript.ecore#//FactorOperator/division"/>
+    </genEnums>
     <genClasses ecoreClass="MiniScript.ecore#//Model"/>
     <genClasses ecoreClass="MiniScript.ecore#//Program">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//Program/expressions"/>

@@ -54,6 +54,7 @@ public interface Factor extends Expression
 
   /**
    * Returns the value of the '<em><b>Operator</b></em>' attribute.
+   * The literals are from the enumeration {@link org.arz.miniScript.FactorOperator}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Operator</em>' attribute isn't clear,
@@ -61,22 +62,24 @@ public interface Factor extends Expression
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Operator</em>' attribute.
-   * @see #setOperator(String)
+   * @see org.arz.miniScript.FactorOperator
+   * @see #setOperator(FactorOperator)
    * @see org.arz.miniScript.MiniScriptPackage#getFactor_Operator()
    * @model
    * @generated
    */
-  String getOperator();
+  FactorOperator getOperator();
 
   /**
    * Sets the value of the '{@link org.arz.miniScript.Factor#getOperator <em>Operator</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Operator</em>' attribute.
+   * @see org.arz.miniScript.FactorOperator
    * @see #getOperator()
    * @generated
    */
-  void setOperator(String value);
+  void setOperator(FactorOperator value);
 
   /**
    * Returns the value of the '<em><b>Right Term</b></em>' containment reference.

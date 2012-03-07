@@ -24,6 +24,7 @@ import org.eclipse.xtext.parser.*;
 import org.eclipse.xtext.parser.impl.*;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.xtext.parser.antlr.AbstractInternalAntlrParser;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream.HiddenTokens;
@@ -515,9 +516,9 @@ ruleLiteralExpr returns [EObject current=null]
     @after { leaveRule(); }:
 (
 (
-		lv_value_0_0=RULE_NUM
+		lv_value_0_0=RULE_INT
 		{
-			newLeafNode(lv_value_0_0, grammarAccess.getLiteralExprAccess().getValueNumTerminalRuleCall_0()); 
+			newLeafNode(lv_value_0_0, grammarAccess.getLiteralExprAccess().getValueINTTerminalRuleCall_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -527,7 +528,7 @@ ruleLiteralExpr returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_0_0, 
-        		"Num");
+        		"INT");
 	    }
 
 )
@@ -608,32 +609,20 @@ ruleNumericExpression returns [EObject current=null]
     }
 )(
 (
-(
-		lv_operator_2_1=	'+' 
-    {
-        newLeafNode(lv_operator_2_1, grammarAccess.getNumericExpressionAccess().getOperatorPlusSignKeyword_1_1_0_0());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getNumericExpressionRule());
-	        }
-       		setWithLastConsumed($current, "operator", lv_operator_2_1, null);
+		{ 
+	        newCompositeNode(grammarAccess.getNumericExpressionAccess().getOperatorAdditionOperatorEnumRuleCall_1_1_0()); 
 	    }
-
-    |		lv_operator_2_2=	'-' 
-    {
-        newLeafNode(lv_operator_2_2, grammarAccess.getNumericExpressionAccess().getOperatorHyphenMinusKeyword_1_1_0_1());
-    }
- 
-	    {
+		lv_operator_2_0=ruleAdditionOperator		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getNumericExpressionRule());
+	            $current = createModelElementForParent(grammarAccess.getNumericExpressionRule());
 	        }
-       		setWithLastConsumed($current, "operator", lv_operator_2_2, null);
+       		set(
+       			$current, 
+       			"operator",
+        		lv_operator_2_0, 
+        		"AdditionOperator");
+	        afterParserOrEnumRuleCall();
 	    }
-
-)
 
 )
 )(
@@ -692,32 +681,20 @@ ruleFactor returns [EObject current=null]
     }
 )(
 (
-(
-		lv_operator_2_1=	'*' 
-    {
-        newLeafNode(lv_operator_2_1, grammarAccess.getFactorAccess().getOperatorAsteriskKeyword_1_1_0_0());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getFactorRule());
-	        }
-       		setWithLastConsumed($current, "operator", lv_operator_2_1, null);
+		{ 
+	        newCompositeNode(grammarAccess.getFactorAccess().getOperatorFactorOperatorEnumRuleCall_1_1_0()); 
 	    }
-
-    |		lv_operator_2_2=	'/' 
-    {
-        newLeafNode(lv_operator_2_2, grammarAccess.getFactorAccess().getOperatorSolidusKeyword_1_1_0_1());
-    }
- 
-	    {
+		lv_operator_2_0=ruleFactorOperator		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getFactorRule());
+	            $current = createModelElementForParent(grammarAccess.getFactorRule());
 	        }
-       		setWithLastConsumed($current, "operator", lv_operator_2_2, null);
+       		set(
+       			$current, 
+       			"operator",
+        		lv_operator_2_0, 
+        		"FactorOperator");
+	        afterParserOrEnumRuleCall();
 	    }
-
-)
 
 )
 )(
@@ -884,7 +861,43 @@ ruleParenthesisExpression returns [EObject current=null]
 
 
 
-RULE_NUM : '0'..'9';
+// Rule AdditionOperator
+ruleAdditionOperator returns [Enumerator current=null] 
+    @init { enterRule(); }
+    @after { leaveRule(); }:
+((	enumLiteral_0='+' 
+	{
+        $current = grammarAccess.getAdditionOperatorAccess().getAddEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_0, grammarAccess.getAdditionOperatorAccess().getAddEnumLiteralDeclaration_0()); 
+    }
+)
+    |(	enumLiteral_1='-' 
+	{
+        $current = grammarAccess.getAdditionOperatorAccess().getSubtractEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getAdditionOperatorAccess().getSubtractEnumLiteralDeclaration_1()); 
+    }
+));
+
+
+
+// Rule FactorOperator
+ruleFactorOperator returns [Enumerator current=null] 
+    @init { enterRule(); }
+    @after { leaveRule(); }:
+((	enumLiteral_0='*' 
+	{
+        $current = grammarAccess.getFactorOperatorAccess().getMultEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_0, grammarAccess.getFactorOperatorAccess().getMultEnumLiteralDeclaration_0()); 
+    }
+)
+    |(	enumLiteral_1='/' 
+	{
+        $current = grammarAccess.getFactorOperatorAccess().getDivisionEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getFactorOperatorAccess().getDivisionEnumLiteralDeclaration_1()); 
+    }
+));
+
+
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

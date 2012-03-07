@@ -288,17 +288,17 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 	public class LiteralExprElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LiteralExpr");
 		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cValueNumTerminalRuleCall_0 = (RuleCall)cValueAssignment.eContents().get(0);
+		private final RuleCall cValueINTTerminalRuleCall_0 = (RuleCall)cValueAssignment.eContents().get(0);
 		
 		//LiteralExpr:
-		//	value=Num;
+		//	value=INT;
 		public ParserRule getRule() { return rule; }
 
-		//value=Num
+		//value=INT
 		public Assignment getValueAssignment() { return cValueAssignment; }
 
-		//Num
-		public RuleCall getValueNumTerminalRuleCall_0() { return cValueNumTerminalRuleCall_0; }
+		//INT
+		public RuleCall getValueINTTerminalRuleCall_0() { return cValueINTTerminalRuleCall_0; }
 	}
 
 	public class SymbolReferenceElements extends AbstractParserRuleElementFinder {
@@ -324,39 +324,31 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Action cNumericExpressionLeftFactorAction_1_0 = (Action)cGroup_1.eContents().get(0);
 		private final Assignment cOperatorAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final Alternatives cOperatorAlternatives_1_1_0 = (Alternatives)cOperatorAssignment_1_1.eContents().get(0);
-		private final Keyword cOperatorPlusSignKeyword_1_1_0_0 = (Keyword)cOperatorAlternatives_1_1_0.eContents().get(0);
-		private final Keyword cOperatorHyphenMinusKeyword_1_1_0_1 = (Keyword)cOperatorAlternatives_1_1_0.eContents().get(1);
+		private final RuleCall cOperatorAdditionOperatorEnumRuleCall_1_1_0 = (RuleCall)cOperatorAssignment_1_1.eContents().get(0);
 		private final Assignment cRightFactorAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
 		private final RuleCall cRightFactorFactorParserRuleCall_1_2_0 = (RuleCall)cRightFactorAssignment_1_2.eContents().get(0);
 		
 		//NumericExpression returns Expression:
-		//	Factor ({NumericExpression.leftFactor=current} operator=("+" | "-") rightFactor=Factor)*;
+		//	Factor ({NumericExpression.leftFactor=current} operator=AdditionOperator rightFactor=Factor)*;
 		public ParserRule getRule() { return rule; }
 
-		//Factor ({NumericExpression.leftFactor=current} operator=("+" | "-") rightFactor=Factor)*
+		//Factor ({NumericExpression.leftFactor=current} operator=AdditionOperator rightFactor=Factor)*
 		public Group getGroup() { return cGroup; }
 
 		//Factor
 		public RuleCall getFactorParserRuleCall_0() { return cFactorParserRuleCall_0; }
 
-		//({NumericExpression.leftFactor=current} operator=("+" | "-") rightFactor=Factor)*
+		//({NumericExpression.leftFactor=current} operator=AdditionOperator rightFactor=Factor)*
 		public Group getGroup_1() { return cGroup_1; }
 
 		//{NumericExpression.leftFactor=current}
 		public Action getNumericExpressionLeftFactorAction_1_0() { return cNumericExpressionLeftFactorAction_1_0; }
 
-		//operator=("+" | "-")
+		//operator=AdditionOperator
 		public Assignment getOperatorAssignment_1_1() { return cOperatorAssignment_1_1; }
 
-		//"+" | "-"
-		public Alternatives getOperatorAlternatives_1_1_0() { return cOperatorAlternatives_1_1_0; }
-
-		//"+"
-		public Keyword getOperatorPlusSignKeyword_1_1_0_0() { return cOperatorPlusSignKeyword_1_1_0_0; }
-
-		//"-"
-		public Keyword getOperatorHyphenMinusKeyword_1_1_0_1() { return cOperatorHyphenMinusKeyword_1_1_0_1; }
+		//AdditionOperator
+		public RuleCall getOperatorAdditionOperatorEnumRuleCall_1_1_0() { return cOperatorAdditionOperatorEnumRuleCall_1_1_0; }
 
 		//rightFactor=Factor
 		public Assignment getRightFactorAssignment_1_2() { return cRightFactorAssignment_1_2; }
@@ -372,39 +364,31 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Action cFactorLeftTermAction_1_0 = (Action)cGroup_1.eContents().get(0);
 		private final Assignment cOperatorAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final Alternatives cOperatorAlternatives_1_1_0 = (Alternatives)cOperatorAssignment_1_1.eContents().get(0);
-		private final Keyword cOperatorAsteriskKeyword_1_1_0_0 = (Keyword)cOperatorAlternatives_1_1_0.eContents().get(0);
-		private final Keyword cOperatorSolidusKeyword_1_1_0_1 = (Keyword)cOperatorAlternatives_1_1_0.eContents().get(1);
+		private final RuleCall cOperatorFactorOperatorEnumRuleCall_1_1_0 = (RuleCall)cOperatorAssignment_1_1.eContents().get(0);
 		private final Assignment cRightTermAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
 		private final RuleCall cRightTermTermParserRuleCall_1_2_0 = (RuleCall)cRightTermAssignment_1_2.eContents().get(0);
 		
 		//Factor returns Expression:
-		//	Term ({Factor.leftTerm=current} operator=("*" | "/") rightTerm=Term)*;
+		//	Term ({Factor.leftTerm=current} operator=FactorOperator rightTerm=Term)*;
 		public ParserRule getRule() { return rule; }
 
-		//Term ({Factor.leftTerm=current} operator=("*" | "/") rightTerm=Term)*
+		//Term ({Factor.leftTerm=current} operator=FactorOperator rightTerm=Term)*
 		public Group getGroup() { return cGroup; }
 
 		//Term
 		public RuleCall getTermParserRuleCall_0() { return cTermParserRuleCall_0; }
 
-		//({Factor.leftTerm=current} operator=("*" | "/") rightTerm=Term)*
+		//({Factor.leftTerm=current} operator=FactorOperator rightTerm=Term)*
 		public Group getGroup_1() { return cGroup_1; }
 
 		//{Factor.leftTerm=current}
 		public Action getFactorLeftTermAction_1_0() { return cFactorLeftTermAction_1_0; }
 
-		//operator=("*" | "/")
+		//operator=FactorOperator
 		public Assignment getOperatorAssignment_1_1() { return cOperatorAssignment_1_1; }
 
-		//"*" | "/"
-		public Alternatives getOperatorAlternatives_1_1_0() { return cOperatorAlternatives_1_1_0; }
-
-		//"*"
-		public Keyword getOperatorAsteriskKeyword_1_1_0_0() { return cOperatorAsteriskKeyword_1_1_0_0; }
-
-		//"/"
-		public Keyword getOperatorSolidusKeyword_1_1_0_1() { return cOperatorSolidusKeyword_1_1_0_1; }
+		//FactorOperator
+		public RuleCall getOperatorFactorOperatorEnumRuleCall_1_1_0() { return cOperatorFactorOperatorEnumRuleCall_1_1_0; }
 
 		//rightTerm=Term
 		public Assignment getRightTermAssignment_1_2() { return cRightTermAssignment_1_2; }
@@ -490,6 +474,62 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	
+	public class AdditionOperatorElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "AdditionOperator");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cAddEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cAddPlusSignKeyword_0_0 = (Keyword)cAddEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cSubtractEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cSubtractHyphenMinusKeyword_1_0 = (Keyword)cSubtractEnumLiteralDeclaration_1.eContents().get(0);
+		
+		//enum AdditionOperator:
+		//	add="+" | subtract="-";
+		public EnumRule getRule() { return rule; }
+
+		//add="+" | subtract="-"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//add="+"
+		public EnumLiteralDeclaration getAddEnumLiteralDeclaration_0() { return cAddEnumLiteralDeclaration_0; }
+
+		//"+"
+		public Keyword getAddPlusSignKeyword_0_0() { return cAddPlusSignKeyword_0_0; }
+
+		//subtract="-"
+		public EnumLiteralDeclaration getSubtractEnumLiteralDeclaration_1() { return cSubtractEnumLiteralDeclaration_1; }
+
+		//"-"
+		public Keyword getSubtractHyphenMinusKeyword_1_0() { return cSubtractHyphenMinusKeyword_1_0; }
+	}
+
+	public class FactorOperatorElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "FactorOperator");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cMultEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cMultAsteriskKeyword_0_0 = (Keyword)cMultEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cDivisionEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cDivisionSolidusKeyword_1_0 = (Keyword)cDivisionEnumLiteralDeclaration_1.eContents().get(0);
+		
+		//enum FactorOperator:
+		//	mult="*" | division="/";
+		public EnumRule getRule() { return rule; }
+
+		//mult="*" | division="/"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//mult="*"
+		public EnumLiteralDeclaration getMultEnumLiteralDeclaration_0() { return cMultEnumLiteralDeclaration_0; }
+
+		//"*"
+		public Keyword getMultAsteriskKeyword_0_0() { return cMultAsteriskKeyword_0_0; }
+
+		//division="/"
+		public EnumLiteralDeclaration getDivisionEnumLiteralDeclaration_1() { return cDivisionEnumLiteralDeclaration_1; }
+
+		//"/"
+		public Keyword getDivisionSolidusKeyword_1_0() { return cDivisionSolidusKeyword_1_0; }
+	}
+	
 	private ModelElements pModel;
 	private ProgramElements pProgram;
 	private ExpressionElements pExpression;
@@ -499,12 +539,13 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 	private FunctorElements pFunctor;
 	private LiteralExprElements pLiteralExpr;
 	private SymbolReferenceElements pSymbolReference;
+	private AdditionOperatorElements unknownRuleAdditionOperator;
+	private FactorOperatorElements unknownRuleFactorOperator;
 	private NumericExpressionElements pNumericExpression;
 	private FactorElements pFactor;
 	private TermElements pTerm;
 	private VariableAssignmentElements pVariableAssignment;
 	private ParenthesisExpressionElements pParenthesisExpression;
-	private TerminalRule tNum;
 	
 	private final GrammarProvider grammarProvider;
 
@@ -598,7 +639,7 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//LiteralExpr:
-	//	value=Num;
+	//	value=INT;
 	public LiteralExprElements getLiteralExprAccess() {
 		return (pLiteralExpr != null) ? pLiteralExpr : (pLiteralExpr = new LiteralExprElements());
 	}
@@ -617,8 +658,28 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 		return getSymbolReferenceAccess().getRule();
 	}
 
+	//enum AdditionOperator:
+	//	add="+" | subtract="-";
+	public AdditionOperatorElements getAdditionOperatorAccess() {
+		return (unknownRuleAdditionOperator != null) ? unknownRuleAdditionOperator : (unknownRuleAdditionOperator = new AdditionOperatorElements());
+	}
+	
+	public EnumRule getAdditionOperatorRule() {
+		return getAdditionOperatorAccess().getRule();
+	}
+
+	//enum FactorOperator:
+	//	mult="*" | division="/";
+	public FactorOperatorElements getFactorOperatorAccess() {
+		return (unknownRuleFactorOperator != null) ? unknownRuleFactorOperator : (unknownRuleFactorOperator = new FactorOperatorElements());
+	}
+	
+	public EnumRule getFactorOperatorRule() {
+		return getFactorOperatorAccess().getRule();
+	}
+
 	//NumericExpression returns Expression:
-	//	Factor ({NumericExpression.leftFactor=current} operator=("+" | "-") rightFactor=Factor)*;
+	//	Factor ({NumericExpression.leftFactor=current} operator=AdditionOperator rightFactor=Factor)*;
 	public NumericExpressionElements getNumericExpressionAccess() {
 		return (pNumericExpression != null) ? pNumericExpression : (pNumericExpression = new NumericExpressionElements());
 	}
@@ -628,7 +689,7 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Factor returns Expression:
-	//	Term ({Factor.leftTerm=current} operator=("*" | "/") rightTerm=Term)*;
+	//	Term ({Factor.leftTerm=current} operator=FactorOperator rightTerm=Term)*;
 	public FactorElements getFactorAccess() {
 		return (pFactor != null) ? pFactor : (pFactor = new FactorElements());
 	}
@@ -666,12 +727,6 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 	public ParserRule getParenthesisExpressionRule() {
 		return getParenthesisExpressionAccess().getRule();
 	}
-
-	//terminal Num:
-	//	"0".."9";
-	public TerminalRule getNumRule() {
-		return (tNum != null) ? tNum : (tNum = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "Num"));
-	} 
 
 	//terminal ID:
 	//	"^"? ("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;

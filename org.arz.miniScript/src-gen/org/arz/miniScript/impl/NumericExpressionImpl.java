@@ -5,6 +5,7 @@
  */
 package org.arz.miniScript.impl;
 
+import org.arz.miniScript.AdditionOperator;
 import org.arz.miniScript.Expression;
 import org.arz.miniScript.MiniScriptPackage;
 import org.arz.miniScript.NumericExpression;
@@ -52,7 +53,7 @@ public class NumericExpressionImpl extends ExpressionImpl implements NumericExpr
    * @generated
    * @ordered
    */
-  protected static final String OPERATOR_EDEFAULT = null;
+  protected static final AdditionOperator OPERATOR_EDEFAULT = AdditionOperator.ADD;
 
   /**
    * The cached value of the '{@link #getOperator() <em>Operator</em>}' attribute.
@@ -62,7 +63,7 @@ public class NumericExpressionImpl extends ExpressionImpl implements NumericExpr
    * @generated
    * @ordered
    */
-  protected String operator = OPERATOR_EDEFAULT;
+  protected AdditionOperator operator = OPERATOR_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getRightFactor() <em>Right Factor</em>}' containment reference.
@@ -148,7 +149,7 @@ public class NumericExpressionImpl extends ExpressionImpl implements NumericExpr
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getOperator()
+  public AdditionOperator getOperator()
   {
     return operator;
   }
@@ -158,10 +159,10 @@ public class NumericExpressionImpl extends ExpressionImpl implements NumericExpr
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setOperator(String newOperator)
+  public void setOperator(AdditionOperator newOperator)
   {
-    String oldOperator = operator;
-    operator = newOperator;
+    AdditionOperator oldOperator = operator;
+    operator = newOperator == null ? OPERATOR_EDEFAULT : newOperator;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.NUMERIC_EXPRESSION__OPERATOR, oldOperator, operator));
   }
@@ -266,7 +267,7 @@ public class NumericExpressionImpl extends ExpressionImpl implements NumericExpr
         setLeftFactor((Expression)newValue);
         return;
       case MiniScriptPackage.NUMERIC_EXPRESSION__OPERATOR:
-        setOperator((String)newValue);
+        setOperator((AdditionOperator)newValue);
         return;
       case MiniScriptPackage.NUMERIC_EXPRESSION__RIGHT_FACTOR:
         setRightFactor((Expression)newValue);
@@ -311,7 +312,7 @@ public class NumericExpressionImpl extends ExpressionImpl implements NumericExpr
       case MiniScriptPackage.NUMERIC_EXPRESSION__LEFT_FACTOR:
         return leftFactor != null;
       case MiniScriptPackage.NUMERIC_EXPRESSION__OPERATOR:
-        return OPERATOR_EDEFAULT == null ? operator != null : !OPERATOR_EDEFAULT.equals(operator);
+        return operator != OPERATOR_EDEFAULT;
       case MiniScriptPackage.NUMERIC_EXPRESSION__RIGHT_FACTOR:
         return rightFactor != null;
     }

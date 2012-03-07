@@ -36,19 +36,22 @@ Functor returns Expression:
 
 
 LiteralExpr :
-	value=Num
+	value=INT
 ;
 
 SymbolReference :
 	id=ID
 ;
 
+enum AdditionOperator : add='+' | subtract='-' ;
+enum FactorOperator:  mult='*' | division='/';
+
 NumericExpression returns Expression:
-	Factor ({NumericExpression.leftFactor=current} operator=('+'|'-') rightFactor=Factor)*
+	Factor ({NumericExpression.leftFactor=current} operator=AdditionOperator rightFactor=Factor)*
 ;
 
 Factor returns Expression: 
-	Term ({Factor.leftTerm=current} operator=('*'|'/') rightTerm=Term)*
+	Term ({Factor.leftTerm=current} operator=FactorOperator rightTerm=Term)*
 ;
 
 Term returns Expression:
@@ -62,4 +65,4 @@ ParenthesisExpression returns Expression:
 	'(' Expression ')'
 ;
 
-terminal Num: '0'..'9';
+
