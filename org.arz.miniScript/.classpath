@@ -5,13 +5,5 @@
 	<classpathentry kind="src" path="xtend-gen"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
-	<classpathentry kind="lib" path="/Users/arnulfo/Downloads/plugins 3/de.itemis.interpreter_1.0.0.201105161925.jar"/>
-	<classpathentry kind="lib" path="/Users/arnulfo/Downloads/plugins 3/de.itemis.interpreter.generator_1.0.0.201105161925.jar"/>
-	<classpathentry kind="lib" path="/Users/arnulfo/Downloads/plugins 3/de.itemis.interpreter.ui_1.0.0.201105161925.jar"/>
-	<classpathentry kind="lib" path="/Users/arnulfo/Downloads/plugins 3/de.itemis.xtext.typesystem_1.0.0.201105161925.jar"/>
-	<classpathentry kind="lib" path="/Users/arnulfo/Downloads/plugins 3/de.itemis.xtext.typesystem.dsl_1.0.0.jar"/>
-	<classpathentry kind="lib" path="/Users/arnulfo/Downloads/plugins 3/de.itemis.xtext.typesystem.dsl.tests_1.0.0.jar"/>
-	<classpathentry kind="lib" path="/Users/arnulfo/Downloads/plugins 3/de.itemis.xtext.typesystem.dsl.ui_1.0.0.jar"/>
-	<classpathentry kind="lib" path="/Users/arnulfo/Downloads/plugins 3/de.itemis.xtext.typesystem.testing_1.0.0.201105161925.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

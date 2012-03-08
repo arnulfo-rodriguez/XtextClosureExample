@@ -136,7 +136,8 @@ public abstract class AbstractMiniScriptRuntimeModule extends DefaultRuntimeModu
 
 	// contributed by org.eclipse.xtext.generator.generator.GeneratorFragment
 	public Class<? extends org.eclipse.xtext.generator.IGenerator> bindIGenerator() {
-		return org.arz.generator.MiniScriptGenerator.class;
+		//return org.arz.generator.MiniScriptGenerator.class;
+		return null;
 	}
 
 	// contributed by org.eclipse.xtext.generator.formatting.FormatterFragment

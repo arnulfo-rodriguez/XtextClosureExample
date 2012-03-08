@@ -170,7 +170,6 @@ public class InterpreterTests {
 			MyEnvironment m = runModel(p, null);
 			Object result = m.get("a");
 			Assert.assertNotNull(result);
-			Assert.assertNotNull(result);
 			Assert.assertTrue(result instanceof Integer);
 			Integer intResult = (Integer) result;
 			Assert.assertEquals(6, intResult.intValue());
@@ -188,7 +187,6 @@ public class InterpreterTests {
 			p = parserHelper.parse(builder.toString());
 			MyEnvironment m = runModel(p, null);
 			Object result = m.get("a");
-			Assert.assertNotNull(result);
 			Assert.assertNotNull(result);
 			Assert.assertTrue(result instanceof Integer);
 			Integer intResult = (Integer) result;
