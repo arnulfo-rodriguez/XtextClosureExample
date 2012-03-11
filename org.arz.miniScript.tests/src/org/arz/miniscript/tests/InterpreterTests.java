@@ -1,6 +1,5 @@
 package org.arz.miniscript.tests;
 
-import static org.junit.Assert.*;
 import junit.framework.Assert;
 
 import org.arz.MiniScriptInjectorProvider;
@@ -10,7 +9,6 @@ import org.arz.interpreter.MiniScriptStatementExecutor;
 import org.arz.interpreter.MyEnvironment;
 import org.arz.miniScript.Model;
 import org.arz.miniScript.Program;
-import org.arz.miniScript.SymbolReference;
 import org.eclipse.xtext.junit.util.ParseHelper;
 import org.eclipse.xtext.junit4.InjectWith;
 import org.eclipse.xtext.junit4.XtextRunner;
@@ -24,7 +22,6 @@ import com.google.inject.Inject;
 
 import de.itemis.interpreter.ExecutionContext;
 import de.itemis.interpreter.InterpreterException;
-import de.itemis.interpreter.MessageList;
 import de.itemis.interpreter.logging.LogEntry;
 import de.itemis.xtext.typesystem.ITypesystem;
 
@@ -143,7 +140,41 @@ public class InterpreterTests {
 		}
 	}
 
+	@Test
+	public void testNumericExpressionPrecedence() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("a=1 + 15 / 3 + 1;");
+		Program p;
+		try {
+			p = parserHelper.parse(builder.toString());
+			MyEnvironment m = runModel(p, null);
+			Object result = m.get("a");
+			Assert.assertNotNull(result);
+			Assert.assertTrue(result instanceof Integer);
+			Integer intResult = (Integer) result;
+			Assert.assertEquals(7, intResult.intValue());
+		} catch (Exception e) {
+			Assert.fail();
+		}
+	}
 	
+	@Test
+	public void testNumericParenthesisExpressionPrecedence() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("a=(1 + 15) / (3 + 1);");
+		Program p;
+		try {
+			p = parserHelper.parse(builder.toString());
+			MyEnvironment m = runModel(p, null);
+			Object result = m.get("a");
+			Assert.assertNotNull(result);
+			Assert.assertTrue(result instanceof Integer);
+			Integer intResult = (Integer) result;
+			Assert.assertEquals(4, intResult.intValue());
+		} catch (Exception e) {
+			Assert.fail();
+		}
+	}
 	@Test
 	public void testFunctionAssignment() {
 		StringBuilder builder = new StringBuilder();
