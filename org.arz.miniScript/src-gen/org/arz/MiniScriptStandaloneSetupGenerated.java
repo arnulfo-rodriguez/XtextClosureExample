@@ -39,6 +39,5 @@ public class MiniScriptStandaloneSetupGenerated implements ISetup {
 
 
 
-
 	}
 }

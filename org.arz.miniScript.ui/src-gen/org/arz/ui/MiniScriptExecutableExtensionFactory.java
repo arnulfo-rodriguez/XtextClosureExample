@@ -8,6 +8,8 @@ import org.osgi.framework.Bundle;
 
 import com.google.inject.Injector;
 
+import org.arz.ui.internal.MiniScriptActivator;
+
 /**
  * This class was generated. Customizations should only happen in a newly
  * introduced subclass. 
@@ -16,12 +18,12 @@ public class MiniScriptExecutableExtensionFactory extends AbstractGuiceAwareExec
 
 	@Override
 	protected Bundle getBundle() {
-		return org.arz.ui.internal.MiniScriptActivator.getInstance().getBundle();
+		return MiniScriptActivator.getInstance().getBundle();
 	}
 	
 	@Override
 	protected Injector getInjector() {
-		return org.arz.ui.internal.MiniScriptActivator.getInstance().getInjector("org.arz.MiniScript");
+		return MiniScriptActivator.getInstance().getInjector(MiniScriptActivator.ORG_ARZ_MINISCRIPT);
 	}
 	
 }

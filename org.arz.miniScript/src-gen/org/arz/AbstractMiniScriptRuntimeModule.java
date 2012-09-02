@@ -41,12 +41,12 @@ public abstract class AbstractMiniScriptRuntimeModule extends DefaultRuntimeModu
 
 	// contributed by org.eclipse.xtext.generator.serializer.SerializerFragment
 	public Class<? extends org.eclipse.xtext.serializer.sequencer.ISemanticSequencer> bindISemanticSequencer() {
-		return org.arz.serializer.AbstractMiniScriptSemanticSequencer.class;
+		return org.arz.serializer.MiniScriptSemanticSequencer.class;
 	}
 
 	// contributed by org.eclipse.xtext.generator.serializer.SerializerFragment
 	public Class<? extends org.eclipse.xtext.serializer.sequencer.ISyntacticSequencer> bindISyntacticSequencer() {
-		return org.arz.serializer.AbstractMiniScriptSyntacticSequencer.class;
+		return org.arz.serializer.MiniScriptSyntacticSequencer.class;
 	}
 
 	// contributed by org.eclipse.xtext.generator.serializer.SerializerFragment
@@ -136,8 +136,7 @@ public abstract class AbstractMiniScriptRuntimeModule extends DefaultRuntimeModu
 
 	// contributed by org.eclipse.xtext.generator.generator.GeneratorFragment
 	public Class<? extends org.eclipse.xtext.generator.IGenerator> bindIGenerator() {
-		//return org.arz.generator.MiniScriptGenerator.class;
-		return null;
+		return org.arz.generator.MiniScriptGenerator.class;
 	}
 
 	// contributed by org.eclipse.xtext.generator.formatting.FormatterFragment
