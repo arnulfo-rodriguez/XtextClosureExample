@@ -76,13 +76,14 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cFunctionDeclarationParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cVariableAssignmentParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cNumericExpressionParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cLogicalBinaryExpressionParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cLogicalUnaryExpressionParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
 		//Expression:
-		//	FunctionDeclaration | VariableAssignment | NumericExpression;
+		//	FunctionDeclaration | VariableAssignment | LogicalBinaryExpression | LogicalUnaryExpression;
 		public ParserRule getRule() { return rule; }
 
-		//FunctionDeclaration | VariableAssignment | NumericExpression
+		//FunctionDeclaration | VariableAssignment | LogicalBinaryExpression | LogicalUnaryExpression
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//FunctionDeclaration
@@ -91,8 +92,121 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 		//VariableAssignment
 		public RuleCall getVariableAssignmentParserRuleCall_1() { return cVariableAssignmentParserRuleCall_1; }
 
+		//LogicalBinaryExpression
+		public RuleCall getLogicalBinaryExpressionParserRuleCall_2() { return cLogicalBinaryExpressionParserRuleCall_2; }
+
+		//LogicalUnaryExpression
+		public RuleCall getLogicalUnaryExpressionParserRuleCall_3() { return cLogicalUnaryExpressionParserRuleCall_3; }
+	}
+
+	public class LogicalBinaryExpressionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LogicalBinaryExpression");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cComparisonExpressionParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Action cLogicalBinaryExpressionLeftExprAction_1_0 = (Action)cGroup_1.eContents().get(0);
+		private final Assignment cOperatorAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cOperatorBinaryLogicalOperatorEnumRuleCall_1_1_0 = (RuleCall)cOperatorAssignment_1_1.eContents().get(0);
+		private final Assignment cRightExprAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final RuleCall cRightExprComparisonExpressionParserRuleCall_1_2_0 = (RuleCall)cRightExprAssignment_1_2.eContents().get(0);
+		
+		//LogicalBinaryExpression returns Expression:
+		//	ComparisonExpression ({LogicalBinaryExpression.leftExpr=current} operator=BinaryLogicalOperator
+		//	rightExpr=ComparisonExpression)*;
+		public ParserRule getRule() { return rule; }
+
+		//ComparisonExpression ({LogicalBinaryExpression.leftExpr=current} operator=BinaryLogicalOperator
+		//rightExpr=ComparisonExpression)*
+		public Group getGroup() { return cGroup; }
+
+		//ComparisonExpression
+		public RuleCall getComparisonExpressionParserRuleCall_0() { return cComparisonExpressionParserRuleCall_0; }
+
+		//({LogicalBinaryExpression.leftExpr=current} operator=BinaryLogicalOperator rightExpr=ComparisonExpression)*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//{LogicalBinaryExpression.leftExpr=current}
+		public Action getLogicalBinaryExpressionLeftExprAction_1_0() { return cLogicalBinaryExpressionLeftExprAction_1_0; }
+
+		//operator=BinaryLogicalOperator
+		public Assignment getOperatorAssignment_1_1() { return cOperatorAssignment_1_1; }
+
+		//BinaryLogicalOperator
+		public RuleCall getOperatorBinaryLogicalOperatorEnumRuleCall_1_1_0() { return cOperatorBinaryLogicalOperatorEnumRuleCall_1_1_0; }
+
+		//rightExpr=ComparisonExpression
+		public Assignment getRightExprAssignment_1_2() { return cRightExprAssignment_1_2; }
+
+		//ComparisonExpression
+		public RuleCall getRightExprComparisonExpressionParserRuleCall_1_2_0() { return cRightExprComparisonExpressionParserRuleCall_1_2_0; }
+	}
+
+	public class LogicalUnaryExpressionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LogicalUnaryExpression");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cOperatorAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cOperatorUnaryLogicalOperatorEnumRuleCall_0_0 = (RuleCall)cOperatorAssignment_0.eContents().get(0);
+		private final Assignment cExpressionAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cExpressionComparisonExpressionParserRuleCall_1_0 = (RuleCall)cExpressionAssignment_1.eContents().get(0);
+		
+		//LogicalUnaryExpression:
+		//	operator=UnaryLogicalOperator expression=ComparisonExpression;
+		public ParserRule getRule() { return rule; }
+
+		//operator=UnaryLogicalOperator expression=ComparisonExpression
+		public Group getGroup() { return cGroup; }
+
+		//operator=UnaryLogicalOperator
+		public Assignment getOperatorAssignment_0() { return cOperatorAssignment_0; }
+
+		//UnaryLogicalOperator
+		public RuleCall getOperatorUnaryLogicalOperatorEnumRuleCall_0_0() { return cOperatorUnaryLogicalOperatorEnumRuleCall_0_0; }
+
+		//expression=ComparisonExpression
+		public Assignment getExpressionAssignment_1() { return cExpressionAssignment_1; }
+
+		//ComparisonExpression
+		public RuleCall getExpressionComparisonExpressionParserRuleCall_1_0() { return cExpressionComparisonExpressionParserRuleCall_1_0; }
+	}
+
+	public class ComparisonExpressionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ComparisonExpression");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cNumericExpressionParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Action cComparisonExpressionLeftExprAction_1_0 = (Action)cGroup_1.eContents().get(0);
+		private final Assignment cOperatorAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cOperatorComparisonOperatorEnumRuleCall_1_1_0 = (RuleCall)cOperatorAssignment_1_1.eContents().get(0);
+		private final Assignment cRightExprAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final RuleCall cRightExprNumericExpressionParserRuleCall_1_2_0 = (RuleCall)cRightExprAssignment_1_2.eContents().get(0);
+		
+		//ComparisonExpression returns Expression:
+		//	NumericExpression ({ComparisonExpression.leftExpr=current} operator=ComparisonOperator rightExpr=NumericExpression)?;
+		public ParserRule getRule() { return rule; }
+
+		//NumericExpression ({ComparisonExpression.leftExpr=current} operator=ComparisonOperator rightExpr=NumericExpression)?
+		public Group getGroup() { return cGroup; }
+
 		//NumericExpression
-		public RuleCall getNumericExpressionParserRuleCall_2() { return cNumericExpressionParserRuleCall_2; }
+		public RuleCall getNumericExpressionParserRuleCall_0() { return cNumericExpressionParserRuleCall_0; }
+
+		//({ComparisonExpression.leftExpr=current} operator=ComparisonOperator rightExpr=NumericExpression)?
+		public Group getGroup_1() { return cGroup_1; }
+
+		//{ComparisonExpression.leftExpr=current}
+		public Action getComparisonExpressionLeftExprAction_1_0() { return cComparisonExpressionLeftExprAction_1_0; }
+
+		//operator=ComparisonOperator
+		public Assignment getOperatorAssignment_1_1() { return cOperatorAssignment_1_1; }
+
+		//ComparisonOperator
+		public RuleCall getOperatorComparisonOperatorEnumRuleCall_1_1_0() { return cOperatorComparisonOperatorEnumRuleCall_1_1_0; }
+
+		//rightExpr=NumericExpression
+		public Assignment getRightExprAssignment_1_2() { return cRightExprAssignment_1_2; }
+
+		//NumericExpression
+		public RuleCall getRightExprNumericExpressionParserRuleCall_1_2_0() { return cRightExprNumericExpressionParserRuleCall_1_2_0; }
 	}
 
 	public class FunctionDeclarationElements extends AbstractParserRuleElementFinder {
@@ -205,102 +319,6 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_1_3() { return cRightCurlyBracketKeyword_1_3; }
-	}
-
-	public class ApplyElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Apply");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cFunctorParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Action cApplyFunctorAction_1_0 = (Action)cGroup_1.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
-		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
-		private final Assignment cArgumentsAssignment_1_2_0 = (Assignment)cGroup_1_2.eContents().get(0);
-		private final RuleCall cArgumentsExpressionParserRuleCall_1_2_0_0 = (RuleCall)cArgumentsAssignment_1_2_0.eContents().get(0);
-		private final Group cGroup_1_2_1 = (Group)cGroup_1_2.eContents().get(1);
-		private final Keyword cCommaKeyword_1_2_1_0 = (Keyword)cGroup_1_2_1.eContents().get(0);
-		private final Assignment cArgumentsAssignment_1_2_1_1 = (Assignment)cGroup_1_2_1.eContents().get(1);
-		private final RuleCall cArgumentsExpressionParserRuleCall_1_2_1_1_0 = (RuleCall)cArgumentsAssignment_1_2_1_1.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
-		
-		//Apply returns Expression:
-		//	Functor ({Apply.functor=current} "(" (arguments+=Expression ("," arguments+=Expression)*)? ")")*;
-		public ParserRule getRule() { return rule; }
-
-		//Functor ({Apply.functor=current} "(" (arguments+=Expression ("," arguments+=Expression)*)? ")")*
-		public Group getGroup() { return cGroup; }
-
-		//Functor
-		public RuleCall getFunctorParserRuleCall_0() { return cFunctorParserRuleCall_0; }
-
-		//({Apply.functor=current} "(" (arguments+=Expression ("," arguments+=Expression)*)? ")")*
-		public Group getGroup_1() { return cGroup_1; }
-
-		//{Apply.functor=current}
-		public Action getApplyFunctorAction_1_0() { return cApplyFunctorAction_1_0; }
-
-		//"("
-		public Keyword getLeftParenthesisKeyword_1_1() { return cLeftParenthesisKeyword_1_1; }
-
-		//(arguments+=Expression ("," arguments+=Expression)*)?
-		public Group getGroup_1_2() { return cGroup_1_2; }
-
-		//arguments+=Expression
-		public Assignment getArgumentsAssignment_1_2_0() { return cArgumentsAssignment_1_2_0; }
-
-		//Expression
-		public RuleCall getArgumentsExpressionParserRuleCall_1_2_0_0() { return cArgumentsExpressionParserRuleCall_1_2_0_0; }
-
-		//("," arguments+=Expression)*
-		public Group getGroup_1_2_1() { return cGroup_1_2_1; }
-
-		//","
-		public Keyword getCommaKeyword_1_2_1_0() { return cCommaKeyword_1_2_1_0; }
-
-		//arguments+=Expression
-		public Assignment getArgumentsAssignment_1_2_1_1() { return cArgumentsAssignment_1_2_1_1; }
-
-		//Expression
-		public RuleCall getArgumentsExpressionParserRuleCall_1_2_1_1_0() { return cArgumentsExpressionParserRuleCall_1_2_1_1_0; }
-
-		//")"
-		public Keyword getRightParenthesisKeyword_1_3() { return cRightParenthesisKeyword_1_3; }
-	}
-
-	public class FunctorElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Functor");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cSymbolReferenceParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cParenthesisExpressionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		
-		//Functor returns Expression:
-		//	SymbolReference | ParenthesisExpression;
-		public ParserRule getRule() { return rule; }
-
-		//SymbolReference | ParenthesisExpression
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//SymbolReference
-		public RuleCall getSymbolReferenceParserRuleCall_0() { return cSymbolReferenceParserRuleCall_0; }
-
-		//ParenthesisExpression
-		public RuleCall getParenthesisExpressionParserRuleCall_1() { return cParenthesisExpressionParserRuleCall_1; }
-	}
-
-	public class LiteralExprElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LiteralExpr");
-		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cValueINTTerminalRuleCall_0 = (RuleCall)cValueAssignment.eContents().get(0);
-		
-		//LiteralExpr:
-		//	value=INT;
-		public ParserRule getRule() { return rule; }
-
-		//value=INT
-		public Assignment getValueAssignment() { return cValueAssignment; }
-
-		//INT
-		public RuleCall getValueINTTerminalRuleCall_0() { return cValueINTTerminalRuleCall_0; }
 	}
 
 	public class SymbolReferenceElements extends AbstractParserRuleElementFinder {
@@ -419,6 +437,102 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getApplyParserRuleCall_1() { return cApplyParserRuleCall_1; }
 	}
 
+	public class ApplyElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Apply");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cFunctorParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Action cApplyFunctorAction_1_0 = (Action)cGroup_1.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
+		private final Assignment cArgumentsAssignment_1_2_0 = (Assignment)cGroup_1_2.eContents().get(0);
+		private final RuleCall cArgumentsExpressionParserRuleCall_1_2_0_0 = (RuleCall)cArgumentsAssignment_1_2_0.eContents().get(0);
+		private final Group cGroup_1_2_1 = (Group)cGroup_1_2.eContents().get(1);
+		private final Keyword cCommaKeyword_1_2_1_0 = (Keyword)cGroup_1_2_1.eContents().get(0);
+		private final Assignment cArgumentsAssignment_1_2_1_1 = (Assignment)cGroup_1_2_1.eContents().get(1);
+		private final RuleCall cArgumentsExpressionParserRuleCall_1_2_1_1_0 = (RuleCall)cArgumentsAssignment_1_2_1_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
+		
+		//Apply returns Expression:
+		//	Functor ({Apply.functor=current} "(" (arguments+=Expression ("," arguments+=Expression)*)? ")")*;
+		public ParserRule getRule() { return rule; }
+
+		//Functor ({Apply.functor=current} "(" (arguments+=Expression ("," arguments+=Expression)*)? ")")*
+		public Group getGroup() { return cGroup; }
+
+		//Functor
+		public RuleCall getFunctorParserRuleCall_0() { return cFunctorParserRuleCall_0; }
+
+		//({Apply.functor=current} "(" (arguments+=Expression ("," arguments+=Expression)*)? ")")*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//{Apply.functor=current}
+		public Action getApplyFunctorAction_1_0() { return cApplyFunctorAction_1_0; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_1_1() { return cLeftParenthesisKeyword_1_1; }
+
+		//(arguments+=Expression ("," arguments+=Expression)*)?
+		public Group getGroup_1_2() { return cGroup_1_2; }
+
+		//arguments+=Expression
+		public Assignment getArgumentsAssignment_1_2_0() { return cArgumentsAssignment_1_2_0; }
+
+		//Expression
+		public RuleCall getArgumentsExpressionParserRuleCall_1_2_0_0() { return cArgumentsExpressionParserRuleCall_1_2_0_0; }
+
+		//("," arguments+=Expression)*
+		public Group getGroup_1_2_1() { return cGroup_1_2_1; }
+
+		//","
+		public Keyword getCommaKeyword_1_2_1_0() { return cCommaKeyword_1_2_1_0; }
+
+		//arguments+=Expression
+		public Assignment getArgumentsAssignment_1_2_1_1() { return cArgumentsAssignment_1_2_1_1; }
+
+		//Expression
+		public RuleCall getArgumentsExpressionParserRuleCall_1_2_1_1_0() { return cArgumentsExpressionParserRuleCall_1_2_1_1_0; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_1_3() { return cRightParenthesisKeyword_1_3; }
+	}
+
+	public class FunctorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Functor");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cSymbolReferenceParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cParenthesisExpressionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//Functor returns Expression:
+		//	SymbolReference | ParenthesisExpression;
+		public ParserRule getRule() { return rule; }
+
+		//SymbolReference | ParenthesisExpression
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//SymbolReference
+		public RuleCall getSymbolReferenceParserRuleCall_0() { return cSymbolReferenceParserRuleCall_0; }
+
+		//ParenthesisExpression
+		public RuleCall getParenthesisExpressionParserRuleCall_1() { return cParenthesisExpressionParserRuleCall_1; }
+	}
+
+	public class LiteralExprElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LiteralExpr");
+		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cValueINTTerminalRuleCall_0 = (RuleCall)cValueAssignment.eContents().get(0);
+		
+		//LiteralExpr:
+		//	value=INT;
+		public ParserRule getRule() { return rule; }
+
+		//value=INT
+		public Assignment getValueAssignment() { return cValueAssignment; }
+
+		//INT
+		public RuleCall getValueINTTerminalRuleCall_0() { return cValueINTTerminalRuleCall_0; }
+	}
+
 	public class VariableAssignmentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "VariableAssignment");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -531,21 +645,123 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 		//"/"
 		public Keyword getDivisionSolidusKeyword_1_0() { return cDivisionSolidusKeyword_1_0; }
 	}
+
+	public class ComparisonOperatorElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "ComparisonOperator");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cGtEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cGtGreaterThanSignKeyword_0_0 = (Keyword)cGtEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cGteEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cGteGreaterThanSignEqualsSignKeyword_1_0 = (Keyword)cGteEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cLtEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cLtLessThanSignKeyword_2_0 = (Keyword)cLtEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cLteEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cLteLessThanSignEqualsSignKeyword_3_0 = (Keyword)cLteEnumLiteralDeclaration_3.eContents().get(0);
+		private final EnumLiteralDeclaration cEqEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
+		private final Keyword cEqEqualsSignEqualsSignKeyword_4_0 = (Keyword)cEqEnumLiteralDeclaration_4.eContents().get(0);
+		
+		//enum ComparisonOperator:
+		//	gt=">" | gte=">=" | lt="<" | lte="<=" | eq="==";
+		public EnumRule getRule() { return rule; }
+
+		//gt=">" | gte=">=" | lt="<" | lte="<=" | eq="=="
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//gt=">"
+		public EnumLiteralDeclaration getGtEnumLiteralDeclaration_0() { return cGtEnumLiteralDeclaration_0; }
+
+		//">"
+		public Keyword getGtGreaterThanSignKeyword_0_0() { return cGtGreaterThanSignKeyword_0_0; }
+
+		//gte=">="
+		public EnumLiteralDeclaration getGteEnumLiteralDeclaration_1() { return cGteEnumLiteralDeclaration_1; }
+
+		//">="
+		public Keyword getGteGreaterThanSignEqualsSignKeyword_1_0() { return cGteGreaterThanSignEqualsSignKeyword_1_0; }
+
+		//lt="<"
+		public EnumLiteralDeclaration getLtEnumLiteralDeclaration_2() { return cLtEnumLiteralDeclaration_2; }
+
+		//"<"
+		public Keyword getLtLessThanSignKeyword_2_0() { return cLtLessThanSignKeyword_2_0; }
+
+		//lte="<="
+		public EnumLiteralDeclaration getLteEnumLiteralDeclaration_3() { return cLteEnumLiteralDeclaration_3; }
+
+		//"<="
+		public Keyword getLteLessThanSignEqualsSignKeyword_3_0() { return cLteLessThanSignEqualsSignKeyword_3_0; }
+
+		//eq="=="
+		public EnumLiteralDeclaration getEqEnumLiteralDeclaration_4() { return cEqEnumLiteralDeclaration_4; }
+
+		//"=="
+		public Keyword getEqEqualsSignEqualsSignKeyword_4_0() { return cEqEqualsSignEqualsSignKeyword_4_0; }
+	}
+
+	public class BinaryLogicalOperatorElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "BinaryLogicalOperator");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cAndEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cAndAndKeyword_0_0 = (Keyword)cAndEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cOrEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cOrOrKeyword_1_0 = (Keyword)cOrEnumLiteralDeclaration_1.eContents().get(0);
+		
+		//enum BinaryLogicalOperator:
+		//	and | or;
+		public EnumRule getRule() { return rule; }
+
+		//and | or
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//and
+		public EnumLiteralDeclaration getAndEnumLiteralDeclaration_0() { return cAndEnumLiteralDeclaration_0; }
+
+		//"and"
+		public Keyword getAndAndKeyword_0_0() { return cAndAndKeyword_0_0; }
+
+		//or
+		public EnumLiteralDeclaration getOrEnumLiteralDeclaration_1() { return cOrEnumLiteralDeclaration_1; }
+
+		//"or"
+		public Keyword getOrOrKeyword_1_0() { return cOrOrKeyword_1_0; }
+	}
+
+	public class UnaryLogicalOperatorElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "UnaryLogicalOperator");
+		private final EnumLiteralDeclaration cNotEnumLiteralDeclaration = (EnumLiteralDeclaration)rule.eContents().get(1);
+		private final Keyword cNotNotKeyword_0 = (Keyword)cNotEnumLiteralDeclaration.eContents().get(0);
+		
+		//enum UnaryLogicalOperator:
+		//	not;
+		public EnumRule getRule() { return rule; }
+
+		//not
+		public EnumLiteralDeclaration getNotEnumLiteralDeclaration() { return cNotEnumLiteralDeclaration; }
+
+		//"not"
+		public Keyword getNotNotKeyword_0() { return cNotNotKeyword_0; }
+	}
 	
 	private ModelElements pModel;
 	private ProgramElements pProgram;
-	private ExpressionElements pExpression;
-	private FunctionDeclarationElements pFunctionDeclaration;
-	private BodyElements pBody;
-	private ApplyElements pApply;
-	private FunctorElements pFunctor;
-	private LiteralExprElements pLiteralExpr;
-	private SymbolReferenceElements pSymbolReference;
 	private AdditionOperatorElements unknownRuleAdditionOperator;
 	private FactorOperatorElements unknownRuleFactorOperator;
+	private ComparisonOperatorElements unknownRuleComparisonOperator;
+	private BinaryLogicalOperatorElements unknownRuleBinaryLogicalOperator;
+	private UnaryLogicalOperatorElements unknownRuleUnaryLogicalOperator;
+	private ExpressionElements pExpression;
+	private LogicalBinaryExpressionElements pLogicalBinaryExpression;
+	private LogicalUnaryExpressionElements pLogicalUnaryExpression;
+	private ComparisonExpressionElements pComparisonExpression;
+	private FunctionDeclarationElements pFunctionDeclaration;
+	private BodyElements pBody;
+	private SymbolReferenceElements pSymbolReference;
 	private NumericExpressionElements pNumericExpression;
 	private FactorElements pFactor;
 	private TermElements pTerm;
+	private ApplyElements pApply;
+	private FunctorElements pFunctor;
+	private LiteralExprElements pLiteralExpr;
 	private VariableAssignmentElements pVariableAssignment;
 	private ParenthesisExpressionElements pParenthesisExpression;
 	
@@ -607,14 +823,95 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 		return getProgramAccess().getRule();
 	}
 
+	//enum AdditionOperator:
+	//	add="+" | subtract="-";
+	public AdditionOperatorElements getAdditionOperatorAccess() {
+		return (unknownRuleAdditionOperator != null) ? unknownRuleAdditionOperator : (unknownRuleAdditionOperator = new AdditionOperatorElements());
+	}
+	
+	public EnumRule getAdditionOperatorRule() {
+		return getAdditionOperatorAccess().getRule();
+	}
+
+	//enum FactorOperator:
+	//	mult="*" | division="/";
+	public FactorOperatorElements getFactorOperatorAccess() {
+		return (unknownRuleFactorOperator != null) ? unknownRuleFactorOperator : (unknownRuleFactorOperator = new FactorOperatorElements());
+	}
+	
+	public EnumRule getFactorOperatorRule() {
+		return getFactorOperatorAccess().getRule();
+	}
+
+	//enum ComparisonOperator:
+	//	gt=">" | gte=">=" | lt="<" | lte="<=" | eq="==";
+	public ComparisonOperatorElements getComparisonOperatorAccess() {
+		return (unknownRuleComparisonOperator != null) ? unknownRuleComparisonOperator : (unknownRuleComparisonOperator = new ComparisonOperatorElements());
+	}
+	
+	public EnumRule getComparisonOperatorRule() {
+		return getComparisonOperatorAccess().getRule();
+	}
+
+	//enum BinaryLogicalOperator:
+	//	and | or;
+	public BinaryLogicalOperatorElements getBinaryLogicalOperatorAccess() {
+		return (unknownRuleBinaryLogicalOperator != null) ? unknownRuleBinaryLogicalOperator : (unknownRuleBinaryLogicalOperator = new BinaryLogicalOperatorElements());
+	}
+	
+	public EnumRule getBinaryLogicalOperatorRule() {
+		return getBinaryLogicalOperatorAccess().getRule();
+	}
+
+	//enum UnaryLogicalOperator:
+	//	not;
+	public UnaryLogicalOperatorElements getUnaryLogicalOperatorAccess() {
+		return (unknownRuleUnaryLogicalOperator != null) ? unknownRuleUnaryLogicalOperator : (unknownRuleUnaryLogicalOperator = new UnaryLogicalOperatorElements());
+	}
+	
+	public EnumRule getUnaryLogicalOperatorRule() {
+		return getUnaryLogicalOperatorAccess().getRule();
+	}
+
 	//Expression:
-	//	FunctionDeclaration | VariableAssignment | NumericExpression;
+	//	FunctionDeclaration | VariableAssignment | LogicalBinaryExpression | LogicalUnaryExpression;
 	public ExpressionElements getExpressionAccess() {
 		return (pExpression != null) ? pExpression : (pExpression = new ExpressionElements());
 	}
 	
 	public ParserRule getExpressionRule() {
 		return getExpressionAccess().getRule();
+	}
+
+	//LogicalBinaryExpression returns Expression:
+	//	ComparisonExpression ({LogicalBinaryExpression.leftExpr=current} operator=BinaryLogicalOperator
+	//	rightExpr=ComparisonExpression)*;
+	public LogicalBinaryExpressionElements getLogicalBinaryExpressionAccess() {
+		return (pLogicalBinaryExpression != null) ? pLogicalBinaryExpression : (pLogicalBinaryExpression = new LogicalBinaryExpressionElements());
+	}
+	
+	public ParserRule getLogicalBinaryExpressionRule() {
+		return getLogicalBinaryExpressionAccess().getRule();
+	}
+
+	//LogicalUnaryExpression:
+	//	operator=UnaryLogicalOperator expression=ComparisonExpression;
+	public LogicalUnaryExpressionElements getLogicalUnaryExpressionAccess() {
+		return (pLogicalUnaryExpression != null) ? pLogicalUnaryExpression : (pLogicalUnaryExpression = new LogicalUnaryExpressionElements());
+	}
+	
+	public ParserRule getLogicalUnaryExpressionRule() {
+		return getLogicalUnaryExpressionAccess().getRule();
+	}
+
+	//ComparisonExpression returns Expression:
+	//	NumericExpression ({ComparisonExpression.leftExpr=current} operator=ComparisonOperator rightExpr=NumericExpression)?;
+	public ComparisonExpressionElements getComparisonExpressionAccess() {
+		return (pComparisonExpression != null) ? pComparisonExpression : (pComparisonExpression = new ComparisonExpressionElements());
+	}
+	
+	public ParserRule getComparisonExpressionRule() {
+		return getComparisonExpressionAccess().getRule();
 	}
 
 	//FunctionDeclaration:
@@ -637,36 +934,6 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 		return getBodyAccess().getRule();
 	}
 
-	//Apply returns Expression:
-	//	Functor ({Apply.functor=current} "(" (arguments+=Expression ("," arguments+=Expression)*)? ")")*;
-	public ApplyElements getApplyAccess() {
-		return (pApply != null) ? pApply : (pApply = new ApplyElements());
-	}
-	
-	public ParserRule getApplyRule() {
-		return getApplyAccess().getRule();
-	}
-
-	//Functor returns Expression:
-	//	SymbolReference | ParenthesisExpression;
-	public FunctorElements getFunctorAccess() {
-		return (pFunctor != null) ? pFunctor : (pFunctor = new FunctorElements());
-	}
-	
-	public ParserRule getFunctorRule() {
-		return getFunctorAccess().getRule();
-	}
-
-	//LiteralExpr:
-	//	value=INT;
-	public LiteralExprElements getLiteralExprAccess() {
-		return (pLiteralExpr != null) ? pLiteralExpr : (pLiteralExpr = new LiteralExprElements());
-	}
-	
-	public ParserRule getLiteralExprRule() {
-		return getLiteralExprAccess().getRule();
-	}
-
 	//SymbolReference:
 	//	id=ID;
 	public SymbolReferenceElements getSymbolReferenceAccess() {
@@ -675,26 +942,6 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getSymbolReferenceRule() {
 		return getSymbolReferenceAccess().getRule();
-	}
-
-	//enum AdditionOperator:
-	//	add="+" | subtract="-";
-	public AdditionOperatorElements getAdditionOperatorAccess() {
-		return (unknownRuleAdditionOperator != null) ? unknownRuleAdditionOperator : (unknownRuleAdditionOperator = new AdditionOperatorElements());
-	}
-	
-	public EnumRule getAdditionOperatorRule() {
-		return getAdditionOperatorAccess().getRule();
-	}
-
-	//enum FactorOperator:
-	//	mult="*" | division="/";
-	public FactorOperatorElements getFactorOperatorAccess() {
-		return (unknownRuleFactorOperator != null) ? unknownRuleFactorOperator : (unknownRuleFactorOperator = new FactorOperatorElements());
-	}
-	
-	public EnumRule getFactorOperatorRule() {
-		return getFactorOperatorAccess().getRule();
 	}
 
 	//NumericExpression returns Expression:
@@ -725,6 +972,36 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getTermRule() {
 		return getTermAccess().getRule();
+	}
+
+	//Apply returns Expression:
+	//	Functor ({Apply.functor=current} "(" (arguments+=Expression ("," arguments+=Expression)*)? ")")*;
+	public ApplyElements getApplyAccess() {
+		return (pApply != null) ? pApply : (pApply = new ApplyElements());
+	}
+	
+	public ParserRule getApplyRule() {
+		return getApplyAccess().getRule();
+	}
+
+	//Functor returns Expression:
+	//	SymbolReference | ParenthesisExpression;
+	public FunctorElements getFunctorAccess() {
+		return (pFunctor != null) ? pFunctor : (pFunctor = new FunctorElements());
+	}
+	
+	public ParserRule getFunctorRule() {
+		return getFunctorAccess().getRule();
+	}
+
+	//LiteralExpr:
+	//	value=INT;
+	public LiteralExprElements getLiteralExprAccess() {
+		return (pLiteralExpr != null) ? pLiteralExpr : (pLiteralExpr = new LiteralExprElements());
+	}
+	
+	public ParserRule getLiteralExprRule() {
+		return getLiteralExprAccess().getRule();
 	}
 
 	//VariableAssignment:

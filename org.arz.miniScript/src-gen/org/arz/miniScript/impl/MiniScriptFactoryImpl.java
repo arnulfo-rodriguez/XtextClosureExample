@@ -68,14 +68,17 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
       case MiniScriptPackage.MODEL: return createModel();
       case MiniScriptPackage.PROGRAM: return createProgram();
       case MiniScriptPackage.EXPRESSION: return createExpression();
+      case MiniScriptPackage.LOGICAL_UNARY_EXPRESSION: return createLogicalUnaryExpression();
       case MiniScriptPackage.FUNCTION_DECLARATION: return createFunctionDeclaration();
       case MiniScriptPackage.BODY: return createBody();
-      case MiniScriptPackage.LITERAL_EXPR: return createLiteralExpr();
       case MiniScriptPackage.SYMBOL_REFERENCE: return createSymbolReference();
+      case MiniScriptPackage.LITERAL_EXPR: return createLiteralExpr();
       case MiniScriptPackage.VARIABLE_ASSIGNMENT: return createVariableAssignment();
-      case MiniScriptPackage.APPLY: return createApply();
+      case MiniScriptPackage.LOGICAL_BINARY_EXPRESSION: return createLogicalBinaryExpression();
+      case MiniScriptPackage.COMPARISON_EXPRESSION: return createComparisonExpression();
       case MiniScriptPackage.NUMERIC_EXPRESSION: return createNumericExpression();
       case MiniScriptPackage.FACTOR: return createFactor();
+      case MiniScriptPackage.APPLY: return createApply();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -95,6 +98,12 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
         return createAdditionOperatorFromString(eDataType, initialValue);
       case MiniScriptPackage.FACTOR_OPERATOR:
         return createFactorOperatorFromString(eDataType, initialValue);
+      case MiniScriptPackage.COMPARISON_OPERATOR:
+        return createComparisonOperatorFromString(eDataType, initialValue);
+      case MiniScriptPackage.BINARY_LOGICAL_OPERATOR:
+        return createBinaryLogicalOperatorFromString(eDataType, initialValue);
+      case MiniScriptPackage.UNARY_LOGICAL_OPERATOR:
+        return createUnaryLogicalOperatorFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -114,6 +123,12 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
         return convertAdditionOperatorToString(eDataType, instanceValue);
       case MiniScriptPackage.FACTOR_OPERATOR:
         return convertFactorOperatorToString(eDataType, instanceValue);
+      case MiniScriptPackage.COMPARISON_OPERATOR:
+        return convertComparisonOperatorToString(eDataType, instanceValue);
+      case MiniScriptPackage.BINARY_LOGICAL_OPERATOR:
+        return convertBinaryLogicalOperatorToString(eDataType, instanceValue);
+      case MiniScriptPackage.UNARY_LOGICAL_OPERATOR:
+        return convertUnaryLogicalOperatorToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -157,6 +172,17 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
    * <!-- end-user-doc -->
    * @generated
    */
+  public LogicalUnaryExpression createLogicalUnaryExpression()
+  {
+    LogicalUnaryExpressionImpl logicalUnaryExpression = new LogicalUnaryExpressionImpl();
+    return logicalUnaryExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public FunctionDeclaration createFunctionDeclaration()
   {
     FunctionDeclarationImpl functionDeclaration = new FunctionDeclarationImpl();
@@ -179,10 +205,10 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public LiteralExpr createLiteralExpr()
+  public SymbolReference createSymbolReference()
   {
-    LiteralExprImpl literalExpr = new LiteralExprImpl();
-    return literalExpr;
+    SymbolReferenceImpl symbolReference = new SymbolReferenceImpl();
+    return symbolReference;
   }
 
   /**
@@ -190,10 +216,10 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public SymbolReference createSymbolReference()
+  public LiteralExpr createLiteralExpr()
   {
-    SymbolReferenceImpl symbolReference = new SymbolReferenceImpl();
-    return symbolReference;
+    LiteralExprImpl literalExpr = new LiteralExprImpl();
+    return literalExpr;
   }
 
   /**
@@ -212,10 +238,21 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public Apply createApply()
+  public LogicalBinaryExpression createLogicalBinaryExpression()
   {
-    ApplyImpl apply = new ApplyImpl();
-    return apply;
+    LogicalBinaryExpressionImpl logicalBinaryExpression = new LogicalBinaryExpressionImpl();
+    return logicalBinaryExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ComparisonExpression createComparisonExpression()
+  {
+    ComparisonExpressionImpl comparisonExpression = new ComparisonExpressionImpl();
+    return comparisonExpression;
   }
 
   /**
@@ -238,6 +275,17 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
   {
     FactorImpl factor = new FactorImpl();
     return factor;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Apply createApply()
+  {
+    ApplyImpl apply = new ApplyImpl();
+    return apply;
   }
 
   /**
@@ -280,6 +328,72 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
    * @generated
    */
   public String convertFactorOperatorToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ComparisonOperator createComparisonOperatorFromString(EDataType eDataType, String initialValue)
+  {
+    ComparisonOperator result = ComparisonOperator.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertComparisonOperatorToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BinaryLogicalOperator createBinaryLogicalOperatorFromString(EDataType eDataType, String initialValue)
+  {
+    BinaryLogicalOperator result = BinaryLogicalOperator.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertBinaryLogicalOperatorToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public UnaryLogicalOperator createUnaryLogicalOperatorFromString(EDataType eDataType, String initialValue)
+  {
+    UnaryLogicalOperator result = UnaryLogicalOperator.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertUnaryLogicalOperatorToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

@@ -50,6 +50,15 @@ public interface MiniScriptFactory extends EFactory
   Expression createExpression();
 
   /**
+   * Returns a new object of class '<em>Logical Unary Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Logical Unary Expression</em>'.
+   * @generated
+   */
+  LogicalUnaryExpression createLogicalUnaryExpression();
+
+  /**
    * Returns a new object of class '<em>Function Declaration</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -68,15 +77,6 @@ public interface MiniScriptFactory extends EFactory
   Body createBody();
 
   /**
-   * Returns a new object of class '<em>Literal Expr</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Literal Expr</em>'.
-   * @generated
-   */
-  LiteralExpr createLiteralExpr();
-
-  /**
    * Returns a new object of class '<em>Symbol Reference</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -84,6 +84,15 @@ public interface MiniScriptFactory extends EFactory
    * @generated
    */
   SymbolReference createSymbolReference();
+
+  /**
+   * Returns a new object of class '<em>Literal Expr</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Literal Expr</em>'.
+   * @generated
+   */
+  LiteralExpr createLiteralExpr();
 
   /**
    * Returns a new object of class '<em>Variable Assignment</em>'.
@@ -95,13 +104,22 @@ public interface MiniScriptFactory extends EFactory
   VariableAssignment createVariableAssignment();
 
   /**
-   * Returns a new object of class '<em>Apply</em>'.
+   * Returns a new object of class '<em>Logical Binary Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Apply</em>'.
+   * @return a new object of class '<em>Logical Binary Expression</em>'.
    * @generated
    */
-  Apply createApply();
+  LogicalBinaryExpression createLogicalBinaryExpression();
+
+  /**
+   * Returns a new object of class '<em>Comparison Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Comparison Expression</em>'.
+   * @generated
+   */
+  ComparisonExpression createComparisonExpression();
 
   /**
    * Returns a new object of class '<em>Numeric Expression</em>'.
@@ -120,6 +138,15 @@ public interface MiniScriptFactory extends EFactory
    * @generated
    */
   Factor createFactor();
+
+  /**
+   * Returns a new object of class '<em>Apply</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Apply</em>'.
+   * @generated
+   */
+  Apply createApply();
 
   /**
    * Returns the package supported by this factory.

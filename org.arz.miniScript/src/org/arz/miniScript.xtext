@@ -2,17 +2,40 @@ grammar org.arz.MiniScript with org.eclipse.xtext.common.Terminals
 
 generate miniScript "http://www.arz.org/miniScript"
 
+
+
 Model:
 	Program;
+
 
 Program:
 	expressions+=Expression ';' (expressions+=Expression ';')*
 ;
 
+enum AdditionOperator : add='+' | subtract='-' ;
+enum FactorOperator:  mult='*' | division='/';
+enum ComparisonOperator: gt='>' | gte='>=' | lt='<' | lte='<=' | eq='==';
+enum BinaryLogicalOperator: and='and' | or='or';
+enum UnaryLogicalOperator: not='not';
+
+
 Expression:
  	FunctionDeclaration  | 
     VariableAssignment |
-	NumericExpression
+	LogicalBinaryExpression |
+	LogicalUnaryExpression
+;
+
+LogicalBinaryExpression returns Expression:
+	ComparisonExpression ({LogicalBinaryExpression.leftExpr=current} operator=BinaryLogicalOperator rightExpr=ComparisonExpression)*
+;
+
+LogicalUnaryExpression:
+	operator=UnaryLogicalOperator expression=ComparisonExpression
+;
+
+ComparisonExpression returns Expression:
+	NumericExpression ({ComparisonExpression.leftExpr=current} operator=ComparisonOperator rightExpr=NumericExpression)?
 ;
 
 
@@ -24,6 +47,23 @@ Body :
  	expressions+=Expression |
     {Body}'{' ( expressions+=Expression ';')* '}'
 ;
+
+
+SymbolReference :
+	id=ID
+;
+
+
+NumericExpression returns Expression:
+	Factor ({NumericExpression.leftFactor=current} operator=AdditionOperator rightFactor=Factor)*
+;
+
+Factor returns Expression: 
+	Term ({Factor.leftTerm=current} operator=FactorOperator rightTerm=Term)*
+;
+
+Term returns Expression:
+ 	LiteralExpr | Apply ;
 
 Apply returns Expression:
 	Functor ({Apply.functor=current} '(' (arguments+=Expression (',' arguments+=Expression)*)? ')')*
@@ -38,24 +78,6 @@ Functor returns Expression:
 LiteralExpr :
 	value=INT
 ;
-
-SymbolReference :
-	id=ID
-;
-
-enum AdditionOperator : add='+' | subtract='-' ;
-enum FactorOperator:  mult='*' | division='/';
-
-NumericExpression returns Expression:
-	Factor ({NumericExpression.leftFactor=current} operator=AdditionOperator rightFactor=Factor)*
-;
-
-Factor returns Expression: 
-	Term ({Factor.leftTerm=current} operator=FactorOperator rightTerm=Term)*
-;
-
-Term returns Expression:
- 	LiteralExpr | Apply ;
 
 VariableAssignment :
 	id=ID '=' expression=Expression

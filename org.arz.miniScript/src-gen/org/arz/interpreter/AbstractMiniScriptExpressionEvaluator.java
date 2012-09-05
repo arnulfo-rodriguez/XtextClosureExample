@@ -22,24 +22,32 @@ public abstract class AbstractMiniScriptExpressionEvaluator extends AbstractExpr
 		LogEntry localLog = parentLog.child(LogEntry.Kind.eval, expr, "evaluating "+expr.eClass().getName());
 
 		
-		if ( expr instanceof FunctionDeclaration ) {
-			return evalFunctionDeclaration( (FunctionDeclaration)expr, localLog );
+		if ( expr instanceof LogicalUnaryExpression ) {
+			return evalLogicalUnaryExpression( (LogicalUnaryExpression)expr, localLog );
 		}
 		
-		if ( expr instanceof LiteralExpr ) {
-			return evalLiteralExpr( (LiteralExpr)expr, localLog );
+		if ( expr instanceof FunctionDeclaration ) {
+			return evalFunctionDeclaration( (FunctionDeclaration)expr, localLog );
 		}
 		
 		if ( expr instanceof SymbolReference ) {
 			return evalSymbolReference( (SymbolReference)expr, localLog );
 		}
 		
+		if ( expr instanceof LiteralExpr ) {
+			return evalLiteralExpr( (LiteralExpr)expr, localLog );
+		}
+		
 		if ( expr instanceof VariableAssignment ) {
 			return evalVariableAssignment( (VariableAssignment)expr, localLog );
 		}
 		
-		if ( expr instanceof Apply ) {
-			return evalApply( (Apply)expr, localLog );
+		if ( expr instanceof LogicalBinaryExpression ) {
+			return evalLogicalBinaryExpression( (LogicalBinaryExpression)expr, localLog );
+		}
+		
+		if ( expr instanceof ComparisonExpression ) {
+			return evalComparisonExpression( (ComparisonExpression)expr, localLog );
 		}
 		
 		if ( expr instanceof NumericExpression ) {
@@ -50,30 +58,42 @@ public abstract class AbstractMiniScriptExpressionEvaluator extends AbstractExpr
 			return evalFactor( (Factor)expr, localLog );
 		}
 		
+		if ( expr instanceof Apply ) {
+			return evalApply( (Apply)expr, localLog );
+		}
+		
 		
 		throw new InterpreterException(expr, "generated eval(...) method cannot handle type "+expr.eClass().getName());
 	}
 
 	
 	
-	protected Object evalFunctionDeclaration( FunctionDeclaration expr, LogEntry log )  throws InterpreterException {
-		throw new MethodNotImplementedException(expr, "method evalFunctionDeclaration not implemented");
+	protected Object evalLogicalUnaryExpression( LogicalUnaryExpression expr, LogEntry log )  throws InterpreterException {
+		throw new MethodNotImplementedException(expr, "method evalLogicalUnaryExpression not implemented");
 	} 
 	
-	protected Object evalLiteralExpr( LiteralExpr expr, LogEntry log )  throws InterpreterException {
-		throw new MethodNotImplementedException(expr, "method evalLiteralExpr not implemented");
+	protected Object evalFunctionDeclaration( FunctionDeclaration expr, LogEntry log )  throws InterpreterException {
+		throw new MethodNotImplementedException(expr, "method evalFunctionDeclaration not implemented");
 	} 
 	
 	protected Object evalSymbolReference( SymbolReference expr, LogEntry log )  throws InterpreterException {
 		throw new MethodNotImplementedException(expr, "method evalSymbolReference not implemented");
 	} 
 	
+	protected Object evalLiteralExpr( LiteralExpr expr, LogEntry log )  throws InterpreterException {
+		throw new MethodNotImplementedException(expr, "method evalLiteralExpr not implemented");
+	} 
+	
 	protected Object evalVariableAssignment( VariableAssignment expr, LogEntry log )  throws InterpreterException {
 		throw new MethodNotImplementedException(expr, "method evalVariableAssignment not implemented");
 	} 
 	
-	protected Object evalApply( Apply expr, LogEntry log )  throws InterpreterException {
-		throw new MethodNotImplementedException(expr, "method evalApply not implemented");
+	protected Object evalLogicalBinaryExpression( LogicalBinaryExpression expr, LogEntry log )  throws InterpreterException {
+		throw new MethodNotImplementedException(expr, "method evalLogicalBinaryExpression not implemented");
+	} 
+	
+	protected Object evalComparisonExpression( ComparisonExpression expr, LogEntry log )  throws InterpreterException {
+		throw new MethodNotImplementedException(expr, "method evalComparisonExpression not implemented");
 	} 
 	
 	protected Object evalNumericExpression( NumericExpression expr, LogEntry log )  throws InterpreterException {
@@ -82,6 +102,10 @@ public abstract class AbstractMiniScriptExpressionEvaluator extends AbstractExpr
 	
 	protected Object evalFactor( Factor expr, LogEntry log )  throws InterpreterException {
 		throw new MethodNotImplementedException(expr, "method evalFactor not implemented");
+	} 
+	
+	protected Object evalApply( Apply expr, LogEntry log )  throws InterpreterException {
+		throw new MethodNotImplementedException(expr, "method evalApply not implemented");
 	} 
 	
 

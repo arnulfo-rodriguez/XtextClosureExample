@@ -90,6 +90,11 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
         return createExpressionAdapter();
       }
       @Override
+      public Adapter caseLogicalUnaryExpression(LogicalUnaryExpression object)
+      {
+        return createLogicalUnaryExpressionAdapter();
+      }
+      @Override
       public Adapter caseFunctionDeclaration(FunctionDeclaration object)
       {
         return createFunctionDeclarationAdapter();
@@ -100,14 +105,14 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
         return createBodyAdapter();
       }
       @Override
-      public Adapter caseLiteralExpr(LiteralExpr object)
-      {
-        return createLiteralExprAdapter();
-      }
-      @Override
       public Adapter caseSymbolReference(SymbolReference object)
       {
         return createSymbolReferenceAdapter();
+      }
+      @Override
+      public Adapter caseLiteralExpr(LiteralExpr object)
+      {
+        return createLiteralExprAdapter();
       }
       @Override
       public Adapter caseVariableAssignment(VariableAssignment object)
@@ -115,9 +120,14 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
         return createVariableAssignmentAdapter();
       }
       @Override
-      public Adapter caseApply(Apply object)
+      public Adapter caseLogicalBinaryExpression(LogicalBinaryExpression object)
       {
-        return createApplyAdapter();
+        return createLogicalBinaryExpressionAdapter();
+      }
+      @Override
+      public Adapter caseComparisonExpression(ComparisonExpression object)
+      {
+        return createComparisonExpressionAdapter();
       }
       @Override
       public Adapter caseNumericExpression(NumericExpression object)
@@ -128,6 +138,11 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
       public Adapter caseFactor(Factor object)
       {
         return createFactorAdapter();
+      }
+      @Override
+      public Adapter caseApply(Apply object)
+      {
+        return createApplyAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -197,6 +212,21 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.arz.miniScript.LogicalUnaryExpression <em>Logical Unary Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.arz.miniScript.LogicalUnaryExpression
+   * @generated
+   */
+  public Adapter createLogicalUnaryExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.arz.miniScript.FunctionDeclaration <em>Function Declaration</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -227,21 +257,6 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.arz.miniScript.LiteralExpr <em>Literal Expr</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.arz.miniScript.LiteralExpr
-   * @generated
-   */
-  public Adapter createLiteralExprAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.arz.miniScript.SymbolReference <em>Symbol Reference</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -252,6 +267,21 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createSymbolReferenceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.arz.miniScript.LiteralExpr <em>Literal Expr</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.arz.miniScript.LiteralExpr
+   * @generated
+   */
+  public Adapter createLiteralExprAdapter()
   {
     return null;
   }
@@ -272,16 +302,31 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.arz.miniScript.Apply <em>Apply</em>}'.
+   * Creates a new adapter for an object of class '{@link org.arz.miniScript.LogicalBinaryExpression <em>Logical Binary Expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.arz.miniScript.Apply
+   * @see org.arz.miniScript.LogicalBinaryExpression
    * @generated
    */
-  public Adapter createApplyAdapter()
+  public Adapter createLogicalBinaryExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.arz.miniScript.ComparisonExpression <em>Comparison Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.arz.miniScript.ComparisonExpression
+   * @generated
+   */
+  public Adapter createComparisonExpressionAdapter()
   {
     return null;
   }
@@ -312,6 +357,21 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFactorAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.arz.miniScript.Apply <em>Apply</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.arz.miniScript.Apply
+   * @generated
+   */
+  public Adapter createApplyAdapter()
   {
     return null;
   }
