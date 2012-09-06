@@ -15,23 +15,32 @@ Program:
 enum AdditionOperator : add='+' | subtract='-' ;
 enum FactorOperator:  mult='*' | division='/';
 enum ComparisonOperator: gt='>' | gte='>=' | lt='<' | lte='<=' | eq='==';
-enum BinaryLogicalOperator: and='and' | or='or';
 enum UnaryLogicalOperator: not='not';
+enum BinaryLogicalOperator: and='and' | or='or';
+enum TernaryOperator: if='if';
+enum BooleanValue: true='true' | false='false';
 
 
 Expression:
  	FunctionDeclaration  | 
     VariableAssignment |
 	LogicalBinaryExpression |
-	LogicalUnaryExpression
+	LogicalUnaryExpression |
+	TernaryExpression |
+	ComparisonExpression
 ;
 
-LogicalBinaryExpression returns Expression:
-	ComparisonExpression ({LogicalBinaryExpression.leftExpr=current} operator=BinaryLogicalOperator rightExpr=ComparisonExpression)*
+TernaryExpression:
+	operator=TernaryOperator '(' condition=Expression ',' trueExpr=Expression ',' falseExpr=Expression')'
+;
+
+
+LogicalBinaryExpression:
+	operator=BinaryLogicalOperator '(' leftExpr=Expression ',' rightExpr=Expression ')'
 ;
 
 LogicalUnaryExpression:
-	operator=UnaryLogicalOperator expression=ComparisonExpression
+	operator=UnaryLogicalOperator '(' expression=Expression ')'
 ;
 
 ComparisonExpression returns Expression:
@@ -74,8 +83,17 @@ Functor returns Expression:
 	ParenthesisExpression
 ;
 
+LiteralExpr returns Expression:
+	LiteralNumber |
+	LiteralBoolean
+;
 
-LiteralExpr :
+LiteralBoolean:
+	value=BooleanValue
+;
+
+
+LiteralNumber :
 	value=INT
 ;
 

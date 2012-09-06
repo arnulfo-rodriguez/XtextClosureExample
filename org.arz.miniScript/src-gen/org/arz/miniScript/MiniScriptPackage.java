@@ -124,6 +124,107 @@ public interface MiniScriptPackage extends EPackage
   int EXPRESSION_FEATURE_COUNT = 0;
 
   /**
+   * The meta object id for the '{@link org.arz.miniScript.impl.TernaryExpressionImpl <em>Ternary Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.arz.miniScript.impl.TernaryExpressionImpl
+   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getTernaryExpression()
+   * @generated
+   */
+  int TERNARY_EXPRESSION = 3;
+
+  /**
+   * The feature id for the '<em><b>Operator</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TERNARY_EXPRESSION__OPERATOR = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Condition</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TERNARY_EXPRESSION__CONDITION = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>True Expr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TERNARY_EXPRESSION__TRUE_EXPR = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>False Expr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TERNARY_EXPRESSION__FALSE_EXPR = EXPRESSION_FEATURE_COUNT + 3;
+
+  /**
+   * The number of structural features of the '<em>Ternary Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TERNARY_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 4;
+
+  /**
+   * The meta object id for the '{@link org.arz.miniScript.impl.LogicalBinaryExpressionImpl <em>Logical Binary Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.arz.miniScript.impl.LogicalBinaryExpressionImpl
+   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getLogicalBinaryExpression()
+   * @generated
+   */
+  int LOGICAL_BINARY_EXPRESSION = 4;
+
+  /**
+   * The feature id for the '<em><b>Operator</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOGICAL_BINARY_EXPRESSION__OPERATOR = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Left Expr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOGICAL_BINARY_EXPRESSION__LEFT_EXPR = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Right Expr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOGICAL_BINARY_EXPRESSION__RIGHT_EXPR = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Logical Binary Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOGICAL_BINARY_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
+
+  /**
    * The meta object id for the '{@link org.arz.miniScript.impl.LogicalUnaryExpressionImpl <em>Logical Unary Expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -131,7 +232,7 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getLogicalUnaryExpression()
    * @generated
    */
-  int LOGICAL_UNARY_EXPRESSION = 3;
+  int LOGICAL_UNARY_EXPRESSION = 5;
 
   /**
    * The feature id for the '<em><b>Operator</b></em>' attribute.
@@ -168,7 +269,7 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getFunctionDeclaration()
    * @generated
    */
-  int FUNCTION_DECLARATION = 4;
+  int FUNCTION_DECLARATION = 6;
 
   /**
    * The feature id for the '<em><b>Parameters</b></em>' attribute list.
@@ -205,7 +306,7 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getBody()
    * @generated
    */
-  int BODY = 5;
+  int BODY = 7;
 
   /**
    * The feature id for the '<em><b>Expressions</b></em>' containment reference list.
@@ -233,7 +334,7 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getSymbolReference()
    * @generated
    */
-  int SYMBOL_REFERENCE = 6;
+  int SYMBOL_REFERENCE = 8;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -254,14 +355,14 @@ public interface MiniScriptPackage extends EPackage
   int SYMBOL_REFERENCE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link org.arz.miniScript.impl.LiteralExprImpl <em>Literal Expr</em>}' class.
+   * The meta object id for the '{@link org.arz.miniScript.impl.LiteralBooleanImpl <em>Literal Boolean</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.arz.miniScript.impl.LiteralExprImpl
-   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getLiteralExpr()
+   * @see org.arz.miniScript.impl.LiteralBooleanImpl
+   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getLiteralBoolean()
    * @generated
    */
-  int LITERAL_EXPR = 7;
+  int LITERAL_BOOLEAN = 9;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -270,16 +371,44 @@ public interface MiniScriptPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LITERAL_EXPR__VALUE = EXPRESSION_FEATURE_COUNT + 0;
+  int LITERAL_BOOLEAN__VALUE = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>Literal Expr</em>' class.
+   * The number of structural features of the '<em>Literal Boolean</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LITERAL_EXPR_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+  int LITERAL_BOOLEAN_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.arz.miniScript.impl.LiteralNumberImpl <em>Literal Number</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.arz.miniScript.impl.LiteralNumberImpl
+   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getLiteralNumber()
+   * @generated
+   */
+  int LITERAL_NUMBER = 10;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_NUMBER__VALUE = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Literal Number</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_NUMBER_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.arz.miniScript.impl.VariableAssignmentImpl <em>Variable Assignment</em>}' class.
@@ -289,7 +418,7 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getVariableAssignment()
    * @generated
    */
-  int VARIABLE_ASSIGNMENT = 8;
+  int VARIABLE_ASSIGNMENT = 11;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -319,52 +448,6 @@ public interface MiniScriptPackage extends EPackage
   int VARIABLE_ASSIGNMENT_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link org.arz.miniScript.impl.LogicalBinaryExpressionImpl <em>Logical Binary Expression</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.arz.miniScript.impl.LogicalBinaryExpressionImpl
-   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getLogicalBinaryExpression()
-   * @generated
-   */
-  int LOGICAL_BINARY_EXPRESSION = 9;
-
-  /**
-   * The feature id for the '<em><b>Left Expr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LOGICAL_BINARY_EXPRESSION__LEFT_EXPR = EXPRESSION_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Operator</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LOGICAL_BINARY_EXPRESSION__OPERATOR = EXPRESSION_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Right Expr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LOGICAL_BINARY_EXPRESSION__RIGHT_EXPR = EXPRESSION_FEATURE_COUNT + 2;
-
-  /**
-   * The number of structural features of the '<em>Logical Binary Expression</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LOGICAL_BINARY_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
-
-  /**
    * The meta object id for the '{@link org.arz.miniScript.impl.ComparisonExpressionImpl <em>Comparison Expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -372,7 +455,7 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getComparisonExpression()
    * @generated
    */
-  int COMPARISON_EXPRESSION = 10;
+  int COMPARISON_EXPRESSION = 12;
 
   /**
    * The feature id for the '<em><b>Left Expr</b></em>' containment reference.
@@ -418,7 +501,7 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getNumericExpression()
    * @generated
    */
-  int NUMERIC_EXPRESSION = 11;
+  int NUMERIC_EXPRESSION = 13;
 
   /**
    * The feature id for the '<em><b>Left Factor</b></em>' containment reference.
@@ -464,7 +547,7 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getFactor()
    * @generated
    */
-  int FACTOR = 12;
+  int FACTOR = 14;
 
   /**
    * The feature id for the '<em><b>Left Term</b></em>' containment reference.
@@ -510,7 +593,7 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getApply()
    * @generated
    */
-  int APPLY = 13;
+  int APPLY = 15;
 
   /**
    * The feature id for the '<em><b>Functor</b></em>' containment reference.
@@ -547,7 +630,7 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getAdditionOperator()
    * @generated
    */
-  int ADDITION_OPERATOR = 14;
+  int ADDITION_OPERATOR = 16;
 
   /**
    * The meta object id for the '{@link org.arz.miniScript.FactorOperator <em>Factor Operator</em>}' enum.
@@ -557,7 +640,7 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getFactorOperator()
    * @generated
    */
-  int FACTOR_OPERATOR = 15;
+  int FACTOR_OPERATOR = 17;
 
   /**
    * The meta object id for the '{@link org.arz.miniScript.ComparisonOperator <em>Comparison Operator</em>}' enum.
@@ -567,17 +650,7 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getComparisonOperator()
    * @generated
    */
-  int COMPARISON_OPERATOR = 16;
-
-  /**
-   * The meta object id for the '{@link org.arz.miniScript.BinaryLogicalOperator <em>Binary Logical Operator</em>}' enum.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.arz.miniScript.BinaryLogicalOperator
-   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getBinaryLogicalOperator()
-   * @generated
-   */
-  int BINARY_LOGICAL_OPERATOR = 17;
+  int COMPARISON_OPERATOR = 18;
 
   /**
    * The meta object id for the '{@link org.arz.miniScript.UnaryLogicalOperator <em>Unary Logical Operator</em>}' enum.
@@ -587,7 +660,37 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getUnaryLogicalOperator()
    * @generated
    */
-  int UNARY_LOGICAL_OPERATOR = 18;
+  int UNARY_LOGICAL_OPERATOR = 19;
+
+  /**
+   * The meta object id for the '{@link org.arz.miniScript.BinaryLogicalOperator <em>Binary Logical Operator</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.arz.miniScript.BinaryLogicalOperator
+   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getBinaryLogicalOperator()
+   * @generated
+   */
+  int BINARY_LOGICAL_OPERATOR = 20;
+
+  /**
+   * The meta object id for the '{@link org.arz.miniScript.TernaryOperator <em>Ternary Operator</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.arz.miniScript.TernaryOperator
+   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getTernaryOperator()
+   * @generated
+   */
+  int TERNARY_OPERATOR = 21;
+
+  /**
+   * The meta object id for the '{@link org.arz.miniScript.BooleanValue <em>Boolean Value</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.arz.miniScript.BooleanValue
+   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getBooleanValue()
+   * @generated
+   */
+  int BOOLEAN_VALUE = 22;
 
 
   /**
@@ -630,6 +733,103 @@ public interface MiniScriptPackage extends EPackage
    * @generated
    */
   EClass getExpression();
+
+  /**
+   * Returns the meta object for class '{@link org.arz.miniScript.TernaryExpression <em>Ternary Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Ternary Expression</em>'.
+   * @see org.arz.miniScript.TernaryExpression
+   * @generated
+   */
+  EClass getTernaryExpression();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.arz.miniScript.TernaryExpression#getOperator <em>Operator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Operator</em>'.
+   * @see org.arz.miniScript.TernaryExpression#getOperator()
+   * @see #getTernaryExpression()
+   * @generated
+   */
+  EAttribute getTernaryExpression_Operator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.arz.miniScript.TernaryExpression#getCondition <em>Condition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Condition</em>'.
+   * @see org.arz.miniScript.TernaryExpression#getCondition()
+   * @see #getTernaryExpression()
+   * @generated
+   */
+  EReference getTernaryExpression_Condition();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.arz.miniScript.TernaryExpression#getTrueExpr <em>True Expr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>True Expr</em>'.
+   * @see org.arz.miniScript.TernaryExpression#getTrueExpr()
+   * @see #getTernaryExpression()
+   * @generated
+   */
+  EReference getTernaryExpression_TrueExpr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.arz.miniScript.TernaryExpression#getFalseExpr <em>False Expr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>False Expr</em>'.
+   * @see org.arz.miniScript.TernaryExpression#getFalseExpr()
+   * @see #getTernaryExpression()
+   * @generated
+   */
+  EReference getTernaryExpression_FalseExpr();
+
+  /**
+   * Returns the meta object for class '{@link org.arz.miniScript.LogicalBinaryExpression <em>Logical Binary Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Logical Binary Expression</em>'.
+   * @see org.arz.miniScript.LogicalBinaryExpression
+   * @generated
+   */
+  EClass getLogicalBinaryExpression();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.arz.miniScript.LogicalBinaryExpression#getOperator <em>Operator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Operator</em>'.
+   * @see org.arz.miniScript.LogicalBinaryExpression#getOperator()
+   * @see #getLogicalBinaryExpression()
+   * @generated
+   */
+  EAttribute getLogicalBinaryExpression_Operator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.arz.miniScript.LogicalBinaryExpression#getLeftExpr <em>Left Expr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left Expr</em>'.
+   * @see org.arz.miniScript.LogicalBinaryExpression#getLeftExpr()
+   * @see #getLogicalBinaryExpression()
+   * @generated
+   */
+  EReference getLogicalBinaryExpression_LeftExpr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.arz.miniScript.LogicalBinaryExpression#getRightExpr <em>Right Expr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right Expr</em>'.
+   * @see org.arz.miniScript.LogicalBinaryExpression#getRightExpr()
+   * @see #getLogicalBinaryExpression()
+   * @generated
+   */
+  EReference getLogicalBinaryExpression_RightExpr();
 
   /**
    * Returns the meta object for class '{@link org.arz.miniScript.LogicalUnaryExpression <em>Logical Unary Expression</em>}'.
@@ -738,25 +938,46 @@ public interface MiniScriptPackage extends EPackage
   EAttribute getSymbolReference_Id();
 
   /**
-   * Returns the meta object for class '{@link org.arz.miniScript.LiteralExpr <em>Literal Expr</em>}'.
+   * Returns the meta object for class '{@link org.arz.miniScript.LiteralBoolean <em>Literal Boolean</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Literal Expr</em>'.
-   * @see org.arz.miniScript.LiteralExpr
+   * @return the meta object for class '<em>Literal Boolean</em>'.
+   * @see org.arz.miniScript.LiteralBoolean
    * @generated
    */
-  EClass getLiteralExpr();
+  EClass getLiteralBoolean();
 
   /**
-   * Returns the meta object for the attribute '{@link org.arz.miniScript.LiteralExpr#getValue <em>Value</em>}'.
+   * Returns the meta object for the attribute '{@link org.arz.miniScript.LiteralBoolean#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.arz.miniScript.LiteralExpr#getValue()
-   * @see #getLiteralExpr()
+   * @see org.arz.miniScript.LiteralBoolean#getValue()
+   * @see #getLiteralBoolean()
    * @generated
    */
-  EAttribute getLiteralExpr_Value();
+  EAttribute getLiteralBoolean_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.arz.miniScript.LiteralNumber <em>Literal Number</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Literal Number</em>'.
+   * @see org.arz.miniScript.LiteralNumber
+   * @generated
+   */
+  EClass getLiteralNumber();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.arz.miniScript.LiteralNumber#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.arz.miniScript.LiteralNumber#getValue()
+   * @see #getLiteralNumber()
+   * @generated
+   */
+  EAttribute getLiteralNumber_Value();
 
   /**
    * Returns the meta object for class '{@link org.arz.miniScript.VariableAssignment <em>Variable Assignment</em>}'.
@@ -789,49 +1010,6 @@ public interface MiniScriptPackage extends EPackage
    * @generated
    */
   EReference getVariableAssignment_Expression();
-
-  /**
-   * Returns the meta object for class '{@link org.arz.miniScript.LogicalBinaryExpression <em>Logical Binary Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Logical Binary Expression</em>'.
-   * @see org.arz.miniScript.LogicalBinaryExpression
-   * @generated
-   */
-  EClass getLogicalBinaryExpression();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.LogicalBinaryExpression#getLeftExpr <em>Left Expr</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left Expr</em>'.
-   * @see org.arz.miniScript.LogicalBinaryExpression#getLeftExpr()
-   * @see #getLogicalBinaryExpression()
-   * @generated
-   */
-  EReference getLogicalBinaryExpression_LeftExpr();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.arz.miniScript.LogicalBinaryExpression#getOperator <em>Operator</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Operator</em>'.
-   * @see org.arz.miniScript.LogicalBinaryExpression#getOperator()
-   * @see #getLogicalBinaryExpression()
-   * @generated
-   */
-  EAttribute getLogicalBinaryExpression_Operator();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.LogicalBinaryExpression#getRightExpr <em>Right Expr</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Right Expr</em>'.
-   * @see org.arz.miniScript.LogicalBinaryExpression#getRightExpr()
-   * @see #getLogicalBinaryExpression()
-   * @generated
-   */
-  EReference getLogicalBinaryExpression_RightExpr();
 
   /**
    * Returns the meta object for class '{@link org.arz.miniScript.ComparisonExpression <em>Comparison Expression</em>}'.
@@ -1025,6 +1203,16 @@ public interface MiniScriptPackage extends EPackage
   EEnum getComparisonOperator();
 
   /**
+   * Returns the meta object for enum '{@link org.arz.miniScript.UnaryLogicalOperator <em>Unary Logical Operator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Unary Logical Operator</em>'.
+   * @see org.arz.miniScript.UnaryLogicalOperator
+   * @generated
+   */
+  EEnum getUnaryLogicalOperator();
+
+  /**
    * Returns the meta object for enum '{@link org.arz.miniScript.BinaryLogicalOperator <em>Binary Logical Operator</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1035,14 +1223,24 @@ public interface MiniScriptPackage extends EPackage
   EEnum getBinaryLogicalOperator();
 
   /**
-   * Returns the meta object for enum '{@link org.arz.miniScript.UnaryLogicalOperator <em>Unary Logical Operator</em>}'.
+   * Returns the meta object for enum '{@link org.arz.miniScript.TernaryOperator <em>Ternary Operator</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Unary Logical Operator</em>'.
-   * @see org.arz.miniScript.UnaryLogicalOperator
+   * @return the meta object for enum '<em>Ternary Operator</em>'.
+   * @see org.arz.miniScript.TernaryOperator
    * @generated
    */
-  EEnum getUnaryLogicalOperator();
+  EEnum getTernaryOperator();
+
+  /**
+   * Returns the meta object for enum '{@link org.arz.miniScript.BooleanValue <em>Boolean Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Boolean Value</em>'.
+   * @see org.arz.miniScript.BooleanValue
+   * @generated
+   */
+  EEnum getBooleanValue();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -1104,6 +1302,82 @@ public interface MiniScriptPackage extends EPackage
      * @generated
      */
     EClass EXPRESSION = eINSTANCE.getExpression();
+
+    /**
+     * The meta object literal for the '{@link org.arz.miniScript.impl.TernaryExpressionImpl <em>Ternary Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.arz.miniScript.impl.TernaryExpressionImpl
+     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getTernaryExpression()
+     * @generated
+     */
+    EClass TERNARY_EXPRESSION = eINSTANCE.getTernaryExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Operator</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TERNARY_EXPRESSION__OPERATOR = eINSTANCE.getTernaryExpression_Operator();
+
+    /**
+     * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TERNARY_EXPRESSION__CONDITION = eINSTANCE.getTernaryExpression_Condition();
+
+    /**
+     * The meta object literal for the '<em><b>True Expr</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TERNARY_EXPRESSION__TRUE_EXPR = eINSTANCE.getTernaryExpression_TrueExpr();
+
+    /**
+     * The meta object literal for the '<em><b>False Expr</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TERNARY_EXPRESSION__FALSE_EXPR = eINSTANCE.getTernaryExpression_FalseExpr();
+
+    /**
+     * The meta object literal for the '{@link org.arz.miniScript.impl.LogicalBinaryExpressionImpl <em>Logical Binary Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.arz.miniScript.impl.LogicalBinaryExpressionImpl
+     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getLogicalBinaryExpression()
+     * @generated
+     */
+    EClass LOGICAL_BINARY_EXPRESSION = eINSTANCE.getLogicalBinaryExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Operator</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LOGICAL_BINARY_EXPRESSION__OPERATOR = eINSTANCE.getLogicalBinaryExpression_Operator();
+
+    /**
+     * The meta object literal for the '<em><b>Left Expr</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LOGICAL_BINARY_EXPRESSION__LEFT_EXPR = eINSTANCE.getLogicalBinaryExpression_LeftExpr();
+
+    /**
+     * The meta object literal for the '<em><b>Right Expr</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LOGICAL_BINARY_EXPRESSION__RIGHT_EXPR = eINSTANCE.getLogicalBinaryExpression_RightExpr();
 
     /**
      * The meta object literal for the '{@link org.arz.miniScript.impl.LogicalUnaryExpressionImpl <em>Logical Unary Expression</em>}' class.
@@ -1194,14 +1468,14 @@ public interface MiniScriptPackage extends EPackage
     EAttribute SYMBOL_REFERENCE__ID = eINSTANCE.getSymbolReference_Id();
 
     /**
-     * The meta object literal for the '{@link org.arz.miniScript.impl.LiteralExprImpl <em>Literal Expr</em>}' class.
+     * The meta object literal for the '{@link org.arz.miniScript.impl.LiteralBooleanImpl <em>Literal Boolean</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.arz.miniScript.impl.LiteralExprImpl
-     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getLiteralExpr()
+     * @see org.arz.miniScript.impl.LiteralBooleanImpl
+     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getLiteralBoolean()
      * @generated
      */
-    EClass LITERAL_EXPR = eINSTANCE.getLiteralExpr();
+    EClass LITERAL_BOOLEAN = eINSTANCE.getLiteralBoolean();
 
     /**
      * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -1209,7 +1483,25 @@ public interface MiniScriptPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute LITERAL_EXPR__VALUE = eINSTANCE.getLiteralExpr_Value();
+    EAttribute LITERAL_BOOLEAN__VALUE = eINSTANCE.getLiteralBoolean_Value();
+
+    /**
+     * The meta object literal for the '{@link org.arz.miniScript.impl.LiteralNumberImpl <em>Literal Number</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.arz.miniScript.impl.LiteralNumberImpl
+     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getLiteralNumber()
+     * @generated
+     */
+    EClass LITERAL_NUMBER = eINSTANCE.getLiteralNumber();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LITERAL_NUMBER__VALUE = eINSTANCE.getLiteralNumber_Value();
 
     /**
      * The meta object literal for the '{@link org.arz.miniScript.impl.VariableAssignmentImpl <em>Variable Assignment</em>}' class.
@@ -1236,40 +1528,6 @@ public interface MiniScriptPackage extends EPackage
      * @generated
      */
     EReference VARIABLE_ASSIGNMENT__EXPRESSION = eINSTANCE.getVariableAssignment_Expression();
-
-    /**
-     * The meta object literal for the '{@link org.arz.miniScript.impl.LogicalBinaryExpressionImpl <em>Logical Binary Expression</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.arz.miniScript.impl.LogicalBinaryExpressionImpl
-     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getLogicalBinaryExpression()
-     * @generated
-     */
-    EClass LOGICAL_BINARY_EXPRESSION = eINSTANCE.getLogicalBinaryExpression();
-
-    /**
-     * The meta object literal for the '<em><b>Left Expr</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference LOGICAL_BINARY_EXPRESSION__LEFT_EXPR = eINSTANCE.getLogicalBinaryExpression_LeftExpr();
-
-    /**
-     * The meta object literal for the '<em><b>Operator</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute LOGICAL_BINARY_EXPRESSION__OPERATOR = eINSTANCE.getLogicalBinaryExpression_Operator();
-
-    /**
-     * The meta object literal for the '<em><b>Right Expr</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference LOGICAL_BINARY_EXPRESSION__RIGHT_EXPR = eINSTANCE.getLogicalBinaryExpression_RightExpr();
 
     /**
      * The meta object literal for the '{@link org.arz.miniScript.impl.ComparisonExpressionImpl <em>Comparison Expression</em>}' class.
@@ -1430,6 +1688,16 @@ public interface MiniScriptPackage extends EPackage
     EEnum COMPARISON_OPERATOR = eINSTANCE.getComparisonOperator();
 
     /**
+     * The meta object literal for the '{@link org.arz.miniScript.UnaryLogicalOperator <em>Unary Logical Operator</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.arz.miniScript.UnaryLogicalOperator
+     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getUnaryLogicalOperator()
+     * @generated
+     */
+    EEnum UNARY_LOGICAL_OPERATOR = eINSTANCE.getUnaryLogicalOperator();
+
+    /**
      * The meta object literal for the '{@link org.arz.miniScript.BinaryLogicalOperator <em>Binary Logical Operator</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1440,14 +1708,24 @@ public interface MiniScriptPackage extends EPackage
     EEnum BINARY_LOGICAL_OPERATOR = eINSTANCE.getBinaryLogicalOperator();
 
     /**
-     * The meta object literal for the '{@link org.arz.miniScript.UnaryLogicalOperator <em>Unary Logical Operator</em>}' enum.
+     * The meta object literal for the '{@link org.arz.miniScript.TernaryOperator <em>Ternary Operator</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.arz.miniScript.UnaryLogicalOperator
-     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getUnaryLogicalOperator()
+     * @see org.arz.miniScript.TernaryOperator
+     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getTernaryOperator()
      * @generated
      */
-    EEnum UNARY_LOGICAL_OPERATOR = eINSTANCE.getUnaryLogicalOperator();
+    EEnum TERNARY_OPERATOR = eINSTANCE.getTernaryOperator();
+
+    /**
+     * The meta object literal for the '{@link org.arz.miniScript.BooleanValue <em>Boolean Value</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.arz.miniScript.BooleanValue
+     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getBooleanValue()
+     * @generated
+     */
+    EEnum BOOLEAN_VALUE = eINSTANCE.getBooleanValue();
 
   }
 

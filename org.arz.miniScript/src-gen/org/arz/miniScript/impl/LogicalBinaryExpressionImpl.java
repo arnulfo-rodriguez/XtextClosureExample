@@ -22,8 +22,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.arz.miniScript.impl.LogicalBinaryExpressionImpl#getLeftExpr <em>Left Expr</em>}</li>
  *   <li>{@link org.arz.miniScript.impl.LogicalBinaryExpressionImpl#getOperator <em>Operator</em>}</li>
+ *   <li>{@link org.arz.miniScript.impl.LogicalBinaryExpressionImpl#getLeftExpr <em>Left Expr</em>}</li>
  *   <li>{@link org.arz.miniScript.impl.LogicalBinaryExpressionImpl#getRightExpr <em>Right Expr</em>}</li>
  * </ul>
  * </p>
@@ -32,16 +32,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class LogicalBinaryExpressionImpl extends ExpressionImpl implements LogicalBinaryExpression
 {
-  /**
-   * The cached value of the '{@link #getLeftExpr() <em>Left Expr</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLeftExpr()
-   * @generated
-   * @ordered
-   */
-  protected Expression leftExpr;
-
   /**
    * The default value of the '{@link #getOperator() <em>Operator</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -61,6 +51,16 @@ public class LogicalBinaryExpressionImpl extends ExpressionImpl implements Logic
    * @ordered
    */
   protected BinaryLogicalOperator operator = OPERATOR_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getLeftExpr() <em>Left Expr</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLeftExpr()
+   * @generated
+   * @ordered
+   */
+  protected Expression leftExpr;
 
   /**
    * The cached value of the '{@link #getRightExpr() <em>Right Expr</em>}' containment reference.
@@ -91,6 +91,29 @@ public class LogicalBinaryExpressionImpl extends ExpressionImpl implements Logic
   protected EClass eStaticClass()
   {
     return MiniScriptPackage.Literals.LOGICAL_BINARY_EXPRESSION;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BinaryLogicalOperator getOperator()
+  {
+    return operator;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setOperator(BinaryLogicalOperator newOperator)
+  {
+    BinaryLogicalOperator oldOperator = operator;
+    operator = newOperator == null ? OPERATOR_EDEFAULT : newOperator;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.LOGICAL_BINARY_EXPRESSION__OPERATOR, oldOperator, operator));
   }
 
   /**
@@ -139,29 +162,6 @@ public class LogicalBinaryExpressionImpl extends ExpressionImpl implements Logic
     }
     else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.LOGICAL_BINARY_EXPRESSION__LEFT_EXPR, newLeftExpr, newLeftExpr));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public BinaryLogicalOperator getOperator()
-  {
-    return operator;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setOperator(BinaryLogicalOperator newOperator)
-  {
-    BinaryLogicalOperator oldOperator = operator;
-    operator = newOperator == null ? OPERATOR_EDEFAULT : newOperator;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.LOGICAL_BINARY_EXPRESSION__OPERATOR, oldOperator, operator));
   }
 
   /**
@@ -240,10 +240,10 @@ public class LogicalBinaryExpressionImpl extends ExpressionImpl implements Logic
   {
     switch (featureID)
     {
-      case MiniScriptPackage.LOGICAL_BINARY_EXPRESSION__LEFT_EXPR:
-        return getLeftExpr();
       case MiniScriptPackage.LOGICAL_BINARY_EXPRESSION__OPERATOR:
         return getOperator();
+      case MiniScriptPackage.LOGICAL_BINARY_EXPRESSION__LEFT_EXPR:
+        return getLeftExpr();
       case MiniScriptPackage.LOGICAL_BINARY_EXPRESSION__RIGHT_EXPR:
         return getRightExpr();
     }
@@ -260,11 +260,11 @@ public class LogicalBinaryExpressionImpl extends ExpressionImpl implements Logic
   {
     switch (featureID)
     {
-      case MiniScriptPackage.LOGICAL_BINARY_EXPRESSION__LEFT_EXPR:
-        setLeftExpr((Expression)newValue);
-        return;
       case MiniScriptPackage.LOGICAL_BINARY_EXPRESSION__OPERATOR:
         setOperator((BinaryLogicalOperator)newValue);
+        return;
+      case MiniScriptPackage.LOGICAL_BINARY_EXPRESSION__LEFT_EXPR:
+        setLeftExpr((Expression)newValue);
         return;
       case MiniScriptPackage.LOGICAL_BINARY_EXPRESSION__RIGHT_EXPR:
         setRightExpr((Expression)newValue);
@@ -283,11 +283,11 @@ public class LogicalBinaryExpressionImpl extends ExpressionImpl implements Logic
   {
     switch (featureID)
     {
-      case MiniScriptPackage.LOGICAL_BINARY_EXPRESSION__LEFT_EXPR:
-        setLeftExpr((Expression)null);
-        return;
       case MiniScriptPackage.LOGICAL_BINARY_EXPRESSION__OPERATOR:
         setOperator(OPERATOR_EDEFAULT);
+        return;
+      case MiniScriptPackage.LOGICAL_BINARY_EXPRESSION__LEFT_EXPR:
+        setLeftExpr((Expression)null);
         return;
       case MiniScriptPackage.LOGICAL_BINARY_EXPRESSION__RIGHT_EXPR:
         setRightExpr((Expression)null);
@@ -306,10 +306,10 @@ public class LogicalBinaryExpressionImpl extends ExpressionImpl implements Logic
   {
     switch (featureID)
     {
-      case MiniScriptPackage.LOGICAL_BINARY_EXPRESSION__LEFT_EXPR:
-        return leftExpr != null;
       case MiniScriptPackage.LOGICAL_BINARY_EXPRESSION__OPERATOR:
         return operator != OPERATOR_EDEFAULT;
+      case MiniScriptPackage.LOGICAL_BINARY_EXPRESSION__LEFT_EXPR:
+        return leftExpr != null;
       case MiniScriptPackage.LOGICAL_BINARY_EXPRESSION__RIGHT_EXPR:
         return rightExpr != null;
     }

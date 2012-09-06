@@ -90,6 +90,16 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
         return createExpressionAdapter();
       }
       @Override
+      public Adapter caseTernaryExpression(TernaryExpression object)
+      {
+        return createTernaryExpressionAdapter();
+      }
+      @Override
+      public Adapter caseLogicalBinaryExpression(LogicalBinaryExpression object)
+      {
+        return createLogicalBinaryExpressionAdapter();
+      }
+      @Override
       public Adapter caseLogicalUnaryExpression(LogicalUnaryExpression object)
       {
         return createLogicalUnaryExpressionAdapter();
@@ -110,19 +120,19 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
         return createSymbolReferenceAdapter();
       }
       @Override
-      public Adapter caseLiteralExpr(LiteralExpr object)
+      public Adapter caseLiteralBoolean(LiteralBoolean object)
       {
-        return createLiteralExprAdapter();
+        return createLiteralBooleanAdapter();
+      }
+      @Override
+      public Adapter caseLiteralNumber(LiteralNumber object)
+      {
+        return createLiteralNumberAdapter();
       }
       @Override
       public Adapter caseVariableAssignment(VariableAssignment object)
       {
         return createVariableAssignmentAdapter();
-      }
-      @Override
-      public Adapter caseLogicalBinaryExpression(LogicalBinaryExpression object)
-      {
-        return createLogicalBinaryExpressionAdapter();
       }
       @Override
       public Adapter caseComparisonExpression(ComparisonExpression object)
@@ -212,6 +222,36 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.arz.miniScript.TernaryExpression <em>Ternary Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.arz.miniScript.TernaryExpression
+   * @generated
+   */
+  public Adapter createTernaryExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.arz.miniScript.LogicalBinaryExpression <em>Logical Binary Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.arz.miniScript.LogicalBinaryExpression
+   * @generated
+   */
+  public Adapter createLogicalBinaryExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.arz.miniScript.LogicalUnaryExpression <em>Logical Unary Expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -272,16 +312,31 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.arz.miniScript.LiteralExpr <em>Literal Expr</em>}'.
+   * Creates a new adapter for an object of class '{@link org.arz.miniScript.LiteralBoolean <em>Literal Boolean</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.arz.miniScript.LiteralExpr
+   * @see org.arz.miniScript.LiteralBoolean
    * @generated
    */
-  public Adapter createLiteralExprAdapter()
+  public Adapter createLiteralBooleanAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.arz.miniScript.LiteralNumber <em>Literal Number</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.arz.miniScript.LiteralNumber
+   * @generated
+   */
+  public Adapter createLiteralNumberAdapter()
   {
     return null;
   }
@@ -297,21 +352,6 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createVariableAssignmentAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.arz.miniScript.LogicalBinaryExpression <em>Logical Binary Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.arz.miniScript.LogicalBinaryExpression
-   * @generated
-   */
-  public Adapter createLogicalBinaryExpressionAdapter()
   {
     return null;
   }

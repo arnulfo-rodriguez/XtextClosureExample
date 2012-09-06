@@ -50,6 +50,24 @@ public interface MiniScriptFactory extends EFactory
   Expression createExpression();
 
   /**
+   * Returns a new object of class '<em>Ternary Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ternary Expression</em>'.
+   * @generated
+   */
+  TernaryExpression createTernaryExpression();
+
+  /**
+   * Returns a new object of class '<em>Logical Binary Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Logical Binary Expression</em>'.
+   * @generated
+   */
+  LogicalBinaryExpression createLogicalBinaryExpression();
+
+  /**
    * Returns a new object of class '<em>Logical Unary Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -86,13 +104,22 @@ public interface MiniScriptFactory extends EFactory
   SymbolReference createSymbolReference();
 
   /**
-   * Returns a new object of class '<em>Literal Expr</em>'.
+   * Returns a new object of class '<em>Literal Boolean</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Literal Expr</em>'.
+   * @return a new object of class '<em>Literal Boolean</em>'.
    * @generated
    */
-  LiteralExpr createLiteralExpr();
+  LiteralBoolean createLiteralBoolean();
+
+  /**
+   * Returns a new object of class '<em>Literal Number</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Literal Number</em>'.
+   * @generated
+   */
+  LiteralNumber createLiteralNumber();
 
   /**
    * Returns a new object of class '<em>Variable Assignment</em>'.
@@ -102,15 +129,6 @@ public interface MiniScriptFactory extends EFactory
    * @generated
    */
   VariableAssignment createVariableAssignment();
-
-  /**
-   * Returns a new object of class '<em>Logical Binary Expression</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Logical Binary Expression</em>'.
-   * @generated
-   */
-  LogicalBinaryExpression createLogicalBinaryExpression();
 
   /**
    * Returns a new object of class '<em>Comparison Expression</em>'.

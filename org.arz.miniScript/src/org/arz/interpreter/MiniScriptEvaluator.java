@@ -2,14 +2,21 @@ package org.arz.interpreter;
 
 import org.arz.miniScript.AdditionOperator;
 import org.arz.miniScript.Apply;
+import org.arz.miniScript.BinaryLogicalOperator;
 import org.arz.miniScript.Body;
+import org.arz.miniScript.BooleanValue;
+import org.arz.miniScript.ComparisonExpression;
 import org.arz.miniScript.Expression;
 import org.arz.miniScript.Factor;
 import org.arz.miniScript.FactorOperator;
 import org.arz.miniScript.FunctionDeclaration;
-import org.arz.miniScript.LiteralExpr;
+import org.arz.miniScript.LiteralBoolean;
+import org.arz.miniScript.LiteralNumber;
+import org.arz.miniScript.LogicalBinaryExpression;
+import org.arz.miniScript.LogicalUnaryExpression;
 import org.arz.miniScript.NumericExpression;
 import org.arz.miniScript.SymbolReference;
+import org.arz.miniScript.TernaryExpression;
 import org.arz.miniScript.VariableAssignment;
 import org.eclipse.emf.common.util.EList;
 
@@ -18,6 +25,8 @@ import de.itemis.interpreter.InterpreterException;
 import de.itemis.interpreter.logging.LogEntry;
 
 public class MiniScriptEvaluator extends AbstractMiniScriptExpressionEvaluator {
+
+	ComparisonExpressionEvaluator expressionEvaluator;
 
 	private MyEnvironment getCurrentEnv() {
 		return (MyEnvironment) ctx.environment.get("myEnv");
@@ -40,6 +49,7 @@ public class MiniScriptEvaluator extends AbstractMiniScriptExpressionEvaluator {
 	public MiniScriptEvaluator(ExecutionContext ctx) {
 		super(ctx);
 		setNewEnvironment(MyEnvironment.getRootEnvironment().createChildEnv());
+		expressionEvaluator = new ComparisonExpressionEvaluator(this);
 	}
 
 	@Override
@@ -81,12 +91,6 @@ public class MiniScriptEvaluator extends AbstractMiniScriptExpressionEvaluator {
 	}
 
 	@Override
-	protected Object evalLiteralExpr(LiteralExpr expr, LogEntry log)
-			throws InterpreterException {
-		return expr.getValue();
-	}
-
-	@Override
 	protected Object evalNumericExpression(NumericExpression expr, LogEntry log)
 			throws InterpreterException {
 		Integer leftResult = (Integer) evalCheckNullLog(expr.getLeftFactor(),
@@ -100,14 +104,14 @@ public class MiniScriptEvaluator extends AbstractMiniScriptExpressionEvaluator {
 
 	@Override
 	protected Object evalFactor(Factor factor, LogEntry log) {
-		// TODO Auto-generated method stub
 		Integer leftResult = (Integer) evalCheckNullLog(factor.getLeftTerm(),
 				log);
 		Integer rightResult = (Integer) evalCheckNullLog(factor.getRightTerm(),
 				log);
-		return new Integer((int) (((double) leftResult.intValue()) * ((factor
-				.getOperator()== FactorOperator.MULT) ? rightResult.intValue()
-				: (1 / (double) rightResult.intValue()))));
+		return new Integer(
+				(int) (((double) leftResult.intValue()) * ((factor
+						.getOperator() == FactorOperator.MULT) ? rightResult
+						.intValue() : (1 / (double) rightResult.intValue()))));
 	}
 
 	@Override
@@ -118,4 +122,50 @@ public class MiniScriptEvaluator extends AbstractMiniScriptExpressionEvaluator {
 		return rightSide;
 	}
 
+	@Override
+	protected Object evalLiteralBoolean(LiteralBoolean expr, LogEntry log)
+			throws InterpreterException {
+		return expr.getValue() == BooleanValue.TRUE;
+	}
+
+	@Override
+	protected Object evalLiteralNumber(LiteralNumber expr, LogEntry log)
+			throws InterpreterException {
+		return expr.getValue();
+	}
+
+	@Override
+	protected Object evalTernaryExpression(TernaryExpression expr, LogEntry log)
+			throws InterpreterException {
+		// assume 'if' since is the only one so far
+		return ((Boolean) eval(expr.getCondition(), log)) ? eval(
+				expr.getTrueExpr(), log) : eval(expr.getFalseExpr(), log);
+
+	}
+
+	@Override
+	protected Object evalLogicalBinaryExpression(LogicalBinaryExpression expr,
+			LogEntry log) throws InterpreterException {
+		// TODO Auto-generated method stub
+		if (expr.getOperator() == BinaryLogicalOperator.AND) {
+			return ((Boolean) eval(expr.getLeftExpr(), log))
+					&& ((Boolean) eval(expr.getRightExpr(), log));
+		} else { // assume or since we only have those two so far
+			return ((Boolean) eval(expr.getLeftExpr(), log))
+					|| ((Boolean) eval(expr.getRightExpr(), log));
+		}
+	}
+
+	@Override
+	protected Object evalLogicalUnaryExpression(LogicalUnaryExpression expr,
+			LogEntry log) throws InterpreterException {
+		// assume 'not'
+		return !(Boolean) eval(expr.getExpression(), log);
+	}
+
+	@Override
+	protected Object evalComparisonExpression(ComparisonExpression expr,
+			LogEntry log) throws InterpreterException {
+		return expressionEvaluator.evaluate(expr, log);
+	}
 }

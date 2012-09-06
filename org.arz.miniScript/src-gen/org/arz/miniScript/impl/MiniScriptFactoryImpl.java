@@ -68,13 +68,15 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
       case MiniScriptPackage.MODEL: return createModel();
       case MiniScriptPackage.PROGRAM: return createProgram();
       case MiniScriptPackage.EXPRESSION: return createExpression();
+      case MiniScriptPackage.TERNARY_EXPRESSION: return createTernaryExpression();
+      case MiniScriptPackage.LOGICAL_BINARY_EXPRESSION: return createLogicalBinaryExpression();
       case MiniScriptPackage.LOGICAL_UNARY_EXPRESSION: return createLogicalUnaryExpression();
       case MiniScriptPackage.FUNCTION_DECLARATION: return createFunctionDeclaration();
       case MiniScriptPackage.BODY: return createBody();
       case MiniScriptPackage.SYMBOL_REFERENCE: return createSymbolReference();
-      case MiniScriptPackage.LITERAL_EXPR: return createLiteralExpr();
+      case MiniScriptPackage.LITERAL_BOOLEAN: return createLiteralBoolean();
+      case MiniScriptPackage.LITERAL_NUMBER: return createLiteralNumber();
       case MiniScriptPackage.VARIABLE_ASSIGNMENT: return createVariableAssignment();
-      case MiniScriptPackage.LOGICAL_BINARY_EXPRESSION: return createLogicalBinaryExpression();
       case MiniScriptPackage.COMPARISON_EXPRESSION: return createComparisonExpression();
       case MiniScriptPackage.NUMERIC_EXPRESSION: return createNumericExpression();
       case MiniScriptPackage.FACTOR: return createFactor();
@@ -100,10 +102,14 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
         return createFactorOperatorFromString(eDataType, initialValue);
       case MiniScriptPackage.COMPARISON_OPERATOR:
         return createComparisonOperatorFromString(eDataType, initialValue);
-      case MiniScriptPackage.BINARY_LOGICAL_OPERATOR:
-        return createBinaryLogicalOperatorFromString(eDataType, initialValue);
       case MiniScriptPackage.UNARY_LOGICAL_OPERATOR:
         return createUnaryLogicalOperatorFromString(eDataType, initialValue);
+      case MiniScriptPackage.BINARY_LOGICAL_OPERATOR:
+        return createBinaryLogicalOperatorFromString(eDataType, initialValue);
+      case MiniScriptPackage.TERNARY_OPERATOR:
+        return createTernaryOperatorFromString(eDataType, initialValue);
+      case MiniScriptPackage.BOOLEAN_VALUE:
+        return createBooleanValueFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -125,10 +131,14 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
         return convertFactorOperatorToString(eDataType, instanceValue);
       case MiniScriptPackage.COMPARISON_OPERATOR:
         return convertComparisonOperatorToString(eDataType, instanceValue);
-      case MiniScriptPackage.BINARY_LOGICAL_OPERATOR:
-        return convertBinaryLogicalOperatorToString(eDataType, instanceValue);
       case MiniScriptPackage.UNARY_LOGICAL_OPERATOR:
         return convertUnaryLogicalOperatorToString(eDataType, instanceValue);
+      case MiniScriptPackage.BINARY_LOGICAL_OPERATOR:
+        return convertBinaryLogicalOperatorToString(eDataType, instanceValue);
+      case MiniScriptPackage.TERNARY_OPERATOR:
+        return convertTernaryOperatorToString(eDataType, instanceValue);
+      case MiniScriptPackage.BOOLEAN_VALUE:
+        return convertBooleanValueToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -165,6 +175,28 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
   {
     ExpressionImpl expression = new ExpressionImpl();
     return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TernaryExpression createTernaryExpression()
+  {
+    TernaryExpressionImpl ternaryExpression = new TernaryExpressionImpl();
+    return ternaryExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LogicalBinaryExpression createLogicalBinaryExpression()
+  {
+    LogicalBinaryExpressionImpl logicalBinaryExpression = new LogicalBinaryExpressionImpl();
+    return logicalBinaryExpression;
   }
 
   /**
@@ -216,10 +248,21 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public LiteralExpr createLiteralExpr()
+  public LiteralBoolean createLiteralBoolean()
   {
-    LiteralExprImpl literalExpr = new LiteralExprImpl();
-    return literalExpr;
+    LiteralBooleanImpl literalBoolean = new LiteralBooleanImpl();
+    return literalBoolean;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LiteralNumber createLiteralNumber()
+  {
+    LiteralNumberImpl literalNumber = new LiteralNumberImpl();
+    return literalNumber;
   }
 
   /**
@@ -231,17 +274,6 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
   {
     VariableAssignmentImpl variableAssignment = new VariableAssignmentImpl();
     return variableAssignment;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LogicalBinaryExpression createLogicalBinaryExpression()
-  {
-    LogicalBinaryExpressionImpl logicalBinaryExpression = new LogicalBinaryExpressionImpl();
-    return logicalBinaryExpression;
   }
 
   /**
@@ -359,6 +391,28 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
    * <!-- end-user-doc -->
    * @generated
    */
+  public UnaryLogicalOperator createUnaryLogicalOperatorFromString(EDataType eDataType, String initialValue)
+  {
+    UnaryLogicalOperator result = UnaryLogicalOperator.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertUnaryLogicalOperatorToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public BinaryLogicalOperator createBinaryLogicalOperatorFromString(EDataType eDataType, String initialValue)
   {
     BinaryLogicalOperator result = BinaryLogicalOperator.get(initialValue);
@@ -381,9 +435,9 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public UnaryLogicalOperator createUnaryLogicalOperatorFromString(EDataType eDataType, String initialValue)
+  public TernaryOperator createTernaryOperatorFromString(EDataType eDataType, String initialValue)
   {
-    UnaryLogicalOperator result = UnaryLogicalOperator.get(initialValue);
+    TernaryOperator result = TernaryOperator.get(initialValue);
     if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
     return result;
   }
@@ -393,7 +447,29 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertUnaryLogicalOperatorToString(EDataType eDataType, Object instanceValue)
+  public String convertTernaryOperatorToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BooleanValue createBooleanValueFromString(EDataType eDataType, String initialValue)
+  {
+    BooleanValue result = BooleanValue.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertBooleanValueToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

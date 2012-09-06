@@ -11,8 +11,8 @@ package org.arz.miniScript;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.arz.miniScript.LogicalBinaryExpression#getLeftExpr <em>Left Expr</em>}</li>
  *   <li>{@link org.arz.miniScript.LogicalBinaryExpression#getOperator <em>Operator</em>}</li>
+ *   <li>{@link org.arz.miniScript.LogicalBinaryExpression#getLeftExpr <em>Left Expr</em>}</li>
  *   <li>{@link org.arz.miniScript.LogicalBinaryExpression#getRightExpr <em>Right Expr</em>}</li>
  * </ul>
  * </p>
@@ -23,32 +23,6 @@ package org.arz.miniScript;
  */
 public interface LogicalBinaryExpression extends Expression
 {
-  /**
-   * Returns the value of the '<em><b>Left Expr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Left Expr</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Left Expr</em>' containment reference.
-   * @see #setLeftExpr(Expression)
-   * @see org.arz.miniScript.MiniScriptPackage#getLogicalBinaryExpression_LeftExpr()
-   * @model containment="true"
-   * @generated
-   */
-  Expression getLeftExpr();
-
-  /**
-   * Sets the value of the '{@link org.arz.miniScript.LogicalBinaryExpression#getLeftExpr <em>Left Expr</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Left Expr</em>' containment reference.
-   * @see #getLeftExpr()
-   * @generated
-   */
-  void setLeftExpr(Expression value);
-
   /**
    * Returns the value of the '<em><b>Operator</b></em>' attribute.
    * The literals are from the enumeration {@link org.arz.miniScript.BinaryLogicalOperator}.
@@ -77,6 +51,32 @@ public interface LogicalBinaryExpression extends Expression
    * @generated
    */
   void setOperator(BinaryLogicalOperator value);
+
+  /**
+   * Returns the value of the '<em><b>Left Expr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Left Expr</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Left Expr</em>' containment reference.
+   * @see #setLeftExpr(Expression)
+   * @see org.arz.miniScript.MiniScriptPackage#getLogicalBinaryExpression_LeftExpr()
+   * @model containment="true"
+   * @generated
+   */
+  Expression getLeftExpr();
+
+  /**
+   * Sets the value of the '{@link org.arz.miniScript.LogicalBinaryExpression#getLeftExpr <em>Left Expr</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Left Expr</em>' containment reference.
+   * @see #getLeftExpr()
+   * @generated
+   */
+  void setLeftExpr(Expression value);
 
   /**
    * Returns the value of the '<em><b>Right Expr</b></em>' containment reference.

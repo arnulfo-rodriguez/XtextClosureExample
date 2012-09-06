@@ -94,6 +94,22 @@ public class MiniScriptSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case MiniScriptPackage.TERNARY_EXPRESSION:
+      {
+        TernaryExpression ternaryExpression = (TernaryExpression)theEObject;
+        T result = caseTernaryExpression(ternaryExpression);
+        if (result == null) result = caseExpression(ternaryExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MiniScriptPackage.LOGICAL_BINARY_EXPRESSION:
+      {
+        LogicalBinaryExpression logicalBinaryExpression = (LogicalBinaryExpression)theEObject;
+        T result = caseLogicalBinaryExpression(logicalBinaryExpression);
+        if (result == null) result = caseExpression(logicalBinaryExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case MiniScriptPackage.LOGICAL_UNARY_EXPRESSION:
       {
         LogicalUnaryExpression logicalUnaryExpression = (LogicalUnaryExpression)theEObject;
@@ -125,11 +141,19 @@ public class MiniScriptSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case MiniScriptPackage.LITERAL_EXPR:
+      case MiniScriptPackage.LITERAL_BOOLEAN:
       {
-        LiteralExpr literalExpr = (LiteralExpr)theEObject;
-        T result = caseLiteralExpr(literalExpr);
-        if (result == null) result = caseExpression(literalExpr);
+        LiteralBoolean literalBoolean = (LiteralBoolean)theEObject;
+        T result = caseLiteralBoolean(literalBoolean);
+        if (result == null) result = caseExpression(literalBoolean);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MiniScriptPackage.LITERAL_NUMBER:
+      {
+        LiteralNumber literalNumber = (LiteralNumber)theEObject;
+        T result = caseLiteralNumber(literalNumber);
+        if (result == null) result = caseExpression(literalNumber);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -138,14 +162,6 @@ public class MiniScriptSwitch<T> extends Switch<T>
         VariableAssignment variableAssignment = (VariableAssignment)theEObject;
         T result = caseVariableAssignment(variableAssignment);
         if (result == null) result = caseExpression(variableAssignment);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case MiniScriptPackage.LOGICAL_BINARY_EXPRESSION:
-      {
-        LogicalBinaryExpression logicalBinaryExpression = (LogicalBinaryExpression)theEObject;
-        T result = caseLogicalBinaryExpression(logicalBinaryExpression);
-        if (result == null) result = caseExpression(logicalBinaryExpression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -234,6 +250,38 @@ public class MiniScriptSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Ternary Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ternary Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTernaryExpression(TernaryExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Logical Binary Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Logical Binary Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLogicalBinaryExpression(LogicalBinaryExpression object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Logical Unary Expression</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -298,17 +346,33 @@ public class MiniScriptSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Literal Expr</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Literal Boolean</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Literal Expr</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Literal Boolean</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseLiteralExpr(LiteralExpr object)
+  public T caseLiteralBoolean(LiteralBoolean object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Literal Number</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Literal Number</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLiteralNumber(LiteralNumber object)
   {
     return null;
   }
@@ -325,22 +389,6 @@ public class MiniScriptSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseVariableAssignment(VariableAssignment object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Logical Binary Expression</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Logical Binary Expression</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseLogicalBinaryExpression(LogicalBinaryExpression object)
   {
     return null;
   }

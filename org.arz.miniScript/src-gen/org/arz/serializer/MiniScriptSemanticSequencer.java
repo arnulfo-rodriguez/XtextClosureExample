@@ -7,13 +7,15 @@ import org.arz.miniScript.Body;
 import org.arz.miniScript.ComparisonExpression;
 import org.arz.miniScript.Factor;
 import org.arz.miniScript.FunctionDeclaration;
-import org.arz.miniScript.LiteralExpr;
+import org.arz.miniScript.LiteralBoolean;
+import org.arz.miniScript.LiteralNumber;
 import org.arz.miniScript.LogicalBinaryExpression;
 import org.arz.miniScript.LogicalUnaryExpression;
 import org.arz.miniScript.MiniScriptPackage;
 import org.arz.miniScript.NumericExpression;
 import org.arz.miniScript.Program;
 import org.arz.miniScript.SymbolReference;
+import org.arz.miniScript.TernaryExpression;
 import org.arz.miniScript.VariableAssignment;
 import org.arz.services.MiniScriptGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
@@ -45,8 +47,6 @@ public class MiniScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 				   context == grammarAccess.getFactorRule() ||
 				   context == grammarAccess.getFactorAccess().getFactorLeftTermAction_1_0() ||
 				   context == grammarAccess.getFunctorRule() ||
-				   context == grammarAccess.getLogicalBinaryExpressionRule() ||
-				   context == grammarAccess.getLogicalBinaryExpressionAccess().getLogicalBinaryExpressionLeftExprAction_1_0() ||
 				   context == grammarAccess.getNumericExpressionRule() ||
 				   context == grammarAccess.getNumericExpressionAccess().getNumericExpressionLeftFactorAction_1_0() ||
 				   context == grammarAccess.getParenthesisExpressionRule() ||
@@ -70,8 +70,6 @@ public class MiniScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 				   context == grammarAccess.getFactorRule() ||
 				   context == grammarAccess.getFactorAccess().getFactorLeftTermAction_1_0() ||
 				   context == grammarAccess.getFunctorRule() ||
-				   context == grammarAccess.getLogicalBinaryExpressionRule() ||
-				   context == grammarAccess.getLogicalBinaryExpressionAccess().getLogicalBinaryExpressionLeftExprAction_1_0() ||
 				   context == grammarAccess.getNumericExpressionRule() ||
 				   context == grammarAccess.getNumericExpressionAccess().getNumericExpressionLeftFactorAction_1_0() ||
 				   context == grammarAccess.getParenthesisExpressionRule() ||
@@ -89,8 +87,6 @@ public class MiniScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 				   context == grammarAccess.getFactorRule() ||
 				   context == grammarAccess.getFactorAccess().getFactorLeftTermAction_1_0() ||
 				   context == grammarAccess.getFunctorRule() ||
-				   context == grammarAccess.getLogicalBinaryExpressionRule() ||
-				   context == grammarAccess.getLogicalBinaryExpressionAccess().getLogicalBinaryExpressionLeftExprAction_1_0() ||
 				   context == grammarAccess.getNumericExpressionRule() ||
 				   context == grammarAccess.getNumericExpressionAccess().getNumericExpressionLeftFactorAction_1_0() ||
 				   context == grammarAccess.getParenthesisExpressionRule() ||
@@ -109,8 +105,6 @@ public class MiniScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 				   context == grammarAccess.getFactorAccess().getFactorLeftTermAction_1_0() ||
 				   context == grammarAccess.getFunctionDeclarationRule() ||
 				   context == grammarAccess.getFunctorRule() ||
-				   context == grammarAccess.getLogicalBinaryExpressionRule() ||
-				   context == grammarAccess.getLogicalBinaryExpressionAccess().getLogicalBinaryExpressionLeftExprAction_1_0() ||
 				   context == grammarAccess.getNumericExpressionRule() ||
 				   context == grammarAccess.getNumericExpressionAccess().getNumericExpressionLeftFactorAction_1_0() ||
 				   context == grammarAccess.getParenthesisExpressionRule() ||
@@ -119,7 +113,26 @@ public class MiniScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 					return; 
 				}
 				else break;
-			case MiniScriptPackage.LITERAL_EXPR:
+			case MiniScriptPackage.LITERAL_BOOLEAN:
+				if(context == grammarAccess.getApplyRule() ||
+				   context == grammarAccess.getApplyAccess().getApplyFunctorAction_1_0() ||
+				   context == grammarAccess.getComparisonExpressionRule() ||
+				   context == grammarAccess.getComparisonExpressionAccess().getComparisonExpressionLeftExprAction_1_0() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getFactorRule() ||
+				   context == grammarAccess.getFactorAccess().getFactorLeftTermAction_1_0() ||
+				   context == grammarAccess.getFunctorRule() ||
+				   context == grammarAccess.getLiteralBooleanRule() ||
+				   context == grammarAccess.getLiteralExprRule() ||
+				   context == grammarAccess.getNumericExpressionRule() ||
+				   context == grammarAccess.getNumericExpressionAccess().getNumericExpressionLeftFactorAction_1_0() ||
+				   context == grammarAccess.getParenthesisExpressionRule() ||
+				   context == grammarAccess.getTermRule()) {
+					sequence_LiteralBoolean(context, (LiteralBoolean) semanticObject); 
+					return; 
+				}
+				else break;
+			case MiniScriptPackage.LITERAL_NUMBER:
 				if(context == grammarAccess.getApplyRule() ||
 				   context == grammarAccess.getApplyAccess().getApplyFunctorAction_1_0() ||
 				   context == grammarAccess.getComparisonExpressionRule() ||
@@ -129,13 +142,12 @@ public class MiniScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 				   context == grammarAccess.getFactorAccess().getFactorLeftTermAction_1_0() ||
 				   context == grammarAccess.getFunctorRule() ||
 				   context == grammarAccess.getLiteralExprRule() ||
-				   context == grammarAccess.getLogicalBinaryExpressionRule() ||
-				   context == grammarAccess.getLogicalBinaryExpressionAccess().getLogicalBinaryExpressionLeftExprAction_1_0() ||
+				   context == grammarAccess.getLiteralNumberRule() ||
 				   context == grammarAccess.getNumericExpressionRule() ||
 				   context == grammarAccess.getNumericExpressionAccess().getNumericExpressionLeftFactorAction_1_0() ||
 				   context == grammarAccess.getParenthesisExpressionRule() ||
 				   context == grammarAccess.getTermRule()) {
-					sequence_LiteralExpr(context, (LiteralExpr) semanticObject); 
+					sequence_LiteralNumber(context, (LiteralNumber) semanticObject); 
 					return; 
 				}
 				else break;
@@ -149,7 +161,6 @@ public class MiniScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 				   context == grammarAccess.getFactorAccess().getFactorLeftTermAction_1_0() ||
 				   context == grammarAccess.getFunctorRule() ||
 				   context == grammarAccess.getLogicalBinaryExpressionRule() ||
-				   context == grammarAccess.getLogicalBinaryExpressionAccess().getLogicalBinaryExpressionLeftExprAction_1_0() ||
 				   context == grammarAccess.getNumericExpressionRule() ||
 				   context == grammarAccess.getNumericExpressionAccess().getNumericExpressionLeftFactorAction_1_0() ||
 				   context == grammarAccess.getParenthesisExpressionRule() ||
@@ -167,8 +178,6 @@ public class MiniScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 				   context == grammarAccess.getFactorRule() ||
 				   context == grammarAccess.getFactorAccess().getFactorLeftTermAction_1_0() ||
 				   context == grammarAccess.getFunctorRule() ||
-				   context == grammarAccess.getLogicalBinaryExpressionRule() ||
-				   context == grammarAccess.getLogicalBinaryExpressionAccess().getLogicalBinaryExpressionLeftExprAction_1_0() ||
 				   context == grammarAccess.getLogicalUnaryExpressionRule() ||
 				   context == grammarAccess.getNumericExpressionRule() ||
 				   context == grammarAccess.getNumericExpressionAccess().getNumericExpressionLeftFactorAction_1_0() ||
@@ -187,8 +196,6 @@ public class MiniScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 				   context == grammarAccess.getFactorRule() ||
 				   context == grammarAccess.getFactorAccess().getFactorLeftTermAction_1_0() ||
 				   context == grammarAccess.getFunctorRule() ||
-				   context == grammarAccess.getLogicalBinaryExpressionRule() ||
-				   context == grammarAccess.getLogicalBinaryExpressionAccess().getLogicalBinaryExpressionLeftExprAction_1_0() ||
 				   context == grammarAccess.getNumericExpressionRule() ||
 				   context == grammarAccess.getNumericExpressionAccess().getNumericExpressionLeftFactorAction_1_0() ||
 				   context == grammarAccess.getParenthesisExpressionRule() ||
@@ -213,14 +220,30 @@ public class MiniScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 				   context == grammarAccess.getFactorRule() ||
 				   context == grammarAccess.getFactorAccess().getFactorLeftTermAction_1_0() ||
 				   context == grammarAccess.getFunctorRule() ||
-				   context == grammarAccess.getLogicalBinaryExpressionRule() ||
-				   context == grammarAccess.getLogicalBinaryExpressionAccess().getLogicalBinaryExpressionLeftExprAction_1_0() ||
 				   context == grammarAccess.getNumericExpressionRule() ||
 				   context == grammarAccess.getNumericExpressionAccess().getNumericExpressionLeftFactorAction_1_0() ||
 				   context == grammarAccess.getParenthesisExpressionRule() ||
 				   context == grammarAccess.getSymbolReferenceRule() ||
 				   context == grammarAccess.getTermRule()) {
 					sequence_SymbolReference(context, (SymbolReference) semanticObject); 
+					return; 
+				}
+				else break;
+			case MiniScriptPackage.TERNARY_EXPRESSION:
+				if(context == grammarAccess.getApplyRule() ||
+				   context == grammarAccess.getApplyAccess().getApplyFunctorAction_1_0() ||
+				   context == grammarAccess.getComparisonExpressionRule() ||
+				   context == grammarAccess.getComparisonExpressionAccess().getComparisonExpressionLeftExprAction_1_0() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getFactorRule() ||
+				   context == grammarAccess.getFactorAccess().getFactorLeftTermAction_1_0() ||
+				   context == grammarAccess.getFunctorRule() ||
+				   context == grammarAccess.getNumericExpressionRule() ||
+				   context == grammarAccess.getNumericExpressionAccess().getNumericExpressionLeftFactorAction_1_0() ||
+				   context == grammarAccess.getParenthesisExpressionRule() ||
+				   context == grammarAccess.getTermRule() ||
+				   context == grammarAccess.getTernaryExpressionRule()) {
+					sequence_TernaryExpression(context, (TernaryExpression) semanticObject); 
 					return; 
 				}
 				else break;
@@ -233,8 +256,6 @@ public class MiniScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 				   context == grammarAccess.getFactorRule() ||
 				   context == grammarAccess.getFactorAccess().getFactorLeftTermAction_1_0() ||
 				   context == grammarAccess.getFunctorRule() ||
-				   context == grammarAccess.getLogicalBinaryExpressionRule() ||
-				   context == grammarAccess.getLogicalBinaryExpressionAccess().getLogicalBinaryExpressionLeftExprAction_1_0() ||
 				   context == grammarAccess.getNumericExpressionRule() ||
 				   context == grammarAccess.getNumericExpressionAccess().getNumericExpressionLeftFactorAction_1_0() ||
 				   context == grammarAccess.getParenthesisExpressionRule() ||
@@ -321,45 +342,61 @@ public class MiniScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     value=INT
+	 *     value=BooleanValue
 	 */
-	protected void sequence_LiteralExpr(EObject context, LiteralExpr semanticObject) {
+	protected void sequence_LiteralBoolean(EObject context, LiteralBoolean semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.LITERAL_EXPR__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.LITERAL_EXPR__VALUE));
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.LITERAL_BOOLEAN__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.LITERAL_BOOLEAN__VALUE));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getLiteralExprAccess().getValueINTTerminalRuleCall_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getLiteralBooleanAccess().getValueBooleanValueEnumRuleCall_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (leftExpr=LogicalBinaryExpression_LogicalBinaryExpression_1_0 operator=BinaryLogicalOperator rightExpr=ComparisonExpression)
+	 *     value=INT
+	 */
+	protected void sequence_LiteralNumber(EObject context, LiteralNumber semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.LITERAL_NUMBER__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.LITERAL_NUMBER__VALUE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getLiteralNumberAccess().getValueINTTerminalRuleCall_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (operator=BinaryLogicalOperator leftExpr=Expression rightExpr=Expression)
 	 */
 	protected void sequence_LogicalBinaryExpression(EObject context, LogicalBinaryExpression semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.LOGICAL_BINARY_EXPRESSION__LEFT_EXPR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.LOGICAL_BINARY_EXPRESSION__LEFT_EXPR));
 			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.LOGICAL_BINARY_EXPRESSION__OPERATOR) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.LOGICAL_BINARY_EXPRESSION__OPERATOR));
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.LOGICAL_BINARY_EXPRESSION__LEFT_EXPR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.LOGICAL_BINARY_EXPRESSION__LEFT_EXPR));
 			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.LOGICAL_BINARY_EXPRESSION__RIGHT_EXPR) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.LOGICAL_BINARY_EXPRESSION__RIGHT_EXPR));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getLogicalBinaryExpressionAccess().getLogicalBinaryExpressionLeftExprAction_1_0(), semanticObject.getLeftExpr());
-		feeder.accept(grammarAccess.getLogicalBinaryExpressionAccess().getOperatorBinaryLogicalOperatorEnumRuleCall_1_1_0(), semanticObject.getOperator());
-		feeder.accept(grammarAccess.getLogicalBinaryExpressionAccess().getRightExprComparisonExpressionParserRuleCall_1_2_0(), semanticObject.getRightExpr());
+		feeder.accept(grammarAccess.getLogicalBinaryExpressionAccess().getOperatorBinaryLogicalOperatorEnumRuleCall_0_0(), semanticObject.getOperator());
+		feeder.accept(grammarAccess.getLogicalBinaryExpressionAccess().getLeftExprExpressionParserRuleCall_2_0(), semanticObject.getLeftExpr());
+		feeder.accept(grammarAccess.getLogicalBinaryExpressionAccess().getRightExprExpressionParserRuleCall_4_0(), semanticObject.getRightExpr());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (operator=UnaryLogicalOperator expression=ComparisonExpression)
+	 *     (operator=UnaryLogicalOperator expression=Expression)
 	 */
 	protected void sequence_LogicalUnaryExpression(EObject context, LogicalUnaryExpression semanticObject) {
 		if(errorAcceptor != null) {
@@ -371,7 +408,7 @@ public class MiniScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getLogicalUnaryExpressionAccess().getOperatorUnaryLogicalOperatorEnumRuleCall_0_0(), semanticObject.getOperator());
-		feeder.accept(grammarAccess.getLogicalUnaryExpressionAccess().getExpressionComparisonExpressionParserRuleCall_1_0(), semanticObject.getExpression());
+		feeder.accept(grammarAccess.getLogicalUnaryExpressionAccess().getExpressionExpressionParserRuleCall_2_0(), semanticObject.getExpression());
 		feeder.finish();
 	}
 	
@@ -419,6 +456,31 @@ public class MiniScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getSymbolReferenceAccess().getIdIDTerminalRuleCall_0(), semanticObject.getId());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (operator=TernaryOperator condition=Expression trueExpr=Expression falseExpr=Expression)
+	 */
+	protected void sequence_TernaryExpression(EObject context, TernaryExpression semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.TERNARY_EXPRESSION__OPERATOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.TERNARY_EXPRESSION__OPERATOR));
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.TERNARY_EXPRESSION__CONDITION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.TERNARY_EXPRESSION__CONDITION));
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.TERNARY_EXPRESSION__TRUE_EXPR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.TERNARY_EXPRESSION__TRUE_EXPR));
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.TERNARY_EXPRESSION__FALSE_EXPR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.TERNARY_EXPRESSION__FALSE_EXPR));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getTernaryExpressionAccess().getOperatorTernaryOperatorEnumRuleCall_0_0(), semanticObject.getOperator());
+		feeder.accept(grammarAccess.getTernaryExpressionAccess().getConditionExpressionParserRuleCall_2_0(), semanticObject.getCondition());
+		feeder.accept(grammarAccess.getTernaryExpressionAccess().getTrueExprExpressionParserRuleCall_4_0(), semanticObject.getTrueExpr());
+		feeder.accept(grammarAccess.getTernaryExpressionAccess().getFalseExprExpressionParserRuleCall_6_0(), semanticObject.getFalseExpr());
 		feeder.finish();
 	}
 	

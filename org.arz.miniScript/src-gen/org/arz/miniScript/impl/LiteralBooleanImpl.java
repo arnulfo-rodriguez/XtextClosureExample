@@ -2,7 +2,8 @@
  */
 package org.arz.miniScript.impl;
 
-import org.arz.miniScript.LiteralExpr;
+import org.arz.miniScript.BooleanValue;
+import org.arz.miniScript.LiteralBoolean;
 import org.arz.miniScript.MiniScriptPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -13,18 +14,18 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Literal Expr</b></em>'.
+ * An implementation of the model object '<em><b>Literal Boolean</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.arz.miniScript.impl.LiteralExprImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link org.arz.miniScript.impl.LiteralBooleanImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class LiteralExprImpl extends ExpressionImpl implements LiteralExpr
+public class LiteralBooleanImpl extends ExpressionImpl implements LiteralBoolean
 {
   /**
    * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -34,7 +35,7 @@ public class LiteralExprImpl extends ExpressionImpl implements LiteralExpr
    * @generated
    * @ordered
    */
-  protected static final int VALUE_EDEFAULT = 0;
+  protected static final BooleanValue VALUE_EDEFAULT = BooleanValue.TRUE;
 
   /**
    * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -44,14 +45,14 @@ public class LiteralExprImpl extends ExpressionImpl implements LiteralExpr
    * @generated
    * @ordered
    */
-  protected int value = VALUE_EDEFAULT;
+  protected BooleanValue value = VALUE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected LiteralExprImpl()
+  protected LiteralBooleanImpl()
   {
     super();
   }
@@ -64,7 +65,7 @@ public class LiteralExprImpl extends ExpressionImpl implements LiteralExpr
   @Override
   protected EClass eStaticClass()
   {
-    return MiniScriptPackage.Literals.LITERAL_EXPR;
+    return MiniScriptPackage.Literals.LITERAL_BOOLEAN;
   }
 
   /**
@@ -72,7 +73,7 @@ public class LiteralExprImpl extends ExpressionImpl implements LiteralExpr
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getValue()
+  public BooleanValue getValue()
   {
     return value;
   }
@@ -82,12 +83,12 @@ public class LiteralExprImpl extends ExpressionImpl implements LiteralExpr
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setValue(int newValue)
+  public void setValue(BooleanValue newValue)
   {
-    int oldValue = value;
-    value = newValue;
+    BooleanValue oldValue = value;
+    value = newValue == null ? VALUE_EDEFAULT : newValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.LITERAL_EXPR__VALUE, oldValue, value));
+      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.LITERAL_BOOLEAN__VALUE, oldValue, value));
   }
 
   /**
@@ -100,7 +101,7 @@ public class LiteralExprImpl extends ExpressionImpl implements LiteralExpr
   {
     switch (featureID)
     {
-      case MiniScriptPackage.LITERAL_EXPR__VALUE:
+      case MiniScriptPackage.LITERAL_BOOLEAN__VALUE:
         return getValue();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -116,8 +117,8 @@ public class LiteralExprImpl extends ExpressionImpl implements LiteralExpr
   {
     switch (featureID)
     {
-      case MiniScriptPackage.LITERAL_EXPR__VALUE:
-        setValue((Integer)newValue);
+      case MiniScriptPackage.LITERAL_BOOLEAN__VALUE:
+        setValue((BooleanValue)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -133,7 +134,7 @@ public class LiteralExprImpl extends ExpressionImpl implements LiteralExpr
   {
     switch (featureID)
     {
-      case MiniScriptPackage.LITERAL_EXPR__VALUE:
+      case MiniScriptPackage.LITERAL_BOOLEAN__VALUE:
         setValue(VALUE_EDEFAULT);
         return;
     }
@@ -150,7 +151,7 @@ public class LiteralExprImpl extends ExpressionImpl implements LiteralExpr
   {
     switch (featureID)
     {
-      case MiniScriptPackage.LITERAL_EXPR__VALUE:
+      case MiniScriptPackage.LITERAL_BOOLEAN__VALUE:
         return value != VALUE_EDEFAULT;
     }
     return super.eIsSet(featureID);
@@ -173,4 +174,4 @@ public class LiteralExprImpl extends ExpressionImpl implements LiteralExpr
     return result.toString();
   }
 
-} //LiteralExprImpl
+} //LiteralBooleanImpl

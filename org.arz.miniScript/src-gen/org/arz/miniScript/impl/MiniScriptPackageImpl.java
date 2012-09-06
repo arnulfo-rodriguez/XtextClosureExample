@@ -6,13 +6,15 @@ import org.arz.miniScript.AdditionOperator;
 import org.arz.miniScript.Apply;
 import org.arz.miniScript.BinaryLogicalOperator;
 import org.arz.miniScript.Body;
+import org.arz.miniScript.BooleanValue;
 import org.arz.miniScript.ComparisonExpression;
 import org.arz.miniScript.ComparisonOperator;
 import org.arz.miniScript.Expression;
 import org.arz.miniScript.Factor;
 import org.arz.miniScript.FactorOperator;
 import org.arz.miniScript.FunctionDeclaration;
-import org.arz.miniScript.LiteralExpr;
+import org.arz.miniScript.LiteralBoolean;
+import org.arz.miniScript.LiteralNumber;
 import org.arz.miniScript.LogicalBinaryExpression;
 import org.arz.miniScript.LogicalUnaryExpression;
 import org.arz.miniScript.MiniScriptFactory;
@@ -21,6 +23,8 @@ import org.arz.miniScript.Model;
 import org.arz.miniScript.NumericExpression;
 import org.arz.miniScript.Program;
 import org.arz.miniScript.SymbolReference;
+import org.arz.miniScript.TernaryExpression;
+import org.arz.miniScript.TernaryOperator;
 import org.arz.miniScript.UnaryLogicalOperator;
 import org.arz.miniScript.VariableAssignment;
 
@@ -66,6 +70,20 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass ternaryExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass logicalBinaryExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass logicalUnaryExpressionEClass = null;
 
   /**
@@ -94,7 +112,14 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass literalExprEClass = null;
+  private EClass literalBooleanEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass literalNumberEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -102,13 +127,6 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * @generated
    */
   private EClass variableAssignmentEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass logicalBinaryExpressionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -164,6 +182,13 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
+  private EEnum unaryLogicalOperatorEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EEnum binaryLogicalOperatorEEnum = null;
 
   /**
@@ -171,7 +196,14 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EEnum unaryLogicalOperatorEEnum = null;
+  private EEnum ternaryOperatorEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum booleanValueEEnum = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -281,6 +313,96 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getTernaryExpression()
+  {
+    return ternaryExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTernaryExpression_Operator()
+  {
+    return (EAttribute)ternaryExpressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTernaryExpression_Condition()
+  {
+    return (EReference)ternaryExpressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTernaryExpression_TrueExpr()
+  {
+    return (EReference)ternaryExpressionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTernaryExpression_FalseExpr()
+  {
+    return (EReference)ternaryExpressionEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLogicalBinaryExpression()
+  {
+    return logicalBinaryExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLogicalBinaryExpression_Operator()
+  {
+    return (EAttribute)logicalBinaryExpressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLogicalBinaryExpression_LeftExpr()
+  {
+    return (EReference)logicalBinaryExpressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLogicalBinaryExpression_RightExpr()
+  {
+    return (EReference)logicalBinaryExpressionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getLogicalUnaryExpression()
   {
     return logicalUnaryExpressionEClass;
@@ -381,9 +503,9 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getLiteralExpr()
+  public EClass getLiteralBoolean()
   {
-    return literalExprEClass;
+    return literalBooleanEClass;
   }
 
   /**
@@ -391,9 +513,29 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getLiteralExpr_Value()
+  public EAttribute getLiteralBoolean_Value()
   {
-    return (EAttribute)literalExprEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)literalBooleanEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLiteralNumber()
+  {
+    return literalNumberEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLiteralNumber_Value()
+  {
+    return (EAttribute)literalNumberEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -424,46 +566,6 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
   public EReference getVariableAssignment_Expression()
   {
     return (EReference)variableAssignmentEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getLogicalBinaryExpression()
-  {
-    return logicalBinaryExpressionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLogicalBinaryExpression_LeftExpr()
-  {
-    return (EReference)logicalBinaryExpressionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getLogicalBinaryExpression_Operator()
-  {
-    return (EAttribute)logicalBinaryExpressionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLogicalBinaryExpression_RightExpr()
-  {
-    return (EReference)logicalBinaryExpressionEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -651,6 +753,16 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EEnum getUnaryLogicalOperator()
+  {
+    return unaryLogicalOperatorEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EEnum getBinaryLogicalOperator()
   {
     return binaryLogicalOperatorEEnum;
@@ -661,9 +773,19 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EEnum getUnaryLogicalOperator()
+  public EEnum getTernaryOperator()
   {
-    return unaryLogicalOperatorEEnum;
+    return ternaryOperatorEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getBooleanValue()
+  {
+    return booleanValueEEnum;
   }
 
   /**
@@ -703,6 +825,17 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
 
     expressionEClass = createEClass(EXPRESSION);
 
+    ternaryExpressionEClass = createEClass(TERNARY_EXPRESSION);
+    createEAttribute(ternaryExpressionEClass, TERNARY_EXPRESSION__OPERATOR);
+    createEReference(ternaryExpressionEClass, TERNARY_EXPRESSION__CONDITION);
+    createEReference(ternaryExpressionEClass, TERNARY_EXPRESSION__TRUE_EXPR);
+    createEReference(ternaryExpressionEClass, TERNARY_EXPRESSION__FALSE_EXPR);
+
+    logicalBinaryExpressionEClass = createEClass(LOGICAL_BINARY_EXPRESSION);
+    createEAttribute(logicalBinaryExpressionEClass, LOGICAL_BINARY_EXPRESSION__OPERATOR);
+    createEReference(logicalBinaryExpressionEClass, LOGICAL_BINARY_EXPRESSION__LEFT_EXPR);
+    createEReference(logicalBinaryExpressionEClass, LOGICAL_BINARY_EXPRESSION__RIGHT_EXPR);
+
     logicalUnaryExpressionEClass = createEClass(LOGICAL_UNARY_EXPRESSION);
     createEAttribute(logicalUnaryExpressionEClass, LOGICAL_UNARY_EXPRESSION__OPERATOR);
     createEReference(logicalUnaryExpressionEClass, LOGICAL_UNARY_EXPRESSION__EXPRESSION);
@@ -717,17 +850,15 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
     symbolReferenceEClass = createEClass(SYMBOL_REFERENCE);
     createEAttribute(symbolReferenceEClass, SYMBOL_REFERENCE__ID);
 
-    literalExprEClass = createEClass(LITERAL_EXPR);
-    createEAttribute(literalExprEClass, LITERAL_EXPR__VALUE);
+    literalBooleanEClass = createEClass(LITERAL_BOOLEAN);
+    createEAttribute(literalBooleanEClass, LITERAL_BOOLEAN__VALUE);
+
+    literalNumberEClass = createEClass(LITERAL_NUMBER);
+    createEAttribute(literalNumberEClass, LITERAL_NUMBER__VALUE);
 
     variableAssignmentEClass = createEClass(VARIABLE_ASSIGNMENT);
     createEAttribute(variableAssignmentEClass, VARIABLE_ASSIGNMENT__ID);
     createEReference(variableAssignmentEClass, VARIABLE_ASSIGNMENT__EXPRESSION);
-
-    logicalBinaryExpressionEClass = createEClass(LOGICAL_BINARY_EXPRESSION);
-    createEReference(logicalBinaryExpressionEClass, LOGICAL_BINARY_EXPRESSION__LEFT_EXPR);
-    createEAttribute(logicalBinaryExpressionEClass, LOGICAL_BINARY_EXPRESSION__OPERATOR);
-    createEReference(logicalBinaryExpressionEClass, LOGICAL_BINARY_EXPRESSION__RIGHT_EXPR);
 
     comparisonExpressionEClass = createEClass(COMPARISON_EXPRESSION);
     createEReference(comparisonExpressionEClass, COMPARISON_EXPRESSION__LEFT_EXPR);
@@ -752,8 +883,10 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
     additionOperatorEEnum = createEEnum(ADDITION_OPERATOR);
     factorOperatorEEnum = createEEnum(FACTOR_OPERATOR);
     comparisonOperatorEEnum = createEEnum(COMPARISON_OPERATOR);
-    binaryLogicalOperatorEEnum = createEEnum(BINARY_LOGICAL_OPERATOR);
     unaryLogicalOperatorEEnum = createEEnum(UNARY_LOGICAL_OPERATOR);
+    binaryLogicalOperatorEEnum = createEEnum(BINARY_LOGICAL_OPERATOR);
+    ternaryOperatorEEnum = createEEnum(TERNARY_OPERATOR);
+    booleanValueEEnum = createEEnum(BOOLEAN_VALUE);
   }
 
   /**
@@ -786,12 +919,14 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
 
     // Add supertypes to classes
     programEClass.getESuperTypes().add(this.getModel());
+    ternaryExpressionEClass.getESuperTypes().add(this.getExpression());
+    logicalBinaryExpressionEClass.getESuperTypes().add(this.getExpression());
     logicalUnaryExpressionEClass.getESuperTypes().add(this.getExpression());
     functionDeclarationEClass.getESuperTypes().add(this.getExpression());
     symbolReferenceEClass.getESuperTypes().add(this.getExpression());
-    literalExprEClass.getESuperTypes().add(this.getExpression());
+    literalBooleanEClass.getESuperTypes().add(this.getExpression());
+    literalNumberEClass.getESuperTypes().add(this.getExpression());
     variableAssignmentEClass.getESuperTypes().add(this.getExpression());
-    logicalBinaryExpressionEClass.getESuperTypes().add(this.getExpression());
     comparisonExpressionEClass.getESuperTypes().add(this.getExpression());
     numericExpressionEClass.getESuperTypes().add(this.getExpression());
     factorEClass.getESuperTypes().add(this.getExpression());
@@ -804,6 +939,17 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
     initEReference(getProgram_Expressions(), this.getExpression(), null, "expressions", null, 0, -1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(ternaryExpressionEClass, TernaryExpression.class, "TernaryExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTernaryExpression_Operator(), this.getTernaryOperator(), "operator", null, 0, 1, TernaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTernaryExpression_Condition(), this.getExpression(), null, "condition", null, 0, 1, TernaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTernaryExpression_TrueExpr(), this.getExpression(), null, "trueExpr", null, 0, 1, TernaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTernaryExpression_FalseExpr(), this.getExpression(), null, "falseExpr", null, 0, 1, TernaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(logicalBinaryExpressionEClass, LogicalBinaryExpression.class, "LogicalBinaryExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLogicalBinaryExpression_Operator(), this.getBinaryLogicalOperator(), "operator", null, 0, 1, LogicalBinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getLogicalBinaryExpression_LeftExpr(), this.getExpression(), null, "leftExpr", null, 0, 1, LogicalBinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getLogicalBinaryExpression_RightExpr(), this.getExpression(), null, "rightExpr", null, 0, 1, LogicalBinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(logicalUnaryExpressionEClass, LogicalUnaryExpression.class, "LogicalUnaryExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getLogicalUnaryExpression_Operator(), this.getUnaryLogicalOperator(), "operator", null, 0, 1, LogicalUnaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -819,17 +965,15 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
     initEClass(symbolReferenceEClass, SymbolReference.class, "SymbolReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSymbolReference_Id(), ecorePackage.getEString(), "id", null, 0, 1, SymbolReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(literalExprEClass, LiteralExpr.class, "LiteralExpr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getLiteralExpr_Value(), ecorePackage.getEInt(), "value", null, 0, 1, LiteralExpr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(literalBooleanEClass, LiteralBoolean.class, "LiteralBoolean", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLiteralBoolean_Value(), this.getBooleanValue(), "value", null, 0, 1, LiteralBoolean.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(literalNumberEClass, LiteralNumber.class, "LiteralNumber", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLiteralNumber_Value(), ecorePackage.getEInt(), "value", null, 0, 1, LiteralNumber.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(variableAssignmentEClass, VariableAssignment.class, "VariableAssignment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getVariableAssignment_Id(), ecorePackage.getEString(), "id", null, 0, 1, VariableAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getVariableAssignment_Expression(), this.getExpression(), null, "expression", null, 0, 1, VariableAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(logicalBinaryExpressionEClass, LogicalBinaryExpression.class, "LogicalBinaryExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getLogicalBinaryExpression_LeftExpr(), this.getExpression(), null, "leftExpr", null, 0, 1, LogicalBinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getLogicalBinaryExpression_Operator(), this.getBinaryLogicalOperator(), "operator", null, 0, 1, LogicalBinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getLogicalBinaryExpression_RightExpr(), this.getExpression(), null, "rightExpr", null, 0, 1, LogicalBinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(comparisonExpressionEClass, ComparisonExpression.class, "ComparisonExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getComparisonExpression_LeftExpr(), this.getExpression(), null, "leftExpr", null, 0, 1, ComparisonExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -866,12 +1010,19 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
     addEEnumLiteral(comparisonOperatorEEnum, ComparisonOperator.LTE);
     addEEnumLiteral(comparisonOperatorEEnum, ComparisonOperator.EQ);
 
+    initEEnum(unaryLogicalOperatorEEnum, UnaryLogicalOperator.class, "UnaryLogicalOperator");
+    addEEnumLiteral(unaryLogicalOperatorEEnum, UnaryLogicalOperator.NOT);
+
     initEEnum(binaryLogicalOperatorEEnum, BinaryLogicalOperator.class, "BinaryLogicalOperator");
     addEEnumLiteral(binaryLogicalOperatorEEnum, BinaryLogicalOperator.AND);
     addEEnumLiteral(binaryLogicalOperatorEEnum, BinaryLogicalOperator.OR);
 
-    initEEnum(unaryLogicalOperatorEEnum, UnaryLogicalOperator.class, "UnaryLogicalOperator");
-    addEEnumLiteral(unaryLogicalOperatorEEnum, UnaryLogicalOperator.NOT);
+    initEEnum(ternaryOperatorEEnum, TernaryOperator.class, "TernaryOperator");
+    addEEnumLiteral(ternaryOperatorEEnum, TernaryOperator.IF);
+
+    initEEnum(booleanValueEEnum, BooleanValue.class, "BooleanValue");
+    addEEnumLiteral(booleanValueEEnum, BooleanValue.TRUE);
+    addEEnumLiteral(booleanValueEEnum, BooleanValue.FALSE);
 
     // Create resource
     createResource(eNS_URI);

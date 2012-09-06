@@ -5,24 +5,25 @@ package org.arz.miniScript;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Literal Expr</b></em>'.
+ * A representation of the model object '<em><b>Literal Boolean</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.arz.miniScript.LiteralExpr#getValue <em>Value</em>}</li>
+ *   <li>{@link org.arz.miniScript.LiteralBoolean#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.arz.miniScript.MiniScriptPackage#getLiteralExpr()
+ * @see org.arz.miniScript.MiniScriptPackage#getLiteralBoolean()
  * @model
  * @generated
  */
-public interface LiteralExpr extends Expression
+public interface LiteralBoolean extends Expression
 {
   /**
    * Returns the value of the '<em><b>Value</b></em>' attribute.
+   * The literals are from the enumeration {@link org.arz.miniScript.BooleanValue}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Value</em>' attribute isn't clear,
@@ -30,21 +31,23 @@ public interface LiteralExpr extends Expression
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Value</em>' attribute.
-   * @see #setValue(int)
-   * @see org.arz.miniScript.MiniScriptPackage#getLiteralExpr_Value()
+   * @see org.arz.miniScript.BooleanValue
+   * @see #setValue(BooleanValue)
+   * @see org.arz.miniScript.MiniScriptPackage#getLiteralBoolean_Value()
    * @model
    * @generated
    */
-  int getValue();
+  BooleanValue getValue();
 
   /**
-   * Sets the value of the '{@link org.arz.miniScript.LiteralExpr#getValue <em>Value</em>}' attribute.
+   * Sets the value of the '{@link org.arz.miniScript.LiteralBoolean#getValue <em>Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Value</em>' attribute.
+   * @see org.arz.miniScript.BooleanValue
    * @see #getValue()
    * @generated
    */
-  void setValue(int value);
+  void setValue(BooleanValue value);
 
-} // LiteralExpr
+} // LiteralBoolean
