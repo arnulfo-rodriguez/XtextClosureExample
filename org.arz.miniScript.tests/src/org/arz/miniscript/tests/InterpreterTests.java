@@ -104,6 +104,7 @@ public class InterpreterTests {
 			Assert.fail();
 		}
 	}
+	
 	@Test
 	public void testMultiplication() {
 		StringBuilder builder = new StringBuilder();
@@ -227,5 +228,40 @@ public class InterpreterTests {
 		}
 	}
 	
+	@Test
+	public void testBooleanExpressions() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("foo=func(){1+1;}; goo=func(){2+2;}; boolValue=not(foo() > goo());");
+		Program p;
+		try {
+			p = parserHelper.parse(builder.toString());
+			MyEnvironment m = runModel(p, null);
+			Object result = m.get("boolValue");
+			Assert.assertNotNull(result);
+			Assert.assertTrue(result instanceof Boolean);
+			boolean boolResult = (Boolean) result;
+			Assert.assertEquals(true, boolResult);
+		} catch (Exception e) {
+			Assert.fail();
+		}
+	}
+	
+	@Test
+	public void testFibonacci() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("fibonacci=func(x){if(x==0,0,if(x==1,1,fibonacci(x-1)+fibonacci(x-2)));};f=fibonacci(5);");
+		Program p;
+		try {
+			p = parserHelper.parse(builder.toString());
+			MyEnvironment m = runModel(p, null);
+			Object result = m.get("f");
+			Assert.assertNotNull(result);
+			Assert.assertTrue(result instanceof Integer);
+			Integer intResult = (Integer) result;
+			Assert.assertEquals(5, intResult.intValue());
+		} catch (Exception e) {
+			Assert.fail();
+		}
+	}
 
 }
