@@ -264,4 +264,39 @@ public class InterpreterTests {
 		}
 	}
 
+	@Test
+	public void testComplexExpression() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("x = true; y = false; f=and(x,or(x,y))");
+		Program p;
+		try {
+			p = parserHelper.parse(builder.toString());
+			MyEnvironment m = runModel(p, null);
+			Object result = m.get("f");
+			Assert.assertNotNull(result);
+			Assert.assertTrue(result instanceof Boolean);
+			Boolean boolResult = (Boolean) result;
+			Assert.assertEquals(true, boolResult.booleanValue());
+		} catch (Exception e) {
+			Assert.fail();
+		}
+	}	
+	
+	@Test
+	public void testComplexExpression2() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("x = false; y = false; f=and(x,or(x,y))");
+		Program p;
+		try {
+			p = parserHelper.parse(builder.toString());
+			MyEnvironment m = runModel(p, null);
+			Object result = m.get("f");
+			Assert.assertNotNull(result);
+			Assert.assertTrue(result instanceof Boolean);
+			Boolean boolResult = (Boolean) result;
+			Assert.assertEquals(false, boolResult.booleanValue());
+		} catch (Exception e) {
+			Assert.fail();
+		}
+	}		
 }

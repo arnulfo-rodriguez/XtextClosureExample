@@ -146,7 +146,6 @@ public class MiniScriptEvaluator extends AbstractMiniScriptExpressionEvaluator {
 	@Override
 	protected Object evalLogicalBinaryExpression(LogicalBinaryExpression expr,
 			LogEntry log) throws InterpreterException {
-		// TODO Auto-generated method stub
 		if (expr.getOperator() == BinaryLogicalOperator.AND) {
 			return ((Boolean) eval(expr.getLeftExpr(), log))
 					&& ((Boolean) eval(expr.getRightExpr(), log));
