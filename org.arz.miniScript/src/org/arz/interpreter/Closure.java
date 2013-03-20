@@ -5,9 +5,9 @@ import org.arz.miniScript.FunctionDeclaration;
 public class Closure {
 
 	private FunctionDeclaration declaration;
-	private MyEnvironment parentEnvironment;
+	private EvaluationEnvironment parentEnvironment;
 
-	public Closure(FunctionDeclaration declaration, MyEnvironment environment) {
+	public Closure(FunctionDeclaration declaration, EvaluationEnvironment environment) {
 		this.declaration = declaration;
 		this.parentEnvironment = environment;
 	}
@@ -16,7 +16,7 @@ public class Closure {
 		return declaration;
 	}
 
-	public MyEnvironment getExecutionEnvironment() {
-		return parentEnvironment.createChildEnv();
+	public EvaluationEnvironment getExecutionEnvironment() {
+		return parentEnvironment.createChildEnv("closure-env");
 	}
 }

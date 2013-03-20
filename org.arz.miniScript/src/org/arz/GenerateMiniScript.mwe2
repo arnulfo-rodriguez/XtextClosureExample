@@ -137,10 +137,6 @@ Workflow {
                  fileExtensions = file.extensions
             }
             
-           fragment = de.itemis.interpreter.generator.InterpreterGenerator {
-            	expressionRootClassName = "Expression"
-           	    statementRootClassName = "Program"
-            }
 
         }
     }
