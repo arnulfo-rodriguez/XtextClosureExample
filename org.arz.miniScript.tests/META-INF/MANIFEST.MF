@@ -3,10 +3,10 @@ Bundle-ManifestVersion: 2
 Bundle-Name: org.arz.miniScript.tests
 Bundle-Vendor: My Company
 Bundle-Version: 1.0.0
-Bundle-SymbolicName: org.arz.miniScript.tests; singleton:=true
+Bundle-SymbolicName: org.arz.mScrpt.tests;singleton:=true
 Bundle-ActivationPolicy: lazy
-Require-Bundle: org.arz.miniScript,
- org.arz.miniScript.ui,
+Require-Bundle: org.arz.mScrpt,
+ org.arz.mScrpt.ui,
  org.eclipse.core.runtime,
  org.eclipse.xtext,
  org.eclipse.xtext.junit4,
