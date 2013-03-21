@@ -1,4 +1,4 @@
-package org.arz.interpreter;
+package org.arz.runtime;
 
 import java.util.HashMap;
 

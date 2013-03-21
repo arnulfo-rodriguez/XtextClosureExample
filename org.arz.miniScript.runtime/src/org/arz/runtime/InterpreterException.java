@@ -1,4 +1,4 @@
-package org.arz.interpreter;
+package org.arz.runtime;
 
 public class InterpreterException extends RuntimeException {
 
