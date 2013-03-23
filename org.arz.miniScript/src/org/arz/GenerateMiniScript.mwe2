@@ -107,7 +107,7 @@ Workflow {
             // generates a more lightweight Antlr parser and lexer tailored for content assist
             fragment = parser.antlr.XtextAntlrUiGeneratorFragment {
               options = {
-                  backtrack = true
+                  backtrack = false
               }
             }
 

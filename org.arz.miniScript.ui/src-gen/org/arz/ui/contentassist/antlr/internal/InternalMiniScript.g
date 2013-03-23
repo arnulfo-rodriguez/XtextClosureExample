@@ -5,7 +5,6 @@ grammar InternalMiniScript;
 
 options {
 	superClass=AbstractInternalContentAssistParser;
-	backtrack=true;
 	
 }
 

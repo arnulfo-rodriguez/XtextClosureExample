@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: org.arz.miniScript
 Bundle-Vendor: My Company
 Bundle-Version: 1.0.0
-Bundle-SymbolicName: org.arz.miniScript; singleton:=true
+Bundle-SymbolicName: org.arz.miniScript;singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext;bundle-version="2.1.0";visibility:=reexport,
  org.eclipse.xtext.xbase;bundle-version="2.1.0";resolution:=optional;visibility:=reexport,
