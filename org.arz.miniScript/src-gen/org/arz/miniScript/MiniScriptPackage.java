@@ -143,31 +143,31 @@ public interface MiniScriptPackage extends EPackage
   int TERNARY_EXPRESSION__OPERATOR = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Condition</b></em>' containment reference.
+   * The feature id for the '<em><b>First Expression</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TERNARY_EXPRESSION__CONDITION = EXPRESSION_FEATURE_COUNT + 1;
+  int TERNARY_EXPRESSION__FIRST_EXPRESSION = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>True Expr</b></em>' containment reference.
+   * The feature id for the '<em><b>Second Expression</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TERNARY_EXPRESSION__TRUE_EXPR = EXPRESSION_FEATURE_COUNT + 2;
+  int TERNARY_EXPRESSION__SECOND_EXPRESSION = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
-   * The feature id for the '<em><b>False Expr</b></em>' containment reference.
+   * The feature id for the '<em><b>Third Expression</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TERNARY_EXPRESSION__FALSE_EXPR = EXPRESSION_FEATURE_COUNT + 3;
+  int TERNARY_EXPRESSION__THIRD_EXPRESSION = EXPRESSION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Ternary Expression</em>' class.
@@ -756,37 +756,37 @@ public interface MiniScriptPackage extends EPackage
   EAttribute getTernaryExpression_Operator();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.TernaryExpression#getCondition <em>Condition</em>}'.
+   * Returns the meta object for the containment reference '{@link org.arz.miniScript.TernaryExpression#getFirstExpression <em>First Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Condition</em>'.
-   * @see org.arz.miniScript.TernaryExpression#getCondition()
+   * @return the meta object for the containment reference '<em>First Expression</em>'.
+   * @see org.arz.miniScript.TernaryExpression#getFirstExpression()
    * @see #getTernaryExpression()
    * @generated
    */
-  EReference getTernaryExpression_Condition();
+  EReference getTernaryExpression_FirstExpression();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.TernaryExpression#getTrueExpr <em>True Expr</em>}'.
+   * Returns the meta object for the containment reference '{@link org.arz.miniScript.TernaryExpression#getSecondExpression <em>Second Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>True Expr</em>'.
-   * @see org.arz.miniScript.TernaryExpression#getTrueExpr()
+   * @return the meta object for the containment reference '<em>Second Expression</em>'.
+   * @see org.arz.miniScript.TernaryExpression#getSecondExpression()
    * @see #getTernaryExpression()
    * @generated
    */
-  EReference getTernaryExpression_TrueExpr();
+  EReference getTernaryExpression_SecondExpression();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.arz.miniScript.TernaryExpression#getFalseExpr <em>False Expr</em>}'.
+   * Returns the meta object for the containment reference '{@link org.arz.miniScript.TernaryExpression#getThirdExpression <em>Third Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>False Expr</em>'.
-   * @see org.arz.miniScript.TernaryExpression#getFalseExpr()
+   * @return the meta object for the containment reference '<em>Third Expression</em>'.
+   * @see org.arz.miniScript.TernaryExpression#getThirdExpression()
    * @see #getTernaryExpression()
    * @generated
    */
-  EReference getTernaryExpression_FalseExpr();
+  EReference getTernaryExpression_ThirdExpression();
 
   /**
    * Returns the meta object for class '{@link org.arz.miniScript.LogicalBinaryExpression <em>Logical Binary Expression</em>}'.
@@ -1322,28 +1322,28 @@ public interface MiniScriptPackage extends EPackage
     EAttribute TERNARY_EXPRESSION__OPERATOR = eINSTANCE.getTernaryExpression_Operator();
 
     /**
-     * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>First Expression</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TERNARY_EXPRESSION__CONDITION = eINSTANCE.getTernaryExpression_Condition();
+    EReference TERNARY_EXPRESSION__FIRST_EXPRESSION = eINSTANCE.getTernaryExpression_FirstExpression();
 
     /**
-     * The meta object literal for the '<em><b>True Expr</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Second Expression</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TERNARY_EXPRESSION__TRUE_EXPR = eINSTANCE.getTernaryExpression_TrueExpr();
+    EReference TERNARY_EXPRESSION__SECOND_EXPRESSION = eINSTANCE.getTernaryExpression_SecondExpression();
 
     /**
-     * The meta object literal for the '<em><b>False Expr</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Third Expression</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TERNARY_EXPRESSION__FALSE_EXPR = eINSTANCE.getTernaryExpression_FalseExpr();
+    EReference TERNARY_EXPRESSION__THIRD_EXPRESSION = eINSTANCE.getTernaryExpression_ThirdExpression();
 
     /**
      * The meta object literal for the '{@link org.arz.miniScript.impl.LogicalBinaryExpressionImpl <em>Logical Binary Expression</em>}' class.

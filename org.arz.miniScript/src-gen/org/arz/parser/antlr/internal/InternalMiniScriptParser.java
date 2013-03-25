@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "';'", "'('", "','", "')'", "'func'", "'{'", "'}'", "'='", "'+'", "'-'", "'*'", "'/'", "'>'", "'>='", "'<'", "'<='", "'=='", "'not'", "'and'", "'or'", "'if'", "'true'", "'false'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "';'", "'('", "','", "')'", "'func'", "'{'", "'}'", "'='", "'+'", "'-'", "'*'", "'/'", "'>'", "'>='", "'<'", "'<='", "'=='", "'!='", "'not'", "'and'", "'or'", "'if'", "'true'", "'false'"
     };
     public static final int RULE_ID=4;
     public static final int T__29=29;
@@ -46,6 +46,7 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
     public static final int T__32=32;
     public static final int T__33=33;
     public static final int T__16=16;
+    public static final int T__34=34;
     public static final int T__15=15;
     public static final int T__18=18;
     public static final int T__17=17;
@@ -271,7 +272,7 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( ((LA1_0>=RULE_ID && LA1_0<=RULE_INT)||LA1_0==12||LA1_0==15||(LA1_0>=28 && LA1_0<=33)) ) {
+                if ( ((LA1_0>=RULE_ID && LA1_0<=RULE_INT)||LA1_0==12||LA1_0==15||(LA1_0>=29 && LA1_0<=34)) ) {
                     alt1=1;
                 }
 
@@ -419,7 +420,7 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
                 if ( (LA2_2==18) ) {
                     alt2=2;
                 }
-                else if ( (LA2_2==EOF||(LA2_2>=11 && LA2_2<=14)||(LA2_2>=19 && LA2_2<=27)) ) {
+                else if ( (LA2_2==EOF||(LA2_2>=11 && LA2_2<=14)||(LA2_2>=19 && LA2_2<=28)) ) {
                     alt2=6;
                 }
                 else {
@@ -430,26 +431,26 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
                 }
                 }
                 break;
-            case 29:
             case 30:
+            case 31:
                 {
                 alt2=3;
                 }
                 break;
-            case 28:
+            case 29:
                 {
                 alt2=4;
                 }
                 break;
-            case 31:
+            case 32:
                 {
                 alt2=5;
                 }
                 break;
             case RULE_INT:
             case 12:
-            case 32:
             case 33:
+            case 34:
                 {
                 alt2=6;
                 }
@@ -627,7 +628,7 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTernaryExpression"
-    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:252:1: ruleTernaryExpression returns [EObject current=null] : ( ( (lv_operator_0_0= ruleTernaryOperator ) ) otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ',' ( (lv_trueExpr_4_0= ruleExpression ) ) otherlv_5= ',' ( (lv_falseExpr_6_0= ruleExpression ) ) otherlv_7= ')' ) ;
+    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:252:1: ruleTernaryExpression returns [EObject current=null] : ( ( (lv_operator_0_0= ruleTernaryOperator ) ) otherlv_1= '(' ( (lv_firstExpression_2_0= ruleExpression ) ) otherlv_3= ',' ( (lv_secondExpression_4_0= ruleExpression ) ) otherlv_5= ',' ( (lv_thirdExpression_6_0= ruleExpression ) ) otherlv_7= ')' ) ;
     public final EObject ruleTernaryExpression() throws RecognitionException {
         EObject current = null;
 
@@ -637,21 +638,21 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
         Token otherlv_7=null;
         Enumerator lv_operator_0_0 = null;
 
-        EObject lv_condition_2_0 = null;
+        EObject lv_firstExpression_2_0 = null;
 
-        EObject lv_trueExpr_4_0 = null;
+        EObject lv_secondExpression_4_0 = null;
 
-        EObject lv_falseExpr_6_0 = null;
+        EObject lv_thirdExpression_6_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:255:28: ( ( ( (lv_operator_0_0= ruleTernaryOperator ) ) otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ',' ( (lv_trueExpr_4_0= ruleExpression ) ) otherlv_5= ',' ( (lv_falseExpr_6_0= ruleExpression ) ) otherlv_7= ')' ) )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:256:1: ( ( (lv_operator_0_0= ruleTernaryOperator ) ) otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ',' ( (lv_trueExpr_4_0= ruleExpression ) ) otherlv_5= ',' ( (lv_falseExpr_6_0= ruleExpression ) ) otherlv_7= ')' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:255:28: ( ( ( (lv_operator_0_0= ruleTernaryOperator ) ) otherlv_1= '(' ( (lv_firstExpression_2_0= ruleExpression ) ) otherlv_3= ',' ( (lv_secondExpression_4_0= ruleExpression ) ) otherlv_5= ',' ( (lv_thirdExpression_6_0= ruleExpression ) ) otherlv_7= ')' ) )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:256:1: ( ( (lv_operator_0_0= ruleTernaryOperator ) ) otherlv_1= '(' ( (lv_firstExpression_2_0= ruleExpression ) ) otherlv_3= ',' ( (lv_secondExpression_4_0= ruleExpression ) ) otherlv_5= ',' ( (lv_thirdExpression_6_0= ruleExpression ) ) otherlv_7= ')' )
             {
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:256:1: ( ( (lv_operator_0_0= ruleTernaryOperator ) ) otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ',' ( (lv_trueExpr_4_0= ruleExpression ) ) otherlv_5= ',' ( (lv_falseExpr_6_0= ruleExpression ) ) otherlv_7= ')' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:256:2: ( (lv_operator_0_0= ruleTernaryOperator ) ) otherlv_1= '(' ( (lv_condition_2_0= ruleExpression ) ) otherlv_3= ',' ( (lv_trueExpr_4_0= ruleExpression ) ) otherlv_5= ',' ( (lv_falseExpr_6_0= ruleExpression ) ) otherlv_7= ')'
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:256:1: ( ( (lv_operator_0_0= ruleTernaryOperator ) ) otherlv_1= '(' ( (lv_firstExpression_2_0= ruleExpression ) ) otherlv_3= ',' ( (lv_secondExpression_4_0= ruleExpression ) ) otherlv_5= ',' ( (lv_thirdExpression_6_0= ruleExpression ) ) otherlv_7= ')' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:256:2: ( (lv_operator_0_0= ruleTernaryOperator ) ) otherlv_1= '(' ( (lv_firstExpression_2_0= ruleExpression ) ) otherlv_3= ',' ( (lv_secondExpression_4_0= ruleExpression ) ) otherlv_5= ',' ( (lv_thirdExpression_6_0= ruleExpression ) ) otherlv_7= ')'
             {
             // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:256:2: ( (lv_operator_0_0= ruleTernaryOperator ) )
             // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:257:1: (lv_operator_0_0= ruleTernaryOperator )
@@ -688,17 +689,17 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_1, grammarAccess.getTernaryExpressionAccess().getLeftParenthesisKeyword_1());
                 
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:278:1: ( (lv_condition_2_0= ruleExpression ) )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:279:1: (lv_condition_2_0= ruleExpression )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:278:1: ( (lv_firstExpression_2_0= ruleExpression ) )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:279:1: (lv_firstExpression_2_0= ruleExpression )
             {
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:279:1: (lv_condition_2_0= ruleExpression )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:280:3: lv_condition_2_0= ruleExpression
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:279:1: (lv_firstExpression_2_0= ruleExpression )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:280:3: lv_firstExpression_2_0= ruleExpression
             {
              
-            	        newCompositeNode(grammarAccess.getTernaryExpressionAccess().getConditionExpressionParserRuleCall_2_0()); 
+            	        newCompositeNode(grammarAccess.getTernaryExpressionAccess().getFirstExpressionExpressionParserRuleCall_2_0()); 
             	    
             pushFollow(FOLLOW_ruleExpression_in_ruleTernaryExpression621);
-            lv_condition_2_0=ruleExpression();
+            lv_firstExpression_2_0=ruleExpression();
 
             state._fsp--;
 
@@ -708,8 +709,8 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
             	        }
                    		set(
                    			current, 
-                   			"condition",
-                    		lv_condition_2_0, 
+                   			"firstExpression",
+                    		lv_firstExpression_2_0, 
                     		"Expression");
             	        afterParserOrEnumRuleCall();
             	    
@@ -723,17 +724,17 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_3, grammarAccess.getTernaryExpressionAccess().getCommaKeyword_3());
                 
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:300:1: ( (lv_trueExpr_4_0= ruleExpression ) )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:301:1: (lv_trueExpr_4_0= ruleExpression )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:300:1: ( (lv_secondExpression_4_0= ruleExpression ) )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:301:1: (lv_secondExpression_4_0= ruleExpression )
             {
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:301:1: (lv_trueExpr_4_0= ruleExpression )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:302:3: lv_trueExpr_4_0= ruleExpression
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:301:1: (lv_secondExpression_4_0= ruleExpression )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:302:3: lv_secondExpression_4_0= ruleExpression
             {
              
-            	        newCompositeNode(grammarAccess.getTernaryExpressionAccess().getTrueExprExpressionParserRuleCall_4_0()); 
+            	        newCompositeNode(grammarAccess.getTernaryExpressionAccess().getSecondExpressionExpressionParserRuleCall_4_0()); 
             	    
             pushFollow(FOLLOW_ruleExpression_in_ruleTernaryExpression654);
-            lv_trueExpr_4_0=ruleExpression();
+            lv_secondExpression_4_0=ruleExpression();
 
             state._fsp--;
 
@@ -743,8 +744,8 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
             	        }
                    		set(
                    			current, 
-                   			"trueExpr",
-                    		lv_trueExpr_4_0, 
+                   			"secondExpression",
+                    		lv_secondExpression_4_0, 
                     		"Expression");
             	        afterParserOrEnumRuleCall();
             	    
@@ -758,17 +759,17 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_5, grammarAccess.getTernaryExpressionAccess().getCommaKeyword_5());
                 
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:322:1: ( (lv_falseExpr_6_0= ruleExpression ) )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:323:1: (lv_falseExpr_6_0= ruleExpression )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:322:1: ( (lv_thirdExpression_6_0= ruleExpression ) )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:323:1: (lv_thirdExpression_6_0= ruleExpression )
             {
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:323:1: (lv_falseExpr_6_0= ruleExpression )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:324:3: lv_falseExpr_6_0= ruleExpression
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:323:1: (lv_thirdExpression_6_0= ruleExpression )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:324:3: lv_thirdExpression_6_0= ruleExpression
             {
              
-            	        newCompositeNode(grammarAccess.getTernaryExpressionAccess().getFalseExprExpressionParserRuleCall_6_0()); 
+            	        newCompositeNode(grammarAccess.getTernaryExpressionAccess().getThirdExpressionExpressionParserRuleCall_6_0()); 
             	    
             pushFollow(FOLLOW_ruleExpression_in_ruleTernaryExpression687);
-            lv_falseExpr_6_0=ruleExpression();
+            lv_thirdExpression_6_0=ruleExpression();
 
             state._fsp--;
 
@@ -778,8 +779,8 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
             	        }
                    		set(
                    			current, 
-                   			"falseExpr",
-                    		lv_falseExpr_6_0, 
+                   			"thirdExpression",
+                    		lv_thirdExpression_6_0, 
                     		"Expression");
             	        afterParserOrEnumRuleCall();
             	    
@@ -1218,7 +1219,7 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
             int alt3=2;
             int LA3_0 = input.LA(1);
 
-            if ( ((LA3_0>=23 && LA3_0<=27)) ) {
+            if ( ((LA3_0>=23 && LA3_0<=28)) ) {
                 alt3=1;
             }
             switch (alt3) {
@@ -1602,7 +1603,7 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
             int alt7=2;
             int LA7_0 = input.LA(1);
 
-            if ( ((LA7_0>=RULE_ID && LA7_0<=RULE_INT)||LA7_0==12||LA7_0==15||(LA7_0>=28 && LA7_0<=33)) ) {
+            if ( ((LA7_0>=RULE_ID && LA7_0<=RULE_INT)||LA7_0==12||LA7_0==15||(LA7_0>=29 && LA7_0<=34)) ) {
                 alt7=1;
             }
             else if ( (LA7_0==16) ) {
@@ -1679,7 +1680,7 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
                         int alt6=2;
                         int LA6_0 = input.LA(1);
 
-                        if ( ((LA6_0>=RULE_ID && LA6_0<=RULE_INT)||LA6_0==12||LA6_0==15||(LA6_0>=28 && LA6_0<=33)) ) {
+                        if ( ((LA6_0>=RULE_ID && LA6_0<=RULE_INT)||LA6_0==12||LA6_0==15||(LA6_0>=29 && LA6_0<=34)) ) {
                             alt6=1;
                         }
 
@@ -2263,11 +2264,11 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTerm"
-    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:935:1: ruleTerm returns [EObject current=null] : (this_LiteralExpr_0= ruleLiteralExpr | this_Apply_1= ruleApply ) ;
+    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:935:1: ruleTerm returns [EObject current=null] : (this_LiteralExpression_0= ruleLiteralExpression | this_Apply_1= ruleApply ) ;
     public final EObject ruleTerm() throws RecognitionException {
         EObject current = null;
 
-        EObject this_LiteralExpr_0 = null;
+        EObject this_LiteralExpression_0 = null;
 
         EObject this_Apply_1 = null;
 
@@ -2275,14 +2276,14 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:938:28: ( (this_LiteralExpr_0= ruleLiteralExpr | this_Apply_1= ruleApply ) )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:939:1: (this_LiteralExpr_0= ruleLiteralExpr | this_Apply_1= ruleApply )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:938:28: ( (this_LiteralExpression_0= ruleLiteralExpression | this_Apply_1= ruleApply ) )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:939:1: (this_LiteralExpression_0= ruleLiteralExpression | this_Apply_1= ruleApply )
             {
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:939:1: (this_LiteralExpr_0= ruleLiteralExpr | this_Apply_1= ruleApply )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:939:1: (this_LiteralExpression_0= ruleLiteralExpression | this_Apply_1= ruleApply )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( (LA10_0==RULE_INT||(LA10_0>=32 && LA10_0<=33)) ) {
+            if ( (LA10_0==RULE_INT||(LA10_0>=33 && LA10_0<=34)) ) {
                 alt10=1;
             }
             else if ( (LA10_0==RULE_ID||LA10_0==12) ) {
@@ -2296,18 +2297,18 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
             }
             switch (alt10) {
                 case 1 :
-                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:940:5: this_LiteralExpr_0= ruleLiteralExpr
+                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:940:5: this_LiteralExpression_0= ruleLiteralExpression
                     {
                      
-                            newCompositeNode(grammarAccess.getTermAccess().getLiteralExprParserRuleCall_0()); 
+                            newCompositeNode(grammarAccess.getTermAccess().getLiteralExpressionParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleLiteralExpr_in_ruleTerm1987);
-                    this_LiteralExpr_0=ruleLiteralExpr();
+                    pushFollow(FOLLOW_ruleLiteralExpression_in_ruleTerm1987);
+                    this_LiteralExpression_0=ruleLiteralExpression();
 
                     state._fsp--;
 
                      
-                            current = this_LiteralExpr_0; 
+                            current = this_LiteralExpression_0; 
                             afterParserOrEnumRuleCall();
                         
 
@@ -2457,7 +2458,7 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
             	    int alt12=2;
             	    int LA12_0 = input.LA(1);
 
-            	    if ( ((LA12_0>=RULE_ID && LA12_0<=RULE_INT)||LA12_0==12||LA12_0==15||(LA12_0>=28 && LA12_0<=33)) ) {
+            	    if ( ((LA12_0>=RULE_ID && LA12_0<=RULE_INT)||LA12_0==12||LA12_0==15||(LA12_0>=29 && LA12_0<=34)) ) {
             	        alt12=1;
             	    }
             	    switch (alt12) {
@@ -2718,26 +2719,26 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleFunctor"
 
 
-    // $ANTLR start "entryRuleLiteralExpr"
-    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1090:1: entryRuleLiteralExpr returns [EObject current=null] : iv_ruleLiteralExpr= ruleLiteralExpr EOF ;
-    public final EObject entryRuleLiteralExpr() throws RecognitionException {
+    // $ANTLR start "entryRuleLiteralExpression"
+    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1090:1: entryRuleLiteralExpression returns [EObject current=null] : iv_ruleLiteralExpression= ruleLiteralExpression EOF ;
+    public final EObject entryRuleLiteralExpression() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleLiteralExpr = null;
+        EObject iv_ruleLiteralExpression = null;
 
 
         try {
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1091:2: (iv_ruleLiteralExpr= ruleLiteralExpr EOF )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1092:2: iv_ruleLiteralExpr= ruleLiteralExpr EOF
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1091:2: (iv_ruleLiteralExpression= ruleLiteralExpression EOF )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1092:2: iv_ruleLiteralExpression= ruleLiteralExpression EOF
             {
-             newCompositeNode(grammarAccess.getLiteralExprRule()); 
-            pushFollow(FOLLOW_ruleLiteralExpr_in_entryRuleLiteralExpr2356);
-            iv_ruleLiteralExpr=ruleLiteralExpr();
+             newCompositeNode(grammarAccess.getLiteralExpressionRule()); 
+            pushFollow(FOLLOW_ruleLiteralExpression_in_entryRuleLiteralExpression2356);
+            iv_ruleLiteralExpression=ruleLiteralExpression();
 
             state._fsp--;
 
-             current =iv_ruleLiteralExpr; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLiteralExpr2366); 
+             current =iv_ruleLiteralExpression; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLiteralExpression2366); 
 
             }
 
@@ -2751,12 +2752,12 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleLiteralExpr"
+    // $ANTLR end "entryRuleLiteralExpression"
 
 
-    // $ANTLR start "ruleLiteralExpr"
-    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1099:1: ruleLiteralExpr returns [EObject current=null] : (this_LiteralNumber_0= ruleLiteralNumber | this_LiteralBoolean_1= ruleLiteralBoolean ) ;
-    public final EObject ruleLiteralExpr() throws RecognitionException {
+    // $ANTLR start "ruleLiteralExpression"
+    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1099:1: ruleLiteralExpression returns [EObject current=null] : (this_LiteralNumber_0= ruleLiteralNumber | this_LiteralBoolean_1= ruleLiteralBoolean ) ;
+    public final EObject ruleLiteralExpression() throws RecognitionException {
         EObject current = null;
 
         EObject this_LiteralNumber_0 = null;
@@ -2777,7 +2778,7 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
             if ( (LA15_0==RULE_INT) ) {
                 alt15=1;
             }
-            else if ( ((LA15_0>=32 && LA15_0<=33)) ) {
+            else if ( ((LA15_0>=33 && LA15_0<=34)) ) {
                 alt15=2;
             }
             else {
@@ -2791,9 +2792,9 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
                     // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1104:5: this_LiteralNumber_0= ruleLiteralNumber
                     {
                      
-                            newCompositeNode(grammarAccess.getLiteralExprAccess().getLiteralNumberParserRuleCall_0()); 
+                            newCompositeNode(grammarAccess.getLiteralExpressionAccess().getLiteralNumberParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleLiteralNumber_in_ruleLiteralExpr2413);
+                    pushFollow(FOLLOW_ruleLiteralNumber_in_ruleLiteralExpression2413);
                     this_LiteralNumber_0=ruleLiteralNumber();
 
                     state._fsp--;
@@ -2809,9 +2810,9 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
                     // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1114:5: this_LiteralBoolean_1= ruleLiteralBoolean
                     {
                      
-                            newCompositeNode(grammarAccess.getLiteralExprAccess().getLiteralBooleanParserRuleCall_1()); 
+                            newCompositeNode(grammarAccess.getLiteralExpressionAccess().getLiteralBooleanParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleLiteralBoolean_in_ruleLiteralExpr2440);
+                    pushFollow(FOLLOW_ruleLiteralBoolean_in_ruleLiteralExpression2440);
                     this_LiteralBoolean_1=ruleLiteralBoolean();
 
                     state._fsp--;
@@ -2840,7 +2841,7 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleLiteralExpr"
+    // $ANTLR end "ruleLiteralExpression"
 
 
     // $ANTLR start "entryRuleLiteralBoolean"
@@ -3433,7 +3434,7 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleComparisonOperator"
-    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1345:1: ruleComparisonOperator returns [Enumerator current=null] : ( (enumLiteral_0= '>' ) | (enumLiteral_1= '>=' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '<=' ) | (enumLiteral_4= '==' ) ) ;
+    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1345:1: ruleComparisonOperator returns [Enumerator current=null] : ( (enumLiteral_0= '>' ) | (enumLiteral_1= '>=' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '<=' ) | (enumLiteral_4= '==' ) | (enumLiteral_5= '!=' ) ) ;
     public final Enumerator ruleComparisonOperator() throws RecognitionException {
         Enumerator current = null;
 
@@ -3442,14 +3443,15 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
         Token enumLiteral_2=null;
         Token enumLiteral_3=null;
         Token enumLiteral_4=null;
+        Token enumLiteral_5=null;
 
          enterRule(); 
         try {
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1347:28: ( ( (enumLiteral_0= '>' ) | (enumLiteral_1= '>=' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '<=' ) | (enumLiteral_4= '==' ) ) )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1348:1: ( (enumLiteral_0= '>' ) | (enumLiteral_1= '>=' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '<=' ) | (enumLiteral_4= '==' ) )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1347:28: ( ( (enumLiteral_0= '>' ) | (enumLiteral_1= '>=' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '<=' ) | (enumLiteral_4= '==' ) | (enumLiteral_5= '!=' ) ) )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1348:1: ( (enumLiteral_0= '>' ) | (enumLiteral_1= '>=' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '<=' ) | (enumLiteral_4= '==' ) | (enumLiteral_5= '!=' ) )
             {
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1348:1: ( (enumLiteral_0= '>' ) | (enumLiteral_1= '>=' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '<=' ) | (enumLiteral_4= '==' ) )
-            int alt18=5;
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1348:1: ( (enumLiteral_0= '>' ) | (enumLiteral_1= '>=' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '<=' ) | (enumLiteral_4= '==' ) | (enumLiteral_5= '!=' ) )
+            int alt18=6;
             switch ( input.LA(1) ) {
             case 23:
                 {
@@ -3474,6 +3476,11 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
             case 27:
                 {
                 alt18=5;
+                }
+                break;
+            case 28:
+                {
+                alt18=6;
                 }
                 break;
             default:
@@ -3569,6 +3576,23 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
+                case 6 :
+                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1378:6: (enumLiteral_5= '!=' )
+                    {
+                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1378:6: (enumLiteral_5= '!=' )
+                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1378:8: enumLiteral_5= '!='
+                    {
+                    enumLiteral_5=(Token)match(input,28,FOLLOW_28_in_ruleComparisonOperator3121); 
+
+                            current = grammarAccess.getComparisonOperatorAccess().getNoteqEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_5, grammarAccess.getComparisonOperatorAccess().getNoteqEnumLiteralDeclaration_5()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
 
             }
 
@@ -3590,7 +3614,7 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUnaryLogicalOperator"
-    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1382:1: ruleUnaryLogicalOperator returns [Enumerator current=null] : (enumLiteral_0= 'not' ) ;
+    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1388:1: ruleUnaryLogicalOperator returns [Enumerator current=null] : (enumLiteral_0= 'not' ) ;
     public final Enumerator ruleUnaryLogicalOperator() throws RecognitionException {
         Enumerator current = null;
 
@@ -3598,13 +3622,13 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1384:28: ( (enumLiteral_0= 'not' ) )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1385:1: (enumLiteral_0= 'not' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1390:28: ( (enumLiteral_0= 'not' ) )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1391:1: (enumLiteral_0= 'not' )
             {
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1385:1: (enumLiteral_0= 'not' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1385:3: enumLiteral_0= 'not'
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1391:1: (enumLiteral_0= 'not' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1391:3: enumLiteral_0= 'not'
             {
-            enumLiteral_0=(Token)match(input,28,FOLLOW_28_in_ruleUnaryLogicalOperator3148); 
+            enumLiteral_0=(Token)match(input,29,FOLLOW_29_in_ruleUnaryLogicalOperator3165); 
 
                     current = grammarAccess.getUnaryLogicalOperatorAccess().getNotEnumLiteralDeclaration().getEnumLiteral().getInstance();
                     newLeafNode(enumLiteral_0, grammarAccess.getUnaryLogicalOperatorAccess().getNotEnumLiteralDeclaration()); 
@@ -3630,7 +3654,7 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBinaryLogicalOperator"
-    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1395:1: ruleBinaryLogicalOperator returns [Enumerator current=null] : ( (enumLiteral_0= 'and' ) | (enumLiteral_1= 'or' ) ) ;
+    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1401:1: ruleBinaryLogicalOperator returns [Enumerator current=null] : ( (enumLiteral_0= 'and' ) | (enumLiteral_1= 'or' ) ) ;
     public final Enumerator ruleBinaryLogicalOperator() throws RecognitionException {
         Enumerator current = null;
 
@@ -3639,17 +3663,17 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1397:28: ( ( (enumLiteral_0= 'and' ) | (enumLiteral_1= 'or' ) ) )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1398:1: ( (enumLiteral_0= 'and' ) | (enumLiteral_1= 'or' ) )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1403:28: ( ( (enumLiteral_0= 'and' ) | (enumLiteral_1= 'or' ) ) )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1404:1: ( (enumLiteral_0= 'and' ) | (enumLiteral_1= 'or' ) )
             {
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1398:1: ( (enumLiteral_0= 'and' ) | (enumLiteral_1= 'or' ) )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1404:1: ( (enumLiteral_0= 'and' ) | (enumLiteral_1= 'or' ) )
             int alt19=2;
             int LA19_0 = input.LA(1);
 
-            if ( (LA19_0==29) ) {
+            if ( (LA19_0==30) ) {
                 alt19=1;
             }
-            else if ( (LA19_0==30) ) {
+            else if ( (LA19_0==31) ) {
                 alt19=2;
             }
             else {
@@ -3660,12 +3684,12 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
             }
             switch (alt19) {
                 case 1 :
-                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1398:2: (enumLiteral_0= 'and' )
+                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1404:2: (enumLiteral_0= 'and' )
                     {
-                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1398:2: (enumLiteral_0= 'and' )
-                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1398:4: enumLiteral_0= 'and'
+                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1404:2: (enumLiteral_0= 'and' )
+                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1404:4: enumLiteral_0= 'and'
                     {
-                    enumLiteral_0=(Token)match(input,29,FOLLOW_29_in_ruleBinaryLogicalOperator3192); 
+                    enumLiteral_0=(Token)match(input,30,FOLLOW_30_in_ruleBinaryLogicalOperator3209); 
 
                             current = grammarAccess.getBinaryLogicalOperatorAccess().getAndEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getBinaryLogicalOperatorAccess().getAndEnumLiteralDeclaration_0()); 
@@ -3677,12 +3701,12 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1404:6: (enumLiteral_1= 'or' )
+                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1410:6: (enumLiteral_1= 'or' )
                     {
-                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1404:6: (enumLiteral_1= 'or' )
-                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1404:8: enumLiteral_1= 'or'
+                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1410:6: (enumLiteral_1= 'or' )
+                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1410:8: enumLiteral_1= 'or'
                     {
-                    enumLiteral_1=(Token)match(input,30,FOLLOW_30_in_ruleBinaryLogicalOperator3209); 
+                    enumLiteral_1=(Token)match(input,31,FOLLOW_31_in_ruleBinaryLogicalOperator3226); 
 
                             current = grammarAccess.getBinaryLogicalOperatorAccess().getOrEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getBinaryLogicalOperatorAccess().getOrEnumLiteralDeclaration_1()); 
@@ -3714,7 +3738,7 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTernaryOperator"
-    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1414:1: ruleTernaryOperator returns [Enumerator current=null] : (enumLiteral_0= 'if' ) ;
+    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1420:1: ruleTernaryOperator returns [Enumerator current=null] : (enumLiteral_0= 'if' ) ;
     public final Enumerator ruleTernaryOperator() throws RecognitionException {
         Enumerator current = null;
 
@@ -3722,16 +3746,16 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1416:28: ( (enumLiteral_0= 'if' ) )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1417:1: (enumLiteral_0= 'if' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1422:28: ( (enumLiteral_0= 'if' ) )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1423:1: (enumLiteral_0= 'if' )
             {
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1417:1: (enumLiteral_0= 'if' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1417:3: enumLiteral_0= 'if'
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1423:1: (enumLiteral_0= 'if' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1423:3: enumLiteral_0= 'if'
             {
-            enumLiteral_0=(Token)match(input,31,FOLLOW_31_in_ruleTernaryOperator3253); 
+            enumLiteral_0=(Token)match(input,32,FOLLOW_32_in_ruleTernaryOperator3270); 
 
-                    current = grammarAccess.getTernaryOperatorAccess().getIfEnumLiteralDeclaration().getEnumLiteral().getInstance();
-                    newLeafNode(enumLiteral_0, grammarAccess.getTernaryOperatorAccess().getIfEnumLiteralDeclaration()); 
+                    current = grammarAccess.getTernaryOperatorAccess().getIfExpressionEnumLiteralDeclaration().getEnumLiteral().getInstance();
+                    newLeafNode(enumLiteral_0, grammarAccess.getTernaryOperatorAccess().getIfExpressionEnumLiteralDeclaration()); 
                 
 
             }
@@ -3754,7 +3778,7 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBooleanValue"
-    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1427:1: ruleBooleanValue returns [Enumerator current=null] : ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) ) ;
+    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1433:1: ruleBooleanValue returns [Enumerator current=null] : ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) ) ;
     public final Enumerator ruleBooleanValue() throws RecognitionException {
         Enumerator current = null;
 
@@ -3763,17 +3787,17 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1429:28: ( ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) ) )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1430:1: ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1435:28: ( ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) ) )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1436:1: ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) )
             {
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1430:1: ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1436:1: ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) )
             int alt20=2;
             int LA20_0 = input.LA(1);
 
-            if ( (LA20_0==32) ) {
+            if ( (LA20_0==33) ) {
                 alt20=1;
             }
-            else if ( (LA20_0==33) ) {
+            else if ( (LA20_0==34) ) {
                 alt20=2;
             }
             else {
@@ -3784,12 +3808,12 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
             }
             switch (alt20) {
                 case 1 :
-                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1430:2: (enumLiteral_0= 'true' )
+                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1436:2: (enumLiteral_0= 'true' )
                     {
-                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1430:2: (enumLiteral_0= 'true' )
-                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1430:4: enumLiteral_0= 'true'
+                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1436:2: (enumLiteral_0= 'true' )
+                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1436:4: enumLiteral_0= 'true'
                     {
-                    enumLiteral_0=(Token)match(input,32,FOLLOW_32_in_ruleBooleanValue3297); 
+                    enumLiteral_0=(Token)match(input,33,FOLLOW_33_in_ruleBooleanValue3314); 
 
                             current = grammarAccess.getBooleanValueAccess().getTrueEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getBooleanValueAccess().getTrueEnumLiteralDeclaration_0()); 
@@ -3801,12 +3825,12 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1436:6: (enumLiteral_1= 'false' )
+                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1442:6: (enumLiteral_1= 'false' )
                     {
-                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1436:6: (enumLiteral_1= 'false' )
-                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1436:8: enumLiteral_1= 'false'
+                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1442:6: (enumLiteral_1= 'false' )
+                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1442:8: enumLiteral_1= 'false'
                     {
-                    enumLiteral_1=(Token)match(input,33,FOLLOW_33_in_ruleBooleanValue3314); 
+                    enumLiteral_1=(Token)match(input,34,FOLLOW_34_in_ruleBooleanValue3331); 
 
                             current = grammarAccess.getBooleanValueAccess().getFalseEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getBooleanValueAccess().getFalseEnumLiteralDeclaration_1()); 
@@ -3847,9 +3871,9 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleProgram_in_entryRuleProgram165 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleProgram175 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExpression_in_ruleProgram221 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_ruleProgram233 = new BitSet(new long[]{0x00000003F0009032L});
+    public static final BitSet FOLLOW_11_in_ruleProgram233 = new BitSet(new long[]{0x00000007E0009032L});
     public static final BitSet FOLLOW_ruleExpression_in_ruleProgram255 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_ruleProgram267 = new BitSet(new long[]{0x00000003F0009032L});
+    public static final BitSet FOLLOW_11_in_ruleProgram267 = new BitSet(new long[]{0x00000007E0009032L});
     public static final BitSet FOLLOW_ruleExpression_in_entryRuleExpression305 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExpression315 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleFunctionDeclaration_in_ruleExpression362 = new BitSet(new long[]{0x0000000000000002L});
@@ -3861,31 +3885,31 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleTernaryExpression_in_entryRuleTernaryExpression532 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleTernaryExpression542 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleTernaryOperator_in_ruleTernaryExpression588 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleTernaryExpression600 = new BitSet(new long[]{0x00000003F0009030L});
+    public static final BitSet FOLLOW_12_in_ruleTernaryExpression600 = new BitSet(new long[]{0x00000007E0009030L});
     public static final BitSet FOLLOW_ruleExpression_in_ruleTernaryExpression621 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_ruleTernaryExpression633 = new BitSet(new long[]{0x00000003F0009030L});
+    public static final BitSet FOLLOW_13_in_ruleTernaryExpression633 = new BitSet(new long[]{0x00000007E0009030L});
     public static final BitSet FOLLOW_ruleExpression_in_ruleTernaryExpression654 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_ruleTernaryExpression666 = new BitSet(new long[]{0x00000003F0009030L});
+    public static final BitSet FOLLOW_13_in_ruleTernaryExpression666 = new BitSet(new long[]{0x00000007E0009030L});
     public static final BitSet FOLLOW_ruleExpression_in_ruleTernaryExpression687 = new BitSet(new long[]{0x0000000000004000L});
     public static final BitSet FOLLOW_14_in_ruleTernaryExpression699 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLogicalBinaryExpression_in_entryRuleLogicalBinaryExpression735 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleLogicalBinaryExpression745 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleBinaryLogicalOperator_in_ruleLogicalBinaryExpression791 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleLogicalBinaryExpression803 = new BitSet(new long[]{0x00000003F0009030L});
+    public static final BitSet FOLLOW_12_in_ruleLogicalBinaryExpression803 = new BitSet(new long[]{0x00000007E0009030L});
     public static final BitSet FOLLOW_ruleExpression_in_ruleLogicalBinaryExpression824 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_ruleLogicalBinaryExpression836 = new BitSet(new long[]{0x00000003F0009030L});
+    public static final BitSet FOLLOW_13_in_ruleLogicalBinaryExpression836 = new BitSet(new long[]{0x00000007E0009030L});
     public static final BitSet FOLLOW_ruleExpression_in_ruleLogicalBinaryExpression857 = new BitSet(new long[]{0x0000000000004000L});
     public static final BitSet FOLLOW_14_in_ruleLogicalBinaryExpression869 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLogicalUnaryExpression_in_entryRuleLogicalUnaryExpression905 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleLogicalUnaryExpression915 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleUnaryLogicalOperator_in_ruleLogicalUnaryExpression961 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleLogicalUnaryExpression973 = new BitSet(new long[]{0x00000003F0009030L});
+    public static final BitSet FOLLOW_12_in_ruleLogicalUnaryExpression973 = new BitSet(new long[]{0x00000007E0009030L});
     public static final BitSet FOLLOW_ruleExpression_in_ruleLogicalUnaryExpression994 = new BitSet(new long[]{0x0000000000004000L});
     public static final BitSet FOLLOW_14_in_ruleLogicalUnaryExpression1006 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleComparisonExpression_in_entryRuleComparisonExpression1042 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleComparisonExpression1052 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumericExpression_in_ruleComparisonExpression1099 = new BitSet(new long[]{0x000000000F800002L});
-    public static final BitSet FOLLOW_ruleComparisonOperator_in_ruleComparisonExpression1129 = new BitSet(new long[]{0x00000003F0009030L});
+    public static final BitSet FOLLOW_ruleNumericExpression_in_ruleComparisonExpression1099 = new BitSet(new long[]{0x000000001F800002L});
+    public static final BitSet FOLLOW_ruleComparisonOperator_in_ruleComparisonExpression1129 = new BitSet(new long[]{0x00000007E0009030L});
     public static final BitSet FOLLOW_ruleNumericExpression_in_ruleComparisonExpression1150 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleFunctionDeclaration_in_entryRuleFunctionDeclaration1188 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleFunctionDeclaration1198 = new BitSet(new long[]{0x0000000000000002L});
@@ -3894,14 +3918,14 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_RULE_ID_in_ruleFunctionDeclaration1265 = new BitSet(new long[]{0x0000000000006000L});
     public static final BitSet FOLLOW_13_in_ruleFunctionDeclaration1283 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleFunctionDeclaration1300 = new BitSet(new long[]{0x0000000000006000L});
-    public static final BitSet FOLLOW_14_in_ruleFunctionDeclaration1321 = new BitSet(new long[]{0x00000003F0019030L});
+    public static final BitSet FOLLOW_14_in_ruleFunctionDeclaration1321 = new BitSet(new long[]{0x00000007E0019030L});
     public static final BitSet FOLLOW_ruleBody_in_ruleFunctionDeclaration1342 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleBody_in_entryRuleBody1378 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleBody1388 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExpression_in_ruleBody1434 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_ruleBody1462 = new BitSet(new long[]{0x00000003F0029030L});
+    public static final BitSet FOLLOW_16_in_ruleBody1462 = new BitSet(new long[]{0x00000007E0029030L});
     public static final BitSet FOLLOW_ruleExpression_in_ruleBody1484 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_ruleBody1496 = new BitSet(new long[]{0x00000003F0029030L});
+    public static final BitSet FOLLOW_11_in_ruleBody1496 = new BitSet(new long[]{0x00000007E0029030L});
     public static final BitSet FOLLOW_17_in_ruleBody1510 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSymbolReference_in_entryRuleSymbolReference1547 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSymbolReference1557 = new BitSet(new long[]{0x0000000000000002L});
@@ -3909,33 +3933,33 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleNumericExpression_in_entryRuleNumericExpression1638 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleNumericExpression1648 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleFactor_in_ruleNumericExpression1695 = new BitSet(new long[]{0x0000000000180002L});
-    public static final BitSet FOLLOW_ruleAdditionOperator_in_ruleNumericExpression1725 = new BitSet(new long[]{0x00000003F0009030L});
+    public static final BitSet FOLLOW_ruleAdditionOperator_in_ruleNumericExpression1725 = new BitSet(new long[]{0x00000007E0009030L});
     public static final BitSet FOLLOW_ruleFactor_in_ruleNumericExpression1746 = new BitSet(new long[]{0x0000000000180002L});
     public static final BitSet FOLLOW_ruleFactor_in_entryRuleFactor1784 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleFactor1794 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleTerm_in_ruleFactor1841 = new BitSet(new long[]{0x0000000000600002L});
-    public static final BitSet FOLLOW_ruleFactorOperator_in_ruleFactor1871 = new BitSet(new long[]{0x00000003F0009030L});
+    public static final BitSet FOLLOW_ruleFactorOperator_in_ruleFactor1871 = new BitSet(new long[]{0x00000007E0009030L});
     public static final BitSet FOLLOW_ruleTerm_in_ruleFactor1892 = new BitSet(new long[]{0x0000000000600002L});
     public static final BitSet FOLLOW_ruleTerm_in_entryRuleTerm1930 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleTerm1940 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLiteralExpr_in_ruleTerm1987 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleTerm1987 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleApply_in_ruleTerm2014 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleApply_in_entryRuleApply2049 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleApply2059 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleFunctor_in_ruleApply2106 = new BitSet(new long[]{0x0000000000001002L});
-    public static final BitSet FOLLOW_12_in_ruleApply2127 = new BitSet(new long[]{0x00000003F000D030L});
+    public static final BitSet FOLLOW_12_in_ruleApply2127 = new BitSet(new long[]{0x00000007E000D030L});
     public static final BitSet FOLLOW_ruleExpression_in_ruleApply2149 = new BitSet(new long[]{0x0000000000006000L});
-    public static final BitSet FOLLOW_13_in_ruleApply2162 = new BitSet(new long[]{0x00000003F0009030L});
+    public static final BitSet FOLLOW_13_in_ruleApply2162 = new BitSet(new long[]{0x00000007E0009030L});
     public static final BitSet FOLLOW_ruleExpression_in_ruleApply2183 = new BitSet(new long[]{0x0000000000006000L});
     public static final BitSet FOLLOW_14_in_ruleApply2199 = new BitSet(new long[]{0x0000000000001002L});
     public static final BitSet FOLLOW_ruleFunctor_in_entryRuleFunctor2237 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleFunctor2247 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSymbolReference_in_ruleFunctor2294 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleParenthesisExpression_in_ruleFunctor2321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLiteralExpr_in_entryRuleLiteralExpr2356 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLiteralExpr2366 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLiteralNumber_in_ruleLiteralExpr2413 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLiteralBoolean_in_ruleLiteralExpr2440 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLiteralExpression_in_entryRuleLiteralExpression2356 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLiteralExpression2366 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLiteralNumber_in_ruleLiteralExpression2413 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLiteralBoolean_in_ruleLiteralExpression2440 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLiteralBoolean_in_entryRuleLiteralBoolean2475 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleLiteralBoolean2485 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleBooleanValue_in_ruleLiteralBoolean2530 = new BitSet(new long[]{0x0000000000000002L});
@@ -3945,11 +3969,11 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleVariableAssignment_in_entryRuleVariableAssignment2656 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleVariableAssignment2666 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleVariableAssignment2708 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleVariableAssignment2725 = new BitSet(new long[]{0x00000003F0009030L});
+    public static final BitSet FOLLOW_18_in_ruleVariableAssignment2725 = new BitSet(new long[]{0x00000007E0009030L});
     public static final BitSet FOLLOW_ruleExpression_in_ruleVariableAssignment2746 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleParenthesisExpression_in_entryRuleParenthesisExpression2782 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleParenthesisExpression2792 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_ruleParenthesisExpression2829 = new BitSet(new long[]{0x00000003F0009030L});
+    public static final BitSet FOLLOW_12_in_ruleParenthesisExpression2829 = new BitSet(new long[]{0x00000007E0009030L});
     public static final BitSet FOLLOW_ruleExpression_in_ruleParenthesisExpression2851 = new BitSet(new long[]{0x0000000000004000L});
     public static final BitSet FOLLOW_14_in_ruleParenthesisExpression2862 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_19_in_ruleAdditionOperator2912 = new BitSet(new long[]{0x0000000000000002L});
@@ -3961,11 +3985,12 @@ public class InternalMiniScriptParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_25_in_ruleComparisonOperator3070 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_26_in_ruleComparisonOperator3087 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_27_in_ruleComparisonOperator3104 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_ruleUnaryLogicalOperator3148 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleBinaryLogicalOperator3192 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_ruleComparisonOperator3121 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_ruleUnaryLogicalOperator3165 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_30_in_ruleBinaryLogicalOperator3209 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_ruleTernaryOperator3253 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_ruleBooleanValue3297 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_ruleBinaryLogicalOperator3226 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_ruleTernaryOperator3270 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_33_in_ruleBooleanValue3314 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_ruleBooleanValue3331 = new BitSet(new long[]{0x0000000000000002L});
 
 }

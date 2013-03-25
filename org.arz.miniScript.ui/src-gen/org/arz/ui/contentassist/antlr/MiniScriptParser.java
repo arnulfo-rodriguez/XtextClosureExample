@@ -41,7 +41,7 @@ public class MiniScriptParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBodyAccess().getAlternatives(), "rule__Body__Alternatives");
 					put(grammarAccess.getTermAccess().getAlternatives(), "rule__Term__Alternatives");
 					put(grammarAccess.getFunctorAccess().getAlternatives(), "rule__Functor__Alternatives");
-					put(grammarAccess.getLiteralExprAccess().getAlternatives(), "rule__LiteralExpr__Alternatives");
+					put(grammarAccess.getLiteralExpressionAccess().getAlternatives(), "rule__LiteralExpression__Alternatives");
 					put(grammarAccess.getAdditionOperatorAccess().getAlternatives(), "rule__AdditionOperator__Alternatives");
 					put(grammarAccess.getFactorOperatorAccess().getAlternatives(), "rule__FactorOperator__Alternatives");
 					put(grammarAccess.getComparisonOperatorAccess().getAlternatives(), "rule__ComparisonOperator__Alternatives");
@@ -72,9 +72,9 @@ public class MiniScriptParser extends AbstractContentAssistParser {
 					put(grammarAccess.getProgramAccess().getExpressionsAssignment_0(), "rule__Program__ExpressionsAssignment_0");
 					put(grammarAccess.getProgramAccess().getExpressionsAssignment_2_0(), "rule__Program__ExpressionsAssignment_2_0");
 					put(grammarAccess.getTernaryExpressionAccess().getOperatorAssignment_0(), "rule__TernaryExpression__OperatorAssignment_0");
-					put(grammarAccess.getTernaryExpressionAccess().getConditionAssignment_2(), "rule__TernaryExpression__ConditionAssignment_2");
-					put(grammarAccess.getTernaryExpressionAccess().getTrueExprAssignment_4(), "rule__TernaryExpression__TrueExprAssignment_4");
-					put(grammarAccess.getTernaryExpressionAccess().getFalseExprAssignment_6(), "rule__TernaryExpression__FalseExprAssignment_6");
+					put(grammarAccess.getTernaryExpressionAccess().getFirstExpressionAssignment_2(), "rule__TernaryExpression__FirstExpressionAssignment_2");
+					put(grammarAccess.getTernaryExpressionAccess().getSecondExpressionAssignment_4(), "rule__TernaryExpression__SecondExpressionAssignment_4");
+					put(grammarAccess.getTernaryExpressionAccess().getThirdExpressionAssignment_6(), "rule__TernaryExpression__ThirdExpressionAssignment_6");
 					put(grammarAccess.getLogicalBinaryExpressionAccess().getOperatorAssignment_0(), "rule__LogicalBinaryExpression__OperatorAssignment_0");
 					put(grammarAccess.getLogicalBinaryExpressionAccess().getLeftExprAssignment_2(), "rule__LogicalBinaryExpression__LeftExprAssignment_2");
 					put(grammarAccess.getLogicalBinaryExpressionAccess().getRightExprAssignment_4(), "rule__LogicalBinaryExpression__RightExprAssignment_4");

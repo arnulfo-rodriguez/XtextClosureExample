@@ -21,6 +21,7 @@
       <genEnumLiterals ecoreEnumLiteral="MiniScript.ecore#//ComparisonOperator/lt"/>
       <genEnumLiterals ecoreEnumLiteral="MiniScript.ecore#//ComparisonOperator/lte"/>
       <genEnumLiterals ecoreEnumLiteral="MiniScript.ecore#//ComparisonOperator/eq"/>
+      <genEnumLiterals ecoreEnumLiteral="MiniScript.ecore#//ComparisonOperator/noteq"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="MiniScript.ecore#//UnaryLogicalOperator">
       <genEnumLiterals ecoreEnumLiteral="MiniScript.ecore#//UnaryLogicalOperator/not"/>
@@ -30,7 +31,7 @@
       <genEnumLiterals ecoreEnumLiteral="MiniScript.ecore#//BinaryLogicalOperator/or"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="MiniScript.ecore#//TernaryOperator">
-      <genEnumLiterals ecoreEnumLiteral="MiniScript.ecore#//TernaryOperator/if"/>
+      <genEnumLiterals ecoreEnumLiteral="MiniScript.ecore#//TernaryOperator/ifExpression"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="MiniScript.ecore#//BooleanValue">
       <genEnumLiterals ecoreEnumLiteral="MiniScript.ecore#//BooleanValue/true"/>
@@ -43,9 +44,9 @@
     <genClasses ecoreClass="MiniScript.ecore#//Expression"/>
     <genClasses ecoreClass="MiniScript.ecore#//TernaryExpression">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MiniScript.ecore#//TernaryExpression/operator"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//TernaryExpression/condition"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//TernaryExpression/trueExpr"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//TernaryExpression/falseExpr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//TernaryExpression/firstExpression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//TernaryExpression/secondExpression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//TernaryExpression/thirdExpression"/>
     </genClasses>
     <genClasses ecoreClass="MiniScript.ecore#//LogicalBinaryExpression">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MiniScript.ecore#//LogicalBinaryExpression/operator"/>

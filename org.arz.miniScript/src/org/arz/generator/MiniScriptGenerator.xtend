@@ -6,10 +6,202 @@ package org.arz.generator
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess
+import org.arz.miniScript.FunctionDeclaration
+import org.arz.miniScript.VariableAssignment
+import org.arz.miniScript.LogicalBinaryExpression
+import org.arz.miniScript.LogicalUnaryExpression
+import org.arz.miniScript.TernaryExpression
+import org.arz.miniScript.ComparisonExpression
+import org.arz.miniScript.Expression
+import org.arz.miniScript.NumericExpression
+import org.arz.miniScript.Factor
+import org.arz.miniScript.LiteralNumber
+import org.arz.miniScript.LiteralBoolean
+import org.arz.miniScript.Apply
+import org.arz.miniScript.SymbolReference
+import org.arz.miniScript.Program
+import org.eclipse.emf.common.util.EList
+import java.util.ArrayList
+import java.util.LinkedList
+import org.arz.miniScript.BinaryLogicalOperator
+import org.arz.miniScript.UnaryLogicalOperator
+import org.arz.miniScript.TernaryOperator
+import org.arz.miniScript.ComparisonOperator
 
 class MiniScriptGenerator implements IGenerator {
 	
+	private String numericType="Double"
+	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-		//TODO implement me
+		var name = resource.URI.segments.last.replace("." + resource.URI.fileExtension,"")
+		fsa.generateFile(name + ".java",doCompileProgram(resource.allContents.filter(typeof(Program)).head,name))
 	}
+	
+	
+    def String doCompileProgram(Program program,String name) { 
+    	'''class «name»
+    	{
+    		public Object eval()
+    		{
+    			org.arz.runtime.Context context = new org.arz.runtime.Context();
+    			«doCompileStatementSequence(program.expressions)»
+    		}
+    	}'''
+    }
+    
+	def String doCompileStatementSequence(EList<Expression> l) { 
+		var rerversedList =  new ArrayList(l.map[exp | doCompileExpression(exp)]).reverse
+		var newList = new LinkedList<String>();
+		newList.add(("return " + rerversedList.head));
+		newList.addAll(rerversedList.tail);
+		return newList.reverse.map[str | str + ";"].join("\n")
+	}
+
+
+	
+def String doCompileExpression(Expression e)
+{
+	switch(e)
+	{
+ 		FunctionDeclaration  : return doCompileFunctionDeclaration(e)
+ 		VariableAssignment : return doCompileVariableAssignment(e)
+	    LogicalBinaryExpression : return doCompileLogicalBinaryExpression(e)
+		LogicalUnaryExpression : return doCompileLogicalUnaryExpression (e)
+		TernaryExpression : return doCompileTernaryExpression (e)
+		ComparisonExpression: return doCompileComparisonExpression(e)
+		NumericExpression: return doCompileNumericExpression(e)
+		LiteralNumber: return doCompileLiteralNumber(e)
+		LiteralBoolean: return doCompileLiteralBoolean(e)
+		Apply: return doCompileApply(e)
+		SymbolReference: return doCompileSymbolReference(e)
+		Factor: return doCompileFactor(e)
+		default: ""
+    }
+}
+
+def String doCompileSymbolReference(SymbolReference symbolReference){
+	'''context.get("«symbolReference.id»")'''
+}
+
+def String doCompileApply(Apply apply){
+	'''«cast("org.arz.runtime.Closure",doCompileExpression(apply.functor))».apply(«apply.arguments.map[arg | doCompileExpression(arg)].join(",")»)'''
+}
+
+def String doCompileLiteralNumber(LiteralNumber literalNumber){
+	'''new «numericType»(«literalNumber.value.toString()»)'''
+}
+
+def String doCompileLiteralBoolean(LiteralBoolean literalBoolean){
+	'''new Boolean(«literalBoolean.value.literal»)'''
+}
+
+def String doCompileFactor(Factor factor){
+		'''«cast(numericType,doCompileExpression(factor.leftTerm))» «factor.operator.literal» «cast(numericType,doCompileExpression(factor.rightTerm))»'''
+}
+	
+def String doCompileNumericExpression(NumericExpression numericExpression){
+	'''«cast(numericType,doCompileExpression(numericExpression.leftFactor))» «numericExpression.operator.literal» «cast(numericType,doCompileExpression(numericExpression.rightFactor))»'''
+}
+	
+	
+def String doCompileFunctionDeclaration  (FunctionDeclaration   functionDeclaration  ){
+	'''new org.arz.runtime.Closure(context.getCurrentEnvironment())
+	{
+			«doCompileExecuteBody(functionDeclaration)»
+	}'''
+}
+
+def doCompileExecuteBody(FunctionDeclaration functionDeclaration) { 
+	'''@Override protected Object executeBody(Object[] arguments) {
+		«doCompileSetupArguments(functionDeclaration.parameters)»
+		«doCompileStatementSequence(functionDeclaration.body.expressions)»
+	}
+	'''
+}
+
+
+def String doCompileSetupArguments(EList<String> list) {
+	if (list.size > 0)
+	{
+	(0..list.size()-1).map[i | '''context.set("«list.get(i)»",arguments[«i»]);'''].join("\n")
+    } else {
+    	""
+    }
+} 
+
+
+def String doCompileVariableAssignment (VariableAssignment  variableAssignment ){
+	'''context.set("«variableAssignment.id»",«doCompileExpression(variableAssignment.expression)»)'''
+}
+
+def String doCompileLogicalBinaryExpression (LogicalBinaryExpression  logicalBinaryExpression ){
+	'''«cast("Boolean",doCompileExpression(logicalBinaryExpression.leftExpr))» «getJavaLogicalOperator(logicalBinaryExpression.operator)» «cast("Boolean",doCompileExpression(logicalBinaryExpression.rightExpr))»'''
+}
+
+
+def String doCompileLogicalUnaryExpression (LogicalUnaryExpression  logicalUnaryExpression ){
+	'''(!«cast("Boolean",doCompileExpression(logicalUnaryExpression.expression))»)'''
+}
+
+def String doCompileTernaryExpression (TernaryExpression  ternaryExpression ){
+	switch(ternaryExpression.operator)
+	{
+		case TernaryOperator::IF_EXPRESSION : compileIf(ternaryExpression)
+	}
+}
+	
+	def String compileIf(TernaryExpression expression) { 
+		'''«cast("Boolean",doCompileExpression(expression.firstExpression))» ? 
+		(«doCompileExpression(expression.secondExpression)»):
+		(«doCompileExpression(expression.thirdExpression)»)'''
+	}
+
+
+def String doCompileComparisonExpression(ComparisonExpression comparisonExpression){
+	if (isEqualityExpression(comparisonExpression))
+	{
+		doCompileEquality(comparisonExpression)
+	}else{
+		doCompileInequality(comparisonExpression)
+	}
+}
+	def String doCompileInequality(ComparisonExpression expression) { 
+		'''«cast(numericType,doCompileExpression(expression.leftExpr))» «expression.operator.literal» «cast(numericType,doCompileExpression(expression.rightExpr))»'''
+	}
+
+	def String doCompileEquality(ComparisonExpression expression) { 
+		var result = '''(«doCompileExpression(expression.leftExpr)»).equals(«doCompileExpression(expression.rightExpr)»)'''
+		if (expression.operator == ComparisonOperator::NOTEQ)
+		{
+			result = '''(!«result»)'''
+		}
+		return result.toString()
+	}
+
+
+def boolean isEqualityExpression(ComparisonExpression expression) { 
+	return expression.operator == ComparisonOperator::EQ || expression.operator == ComparisonOperator::NOTEQ
+}
+
+
+def String cast(String type,String expression) {
+	'''((«type»)(«expression»))'''
+}
+
+	def getJavaLogicalOperator(BinaryLogicalOperator operator) { 
+		switch operator
+		{
+			case BinaryLogicalOperator::AND: "&&"
+			case BinaryLogicalOperator::OR: "||"
+		}
+	}
+	
+	def getJavaLogicalOperator(UnaryLogicalOperator operator) { 
+		switch operator
+		{
+			case UnaryLogicalOperator::NOT: "!"
+		}
+		
+	}
+
 }

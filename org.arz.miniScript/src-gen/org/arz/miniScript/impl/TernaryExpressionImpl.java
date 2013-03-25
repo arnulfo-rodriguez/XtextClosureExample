@@ -23,9 +23,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.arz.miniScript.impl.TernaryExpressionImpl#getOperator <em>Operator</em>}</li>
- *   <li>{@link org.arz.miniScript.impl.TernaryExpressionImpl#getCondition <em>Condition</em>}</li>
- *   <li>{@link org.arz.miniScript.impl.TernaryExpressionImpl#getTrueExpr <em>True Expr</em>}</li>
- *   <li>{@link org.arz.miniScript.impl.TernaryExpressionImpl#getFalseExpr <em>False Expr</em>}</li>
+ *   <li>{@link org.arz.miniScript.impl.TernaryExpressionImpl#getFirstExpression <em>First Expression</em>}</li>
+ *   <li>{@link org.arz.miniScript.impl.TernaryExpressionImpl#getSecondExpression <em>Second Expression</em>}</li>
+ *   <li>{@link org.arz.miniScript.impl.TernaryExpressionImpl#getThirdExpression <em>Third Expression</em>}</li>
  * </ul>
  * </p>
  *
@@ -41,7 +41,7 @@ public class TernaryExpressionImpl extends ExpressionImpl implements TernaryExpr
    * @generated
    * @ordered
    */
-  protected static final TernaryOperator OPERATOR_EDEFAULT = TernaryOperator.IF;
+  protected static final TernaryOperator OPERATOR_EDEFAULT = TernaryOperator.IF_EXPRESSION;
 
   /**
    * The cached value of the '{@link #getOperator() <em>Operator</em>}' attribute.
@@ -54,34 +54,34 @@ public class TernaryExpressionImpl extends ExpressionImpl implements TernaryExpr
   protected TernaryOperator operator = OPERATOR_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference.
+   * The cached value of the '{@link #getFirstExpression() <em>First Expression</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCondition()
+   * @see #getFirstExpression()
    * @generated
    * @ordered
    */
-  protected Expression condition;
+  protected Expression firstExpression;
 
   /**
-   * The cached value of the '{@link #getTrueExpr() <em>True Expr</em>}' containment reference.
+   * The cached value of the '{@link #getSecondExpression() <em>Second Expression</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTrueExpr()
+   * @see #getSecondExpression()
    * @generated
    * @ordered
    */
-  protected Expression trueExpr;
+  protected Expression secondExpression;
 
   /**
-   * The cached value of the '{@link #getFalseExpr() <em>False Expr</em>}' containment reference.
+   * The cached value of the '{@link #getThirdExpression() <em>Third Expression</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFalseExpr()
+   * @see #getThirdExpression()
    * @generated
    * @ordered
    */
-  protected Expression falseExpr;
+  protected Expression thirdExpression;
 
   /**
    * <!-- begin-user-doc -->
@@ -132,9 +132,9 @@ public class TernaryExpressionImpl extends ExpressionImpl implements TernaryExpr
    * <!-- end-user-doc -->
    * @generated
    */
-  public Expression getCondition()
+  public Expression getFirstExpression()
   {
-    return condition;
+    return firstExpression;
   }
 
   /**
@@ -142,13 +142,13 @@ public class TernaryExpressionImpl extends ExpressionImpl implements TernaryExpr
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetCondition(Expression newCondition, NotificationChain msgs)
+  public NotificationChain basicSetFirstExpression(Expression newFirstExpression, NotificationChain msgs)
   {
-    Expression oldCondition = condition;
-    condition = newCondition;
+    Expression oldFirstExpression = firstExpression;
+    firstExpression = newFirstExpression;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.TERNARY_EXPRESSION__CONDITION, oldCondition, newCondition);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.TERNARY_EXPRESSION__FIRST_EXPRESSION, oldFirstExpression, newFirstExpression);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -159,20 +159,20 @@ public class TernaryExpressionImpl extends ExpressionImpl implements TernaryExpr
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setCondition(Expression newCondition)
+  public void setFirstExpression(Expression newFirstExpression)
   {
-    if (newCondition != condition)
+    if (newFirstExpression != firstExpression)
     {
       NotificationChain msgs = null;
-      if (condition != null)
-        msgs = ((InternalEObject)condition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.TERNARY_EXPRESSION__CONDITION, null, msgs);
-      if (newCondition != null)
-        msgs = ((InternalEObject)newCondition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.TERNARY_EXPRESSION__CONDITION, null, msgs);
-      msgs = basicSetCondition(newCondition, msgs);
+      if (firstExpression != null)
+        msgs = ((InternalEObject)firstExpression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.TERNARY_EXPRESSION__FIRST_EXPRESSION, null, msgs);
+      if (newFirstExpression != null)
+        msgs = ((InternalEObject)newFirstExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.TERNARY_EXPRESSION__FIRST_EXPRESSION, null, msgs);
+      msgs = basicSetFirstExpression(newFirstExpression, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.TERNARY_EXPRESSION__CONDITION, newCondition, newCondition));
+      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.TERNARY_EXPRESSION__FIRST_EXPRESSION, newFirstExpression, newFirstExpression));
   }
 
   /**
@@ -180,9 +180,9 @@ public class TernaryExpressionImpl extends ExpressionImpl implements TernaryExpr
    * <!-- end-user-doc -->
    * @generated
    */
-  public Expression getTrueExpr()
+  public Expression getSecondExpression()
   {
-    return trueExpr;
+    return secondExpression;
   }
 
   /**
@@ -190,13 +190,13 @@ public class TernaryExpressionImpl extends ExpressionImpl implements TernaryExpr
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetTrueExpr(Expression newTrueExpr, NotificationChain msgs)
+  public NotificationChain basicSetSecondExpression(Expression newSecondExpression, NotificationChain msgs)
   {
-    Expression oldTrueExpr = trueExpr;
-    trueExpr = newTrueExpr;
+    Expression oldSecondExpression = secondExpression;
+    secondExpression = newSecondExpression;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.TERNARY_EXPRESSION__TRUE_EXPR, oldTrueExpr, newTrueExpr);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.TERNARY_EXPRESSION__SECOND_EXPRESSION, oldSecondExpression, newSecondExpression);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -207,20 +207,20 @@ public class TernaryExpressionImpl extends ExpressionImpl implements TernaryExpr
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setTrueExpr(Expression newTrueExpr)
+  public void setSecondExpression(Expression newSecondExpression)
   {
-    if (newTrueExpr != trueExpr)
+    if (newSecondExpression != secondExpression)
     {
       NotificationChain msgs = null;
-      if (trueExpr != null)
-        msgs = ((InternalEObject)trueExpr).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.TERNARY_EXPRESSION__TRUE_EXPR, null, msgs);
-      if (newTrueExpr != null)
-        msgs = ((InternalEObject)newTrueExpr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.TERNARY_EXPRESSION__TRUE_EXPR, null, msgs);
-      msgs = basicSetTrueExpr(newTrueExpr, msgs);
+      if (secondExpression != null)
+        msgs = ((InternalEObject)secondExpression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.TERNARY_EXPRESSION__SECOND_EXPRESSION, null, msgs);
+      if (newSecondExpression != null)
+        msgs = ((InternalEObject)newSecondExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.TERNARY_EXPRESSION__SECOND_EXPRESSION, null, msgs);
+      msgs = basicSetSecondExpression(newSecondExpression, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.TERNARY_EXPRESSION__TRUE_EXPR, newTrueExpr, newTrueExpr));
+      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.TERNARY_EXPRESSION__SECOND_EXPRESSION, newSecondExpression, newSecondExpression));
   }
 
   /**
@@ -228,9 +228,9 @@ public class TernaryExpressionImpl extends ExpressionImpl implements TernaryExpr
    * <!-- end-user-doc -->
    * @generated
    */
-  public Expression getFalseExpr()
+  public Expression getThirdExpression()
   {
-    return falseExpr;
+    return thirdExpression;
   }
 
   /**
@@ -238,13 +238,13 @@ public class TernaryExpressionImpl extends ExpressionImpl implements TernaryExpr
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetFalseExpr(Expression newFalseExpr, NotificationChain msgs)
+  public NotificationChain basicSetThirdExpression(Expression newThirdExpression, NotificationChain msgs)
   {
-    Expression oldFalseExpr = falseExpr;
-    falseExpr = newFalseExpr;
+    Expression oldThirdExpression = thirdExpression;
+    thirdExpression = newThirdExpression;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.TERNARY_EXPRESSION__FALSE_EXPR, oldFalseExpr, newFalseExpr);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MiniScriptPackage.TERNARY_EXPRESSION__THIRD_EXPRESSION, oldThirdExpression, newThirdExpression);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -255,20 +255,20 @@ public class TernaryExpressionImpl extends ExpressionImpl implements TernaryExpr
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setFalseExpr(Expression newFalseExpr)
+  public void setThirdExpression(Expression newThirdExpression)
   {
-    if (newFalseExpr != falseExpr)
+    if (newThirdExpression != thirdExpression)
     {
       NotificationChain msgs = null;
-      if (falseExpr != null)
-        msgs = ((InternalEObject)falseExpr).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.TERNARY_EXPRESSION__FALSE_EXPR, null, msgs);
-      if (newFalseExpr != null)
-        msgs = ((InternalEObject)newFalseExpr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.TERNARY_EXPRESSION__FALSE_EXPR, null, msgs);
-      msgs = basicSetFalseExpr(newFalseExpr, msgs);
+      if (thirdExpression != null)
+        msgs = ((InternalEObject)thirdExpression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.TERNARY_EXPRESSION__THIRD_EXPRESSION, null, msgs);
+      if (newThirdExpression != null)
+        msgs = ((InternalEObject)newThirdExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MiniScriptPackage.TERNARY_EXPRESSION__THIRD_EXPRESSION, null, msgs);
+      msgs = basicSetThirdExpression(newThirdExpression, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.TERNARY_EXPRESSION__FALSE_EXPR, newFalseExpr, newFalseExpr));
+      eNotify(new ENotificationImpl(this, Notification.SET, MiniScriptPackage.TERNARY_EXPRESSION__THIRD_EXPRESSION, newThirdExpression, newThirdExpression));
   }
 
   /**
@@ -281,12 +281,12 @@ public class TernaryExpressionImpl extends ExpressionImpl implements TernaryExpr
   {
     switch (featureID)
     {
-      case MiniScriptPackage.TERNARY_EXPRESSION__CONDITION:
-        return basicSetCondition(null, msgs);
-      case MiniScriptPackage.TERNARY_EXPRESSION__TRUE_EXPR:
-        return basicSetTrueExpr(null, msgs);
-      case MiniScriptPackage.TERNARY_EXPRESSION__FALSE_EXPR:
-        return basicSetFalseExpr(null, msgs);
+      case MiniScriptPackage.TERNARY_EXPRESSION__FIRST_EXPRESSION:
+        return basicSetFirstExpression(null, msgs);
+      case MiniScriptPackage.TERNARY_EXPRESSION__SECOND_EXPRESSION:
+        return basicSetSecondExpression(null, msgs);
+      case MiniScriptPackage.TERNARY_EXPRESSION__THIRD_EXPRESSION:
+        return basicSetThirdExpression(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -303,12 +303,12 @@ public class TernaryExpressionImpl extends ExpressionImpl implements TernaryExpr
     {
       case MiniScriptPackage.TERNARY_EXPRESSION__OPERATOR:
         return getOperator();
-      case MiniScriptPackage.TERNARY_EXPRESSION__CONDITION:
-        return getCondition();
-      case MiniScriptPackage.TERNARY_EXPRESSION__TRUE_EXPR:
-        return getTrueExpr();
-      case MiniScriptPackage.TERNARY_EXPRESSION__FALSE_EXPR:
-        return getFalseExpr();
+      case MiniScriptPackage.TERNARY_EXPRESSION__FIRST_EXPRESSION:
+        return getFirstExpression();
+      case MiniScriptPackage.TERNARY_EXPRESSION__SECOND_EXPRESSION:
+        return getSecondExpression();
+      case MiniScriptPackage.TERNARY_EXPRESSION__THIRD_EXPRESSION:
+        return getThirdExpression();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -326,14 +326,14 @@ public class TernaryExpressionImpl extends ExpressionImpl implements TernaryExpr
       case MiniScriptPackage.TERNARY_EXPRESSION__OPERATOR:
         setOperator((TernaryOperator)newValue);
         return;
-      case MiniScriptPackage.TERNARY_EXPRESSION__CONDITION:
-        setCondition((Expression)newValue);
+      case MiniScriptPackage.TERNARY_EXPRESSION__FIRST_EXPRESSION:
+        setFirstExpression((Expression)newValue);
         return;
-      case MiniScriptPackage.TERNARY_EXPRESSION__TRUE_EXPR:
-        setTrueExpr((Expression)newValue);
+      case MiniScriptPackage.TERNARY_EXPRESSION__SECOND_EXPRESSION:
+        setSecondExpression((Expression)newValue);
         return;
-      case MiniScriptPackage.TERNARY_EXPRESSION__FALSE_EXPR:
-        setFalseExpr((Expression)newValue);
+      case MiniScriptPackage.TERNARY_EXPRESSION__THIRD_EXPRESSION:
+        setThirdExpression((Expression)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -352,14 +352,14 @@ public class TernaryExpressionImpl extends ExpressionImpl implements TernaryExpr
       case MiniScriptPackage.TERNARY_EXPRESSION__OPERATOR:
         setOperator(OPERATOR_EDEFAULT);
         return;
-      case MiniScriptPackage.TERNARY_EXPRESSION__CONDITION:
-        setCondition((Expression)null);
+      case MiniScriptPackage.TERNARY_EXPRESSION__FIRST_EXPRESSION:
+        setFirstExpression((Expression)null);
         return;
-      case MiniScriptPackage.TERNARY_EXPRESSION__TRUE_EXPR:
-        setTrueExpr((Expression)null);
+      case MiniScriptPackage.TERNARY_EXPRESSION__SECOND_EXPRESSION:
+        setSecondExpression((Expression)null);
         return;
-      case MiniScriptPackage.TERNARY_EXPRESSION__FALSE_EXPR:
-        setFalseExpr((Expression)null);
+      case MiniScriptPackage.TERNARY_EXPRESSION__THIRD_EXPRESSION:
+        setThirdExpression((Expression)null);
         return;
     }
     super.eUnset(featureID);
@@ -377,12 +377,12 @@ public class TernaryExpressionImpl extends ExpressionImpl implements TernaryExpr
     {
       case MiniScriptPackage.TERNARY_EXPRESSION__OPERATOR:
         return operator != OPERATOR_EDEFAULT;
-      case MiniScriptPackage.TERNARY_EXPRESSION__CONDITION:
-        return condition != null;
-      case MiniScriptPackage.TERNARY_EXPRESSION__TRUE_EXPR:
-        return trueExpr != null;
-      case MiniScriptPackage.TERNARY_EXPRESSION__FALSE_EXPR:
-        return falseExpr != null;
+      case MiniScriptPackage.TERNARY_EXPRESSION__FIRST_EXPRESSION:
+        return firstExpression != null;
+      case MiniScriptPackage.TERNARY_EXPRESSION__SECOND_EXPRESSION:
+        return secondExpression != null;
+      case MiniScriptPackage.TERNARY_EXPRESSION__THIRD_EXPRESSION:
+        return thirdExpression != null;
     }
     return super.eIsSet(featureID);
   }

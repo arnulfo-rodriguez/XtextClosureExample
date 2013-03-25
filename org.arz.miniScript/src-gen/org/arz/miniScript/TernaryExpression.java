@@ -12,9 +12,9 @@ package org.arz.miniScript;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.arz.miniScript.TernaryExpression#getOperator <em>Operator</em>}</li>
- *   <li>{@link org.arz.miniScript.TernaryExpression#getCondition <em>Condition</em>}</li>
- *   <li>{@link org.arz.miniScript.TernaryExpression#getTrueExpr <em>True Expr</em>}</li>
- *   <li>{@link org.arz.miniScript.TernaryExpression#getFalseExpr <em>False Expr</em>}</li>
+ *   <li>{@link org.arz.miniScript.TernaryExpression#getFirstExpression <em>First Expression</em>}</li>
+ *   <li>{@link org.arz.miniScript.TernaryExpression#getSecondExpression <em>Second Expression</em>}</li>
+ *   <li>{@link org.arz.miniScript.TernaryExpression#getThirdExpression <em>Third Expression</em>}</li>
  * </ul>
  * </p>
  *
@@ -54,81 +54,81 @@ public interface TernaryExpression extends Expression
   void setOperator(TernaryOperator value);
 
   /**
-   * Returns the value of the '<em><b>Condition</b></em>' containment reference.
+   * Returns the value of the '<em><b>First Expression</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Condition</em>' containment reference isn't clear,
+   * If the meaning of the '<em>First Expression</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Condition</em>' containment reference.
-   * @see #setCondition(Expression)
-   * @see org.arz.miniScript.MiniScriptPackage#getTernaryExpression_Condition()
+   * @return the value of the '<em>First Expression</em>' containment reference.
+   * @see #setFirstExpression(Expression)
+   * @see org.arz.miniScript.MiniScriptPackage#getTernaryExpression_FirstExpression()
    * @model containment="true"
    * @generated
    */
-  Expression getCondition();
+  Expression getFirstExpression();
 
   /**
-   * Sets the value of the '{@link org.arz.miniScript.TernaryExpression#getCondition <em>Condition</em>}' containment reference.
+   * Sets the value of the '{@link org.arz.miniScript.TernaryExpression#getFirstExpression <em>First Expression</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Condition</em>' containment reference.
-   * @see #getCondition()
+   * @param value the new value of the '<em>First Expression</em>' containment reference.
+   * @see #getFirstExpression()
    * @generated
    */
-  void setCondition(Expression value);
+  void setFirstExpression(Expression value);
 
   /**
-   * Returns the value of the '<em><b>True Expr</b></em>' containment reference.
+   * Returns the value of the '<em><b>Second Expression</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>True Expr</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Second Expression</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>True Expr</em>' containment reference.
-   * @see #setTrueExpr(Expression)
-   * @see org.arz.miniScript.MiniScriptPackage#getTernaryExpression_TrueExpr()
+   * @return the value of the '<em>Second Expression</em>' containment reference.
+   * @see #setSecondExpression(Expression)
+   * @see org.arz.miniScript.MiniScriptPackage#getTernaryExpression_SecondExpression()
    * @model containment="true"
    * @generated
    */
-  Expression getTrueExpr();
+  Expression getSecondExpression();
 
   /**
-   * Sets the value of the '{@link org.arz.miniScript.TernaryExpression#getTrueExpr <em>True Expr</em>}' containment reference.
+   * Sets the value of the '{@link org.arz.miniScript.TernaryExpression#getSecondExpression <em>Second Expression</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>True Expr</em>' containment reference.
-   * @see #getTrueExpr()
+   * @param value the new value of the '<em>Second Expression</em>' containment reference.
+   * @see #getSecondExpression()
    * @generated
    */
-  void setTrueExpr(Expression value);
+  void setSecondExpression(Expression value);
 
   /**
-   * Returns the value of the '<em><b>False Expr</b></em>' containment reference.
+   * Returns the value of the '<em><b>Third Expression</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>False Expr</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Third Expression</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>False Expr</em>' containment reference.
-   * @see #setFalseExpr(Expression)
-   * @see org.arz.miniScript.MiniScriptPackage#getTernaryExpression_FalseExpr()
+   * @return the value of the '<em>Third Expression</em>' containment reference.
+   * @see #setThirdExpression(Expression)
+   * @see org.arz.miniScript.MiniScriptPackage#getTernaryExpression_ThirdExpression()
    * @model containment="true"
    * @generated
    */
-  Expression getFalseExpr();
+  Expression getThirdExpression();
 
   /**
-   * Sets the value of the '{@link org.arz.miniScript.TernaryExpression#getFalseExpr <em>False Expr</em>}' containment reference.
+   * Sets the value of the '{@link org.arz.miniScript.TernaryExpression#getThirdExpression <em>Third Expression</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>False Expr</em>' containment reference.
-   * @see #getFalseExpr()
+   * @param value the new value of the '<em>Third Expression</em>' containment reference.
+   * @see #getThirdExpression()
    * @generated
    */
-  void setFalseExpr(Expression value);
+  void setThirdExpression(Expression value);
 
 } // TernaryExpression

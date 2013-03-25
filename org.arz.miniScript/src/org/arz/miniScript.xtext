@@ -14,10 +14,10 @@ Program:
 
 enum AdditionOperator : add='+' | subtract='-' ;
 enum FactorOperator:  mult='*' | division='/';
-enum ComparisonOperator: gt='>' | gte='>=' | lt='<' | lte='<=' | eq='==';
+enum ComparisonOperator: gt='>' | gte='>=' | lt='<' | lte='<=' | eq='==' | noteq='!=';
 enum UnaryLogicalOperator: not='not';
 enum BinaryLogicalOperator: and='and' | or='or';
-enum TernaryOperator: if='if';
+enum TernaryOperator: ifExpression ='if';
 enum BooleanValue: true='true' | false='false';
 
 
@@ -31,7 +31,7 @@ Expression:
 ;
 
 TernaryExpression:
-	operator=TernaryOperator '(' condition=Expression ',' trueExpr=Expression ',' falseExpr=Expression')'
+	operator=TernaryOperator '(' firstExpression=Expression ',' secondExpression=Expression ',' thirdExpression=Expression')'
 ;
 
 
@@ -72,7 +72,7 @@ Factor returns Expression:
 ;
 
 Term returns Expression:
- 	LiteralExpr | Apply ;
+ 	LiteralExpression | Apply ;
 
 Apply returns Expression:
 	Functor ({Apply.functor=current} '(' (arguments+=Expression (',' arguments+=Expression)*)? ')')*
@@ -83,7 +83,7 @@ Functor returns Expression:
 	ParenthesisExpression
 ;
 
-LiteralExpr returns Expression:
+LiteralExpression returns Expression:
 	LiteralNumber |
 	LiteralBoolean
 ;

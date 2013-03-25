@@ -123,7 +123,7 @@ public class MiniScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 				   context == grammarAccess.getFactorAccess().getFactorLeftTermAction_1_0() ||
 				   context == grammarAccess.getFunctorRule() ||
 				   context == grammarAccess.getLiteralBooleanRule() ||
-				   context == grammarAccess.getLiteralExprRule() ||
+				   context == grammarAccess.getLiteralExpressionRule() ||
 				   context == grammarAccess.getNumericExpressionRule() ||
 				   context == grammarAccess.getNumericExpressionAccess().getNumericExpressionLeftFactorAction_1_0() ||
 				   context == grammarAccess.getParenthesisExpressionRule() ||
@@ -141,7 +141,7 @@ public class MiniScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 				   context == grammarAccess.getFactorRule() ||
 				   context == grammarAccess.getFactorAccess().getFactorLeftTermAction_1_0() ||
 				   context == grammarAccess.getFunctorRule() ||
-				   context == grammarAccess.getLiteralExprRule() ||
+				   context == grammarAccess.getLiteralExpressionRule() ||
 				   context == grammarAccess.getLiteralNumberRule() ||
 				   context == grammarAccess.getNumericExpressionRule() ||
 				   context == grammarAccess.getNumericExpressionAccess().getNumericExpressionLeftFactorAction_1_0() ||
@@ -462,25 +462,25 @@ public class MiniScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (operator=TernaryOperator condition=Expression trueExpr=Expression falseExpr=Expression)
+	 *     (operator=TernaryOperator firstExpression=Expression secondExpression=Expression thirdExpression=Expression)
 	 */
 	protected void sequence_TernaryExpression(EObject context, TernaryExpression semanticObject) {
 		if(errorAcceptor != null) {
 			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.TERNARY_EXPRESSION__OPERATOR) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.TERNARY_EXPRESSION__OPERATOR));
-			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.TERNARY_EXPRESSION__CONDITION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.TERNARY_EXPRESSION__CONDITION));
-			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.TERNARY_EXPRESSION__TRUE_EXPR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.TERNARY_EXPRESSION__TRUE_EXPR));
-			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.TERNARY_EXPRESSION__FALSE_EXPR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.TERNARY_EXPRESSION__FALSE_EXPR));
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.TERNARY_EXPRESSION__FIRST_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.TERNARY_EXPRESSION__FIRST_EXPRESSION));
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.TERNARY_EXPRESSION__SECOND_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.TERNARY_EXPRESSION__SECOND_EXPRESSION));
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.TERNARY_EXPRESSION__THIRD_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.TERNARY_EXPRESSION__THIRD_EXPRESSION));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getTernaryExpressionAccess().getOperatorTernaryOperatorEnumRuleCall_0_0(), semanticObject.getOperator());
-		feeder.accept(grammarAccess.getTernaryExpressionAccess().getConditionExpressionParserRuleCall_2_0(), semanticObject.getCondition());
-		feeder.accept(grammarAccess.getTernaryExpressionAccess().getTrueExprExpressionParserRuleCall_4_0(), semanticObject.getTrueExpr());
-		feeder.accept(grammarAccess.getTernaryExpressionAccess().getFalseExprExpressionParserRuleCall_6_0(), semanticObject.getFalseExpr());
+		feeder.accept(grammarAccess.getTernaryExpressionAccess().getFirstExpressionExpressionParserRuleCall_2_0(), semanticObject.getFirstExpression());
+		feeder.accept(grammarAccess.getTernaryExpressionAccess().getSecondExpressionExpressionParserRuleCall_4_0(), semanticObject.getSecondExpression());
+		feeder.accept(grammarAccess.getTernaryExpressionAccess().getThirdExpressionExpressionParserRuleCall_6_0(), semanticObject.getThirdExpression());
 		feeder.finish();
 	}
 	

@@ -67,7 +67,17 @@ public enum ComparisonOperator implements Enumerator
    * @generated
    * @ordered
    */
-  EQ(4, "eq", "==");
+  EQ(4, "eq", "=="),
+
+  /**
+   * The '<em><b>Noteq</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #NOTEQ_VALUE
+   * @generated
+   * @ordered
+   */
+  NOTEQ(5, "noteq", "!=");
 
   /**
    * The '<em><b>Gt</b></em>' literal value.
@@ -145,6 +155,21 @@ public enum ComparisonOperator implements Enumerator
   public static final int EQ_VALUE = 4;
 
   /**
+   * The '<em><b>Noteq</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Noteq</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #NOTEQ
+   * @model name="noteq" literal="!="
+   * @generated
+   * @ordered
+   */
+  public static final int NOTEQ_VALUE = 5;
+
+  /**
    * An array of all the '<em><b>Comparison Operator</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -158,6 +183,7 @@ public enum ComparisonOperator implements Enumerator
       LT,
       LTE,
       EQ,
+      NOTEQ,
     };
 
   /**
@@ -221,6 +247,7 @@ public enum ComparisonOperator implements Enumerator
       case LT_VALUE: return LT;
       case LTE_VALUE: return LTE;
       case EQ_VALUE: return EQ;
+      case NOTEQ_VALUE: return NOTEQ;
     }
     return null;
   }

@@ -1,14 +1,21 @@
 package org.arz.runtime;
 
-public class Closure {
+public abstract class Closure {
 
-	private EvaluationEnvironment parentEnvironment;
+	protected Context context;
 
 	public Closure(EvaluationEnvironment environment) {
-		this.parentEnvironment = environment;
+		this.context = new Context(environment);
 	}
 
-	public EvaluationEnvironment getExecutionEnvironment() {
-		return parentEnvironment.createChildEnv("closure-env");
+	public Object apply(Object...arguments)
+	{
+		context.pushEnvironment("closureEnv");
+		Object result = executeBody(arguments);
+		context.popEnvironment();
+		return result;
 	}
+
+	protected abstract Object executeBody(Object[] arguments);
+  
 }

@@ -115,21 +115,23 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cOperatorAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cOperatorTernaryOperatorEnumRuleCall_0_0 = (RuleCall)cOperatorAssignment_0.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cConditionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cConditionExpressionParserRuleCall_2_0 = (RuleCall)cConditionAssignment_2.eContents().get(0);
+		private final Assignment cFirstExpressionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cFirstExpressionExpressionParserRuleCall_2_0 = (RuleCall)cFirstExpressionAssignment_2.eContents().get(0);
 		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cTrueExprAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cTrueExprExpressionParserRuleCall_4_0 = (RuleCall)cTrueExprAssignment_4.eContents().get(0);
+		private final Assignment cSecondExpressionAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cSecondExpressionExpressionParserRuleCall_4_0 = (RuleCall)cSecondExpressionAssignment_4.eContents().get(0);
 		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cFalseExprAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cFalseExprExpressionParserRuleCall_6_0 = (RuleCall)cFalseExprAssignment_6.eContents().get(0);
+		private final Assignment cThirdExpressionAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cThirdExpressionExpressionParserRuleCall_6_0 = (RuleCall)cThirdExpressionAssignment_6.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//TernaryExpression:
-		//	operator=TernaryOperator "(" condition=Expression "," trueExpr=Expression "," falseExpr=Expression ")";
+		//	operator=TernaryOperator "(" firstExpression=Expression "," secondExpression=Expression "," thirdExpression=Expression
+		//	")";
 		public ParserRule getRule() { return rule; }
 
-		//operator=TernaryOperator "(" condition=Expression "," trueExpr=Expression "," falseExpr=Expression ")"
+		//operator=TernaryOperator "(" firstExpression=Expression "," secondExpression=Expression "," thirdExpression=Expression
+		//")"
 		public Group getGroup() { return cGroup; }
 
 		//operator=TernaryOperator
@@ -141,29 +143,29 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 		//"("
 		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
 
-		//condition=Expression
-		public Assignment getConditionAssignment_2() { return cConditionAssignment_2; }
+		//firstExpression=Expression
+		public Assignment getFirstExpressionAssignment_2() { return cFirstExpressionAssignment_2; }
 
 		//Expression
-		public RuleCall getConditionExpressionParserRuleCall_2_0() { return cConditionExpressionParserRuleCall_2_0; }
+		public RuleCall getFirstExpressionExpressionParserRuleCall_2_0() { return cFirstExpressionExpressionParserRuleCall_2_0; }
 
 		//","
 		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
 
-		//trueExpr=Expression
-		public Assignment getTrueExprAssignment_4() { return cTrueExprAssignment_4; }
+		//secondExpression=Expression
+		public Assignment getSecondExpressionAssignment_4() { return cSecondExpressionAssignment_4; }
 
 		//Expression
-		public RuleCall getTrueExprExpressionParserRuleCall_4_0() { return cTrueExprExpressionParserRuleCall_4_0; }
+		public RuleCall getSecondExpressionExpressionParserRuleCall_4_0() { return cSecondExpressionExpressionParserRuleCall_4_0; }
 
 		//","
 		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
 
-		//falseExpr=Expression
-		public Assignment getFalseExprAssignment_6() { return cFalseExprAssignment_6; }
+		//thirdExpression=Expression
+		public Assignment getThirdExpressionAssignment_6() { return cThirdExpressionAssignment_6; }
 
 		//Expression
-		public RuleCall getFalseExprExpressionParserRuleCall_6_0() { return cFalseExprExpressionParserRuleCall_6_0; }
+		public RuleCall getThirdExpressionExpressionParserRuleCall_6_0() { return cThirdExpressionExpressionParserRuleCall_6_0; }
 
 		//")"
 		public Keyword getRightParenthesisKeyword_7() { return cRightParenthesisKeyword_7; }
@@ -504,18 +506,18 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 	public class TermElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Term");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cLiteralExprParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cLiteralExpressionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cApplyParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//Term returns Expression:
-		//	LiteralExpr | Apply;
+		//	LiteralExpression | Apply;
 		public ParserRule getRule() { return rule; }
 
-		//LiteralExpr | Apply
+		//LiteralExpression | Apply
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//LiteralExpr
-		public RuleCall getLiteralExprParserRuleCall_0() { return cLiteralExprParserRuleCall_0; }
+		//LiteralExpression
+		public RuleCall getLiteralExpressionParserRuleCall_0() { return cLiteralExpressionParserRuleCall_0; }
 
 		//Apply
 		public RuleCall getApplyParserRuleCall_1() { return cApplyParserRuleCall_1; }
@@ -601,13 +603,13 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getParenthesisExpressionParserRuleCall_1() { return cParenthesisExpressionParserRuleCall_1; }
 	}
 
-	public class LiteralExprElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LiteralExpr");
+	public class LiteralExpressionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LiteralExpression");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cLiteralNumberParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cLiteralBooleanParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//LiteralExpr returns Expression:
+		//LiteralExpression returns Expression:
 		//	LiteralNumber | LiteralBoolean;
 		public ParserRule getRule() { return rule; }
 
@@ -779,12 +781,14 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLteLessThanSignEqualsSignKeyword_3_0 = (Keyword)cLteEnumLiteralDeclaration_3.eContents().get(0);
 		private final EnumLiteralDeclaration cEqEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
 		private final Keyword cEqEqualsSignEqualsSignKeyword_4_0 = (Keyword)cEqEnumLiteralDeclaration_4.eContents().get(0);
+		private final EnumLiteralDeclaration cNoteqEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
+		private final Keyword cNoteqExclamationMarkEqualsSignKeyword_5_0 = (Keyword)cNoteqEnumLiteralDeclaration_5.eContents().get(0);
 		
 		//enum ComparisonOperator:
-		//	gt=">" | gte=">=" | lt="<" | lte="<=" | eq="==";
+		//	gt=">" | gte=">=" | lt="<" | lte="<=" | eq="==" | noteq="!=";
 		public EnumRule getRule() { return rule; }
 
-		//gt=">" | gte=">=" | lt="<" | lte="<=" | eq="=="
+		//gt=">" | gte=">=" | lt="<" | lte="<=" | eq="==" | noteq="!="
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//gt=">"
@@ -816,6 +820,12 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"=="
 		public Keyword getEqEqualsSignEqualsSignKeyword_4_0() { return cEqEqualsSignEqualsSignKeyword_4_0; }
+
+		//noteq="!="
+		public EnumLiteralDeclaration getNoteqEnumLiteralDeclaration_5() { return cNoteqEnumLiteralDeclaration_5; }
+
+		//"!="
+		public Keyword getNoteqExclamationMarkEqualsSignKeyword_5_0() { return cNoteqExclamationMarkEqualsSignKeyword_5_0; }
 	}
 
 	public class UnaryLogicalOperatorElements extends AbstractEnumRuleElementFinder {
@@ -864,18 +874,18 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class TernaryOperatorElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "TernaryOperator");
-		private final EnumLiteralDeclaration cIfEnumLiteralDeclaration = (EnumLiteralDeclaration)rule.eContents().get(1);
-		private final Keyword cIfIfKeyword_0 = (Keyword)cIfEnumLiteralDeclaration.eContents().get(0);
+		private final EnumLiteralDeclaration cIfExpressionEnumLiteralDeclaration = (EnumLiteralDeclaration)rule.eContents().get(1);
+		private final Keyword cIfExpressionIfKeyword_0 = (Keyword)cIfExpressionEnumLiteralDeclaration.eContents().get(0);
 		
 		//enum TernaryOperator:
-		//	if;
+		//	ifExpression="if";
 		public EnumRule getRule() { return rule; }
 
-		//if
-		public EnumLiteralDeclaration getIfEnumLiteralDeclaration() { return cIfEnumLiteralDeclaration; }
+		//ifExpression="if"
+		public EnumLiteralDeclaration getIfExpressionEnumLiteralDeclaration() { return cIfExpressionEnumLiteralDeclaration; }
 
 		//"if"
-		public Keyword getIfIfKeyword_0() { return cIfIfKeyword_0; }
+		public Keyword getIfExpressionIfKeyword_0() { return cIfExpressionIfKeyword_0; }
 	}
 
 	public class BooleanValueElements extends AbstractEnumRuleElementFinder {
@@ -928,7 +938,7 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 	private TermElements pTerm;
 	private ApplyElements pApply;
 	private FunctorElements pFunctor;
-	private LiteralExprElements pLiteralExpr;
+	private LiteralExpressionElements pLiteralExpression;
 	private LiteralBooleanElements pLiteralBoolean;
 	private LiteralNumberElements pLiteralNumber;
 	private VariableAssignmentElements pVariableAssignment;
@@ -1013,7 +1023,7 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum ComparisonOperator:
-	//	gt=">" | gte=">=" | lt="<" | lte="<=" | eq="==";
+	//	gt=">" | gte=">=" | lt="<" | lte="<=" | eq="==" | noteq="!=";
 	public ComparisonOperatorElements getComparisonOperatorAccess() {
 		return (unknownRuleComparisonOperator != null) ? unknownRuleComparisonOperator : (unknownRuleComparisonOperator = new ComparisonOperatorElements());
 	}
@@ -1043,7 +1053,7 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum TernaryOperator:
-	//	if;
+	//	ifExpression="if";
 	public TernaryOperatorElements getTernaryOperatorAccess() {
 		return (unknownRuleTernaryOperator != null) ? unknownRuleTernaryOperator : (unknownRuleTernaryOperator = new TernaryOperatorElements());
 	}
@@ -1074,7 +1084,8 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//TernaryExpression:
-	//	operator=TernaryOperator "(" condition=Expression "," trueExpr=Expression "," falseExpr=Expression ")";
+	//	operator=TernaryOperator "(" firstExpression=Expression "," secondExpression=Expression "," thirdExpression=Expression
+	//	")";
 	public TernaryExpressionElements getTernaryExpressionAccess() {
 		return (pTernaryExpression != null) ? pTernaryExpression : (pTernaryExpression = new TernaryExpressionElements());
 	}
@@ -1164,7 +1175,7 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Term returns Expression:
-	//	LiteralExpr | Apply;
+	//	LiteralExpression | Apply;
 	public TermElements getTermAccess() {
 		return (pTerm != null) ? pTerm : (pTerm = new TermElements());
 	}
@@ -1193,14 +1204,14 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 		return getFunctorAccess().getRule();
 	}
 
-	//LiteralExpr returns Expression:
+	//LiteralExpression returns Expression:
 	//	LiteralNumber | LiteralBoolean;
-	public LiteralExprElements getLiteralExprAccess() {
-		return (pLiteralExpr != null) ? pLiteralExpr : (pLiteralExpr = new LiteralExprElements());
+	public LiteralExpressionElements getLiteralExpressionAccess() {
+		return (pLiteralExpression != null) ? pLiteralExpression : (pLiteralExpression = new LiteralExpressionElements());
 	}
 	
-	public ParserRule getLiteralExprRule() {
-		return getLiteralExprAccess().getRule();
+	public ParserRule getLiteralExpressionRule() {
+		return getLiteralExpressionAccess().getRule();
 	}
 
 	//LiteralBoolean:

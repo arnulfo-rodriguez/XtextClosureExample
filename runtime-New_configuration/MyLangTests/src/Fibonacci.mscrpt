@@ -1,0 +1,25 @@
+fib = func(x){
+	forwardFib = func(counter,prevFib,prevprevFib) {
+		currentFib = func(){prevFib() + prevprevFib();};
+		if (counter == x,
+			currentFib(),
+			forwardFib(counter+1,currentFib,prevFib)
+		); 
+   };
+	
+	fib0 = func(){0;};
+	fib1 = func(){1;};
+	if (x == 0,
+		fib0,
+	    if(x == 1,
+	       	fib1,
+	       	func(){forwardFib(2,fib1,fib0);}
+	    )
+    );
+};
+
+
+fib4Func = fib(4);
+fib3Func = fib(3);
+fib5 = fib4Func() + fib3Func();
+fib5 == 5;

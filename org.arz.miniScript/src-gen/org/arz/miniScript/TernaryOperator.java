@@ -20,29 +20,29 @@ import org.eclipse.emf.common.util.Enumerator;
 public enum TernaryOperator implements Enumerator
 {
   /**
-   * The '<em><b>If</b></em>' literal object.
+   * The '<em><b>If Expression</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #IF_VALUE
+   * @see #IF_EXPRESSION_VALUE
    * @generated
    * @ordered
    */
-  IF(0, "if", "if");
+  IF_EXPRESSION(0, "ifExpression", "if");
 
   /**
-   * The '<em><b>If</b></em>' literal value.
+   * The '<em><b>If Expression</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>If</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>If Expression</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #IF
-   * @model name="if"
+   * @see #IF_EXPRESSION
+   * @model name="ifExpression" literal="if"
    * @generated
    * @ordered
    */
-  public static final int IF_VALUE = 0;
+  public static final int IF_EXPRESSION_VALUE = 0;
 
   /**
    * An array of all the '<em><b>Ternary Operator</b></em>' enumerators.
@@ -53,7 +53,7 @@ public enum TernaryOperator implements Enumerator
   private static final TernaryOperator[] VALUES_ARRAY =
     new TernaryOperator[]
     {
-      IF,
+      IF_EXPRESSION,
     };
 
   /**
@@ -112,7 +112,7 @@ public enum TernaryOperator implements Enumerator
   {
     switch (value)
     {
-      case IF_VALUE: return IF;
+      case IF_EXPRESSION_VALUE: return IF_EXPRESSION;
     }
     return null;
   }

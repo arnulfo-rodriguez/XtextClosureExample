@@ -333,7 +333,7 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTernaryExpression_Condition()
+  public EReference getTernaryExpression_FirstExpression()
   {
     return (EReference)ternaryExpressionEClass.getEStructuralFeatures().get(1);
   }
@@ -343,7 +343,7 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTernaryExpression_TrueExpr()
+  public EReference getTernaryExpression_SecondExpression()
   {
     return (EReference)ternaryExpressionEClass.getEStructuralFeatures().get(2);
   }
@@ -353,7 +353,7 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTernaryExpression_FalseExpr()
+  public EReference getTernaryExpression_ThirdExpression()
   {
     return (EReference)ternaryExpressionEClass.getEStructuralFeatures().get(3);
   }
@@ -827,9 +827,9 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
 
     ternaryExpressionEClass = createEClass(TERNARY_EXPRESSION);
     createEAttribute(ternaryExpressionEClass, TERNARY_EXPRESSION__OPERATOR);
-    createEReference(ternaryExpressionEClass, TERNARY_EXPRESSION__CONDITION);
-    createEReference(ternaryExpressionEClass, TERNARY_EXPRESSION__TRUE_EXPR);
-    createEReference(ternaryExpressionEClass, TERNARY_EXPRESSION__FALSE_EXPR);
+    createEReference(ternaryExpressionEClass, TERNARY_EXPRESSION__FIRST_EXPRESSION);
+    createEReference(ternaryExpressionEClass, TERNARY_EXPRESSION__SECOND_EXPRESSION);
+    createEReference(ternaryExpressionEClass, TERNARY_EXPRESSION__THIRD_EXPRESSION);
 
     logicalBinaryExpressionEClass = createEClass(LOGICAL_BINARY_EXPRESSION);
     createEAttribute(logicalBinaryExpressionEClass, LOGICAL_BINARY_EXPRESSION__OPERATOR);
@@ -942,9 +942,9 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
 
     initEClass(ternaryExpressionEClass, TernaryExpression.class, "TernaryExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTernaryExpression_Operator(), this.getTernaryOperator(), "operator", null, 0, 1, TernaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTernaryExpression_Condition(), this.getExpression(), null, "condition", null, 0, 1, TernaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTernaryExpression_TrueExpr(), this.getExpression(), null, "trueExpr", null, 0, 1, TernaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTernaryExpression_FalseExpr(), this.getExpression(), null, "falseExpr", null, 0, 1, TernaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTernaryExpression_FirstExpression(), this.getExpression(), null, "firstExpression", null, 0, 1, TernaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTernaryExpression_SecondExpression(), this.getExpression(), null, "secondExpression", null, 0, 1, TernaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTernaryExpression_ThirdExpression(), this.getExpression(), null, "thirdExpression", null, 0, 1, TernaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(logicalBinaryExpressionEClass, LogicalBinaryExpression.class, "LogicalBinaryExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getLogicalBinaryExpression_Operator(), this.getBinaryLogicalOperator(), "operator", null, 0, 1, LogicalBinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1009,6 +1009,7 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
     addEEnumLiteral(comparisonOperatorEEnum, ComparisonOperator.LT);
     addEEnumLiteral(comparisonOperatorEEnum, ComparisonOperator.LTE);
     addEEnumLiteral(comparisonOperatorEEnum, ComparisonOperator.EQ);
+    addEEnumLiteral(comparisonOperatorEEnum, ComparisonOperator.NOTEQ);
 
     initEEnum(unaryLogicalOperatorEEnum, UnaryLogicalOperator.class, "UnaryLogicalOperator");
     addEEnumLiteral(unaryLogicalOperatorEEnum, UnaryLogicalOperator.NOT);
@@ -1018,7 +1019,7 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
     addEEnumLiteral(binaryLogicalOperatorEEnum, BinaryLogicalOperator.OR);
 
     initEEnum(ternaryOperatorEEnum, TernaryOperator.class, "TernaryOperator");
-    addEEnumLiteral(ternaryOperatorEEnum, TernaryOperator.IF);
+    addEEnumLiteral(ternaryOperatorEEnum, TernaryOperator.IF_EXPRESSION);
 
     initEEnum(booleanValueEEnum, BooleanValue.class, "BooleanValue");
     addEEnumLiteral(booleanValueEEnum, BooleanValue.TRUE);
