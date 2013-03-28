@@ -37,6 +37,7 @@ public class InternalMiniScriptLexer extends Lexer {
     public static final int T__15=15;
     public static final int T__34=34;
     public static final int T__18=18;
+    public static final int T__35=35;
     public static final int T__17=17;
     public static final int T__12=12;
     public static final int T__11=11;
@@ -83,10 +84,11 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:12:7: ( '(' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:12:9: '('
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:12:7: ( 'let' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:12:9: 'let'
             {
-            match('('); 
+            match("let"); 
+
 
             }
 
@@ -123,10 +125,10 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:14:7: ( ')' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:14:9: ')'
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:14:7: ( '(' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:14:9: '('
             {
-            match(')'); 
+            match('('); 
 
             }
 
@@ -143,11 +145,10 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:15:7: ( 'func' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:15:9: 'func'
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:15:7: ( ')' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:15:9: ')'
             {
-            match("func"); 
-
+            match(')'); 
 
             }
 
@@ -164,10 +165,11 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:16:7: ( '{' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:16:9: '{'
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:16:7: ( 'func' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:16:9: 'func'
             {
-            match('{'); 
+            match("func"); 
+
 
             }
 
@@ -184,10 +186,10 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:17:7: ( '}' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:17:9: '}'
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:17:7: ( '{' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:17:9: '{'
             {
-            match('}'); 
+            match('{'); 
 
             }
 
@@ -204,10 +206,10 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:18:7: ( '=' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:18:9: '='
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:18:7: ( '}' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:18:9: '}'
             {
-            match('='); 
+            match('}'); 
 
             }
 
@@ -224,10 +226,10 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:19:7: ( '+' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:19:9: '+'
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:19:7: ( '=' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:19:9: '='
             {
-            match('+'); 
+            match('='); 
 
             }
 
@@ -244,10 +246,10 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:20:7: ( '-' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:20:9: '-'
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:20:7: ( '+' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:20:9: '+'
             {
-            match('-'); 
+            match('+'); 
 
             }
 
@@ -264,10 +266,10 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:21:7: ( '*' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:21:9: '*'
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:21:7: ( '-' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:21:9: '-'
             {
-            match('*'); 
+            match('-'); 
 
             }
 
@@ -284,10 +286,10 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:22:7: ( '/' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:22:9: '/'
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:22:7: ( '*' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:22:9: '*'
             {
-            match('/'); 
+            match('*'); 
 
             }
 
@@ -304,10 +306,10 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:23:7: ( '>' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:23:9: '>'
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:23:7: ( '/' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:23:9: '/'
             {
-            match('>'); 
+            match('/'); 
 
             }
 
@@ -324,11 +326,10 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:24:7: ( '>=' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:24:9: '>='
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:24:7: ( '>' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:24:9: '>'
             {
-            match(">="); 
-
+            match('>'); 
 
             }
 
@@ -345,10 +346,11 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:25:7: ( '<' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:25:9: '<'
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:25:7: ( '>=' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:25:9: '>='
             {
-            match('<'); 
+            match(">="); 
+
 
             }
 
@@ -365,11 +367,10 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:26:7: ( '<=' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:26:9: '<='
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:26:7: ( '<' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:26:9: '<'
             {
-            match("<="); 
-
+            match('<'); 
 
             }
 
@@ -386,10 +387,10 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:27:7: ( '==' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:27:9: '=='
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:27:7: ( '<=' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:27:9: '<='
             {
-            match("=="); 
+            match("<="); 
 
 
             }
@@ -407,10 +408,10 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:28:7: ( '!=' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:28:9: '!='
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:28:7: ( '==' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:28:9: '=='
             {
-            match("!="); 
+            match("=="); 
 
 
             }
@@ -428,10 +429,10 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:29:7: ( 'not' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:29:9: 'not'
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:29:7: ( '!=' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:29:9: '!='
             {
-            match("not"); 
+            match("!="); 
 
 
             }
@@ -449,10 +450,10 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:30:7: ( 'and' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:30:9: 'and'
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:30:7: ( 'not' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:30:9: 'not'
             {
-            match("and"); 
+            match("not"); 
 
 
             }
@@ -470,10 +471,10 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:31:7: ( 'or' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:31:9: 'or'
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:31:7: ( 'and' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:31:9: 'and'
             {
-            match("or"); 
+            match("and"); 
 
 
             }
@@ -491,10 +492,10 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:32:7: ( 'if' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:32:9: 'if'
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:32:7: ( 'or' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:32:9: 'or'
             {
-            match("if"); 
+            match("or"); 
 
 
             }
@@ -512,10 +513,10 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:33:7: ( 'true' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:33:9: 'true'
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:33:7: ( 'if' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:33:9: 'if'
             {
-            match("true"); 
+            match("if"); 
 
 
             }
@@ -533,10 +534,10 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:34:7: ( 'false' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:34:9: 'false'
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:34:7: ( 'true' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:34:9: 'true'
             {
-            match("false"); 
+            match("true"); 
 
 
             }
@@ -549,15 +550,36 @@ public class InternalMiniScriptLexer extends Lexer {
     }
     // $ANTLR end "T__34"
 
+    // $ANTLR start "T__35"
+    public final void mT__35() throws RecognitionException {
+        try {
+            int _type = T__35;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:35:7: ( 'false' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:35:9: 'false'
+            {
+            match("false"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__35"
+
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1451:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1451:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1526:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1526:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1451:11: ( '^' )?
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1526:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -566,7 +588,7 @@ public class InternalMiniScriptLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1451:11: '^'
+                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1526:11: '^'
                     {
                     match('^'); 
 
@@ -584,7 +606,7 @@ public class InternalMiniScriptLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1451:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1526:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -633,10 +655,10 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1453:10: ( ( '0' .. '9' )+ )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1453:12: ( '0' .. '9' )+
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1528:10: ( ( '0' .. '9' )+ )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1528:12: ( '0' .. '9' )+
             {
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1453:12: ( '0' .. '9' )+
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1528:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -650,7 +672,7 @@ public class InternalMiniScriptLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1453:13: '0' .. '9'
+            	    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1528:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -682,10 +704,10 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1455:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1455:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1530:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1530:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1455:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1530:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -703,10 +725,10 @@ public class InternalMiniScriptLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1455:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1530:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1455:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1530:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -722,7 +744,7 @@ public class InternalMiniScriptLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1455:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1530:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -738,7 +760,7 @@ public class InternalMiniScriptLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1455:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1530:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -763,10 +785,10 @@ public class InternalMiniScriptLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1455:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1530:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1455:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1530:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -782,7 +804,7 @@ public class InternalMiniScriptLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1455:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1530:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -798,7 +820,7 @@ public class InternalMiniScriptLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1455:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1530:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -841,12 +863,12 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1457:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1457:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1532:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1532:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1457:24: ( options {greedy=false; } : . )*
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1532:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -871,7 +893,7 @@ public class InternalMiniScriptLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1457:52: .
+            	    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1532:52: .
             	    {
             	    matchAny(); 
 
@@ -901,12 +923,12 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1459:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1459:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1534:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1534:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1459:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1534:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -919,7 +941,7 @@ public class InternalMiniScriptLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1459:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1534:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -939,7 +961,7 @@ public class InternalMiniScriptLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1459:40: ( ( '\\r' )? '\\n' )?
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1534:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -948,9 +970,9 @@ public class InternalMiniScriptLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1459:41: ( '\\r' )? '\\n'
+                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1534:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1459:41: ( '\\r' )?
+                    // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1534:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -959,7 +981,7 @@ public class InternalMiniScriptLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1459:41: '\\r'
+                            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1534:41: '\\r'
                             {
                             match('\r'); 
 
@@ -991,10 +1013,10 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1461:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1461:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1536:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1536:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1461:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1536:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1048,8 +1070,8 @@ public class InternalMiniScriptLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1463:16: ( . )
-            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1463:18: .
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1538:16: ( . )
+            // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1538:18: .
             {
             matchAny(); 
 
@@ -1064,8 +1086,8 @@ public class InternalMiniScriptLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=31;
+        // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=32;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
@@ -1237,49 +1259,56 @@ public class InternalMiniScriptLexer extends Lexer {
                 }
                 break;
             case 25 :
-                // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1:154: RULE_ID
+                // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1:154: T__35
+                {
+                mT__35(); 
+
+                }
+                break;
+            case 26 :
+                // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1:160: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 26 :
-                // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1:162: RULE_INT
+            case 27 :
+                // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1:168: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 27 :
-                // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1:171: RULE_STRING
+            case 28 :
+                // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1:177: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 28 :
-                // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1:183: RULE_ML_COMMENT
+            case 29 :
+                // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1:189: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 29 :
-                // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1:199: RULE_SL_COMMENT
+            case 30 :
+                // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1:205: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 30 :
-                // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1:215: RULE_WS
+            case 31 :
+                // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1:221: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 31 :
-                // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1:223: RULE_ANY_OTHER
+            case 32 :
+                // ../org.arz.miniScript/src-gen/org/arz/parser/antlr/internal/InternalMiniScript.g:1:229: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1293,106 +1322,112 @@ public class InternalMiniScriptLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\5\uffff\1\42\2\uffff\1\46\3\uffff\1\54\1\56\1\60\1\33\5\42\1\33"+
-        "\2\uffff\2\33\6\uffff\2\42\20\uffff\2\42\1\76\1\77\1\42\3\uffff"+
-        "\2\42\1\103\1\104\2\uffff\1\42\1\106\1\42\2\uffff\1\110\1\uffff"+
-        "\1\111\2\uffff";
+        "\2\uffff\1\37\3\uffff\1\37\2\uffff\1\50\3\uffff\1\56\1\60\1\62\1"+
+        "\34\5\37\1\34\2\uffff\2\34\3\uffff\1\37\4\uffff\2\37\17\uffff\2"+
+        "\37\1\101\1\102\1\37\3\uffff\1\104\2\37\1\107\1\110\2\uffff\1\37"+
+        "\1\uffff\1\112\1\37\2\uffff\1\114\1\uffff\1\115\2\uffff";
     static final String DFA12_eofS =
-        "\112\uffff";
+        "\116\uffff";
     static final String DFA12_minS =
-        "\1\0\4\uffff\1\141\2\uffff\1\75\3\uffff\1\52\3\75\1\157\1\156\1"+
-        "\162\1\146\1\162\1\101\2\uffff\2\0\6\uffff\1\156\1\154\20\uffff"+
-        "\1\164\1\144\2\60\1\165\3\uffff\1\143\1\163\2\60\2\uffff\1\145\1"+
-        "\60\1\145\2\uffff\1\60\1\uffff\1\60\2\uffff";
+        "\1\0\1\uffff\1\145\3\uffff\1\141\2\uffff\1\75\3\uffff\1\52\3\75"+
+        "\1\157\1\156\1\162\1\146\1\162\1\101\2\uffff\2\0\3\uffff\1\164\4"+
+        "\uffff\1\156\1\154\17\uffff\1\164\1\144\2\60\1\165\3\uffff\1\60"+
+        "\1\143\1\163\2\60\2\uffff\1\145\1\uffff\1\60\1\145\2\uffff\1\60"+
+        "\1\uffff\1\60\2\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\4\uffff\1\165\2\uffff\1\75\3\uffff\1\57\3\75\1\157\1\156"+
-        "\1\162\1\146\1\162\1\172\2\uffff\2\uffff\6\uffff\1\156\1\154\20"+
-        "\uffff\1\164\1\144\2\172\1\165\3\uffff\1\143\1\163\2\172\2\uffff"+
-        "\1\145\1\172\1\145\2\uffff\1\172\1\uffff\1\172\2\uffff";
+        "\1\uffff\1\uffff\1\145\3\uffff\1\165\2\uffff\1\75\3\uffff\1\57\3"+
+        "\75\1\157\1\156\1\162\1\146\1\162\1\172\2\uffff\2\uffff\3\uffff"+
+        "\1\164\4\uffff\1\156\1\154\17\uffff\1\164\1\144\2\172\1\165\3\uffff"+
+        "\1\172\1\143\1\163\2\172\2\uffff\1\145\1\uffff\1\172\1\145\2\uffff"+
+        "\1\172\1\uffff\1\172\2\uffff";
     static final String DFA12_acceptS =
-        "\1\uffff\1\1\1\2\1\3\1\4\1\uffff\1\6\1\7\1\uffff\1\11\1\12\1\13"+
-        "\12\uffff\1\31\1\32\2\uffff\1\36\1\37\1\1\1\2\1\3\1\4\2\uffff\1"+
-        "\31\1\6\1\7\1\21\1\10\1\11\1\12\1\13\1\34\1\35\1\14\1\16\1\15\1"+
-        "\20\1\17\1\22\5\uffff\1\32\1\33\1\36\4\uffff\1\25\1\26\3\uffff\1"+
-        "\23\1\24\1\uffff\1\5\1\uffff\1\27\1\30";
+        "\1\uffff\1\1\1\uffff\1\3\1\4\1\5\1\uffff\1\7\1\10\1\uffff\1\12\1"+
+        "\13\1\14\12\uffff\1\32\1\33\2\uffff\1\37\1\40\1\1\1\uffff\1\32\1"+
+        "\3\1\4\1\5\2\uffff\1\7\1\10\1\22\1\11\1\12\1\13\1\14\1\35\1\36\1"+
+        "\15\1\17\1\16\1\21\1\20\1\23\5\uffff\1\33\1\34\1\37\5\uffff\1\26"+
+        "\1\27\1\uffff\1\2\2\uffff\1\24\1\25\1\uffff\1\6\1\uffff\1\30\1\31";
     static final String DFA12_specialS =
-        "\1\0\27\uffff\1\2\1\1\60\uffff}>";
+        "\1\0\30\uffff\1\2\1\1\63\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\33\2\32\2\33\1\32\22\33\1\32\1\17\1\30\4\33\1\31\1\2\1\4"+
-            "\1\13\1\11\1\3\1\12\1\33\1\14\12\27\1\33\1\1\1\16\1\10\1\15"+
-            "\2\33\32\26\3\33\1\25\1\26\1\33\1\21\4\26\1\5\2\26\1\23\4\26"+
-            "\1\20\1\22\4\26\1\24\6\26\1\6\1\33\1\7\uff82\33",
+            "\11\34\2\33\2\34\1\33\22\34\1\33\1\20\1\31\4\34\1\32\1\4\1\5"+
+            "\1\14\1\12\1\3\1\13\1\34\1\15\12\30\1\34\1\1\1\17\1\11\1\16"+
+            "\2\34\32\27\3\34\1\26\1\27\1\34\1\22\4\27\1\6\2\27\1\24\2\27"+
+            "\1\2\1\27\1\21\1\23\4\27\1\25\6\27\1\7\1\34\1\10\uff82\34",
+            "",
+            "\1\36",
             "",
             "",
             "",
-            "",
-            "\1\41\23\uffff\1\40",
-            "",
-            "",
-            "\1\45",
+            "\1\44\23\uffff\1\43",
             "",
             "",
+            "\1\47",
             "",
-            "\1\52\4\uffff\1\53",
-            "\1\55",
+            "",
+            "",
+            "\1\54\4\uffff\1\55",
             "\1\57",
             "\1\61",
-            "\1\62",
             "\1\63",
             "\1\64",
             "\1\65",
             "\1\66",
-            "\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\67",
+            "\1\70",
+            "\32\37\4\uffff\1\37\1\uffff\32\37",
             "",
             "",
-            "\0\70",
-            "\0\70",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\72",
-            "\1\73",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
+            "\0\72",
+            "\0\72",
             "",
             "",
             "",
             "\1\74",
+            "",
+            "",
+            "",
+            "",
             "\1\75",
-            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
-            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\76",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\77",
             "\1\100",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\1\103",
             "",
             "",
             "",
-            "\1\101",
-            "\1\102",
-            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
-            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
-            "",
-            "",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
             "\1\105",
-            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
-            "\1\107",
+            "\1\106",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
             "",
             "",
-            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\1\111",
             "",
-            "\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "\1\113",
+            "",
+            "",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
+            "",
+            "\12\37\7\uffff\32\37\4\uffff\1\37\1\uffff\32\37",
             "",
             ""
     };
@@ -1427,7 +1462,7 @@ public class InternalMiniScriptLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
@@ -1439,77 +1474,79 @@ public class InternalMiniScriptLexer extends Lexer {
                         s = -1;
                         if ( (LA12_0==';') ) {s = 1;}
 
-                        else if ( (LA12_0=='(') ) {s = 2;}
+                        else if ( (LA12_0=='l') ) {s = 2;}
 
                         else if ( (LA12_0==',') ) {s = 3;}
 
-                        else if ( (LA12_0==')') ) {s = 4;}
+                        else if ( (LA12_0=='(') ) {s = 4;}
 
-                        else if ( (LA12_0=='f') ) {s = 5;}
+                        else if ( (LA12_0==')') ) {s = 5;}
 
-                        else if ( (LA12_0=='{') ) {s = 6;}
+                        else if ( (LA12_0=='f') ) {s = 6;}
 
-                        else if ( (LA12_0=='}') ) {s = 7;}
+                        else if ( (LA12_0=='{') ) {s = 7;}
 
-                        else if ( (LA12_0=='=') ) {s = 8;}
+                        else if ( (LA12_0=='}') ) {s = 8;}
 
-                        else if ( (LA12_0=='+') ) {s = 9;}
+                        else if ( (LA12_0=='=') ) {s = 9;}
 
-                        else if ( (LA12_0=='-') ) {s = 10;}
+                        else if ( (LA12_0=='+') ) {s = 10;}
 
-                        else if ( (LA12_0=='*') ) {s = 11;}
+                        else if ( (LA12_0=='-') ) {s = 11;}
 
-                        else if ( (LA12_0=='/') ) {s = 12;}
+                        else if ( (LA12_0=='*') ) {s = 12;}
 
-                        else if ( (LA12_0=='>') ) {s = 13;}
+                        else if ( (LA12_0=='/') ) {s = 13;}
 
-                        else if ( (LA12_0=='<') ) {s = 14;}
+                        else if ( (LA12_0=='>') ) {s = 14;}
 
-                        else if ( (LA12_0=='!') ) {s = 15;}
+                        else if ( (LA12_0=='<') ) {s = 15;}
 
-                        else if ( (LA12_0=='n') ) {s = 16;}
+                        else if ( (LA12_0=='!') ) {s = 16;}
 
-                        else if ( (LA12_0=='a') ) {s = 17;}
+                        else if ( (LA12_0=='n') ) {s = 17;}
 
-                        else if ( (LA12_0=='o') ) {s = 18;}
+                        else if ( (LA12_0=='a') ) {s = 18;}
 
-                        else if ( (LA12_0=='i') ) {s = 19;}
+                        else if ( (LA12_0=='o') ) {s = 19;}
 
-                        else if ( (LA12_0=='t') ) {s = 20;}
+                        else if ( (LA12_0=='i') ) {s = 20;}
 
-                        else if ( (LA12_0=='^') ) {s = 21;}
+                        else if ( (LA12_0=='t') ) {s = 21;}
 
-                        else if ( ((LA12_0>='A' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='b' && LA12_0<='e')||(LA12_0>='g' && LA12_0<='h')||(LA12_0>='j' && LA12_0<='m')||(LA12_0>='p' && LA12_0<='s')||(LA12_0>='u' && LA12_0<='z')) ) {s = 22;}
+                        else if ( (LA12_0=='^') ) {s = 22;}
 
-                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 23;}
+                        else if ( ((LA12_0>='A' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='b' && LA12_0<='e')||(LA12_0>='g' && LA12_0<='h')||(LA12_0>='j' && LA12_0<='k')||LA12_0=='m'||(LA12_0>='p' && LA12_0<='s')||(LA12_0>='u' && LA12_0<='z')) ) {s = 23;}
 
-                        else if ( (LA12_0=='\"') ) {s = 24;}
+                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 24;}
 
-                        else if ( (LA12_0=='\'') ) {s = 25;}
+                        else if ( (LA12_0=='\"') ) {s = 25;}
 
-                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 26;}
+                        else if ( (LA12_0=='\'') ) {s = 26;}
 
-                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||(LA12_0>='#' && LA12_0<='&')||LA12_0=='.'||LA12_0==':'||(LA12_0>='?' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 27;}
+                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 27;}
+
+                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||(LA12_0>='#' && LA12_0<='&')||LA12_0=='.'||LA12_0==':'||(LA12_0>='?' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 28;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA12_25 = input.LA(1);
+                        int LA12_26 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_25>='\u0000' && LA12_25<='\uFFFF')) ) {s = 56;}
+                        if ( ((LA12_26>='\u0000' && LA12_26<='\uFFFF')) ) {s = 58;}
 
-                        else s = 27;
+                        else s = 28;
 
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA12_24 = input.LA(1);
+                        int LA12_25 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_24>='\u0000' && LA12_24<='\uFFFF')) ) {s = 56;}
+                        if ( ((LA12_25>='\u0000' && LA12_25<='\uFFFF')) ) {s = 58;}
 
-                        else s = 27;
+                        else s = 28;
 
                         if ( s>=0 ) return s;
                         break;

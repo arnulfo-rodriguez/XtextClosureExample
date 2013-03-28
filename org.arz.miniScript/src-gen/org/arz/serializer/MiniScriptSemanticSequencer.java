@@ -7,6 +7,7 @@ import org.arz.miniScript.Body;
 import org.arz.miniScript.ComparisonExpression;
 import org.arz.miniScript.Factor;
 import org.arz.miniScript.FunctionDeclaration;
+import org.arz.miniScript.LetExpression;
 import org.arz.miniScript.LiteralBoolean;
 import org.arz.miniScript.LiteralNumber;
 import org.arz.miniScript.LogicalBinaryExpression;
@@ -110,6 +111,24 @@ public class MiniScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 				   context == grammarAccess.getParenthesisExpressionRule() ||
 				   context == grammarAccess.getTermRule()) {
 					sequence_FunctionDeclaration(context, (FunctionDeclaration) semanticObject); 
+					return; 
+				}
+				else break;
+			case MiniScriptPackage.LET_EXPRESSION:
+				if(context == grammarAccess.getApplyRule() ||
+				   context == grammarAccess.getApplyAccess().getApplyFunctorAction_1_0() ||
+				   context == grammarAccess.getComparisonExpressionRule() ||
+				   context == grammarAccess.getComparisonExpressionAccess().getComparisonExpressionLeftExprAction_1_0() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getFactorRule() ||
+				   context == grammarAccess.getFactorAccess().getFactorLeftTermAction_1_0() ||
+				   context == grammarAccess.getFunctorRule() ||
+				   context == grammarAccess.getLetExpressionRule() ||
+				   context == grammarAccess.getNumericExpressionRule() ||
+				   context == grammarAccess.getNumericExpressionAccess().getNumericExpressionLeftFactorAction_1_0() ||
+				   context == grammarAccess.getParenthesisExpressionRule() ||
+				   context == grammarAccess.getTermRule()) {
+					sequence_LetExpression(context, (LetExpression) semanticObject); 
 					return; 
 				}
 				else break;
@@ -337,6 +356,25 @@ public class MiniScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 */
 	protected void sequence_FunctionDeclaration(EObject context, FunctionDeclaration semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (assigment=VariableAssignment expression=Expression)
+	 */
+	protected void sequence_LetExpression(EObject context, LetExpression semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.LET_EXPRESSION__ASSIGMENT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.LET_EXPRESSION__ASSIGMENT));
+			if(transientValues.isValueTransient(semanticObject, MiniScriptPackage.Literals.LET_EXPRESSION__EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MiniScriptPackage.Literals.LET_EXPRESSION__EXPRESSION));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getLetExpressionAccess().getAssigmentVariableAssignmentParserRuleCall_1_0_0(), semanticObject.getAssigment());
+		feeder.accept(grammarAccess.getLetExpressionAccess().getExpressionExpressionParserRuleCall_2_0(), semanticObject.getExpression());
+		feeder.finish();
 	}
 	
 	

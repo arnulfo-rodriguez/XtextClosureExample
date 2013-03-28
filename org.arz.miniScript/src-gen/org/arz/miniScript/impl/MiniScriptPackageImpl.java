@@ -13,6 +13,7 @@ import org.arz.miniScript.Expression;
 import org.arz.miniScript.Factor;
 import org.arz.miniScript.FactorOperator;
 import org.arz.miniScript.FunctionDeclaration;
+import org.arz.miniScript.LetExpression;
 import org.arz.miniScript.LiteralBoolean;
 import org.arz.miniScript.LiteralNumber;
 import org.arz.miniScript.LogicalBinaryExpression;
@@ -64,6 +65,13 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * @generated
    */
   private EClass expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass letExpressionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -306,6 +314,36 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
   public EClass getExpression()
   {
     return expressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLetExpression()
+  {
+    return letExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLetExpression_Assigment()
+  {
+    return (EReference)letExpressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLetExpression_Expression()
+  {
+    return (EReference)letExpressionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -825,6 +863,10 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
 
     expressionEClass = createEClass(EXPRESSION);
 
+    letExpressionEClass = createEClass(LET_EXPRESSION);
+    createEReference(letExpressionEClass, LET_EXPRESSION__ASSIGMENT);
+    createEReference(letExpressionEClass, LET_EXPRESSION__EXPRESSION);
+
     ternaryExpressionEClass = createEClass(TERNARY_EXPRESSION);
     createEAttribute(ternaryExpressionEClass, TERNARY_EXPRESSION__OPERATOR);
     createEReference(ternaryExpressionEClass, TERNARY_EXPRESSION__FIRST_EXPRESSION);
@@ -919,6 +961,7 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
 
     // Add supertypes to classes
     programEClass.getESuperTypes().add(this.getModel());
+    letExpressionEClass.getESuperTypes().add(this.getExpression());
     ternaryExpressionEClass.getESuperTypes().add(this.getExpression());
     logicalBinaryExpressionEClass.getESuperTypes().add(this.getExpression());
     logicalUnaryExpressionEClass.getESuperTypes().add(this.getExpression());
@@ -939,6 +982,10 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
     initEReference(getProgram_Expressions(), this.getExpression(), null, "expressions", null, 0, -1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(letExpressionEClass, LetExpression.class, "LetExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getLetExpression_Assigment(), this.getVariableAssignment(), null, "assigment", null, 0, 1, LetExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getLetExpression_Expression(), this.getExpression(), null, "expression", null, 0, 1, LetExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(ternaryExpressionEClass, TernaryExpression.class, "TernaryExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTernaryExpression_Operator(), this.getTernaryOperator(), "operator", null, 0, 1, TernaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

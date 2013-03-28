@@ -68,6 +68,7 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
       case MiniScriptPackage.MODEL: return createModel();
       case MiniScriptPackage.PROGRAM: return createProgram();
       case MiniScriptPackage.EXPRESSION: return createExpression();
+      case MiniScriptPackage.LET_EXPRESSION: return createLetExpression();
       case MiniScriptPackage.TERNARY_EXPRESSION: return createTernaryExpression();
       case MiniScriptPackage.LOGICAL_BINARY_EXPRESSION: return createLogicalBinaryExpression();
       case MiniScriptPackage.LOGICAL_UNARY_EXPRESSION: return createLogicalUnaryExpression();
@@ -175,6 +176,17 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
   {
     ExpressionImpl expression = new ExpressionImpl();
     return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LetExpression createLetExpression()
+  {
+    LetExpressionImpl letExpression = new LetExpressionImpl();
+    return letExpression;
   }
 
   /**

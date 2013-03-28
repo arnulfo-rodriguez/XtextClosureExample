@@ -232,7 +232,82 @@ ruleExpression returns [EObject current=null]
         $current = $this_ComparisonExpression_5.current; 
         afterParserOrEnumRuleCall();
     }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getExpressionAccess().getLetExpressionParserRuleCall_6()); 
+    }
+    this_LetExpression_6=ruleLetExpression
+    { 
+        $current = $this_LetExpression_6.current; 
+        afterParserOrEnumRuleCall();
+    }
 )
+;
+
+
+
+
+
+// Entry rule entryRuleLetExpression
+entryRuleLetExpression returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getLetExpressionRule()); }
+	 iv_ruleLetExpression=ruleLetExpression 
+	 { $current=$iv_ruleLetExpression.current; } 
+	 EOF 
+;
+
+// Rule LetExpression
+ruleLetExpression returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='let' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getLetExpressionAccess().getLetKeyword_0());
+    }
+((
+(
+		{ 
+	        newCompositeNode(grammarAccess.getLetExpressionAccess().getAssigmentVariableAssignmentParserRuleCall_1_0_0()); 
+	    }
+		lv_assigment_1_0=ruleVariableAssignment		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getLetExpressionRule());
+	        }
+       		set(
+       			$current, 
+       			"assigment",
+        		lv_assigment_1_0, 
+        		"VariableAssignment");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_2=',' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getLetExpressionAccess().getCommaKeyword_1_1());
+    }
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getLetExpressionAccess().getExpressionExpressionParserRuleCall_2_0()); 
+	    }
+		lv_expression_3_0=ruleExpression		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getLetExpressionRule());
+	        }
+       		set(
+       			$current, 
+       			"expression",
+        		lv_expression_3_0, 
+        		"Expression");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))
 ;
 
 

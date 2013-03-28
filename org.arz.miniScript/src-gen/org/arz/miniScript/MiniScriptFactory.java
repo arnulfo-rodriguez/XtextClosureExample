@@ -50,6 +50,15 @@ public interface MiniScriptFactory extends EFactory
   Expression createExpression();
 
   /**
+   * Returns a new object of class '<em>Let Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Let Expression</em>'.
+   * @generated
+   */
+  LetExpression createLetExpression();
+
+  /**
    * Returns a new object of class '<em>Ternary Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

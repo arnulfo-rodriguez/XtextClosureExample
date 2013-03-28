@@ -49,6 +49,8 @@ public class MiniScriptParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBooleanValueAccess().getAlternatives(), "rule__BooleanValue__Alternatives");
 					put(grammarAccess.getProgramAccess().getGroup(), "rule__Program__Group__0");
 					put(grammarAccess.getProgramAccess().getGroup_2(), "rule__Program__Group_2__0");
+					put(grammarAccess.getLetExpressionAccess().getGroup(), "rule__LetExpression__Group__0");
+					put(grammarAccess.getLetExpressionAccess().getGroup_1(), "rule__LetExpression__Group_1__0");
 					put(grammarAccess.getTernaryExpressionAccess().getGroup(), "rule__TernaryExpression__Group__0");
 					put(grammarAccess.getLogicalBinaryExpressionAccess().getGroup(), "rule__LogicalBinaryExpression__Group__0");
 					put(grammarAccess.getLogicalUnaryExpressionAccess().getGroup(), "rule__LogicalUnaryExpression__Group__0");
@@ -71,6 +73,8 @@ public class MiniScriptParser extends AbstractContentAssistParser {
 					put(grammarAccess.getParenthesisExpressionAccess().getGroup(), "rule__ParenthesisExpression__Group__0");
 					put(grammarAccess.getProgramAccess().getExpressionsAssignment_0(), "rule__Program__ExpressionsAssignment_0");
 					put(grammarAccess.getProgramAccess().getExpressionsAssignment_2_0(), "rule__Program__ExpressionsAssignment_2_0");
+					put(grammarAccess.getLetExpressionAccess().getAssigmentAssignment_1_0(), "rule__LetExpression__AssigmentAssignment_1_0");
+					put(grammarAccess.getLetExpressionAccess().getExpressionAssignment_2(), "rule__LetExpression__ExpressionAssignment_2");
 					put(grammarAccess.getTernaryExpressionAccess().getOperatorAssignment_0(), "rule__TernaryExpression__OperatorAssignment_0");
 					put(grammarAccess.getTernaryExpressionAccess().getFirstExpressionAssignment_2(), "rule__TernaryExpression__FirstExpressionAssignment_2");
 					put(grammarAccess.getTernaryExpressionAccess().getSecondExpressionAssignment_4(), "rule__TernaryExpression__SecondExpressionAssignment_4");

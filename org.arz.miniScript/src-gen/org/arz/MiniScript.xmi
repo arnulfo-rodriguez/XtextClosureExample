@@ -141,12 +141,30 @@
         <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//Expression"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.14"/>
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.25"/>
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.15"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.26"/>
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.13"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.14"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="LetExpression">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//LetExpression"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="let"/>
+        <elements xsi:type="xtext:Group">
+          <elements xsi:type="xtext:Assignment" feature="assigment" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.26"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value=","/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" feature="expression" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
+        </elements>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="TernaryExpression">
@@ -211,7 +229,7 @@
         <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//Expression"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.17"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.18"/>
         <elements xsi:type="xtext:Group" cardinality="?">
           <elements xsi:type="xtext:Action" feature="leftExpr" operator="=">
             <type metamodel="/0/@metamodelDeclarations.0">
@@ -222,7 +240,7 @@
             <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.4"/>
           </elements>
           <elements xsi:type="xtext:Assignment" feature="rightExpr" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.17"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.18"/>
           </elements>
         </elements>
       </alternatives>
@@ -247,7 +265,7 @@
         </elements>
         <elements xsi:type="xtext:Keyword" value=")"/>
         <elements xsi:type="xtext:Assignment" feature="body" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.15"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.16"/>
         </elements>
       </alternatives>
     </rules>
@@ -289,7 +307,7 @@
         <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//Expression"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.18"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
         <elements xsi:type="xtext:Group" cardinality="*">
           <elements xsi:type="xtext:Action" feature="leftFactor" operator="=">
             <type metamodel="/0/@metamodelDeclarations.0">
@@ -300,7 +318,7 @@
             <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
           </elements>
           <elements xsi:type="xtext:Assignment" feature="rightFactor" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.18"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
           </elements>
         </elements>
       </alternatives>
@@ -310,7 +328,7 @@
         <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//Expression"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.20"/>
         <elements xsi:type="xtext:Group" cardinality="*">
           <elements xsi:type="xtext:Action" feature="leftTerm" operator="=">
             <type metamodel="/0/@metamodelDeclarations.0">
@@ -321,7 +339,7 @@
             <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.3"/>
           </elements>
           <elements xsi:type="xtext:Assignment" feature="rightTerm" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.20"/>
           </elements>
         </elements>
       </alternatives>
@@ -331,8 +349,8 @@
         <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//Expression"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.22"/>
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.20"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.23"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.21"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Apply">
@@ -340,7 +358,7 @@
         <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//Expression"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.21"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.22"/>
         <elements xsi:type="xtext:Group" cardinality="*">
           <elements xsi:type="xtext:Action" feature="functor" operator="=">
             <type metamodel="/0/@metamodelDeclarations.0">
@@ -368,8 +386,8 @@
         <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//Expression"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.16"/>
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.26"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.17"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.27"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="LiteralExpression">
@@ -377,8 +395,8 @@
         <classifier xsi:type="ecore:EClass" href="http://www.arz.org/miniScript#//Expression"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.25"/>
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.24"/>
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.23"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="LiteralBoolean">

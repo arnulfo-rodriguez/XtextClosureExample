@@ -3,30 +3,31 @@
  */
 package org.arz.generator
 
-import org.eclipse.emf.ecore.resource.Resource
-import org.eclipse.xtext.generator.IGenerator
-import org.eclipse.xtext.generator.IFileSystemAccess
-import org.arz.miniScript.FunctionDeclaration
-import org.arz.miniScript.VariableAssignment
-import org.arz.miniScript.LogicalBinaryExpression
-import org.arz.miniScript.LogicalUnaryExpression
-import org.arz.miniScript.TernaryExpression
-import org.arz.miniScript.ComparisonExpression
-import org.arz.miniScript.Expression
-import org.arz.miniScript.NumericExpression
-import org.arz.miniScript.Factor
-import org.arz.miniScript.LiteralNumber
-import org.arz.miniScript.LiteralBoolean
-import org.arz.miniScript.Apply
-import org.arz.miniScript.SymbolReference
-import org.arz.miniScript.Program
-import org.eclipse.emf.common.util.EList
 import java.util.ArrayList
 import java.util.LinkedList
+import java.util.List
+import org.arz.miniScript.Apply
 import org.arz.miniScript.BinaryLogicalOperator
-import org.arz.miniScript.UnaryLogicalOperator
-import org.arz.miniScript.TernaryOperator
+import org.arz.miniScript.ComparisonExpression
 import org.arz.miniScript.ComparisonOperator
+import org.arz.miniScript.Expression
+import org.arz.miniScript.Factor
+import org.arz.miniScript.FunctionDeclaration
+import org.arz.miniScript.LetExpression
+import org.arz.miniScript.LiteralBoolean
+import org.arz.miniScript.LiteralNumber
+import org.arz.miniScript.LogicalBinaryExpression
+import org.arz.miniScript.LogicalUnaryExpression
+import org.arz.miniScript.NumericExpression
+import org.arz.miniScript.Program
+import org.arz.miniScript.SymbolReference
+import org.arz.miniScript.TernaryExpression
+import org.arz.miniScript.TernaryOperator
+import org.arz.miniScript.UnaryLogicalOperator
+import org.arz.miniScript.VariableAssignment
+import org.eclipse.emf.ecore.resource.Resource
+import org.eclipse.xtext.generator.IFileSystemAccess
+import org.eclipse.xtext.generator.IGenerator
 
 class MiniScriptGenerator implements IGenerator {
 	
@@ -49,7 +50,7 @@ class MiniScriptGenerator implements IGenerator {
     	}'''
     }
     
-	def String doCompileStatementSequence(EList<Expression> l) { 
+	def String doCompileStatementSequence(List<Expression> l) { 
 		var rerversedList =  new ArrayList(l.map[exp | doCompileExpression(exp)]).reverse
 		var newList = new LinkedList<String>();
 		newList.add(("return " + rerversedList.head));
@@ -61,23 +62,31 @@ class MiniScriptGenerator implements IGenerator {
 	
 def String doCompileExpression(Expression e)
 {
-	switch(e)
+	return switch(e)
 	{
- 		FunctionDeclaration  : return doCompileFunctionDeclaration(e)
- 		VariableAssignment : return doCompileVariableAssignment(e)
-	    LogicalBinaryExpression : return doCompileLogicalBinaryExpression(e)
-		LogicalUnaryExpression : return doCompileLogicalUnaryExpression (e)
-		TernaryExpression : return doCompileTernaryExpression (e)
-		ComparisonExpression: return doCompileComparisonExpression(e)
-		NumericExpression: return doCompileNumericExpression(e)
-		LiteralNumber: return doCompileLiteralNumber(e)
-		LiteralBoolean: return doCompileLiteralBoolean(e)
-		Apply: return doCompileApply(e)
-		SymbolReference: return doCompileSymbolReference(e)
-		Factor: return doCompileFactor(e)
+ 		FunctionDeclaration  :  doCompileFunctionDeclaration(e)
+ 		VariableAssignment :  doCompileVariableAssignment(e)
+	    LogicalBinaryExpression :  doCompileLogicalBinaryExpression(e)
+		LogicalUnaryExpression :  doCompileLogicalUnaryExpression (e)
+		TernaryExpression :  doCompileTernaryExpression (e)
+		ComparisonExpression:  doCompileComparisonExpression(e)
+		NumericExpression:  doCompileNumericExpression(e)
+		LiteralNumber:  doCompileLiteralNumber(e)
+		LiteralBoolean:  doCompileLiteralBoolean(e)
+		Apply:  doCompileApply(e)
+		SymbolReference:  doCompileSymbolReference(e)
+		Factor:  doCompileFactor(e)
+		LetExpression:  doCompileLetExpression(e)
 		default: ""
     }
 }
+	def String doCompileLetExpression(LetExpression LetExpression) { 
+	   '''new org.arz.runtime.Closure(context.getCurrentEnvironment())
+	   {
+			«doCompileExecuteBody(newArrayList(),newArrayList(LetExpression.assigment,LetExpression.expression))»
+	   }.apply()'''
+	}
+
 
 def String doCompileSymbolReference(SymbolReference symbolReference){
 	'''context.get("«symbolReference.id»")'''
@@ -107,20 +116,20 @@ def String doCompileNumericExpression(NumericExpression numericExpression){
 def String doCompileFunctionDeclaration  (FunctionDeclaration   functionDeclaration  ){
 	'''new org.arz.runtime.Closure(context.getCurrentEnvironment())
 	{
-			«doCompileExecuteBody(functionDeclaration)»
+			«doCompileExecuteBody(functionDeclaration.parameters,functionDeclaration.body.expressions)»
 	}'''
 }
 
-def doCompileExecuteBody(FunctionDeclaration functionDeclaration) { 
+def doCompileExecuteBody(List<String> parameters, List<Expression> expressions) { 
 	'''@Override protected Object executeBody(Object[] arguments) {
-		«doCompileSetupArguments(functionDeclaration.parameters)»
-		«doCompileStatementSequence(functionDeclaration.body.expressions)»
+		«doCompileSetupArguments(parameters)»
+		«doCompileStatementSequence(expressions)»
 	}
 	'''
 }
 
 
-def String doCompileSetupArguments(EList<String> list) {
+def String doCompileSetupArguments(List<String> list) {
 	if (list.size > 0)
 	{
 	(0..list.size()-1).map[i | '''context.set("«list.get(i)»",arguments[«i»]);'''].join("\n")

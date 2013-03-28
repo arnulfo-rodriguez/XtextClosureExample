@@ -12,6 +12,7 @@ import org.arz.miniScript.Expression;
 import org.arz.miniScript.Factor;
 import org.arz.miniScript.FactorOperator;
 import org.arz.miniScript.FunctionDeclaration;
+import org.arz.miniScript.LetExpression;
 import org.arz.miniScript.LiteralNumber;
 import org.arz.miniScript.LogicalBinaryExpression;
 import org.arz.miniScript.LogicalUnaryExpression;
@@ -228,8 +229,7 @@ public class ParsingTests {
 			Assert.fail();
 		}
 	}
-	
-	
+
 	@Test
 	public void parseComparisonExpression() {
 		StringBuilder builder = new StringBuilder();
@@ -248,7 +248,7 @@ public class ParsingTests {
 			Assert.fail();
 		}
 	}
-	
+
 	@Test
 	public void parseBinaryLogicalExpression() {
 		StringBuilder builder = new StringBuilder();
@@ -267,7 +267,7 @@ public class ParsingTests {
 			Assert.fail();
 		}
 	}
-	
+
 	@Test
 	public void parseCpomplexLogicalExpression() {
 		StringBuilder builder = new StringBuilder();
@@ -285,6 +285,24 @@ public class ParsingTests {
 		} catch (Exception e) {
 			Assert.fail();
 		}
+	}
+
+	@Test
+	public void parseLetExpression() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("let a=1,a;");
+		Program p;
+		try {
+			p = parserHelper.parse(builder.toString());
+			Expression expression = p.getExpressions().get(0);
+			Assert.assertTrue(expression instanceof LetExpression);
+			LetExpression letExpr = (LetExpression) expression;
+			Assert.assertTrue(letExpr.getAssigment() instanceof VariableAssignment);
+			Assert.assertTrue(letExpr.getExpression() instanceof SymbolReference);
+		} catch (Exception e) {
+			Assert.fail();
+		}
+
 	}
 
 }

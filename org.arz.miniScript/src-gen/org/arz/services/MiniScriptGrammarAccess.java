@@ -80,14 +80,15 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cLogicalUnaryExpressionParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		private final RuleCall cTernaryExpressionParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		private final RuleCall cComparisonExpressionParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cLetExpressionParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
 		
 		//Expression:
 		//	FunctionDeclaration | VariableAssignment | LogicalBinaryExpression | LogicalUnaryExpression | TernaryExpression |
-		//	ComparisonExpression;
+		//	ComparisonExpression | LetExpression;
 		public ParserRule getRule() { return rule; }
 
 		//FunctionDeclaration | VariableAssignment | LogicalBinaryExpression | LogicalUnaryExpression | TernaryExpression |
-		//ComparisonExpression
+		//ComparisonExpression | LetExpression
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//FunctionDeclaration
@@ -107,6 +108,49 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ComparisonExpression
 		public RuleCall getComparisonExpressionParserRuleCall_5() { return cComparisonExpressionParserRuleCall_5; }
+
+		//LetExpression
+		public RuleCall getLetExpressionParserRuleCall_6() { return cLetExpressionParserRuleCall_6; }
+	}
+
+	public class LetExpressionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LetExpression");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cLetKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Assignment cAssigmentAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final RuleCall cAssigmentVariableAssignmentParserRuleCall_1_0_0 = (RuleCall)cAssigmentAssignment_1_0.eContents().get(0);
+		private final Keyword cCommaKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Assignment cExpressionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cExpressionExpressionParserRuleCall_2_0 = (RuleCall)cExpressionAssignment_2.eContents().get(0);
+		
+		//LetExpression:
+		//	"let" (assigment=VariableAssignment ",") expression=Expression;
+		public ParserRule getRule() { return rule; }
+
+		//"let" (assigment=VariableAssignment ",") expression=Expression
+		public Group getGroup() { return cGroup; }
+
+		//"let"
+		public Keyword getLetKeyword_0() { return cLetKeyword_0; }
+
+		//assigment=VariableAssignment ","
+		public Group getGroup_1() { return cGroup_1; }
+
+		//assigment=VariableAssignment
+		public Assignment getAssigmentAssignment_1_0() { return cAssigmentAssignment_1_0; }
+
+		//VariableAssignment
+		public RuleCall getAssigmentVariableAssignmentParserRuleCall_1_0_0() { return cAssigmentVariableAssignmentParserRuleCall_1_0_0; }
+
+		//","
+		public Keyword getCommaKeyword_1_1() { return cCommaKeyword_1_1; }
+
+		//expression=Expression
+		public Assignment getExpressionAssignment_2() { return cExpressionAssignment_2; }
+
+		//Expression
+		public RuleCall getExpressionExpressionParserRuleCall_2_0() { return cExpressionExpressionParserRuleCall_2_0; }
 	}
 
 	public class TernaryExpressionElements extends AbstractParserRuleElementFinder {
@@ -926,6 +970,7 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 	private TernaryOperatorElements unknownRuleTernaryOperator;
 	private BooleanValueElements unknownRuleBooleanValue;
 	private ExpressionElements pExpression;
+	private LetExpressionElements pLetExpression;
 	private TernaryExpressionElements pTernaryExpression;
 	private LogicalBinaryExpressionElements pLogicalBinaryExpression;
 	private LogicalUnaryExpressionElements pLogicalUnaryExpression;
@@ -1074,13 +1119,23 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Expression:
 	//	FunctionDeclaration | VariableAssignment | LogicalBinaryExpression | LogicalUnaryExpression | TernaryExpression |
-	//	ComparisonExpression;
+	//	ComparisonExpression | LetExpression;
 	public ExpressionElements getExpressionAccess() {
 		return (pExpression != null) ? pExpression : (pExpression = new ExpressionElements());
 	}
 	
 	public ParserRule getExpressionRule() {
 		return getExpressionAccess().getRule();
+	}
+
+	//LetExpression:
+	//	"let" (assigment=VariableAssignment ",") expression=Expression;
+	public LetExpressionElements getLetExpressionAccess() {
+		return (pLetExpression != null) ? pLetExpression : (pLetExpression = new LetExpressionElements());
+	}
+	
+	public ParserRule getLetExpressionRule() {
+		return getLetExpressionAccess().getRule();
 	}
 
 	//TernaryExpression:

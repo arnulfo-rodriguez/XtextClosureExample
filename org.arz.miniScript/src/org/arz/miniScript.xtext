@@ -27,8 +27,15 @@ Expression:
 	LogicalBinaryExpression |
 	LogicalUnaryExpression |
 	TernaryExpression |
-	ComparisonExpression
+	ComparisonExpression |
+	LetExpression
 ;
+
+LetExpression:
+	'let' (assigment = VariableAssignment ',') expression = Expression
+;
+
+
 
 TernaryExpression:
 	operator=TernaryOperator '(' firstExpression=Expression ',' secondExpression=Expression ',' thirdExpression=Expression')'

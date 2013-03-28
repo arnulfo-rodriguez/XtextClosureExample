@@ -90,6 +90,11 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
         return createExpressionAdapter();
       }
       @Override
+      public Adapter caseLetExpression(LetExpression object)
+      {
+        return createLetExpressionAdapter();
+      }
+      @Override
       public Adapter caseTernaryExpression(TernaryExpression object)
       {
         return createTernaryExpressionAdapter();
@@ -217,6 +222,21 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.arz.miniScript.LetExpression <em>Let Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.arz.miniScript.LetExpression
+   * @generated
+   */
+  public Adapter createLetExpressionAdapter()
   {
     return null;
   }
