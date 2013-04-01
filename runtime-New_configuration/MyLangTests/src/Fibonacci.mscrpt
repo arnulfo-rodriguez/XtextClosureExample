@@ -5,16 +5,18 @@ fib = func(x){
 		fib0,
 	    if(x == 1,
 	       	fib1,
-	       	let	forwardFib = func(counter,prevFib,prevprevFib) {
-		            currentFib = func(){prevFib() + prevprevFib();};
-		       if (counter == x,
-			       currentFib(),
-			       forwardFib(counter+1,currentFib,prevFib)); 
-            }, 
-	       	func(){forwardFib(2,fib1,fib0);}
-	    )
-    );
-};
+	       	if (x >= 2,
+		       	let	forwardFib = func(counter,prevFib,prevprevFib) {
+			            currentFib =  func(){prevFib() + prevprevFib();};
+			       if (counter == x,
+				       currentFib(),
+				       forwardFib(counter+1,currentFib,prevFib)); 
+	            }, 
+		       	func(){forwardFib(2,fib1,fib0);},
+ 		       	0)
+	       	) 
+	    );
+}; 
 
 
 fib4Func = fib(4);

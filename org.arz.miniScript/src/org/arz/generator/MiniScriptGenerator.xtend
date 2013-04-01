@@ -28,6 +28,7 @@ import org.arz.miniScript.VariableAssignment
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
+import java.util.Collection
 
 class MiniScriptGenerator implements IGenerator {
 	
@@ -40,18 +41,25 @@ class MiniScriptGenerator implements IGenerator {
 	
 	
     def String doCompileProgram(Program program,String name) { 
+    	var rootContext = CompilationContext::getRootContext;
+    	var code = doCompileStatementSequence(program.expressions,rootContext)
     	'''class «name»
     	{
+    	    «doGenerateInnerClasses(rootContext)»
+    		«doGenerateFieldDeclarations(rootContext)»
     		public Object eval()
     		{
-    			org.arz.runtime.Context context = new org.arz.runtime.Context();
-    			«doCompileStatementSequence(program.expressions)»
+   			   «code»
     		}
     	}'''
     }
     
-	def String doCompileStatementSequence(List<Expression> l) { 
-		var rerversedList =  new ArrayList(l.map[exp | doCompileExpression(exp)]).reverse
+	def doGenerateFieldDeclarations(CompilationContext context) { 
+		context.getLocalSymbols().map[symbol | '''Object «symbol»;'''].join("\n")
+	}
+    
+	def String doCompileStatementSequence(List<Expression> l,CompilationContext context) { 
+		var rerversedList =  new ArrayList(l.map[exp | doCompileExpression(exp,context)]).reverse
 		var newList = new LinkedList<String>();
 		newList.add(("return " + rerversedList.head));
 		newList.addAll(rerversedList.tail);
@@ -60,126 +68,169 @@ class MiniScriptGenerator implements IGenerator {
 
 
 	
-def String doCompileExpression(Expression e)
+def String doCompileExpression(Expression e, CompilationContext context)
 {
 	return switch(e)
 	{
- 		FunctionDeclaration  :  doCompileFunctionDeclaration(e)
- 		VariableAssignment :  doCompileVariableAssignment(e)
-	    LogicalBinaryExpression :  doCompileLogicalBinaryExpression(e)
-		LogicalUnaryExpression :  doCompileLogicalUnaryExpression (e)
-		TernaryExpression :  doCompileTernaryExpression (e)
-		ComparisonExpression:  doCompileComparisonExpression(e)
-		NumericExpression:  doCompileNumericExpression(e)
-		LiteralNumber:  doCompileLiteralNumber(e)
-		LiteralBoolean:  doCompileLiteralBoolean(e)
-		Apply:  doCompileApply(e)
-		SymbolReference:  doCompileSymbolReference(e)
-		Factor:  doCompileFactor(e)
-		LetExpression:  doCompileLetExpression(e)
+ 		FunctionDeclaration  :  doCompileFunctionDeclaration(e,context)
+ 		VariableAssignment :  doCompileVariableAssignment(e,context)
+	    LogicalBinaryExpression :  doCompileLogicalBinaryExpression(e,context)
+		LogicalUnaryExpression :  doCompileLogicalUnaryExpression (e,context)
+		TernaryExpression :  doCompileTernaryExpression (e,context)
+		ComparisonExpression:  doCompileComparisonExpression(e,context)
+		NumericExpression:  doCompileNumericExpression(e,context)
+		LiteralNumber:  doCompileLiteralNumber(e,context)
+		LiteralBoolean:  doCompileLiteralBoolean(e,context)
+		Apply:  doCompileApply(e,context)
+		SymbolReference:  doCompileSymbolReference(e,context)
+		Factor:  doCompileFactor(e,context)
+		LetExpression:  doCompileLetExpression(e,context)
 		default: ""
     }
 }
-	def String doCompileLetExpression(LetExpression LetExpression) { 
-	   '''new org.arz.runtime.Closure(context.getCurrentEnvironment())
-	   {
-			«doCompileExecuteBody(newArrayList(),newArrayList(LetExpression.assigment,LetExpression.expression))»
-	   }.apply()'''
+	def String doCompileLetExpression(LetExpression LetExpression,CompilationContext context) { 
+		
+		var newContext = context.newChildContext;
+		var bodyCode = doCompileLetBody(newArrayList(LetExpression.assigment,LetExpression.expression),newContext)
+	   
+		'''new  org.arz.runtime.Closure()
+		{
+		        «doGenerateInnerClasses(newContext)»
+			    «doGenerateFieldDeclarations(newContext)»
+				«bodyCode»
+		}.apply()'''
+		
+	   
+	}
+	
+	def doCompileLetBody(List<Expression> expressions, CompilationContext context) { 
+		''' @Override public Object apply(Object...arguments)
+	       {
+	       	 «doCompileStatementSequence(expressions,context)» 
+	  	   }
+	  	'''
 	}
 
 
-def String doCompileSymbolReference(SymbolReference symbolReference){
-	'''context.get("«symbolReference.id»")'''
+
+def String doCompileSymbolReference(SymbolReference symbolReference,CompilationContext context){
+	'''«symbolReference.id»'''
 }
 
-def String doCompileApply(Apply apply){
-	'''«cast("org.arz.runtime.Closure",doCompileExpression(apply.functor))».apply(«apply.arguments.map[arg | doCompileExpression(arg)].join(",")»)'''
+def String doCompileApply(Apply apply,CompilationContext context){
+	'''«cast("org.arz.runtime.Closure",doCompileExpression(apply.functor,context))».apply(«apply.arguments.map[arg | doCompileExpression(arg,context)].join(",")»)'''
 }
 
-def String doCompileLiteralNumber(LiteralNumber literalNumber){
+def String doCompileLiteralNumber(LiteralNumber literalNumber,CompilationContext context){
 	'''new «numericType»(«literalNumber.value.toString()»)'''
 }
 
-def String doCompileLiteralBoolean(LiteralBoolean literalBoolean){
+def String doCompileLiteralBoolean(LiteralBoolean literalBoolean,CompilationContext context){
 	'''new Boolean(«literalBoolean.value.literal»)'''
 }
 
-def String doCompileFactor(Factor factor){
-		'''«cast(numericType,doCompileExpression(factor.leftTerm))» «factor.operator.literal» «cast(numericType,doCompileExpression(factor.rightTerm))»'''
+def String doCompileFactor(Factor factor,CompilationContext context){
+		'''«cast(numericType,doCompileExpression(factor.leftTerm,context))» «factor.operator.literal» «cast(numericType,doCompileExpression(factor.rightTerm,context))»'''
 }
 	
-def String doCompileNumericExpression(NumericExpression numericExpression){
-	'''«cast(numericType,doCompileExpression(numericExpression.leftFactor))» «numericExpression.operator.literal» «cast(numericType,doCompileExpression(numericExpression.rightFactor))»'''
+def String doCompileNumericExpression(NumericExpression numericExpression,CompilationContext context){
+	'''«cast(numericType,doCompileExpression(numericExpression.leftFactor,context))» «numericExpression.operator.literal» «cast(numericType,doCompileExpression(numericExpression.rightFactor,context))»'''
 }
 	
 	
-def String doCompileFunctionDeclaration  (FunctionDeclaration   functionDeclaration  ){
-	'''new org.arz.runtime.Closure(context.getCurrentEnvironment())
+def String doCompileFunctionDeclaration  (FunctionDeclaration   functionDeclaration,CompilationContext context){
+	var newContext = context.newChildContext;
+	var clazzName = newContext.generateClassName;
+	var code = doCompileExecuteBody(functionDeclaration.parameters,functionDeclaration.body.expressions,newContext)
+	var String clazz = '''class «clazzName» implements org.arz.runtime.Closure
 	{
-			«doCompileExecuteBody(functionDeclaration.parameters,functionDeclaration.body.expressions)»
+		    «doGenerateInnerClasses(newContext)»
+		    «doGenerateFieldDeclarations(newContext)»
+			«code»
 	}'''
+	context.addClass(clazz);
+	'''new «clazzName»()'''
 }
 
-def doCompileExecuteBody(List<String> parameters, List<Expression> expressions) { 
-	'''@Override protected Object executeBody(Object[] arguments) {
-		«doCompileSetupArguments(parameters)»
-		«doCompileStatementSequence(expressions)»
+
+def doGenerateInnerClasses(CompilationContext context) { 
+	context.classes.join("\n");
+}
+
+
+def String doCompileExecuteBody(List<String> parameters, List<Expression> expressions,CompilationContext context) { 
+	'''
+	 private boolean __invoked__= false;
+	  @Override public Object apply(Object...arguments)
+	  {
+	  	if (__invoked__)
+	  	{
+	  	  return new «context.currenctClassName»().applyImpl(arguments);
+	  	}
+	  	__invoked__ = true;
+	  	return applyImpl(arguments);
+	  }
+	  private Object applyImpl(Object[] arguments) {
+		«doCompileSetupArguments(parameters,context)»
+		«doCompileStatementSequence(expressions,context)»
 	}
 	'''
 }
 
 
-def String doCompileSetupArguments(List<String> list) {
+def String doCompileSetupArguments(List<String> list,CompilationContext context) {
+	list.forEach[parameter | context.addParameter(parameter)]
 	if (list.size > 0)
 	{
-	(0..list.size()-1).map[i | '''context.set("«list.get(i)»",arguments[«i»]);'''].join("\n")
+	(0..list.size()-1).map[i | '''«list.get(i)» = arguments[«i»];'''].join("\n")
     } else {
     	""
     }
 } 
 
 
-def String doCompileVariableAssignment (VariableAssignment  variableAssignment ){
-	'''context.set("«variableAssignment.id»",«doCompileExpression(variableAssignment.expression)»)'''
+def String doCompileVariableAssignment (VariableAssignment  variableAssignment,CompilationContext context ){
+	context.addVariable(variableAssignment.id)
+	'''«variableAssignment.id» = «doCompileExpression(variableAssignment.expression,context)»'''
 }
 
-def String doCompileLogicalBinaryExpression (LogicalBinaryExpression  logicalBinaryExpression ){
-	'''«cast("Boolean",doCompileExpression(logicalBinaryExpression.leftExpr))» «getJavaLogicalOperator(logicalBinaryExpression.operator)» «cast("Boolean",doCompileExpression(logicalBinaryExpression.rightExpr))»'''
+def String doCompileLogicalBinaryExpression (LogicalBinaryExpression  logicalBinaryExpression,CompilationContext context ){
+	'''«cast("Boolean",doCompileExpression(logicalBinaryExpression.leftExpr,context))» «getJavaLogicalOperator(logicalBinaryExpression.operator)» «cast("Boolean",doCompileExpression(logicalBinaryExpression.rightExpr,context))»'''
 }
 
 
-def String doCompileLogicalUnaryExpression (LogicalUnaryExpression  logicalUnaryExpression ){
-	'''(!«cast("Boolean",doCompileExpression(logicalUnaryExpression.expression))»)'''
+def String doCompileLogicalUnaryExpression (LogicalUnaryExpression  logicalUnaryExpression,CompilationContext context ){
+	'''(!«cast("Boolean",doCompileExpression(logicalUnaryExpression.expression,context))»)'''
 }
 
-def String doCompileTernaryExpression (TernaryExpression  ternaryExpression ){
+def String doCompileTernaryExpression (TernaryExpression  ternaryExpression,CompilationContext context){
 	switch(ternaryExpression.operator)
 	{
-		case TernaryOperator::IF_EXPRESSION : compileIf(ternaryExpression)
+		case TernaryOperator::IF_EXPRESSION : compileIf(ternaryExpression,context)
 	}
 }
 	
-	def String compileIf(TernaryExpression expression) { 
-		'''«cast("Boolean",doCompileExpression(expression.firstExpression))» ? 
-		(«doCompileExpression(expression.secondExpression)»):
-		(«doCompileExpression(expression.thirdExpression)»)'''
+	def String compileIf(TernaryExpression expression,CompilationContext context) { 
+		'''«cast("Boolean",doCompileExpression(expression.firstExpression,context))» ? 
+		(«doCompileExpression(expression.secondExpression,context)»):
+		(«doCompileExpression(expression.thirdExpression,context)»)'''
 	}
 
 
-def String doCompileComparisonExpression(ComparisonExpression comparisonExpression){
+def String doCompileComparisonExpression(ComparisonExpression comparisonExpression,CompilationContext context){
 	if (isEqualityExpression(comparisonExpression))
 	{
-		doCompileEquality(comparisonExpression)
+		doCompileEquality(comparisonExpression,context)
 	}else{
-		doCompileInequality(comparisonExpression)
+		doCompileInequality(comparisonExpression,context)
 	}
 }
-	def String doCompileInequality(ComparisonExpression expression) { 
-		'''«cast(numericType,doCompileExpression(expression.leftExpr))» «expression.operator.literal» «cast(numericType,doCompileExpression(expression.rightExpr))»'''
+	def String doCompileInequality(ComparisonExpression expression,CompilationContext context) { 
+		'''«cast(numericType,doCompileExpression(expression.leftExpr,context))» «expression.operator.literal» «cast(numericType,doCompileExpression(expression.rightExpr,context))»'''
 	}
 
-	def String doCompileEquality(ComparisonExpression expression) { 
-		var result = '''(«doCompileExpression(expression.leftExpr)»).equals(«doCompileExpression(expression.rightExpr)»)'''
+	def String doCompileEquality(ComparisonExpression expression,CompilationContext context) { 
+		var result = '''(«doCompileExpression(expression.leftExpr,context)»).equals(«doCompileExpression(expression.rightExpr,context)»)'''
 		if (expression.operator == ComparisonOperator::NOTEQ)
 		{
 			result = '''(!«result»)'''
