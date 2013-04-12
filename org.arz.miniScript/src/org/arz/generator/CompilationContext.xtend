@@ -41,8 +41,9 @@ class CompilationContext {
 	
 	val HashSet<Symbol> symbols = new HashSet<Symbol>();
 	val Collection<String> innerClasses = new ArrayList<String>();
+	val Collection<String> methods = new ArrayList<String>();
 	@Property var String currentClassName;
-	private static int clazzCount = 0;
+	private static int nameCount = 0;
 	private static val String classNamePrefix = "Closure"
 
 	
@@ -85,9 +86,15 @@ class CompilationContext {
 	
 	def String generateClassName()
 	{
-		clazzCount = clazzCount + 1;
-		 currentClassName = '''«classNamePrefix»_«clazzCount»'''
+		nameCount = nameCount + 1;
+		 currentClassName = '''«classNamePrefix»_«nameCount»'''
 		 return currentClassName;
+	}
+	
+	def String generateMethodName(String prefix)
+	{
+		nameCount = nameCount + 1;
+		return '''«prefix»_«nameCount»'''
 	}
 	
 	def String getCurrenctClassName()
@@ -120,6 +127,17 @@ class CompilationContext {
 	{
 		symbols.map[symbol | symbol.name]
 	}
+	
+	def void addMethod(String method)
+	{
+		methods.add(method)
+	}
+	
+	def Iterable<String> getMethods()
+	{
+		return methods;
+	}
+	
 		
 }
 

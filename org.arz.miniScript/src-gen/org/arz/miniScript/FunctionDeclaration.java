@@ -48,12 +48,12 @@ public interface FunctionDeclaration extends Expression
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Body</em>' containment reference.
-   * @see #setBody(Body)
+   * @see #setBody(Expression)
    * @see org.arz.miniScript.MiniScriptPackage#getFunctionDeclaration_Body()
    * @model containment="true"
    * @generated
    */
-  Body getBody();
+  Expression getBody();
 
   /**
    * Sets the value of the '{@link org.arz.miniScript.FunctionDeclaration#getBody <em>Body</em>}' containment reference.
@@ -63,6 +63,6 @@ public interface FunctionDeclaration extends Expression
    * @see #getBody()
    * @generated
    */
-  void setBody(Body value);
+  void setBody(Expression value);
 
 } // FunctionDeclaration

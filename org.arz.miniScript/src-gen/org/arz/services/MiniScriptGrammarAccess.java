@@ -81,14 +81,15 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cTernaryExpressionParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		private final RuleCall cComparisonExpressionParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		private final RuleCall cLetExpressionParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cBlockExpressionParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
 		
 		//Expression:
 		//	FunctionDeclaration | VariableAssignment | LogicalBinaryExpression | LogicalUnaryExpression | TernaryExpression |
-		//	ComparisonExpression | LetExpression;
+		//	ComparisonExpression | LetExpression | BlockExpression;
 		public ParserRule getRule() { return rule; }
 
 		//FunctionDeclaration | VariableAssignment | LogicalBinaryExpression | LogicalUnaryExpression | TernaryExpression |
-		//ComparisonExpression | LetExpression
+		//ComparisonExpression | LetExpression | BlockExpression
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//FunctionDeclaration
@@ -111,6 +112,45 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 
 		//LetExpression
 		public RuleCall getLetExpressionParserRuleCall_6() { return cLetExpressionParserRuleCall_6; }
+
+		//BlockExpression
+		public RuleCall getBlockExpressionParserRuleCall_7() { return cBlockExpressionParserRuleCall_7; }
+	}
+
+	public class BlockExpressionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BlockExpression");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Assignment cExpressionsAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final RuleCall cExpressionsExpressionParserRuleCall_1_0_0 = (RuleCall)cExpressionsAssignment_1_0.eContents().get(0);
+		private final Keyword cSemicolonKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Keyword cRightCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		
+		//BlockExpression:
+		//	"{" (expressions+=Expression ";")+ "}";
+		public ParserRule getRule() { return rule; }
+
+		//"{" (expressions+=Expression ";")+ "}"
+		public Group getGroup() { return cGroup; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_0() { return cLeftCurlyBracketKeyword_0; }
+
+		//(expressions+=Expression ";")+
+		public Group getGroup_1() { return cGroup_1; }
+
+		//expressions+=Expression
+		public Assignment getExpressionsAssignment_1_0() { return cExpressionsAssignment_1_0; }
+
+		//Expression
+		public RuleCall getExpressionsExpressionParserRuleCall_1_0_0() { return cExpressionsExpressionParserRuleCall_1_0_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_1_1() { return cSemicolonKeyword_1_1; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_2() { return cRightCurlyBracketKeyword_2; }
 	}
 
 	public class LetExpressionElements extends AbstractParserRuleElementFinder {
@@ -353,13 +393,13 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cParametersIDTerminalRuleCall_2_1_1_0 = (RuleCall)cParametersAssignment_2_1_1.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cBodyAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cBodyBodyParserRuleCall_4_0 = (RuleCall)cBodyAssignment_4.eContents().get(0);
+		private final RuleCall cBodyExpressionParserRuleCall_4_0 = (RuleCall)cBodyAssignment_4.eContents().get(0);
 		
 		//FunctionDeclaration:
-		//	"func" "(" (parameters+=ID ("," parameters+=ID)*)? ")" body=Body;
+		//	"func" "(" (parameters+=ID ("," parameters+=ID)*)? ")" body=Expression;
 		public ParserRule getRule() { return rule; }
 
-		//"func" "(" (parameters+=ID ("," parameters+=ID)*)? ")" body=Body
+		//"func" "(" (parameters+=ID ("," parameters+=ID)*)? ")" body=Expression
 		public Group getGroup() { return cGroup; }
 
 		//"func"
@@ -392,63 +432,11 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 		//")"
 		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
 
-		//body=Body
+		//body=Expression
 		public Assignment getBodyAssignment_4() { return cBodyAssignment_4; }
 
-		//Body
-		public RuleCall getBodyBodyParserRuleCall_4_0() { return cBodyBodyParserRuleCall_4_0; }
-	}
-
-	public class BodyElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Body");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Assignment cExpressionsAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
-		private final RuleCall cExpressionsExpressionParserRuleCall_0_0 = (RuleCall)cExpressionsAssignment_0.eContents().get(0);
-		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final Action cBodyAction_1_0 = (Action)cGroup_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
-		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
-		private final Assignment cExpressionsAssignment_1_2_0 = (Assignment)cGroup_1_2.eContents().get(0);
-		private final RuleCall cExpressionsExpressionParserRuleCall_1_2_0_0 = (RuleCall)cExpressionsAssignment_1_2_0.eContents().get(0);
-		private final Keyword cSemicolonKeyword_1_2_1 = (Keyword)cGroup_1_2.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
-		
-		//Body:
-		//	expressions+=Expression | {Body} "{" (expressions+=Expression ";")* "}";
-		public ParserRule getRule() { return rule; }
-
-		//expressions+=Expression | {Body} "{" (expressions+=Expression ";")* "}"
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//expressions+=Expression
-		public Assignment getExpressionsAssignment_0() { return cExpressionsAssignment_0; }
-
 		//Expression
-		public RuleCall getExpressionsExpressionParserRuleCall_0_0() { return cExpressionsExpressionParserRuleCall_0_0; }
-
-		//{Body} "{" (expressions+=Expression ";")* "}"
-		public Group getGroup_1() { return cGroup_1; }
-
-		//{Body}
-		public Action getBodyAction_1_0() { return cBodyAction_1_0; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_1_1() { return cLeftCurlyBracketKeyword_1_1; }
-
-		//(expressions+=Expression ";")*
-		public Group getGroup_1_2() { return cGroup_1_2; }
-
-		//expressions+=Expression
-		public Assignment getExpressionsAssignment_1_2_0() { return cExpressionsAssignment_1_2_0; }
-
-		//Expression
-		public RuleCall getExpressionsExpressionParserRuleCall_1_2_0_0() { return cExpressionsExpressionParserRuleCall_1_2_0_0; }
-
-		//";"
-		public Keyword getSemicolonKeyword_1_2_1() { return cSemicolonKeyword_1_2_1; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_1_3() { return cRightCurlyBracketKeyword_1_3; }
+		public RuleCall getBodyExpressionParserRuleCall_4_0() { return cBodyExpressionParserRuleCall_4_0; }
 	}
 
 	public class SymbolReferenceElements extends AbstractParserRuleElementFinder {
@@ -970,13 +958,13 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 	private TernaryOperatorElements unknownRuleTernaryOperator;
 	private BooleanValueElements unknownRuleBooleanValue;
 	private ExpressionElements pExpression;
+	private BlockExpressionElements pBlockExpression;
 	private LetExpressionElements pLetExpression;
 	private TernaryExpressionElements pTernaryExpression;
 	private LogicalBinaryExpressionElements pLogicalBinaryExpression;
 	private LogicalUnaryExpressionElements pLogicalUnaryExpression;
 	private ComparisonExpressionElements pComparisonExpression;
 	private FunctionDeclarationElements pFunctionDeclaration;
-	private BodyElements pBody;
 	private SymbolReferenceElements pSymbolReference;
 	private NumericExpressionElements pNumericExpression;
 	private FactorElements pFactor;
@@ -1119,13 +1107,23 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Expression:
 	//	FunctionDeclaration | VariableAssignment | LogicalBinaryExpression | LogicalUnaryExpression | TernaryExpression |
-	//	ComparisonExpression | LetExpression;
+	//	ComparisonExpression | LetExpression | BlockExpression;
 	public ExpressionElements getExpressionAccess() {
 		return (pExpression != null) ? pExpression : (pExpression = new ExpressionElements());
 	}
 	
 	public ParserRule getExpressionRule() {
 		return getExpressionAccess().getRule();
+	}
+
+	//BlockExpression:
+	//	"{" (expressions+=Expression ";")+ "}";
+	public BlockExpressionElements getBlockExpressionAccess() {
+		return (pBlockExpression != null) ? pBlockExpression : (pBlockExpression = new BlockExpressionElements());
+	}
+	
+	public ParserRule getBlockExpressionRule() {
+		return getBlockExpressionAccess().getRule();
 	}
 
 	//LetExpression:
@@ -1180,23 +1178,13 @@ public class MiniScriptGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//FunctionDeclaration:
-	//	"func" "(" (parameters+=ID ("," parameters+=ID)*)? ")" body=Body;
+	//	"func" "(" (parameters+=ID ("," parameters+=ID)*)? ")" body=Expression;
 	public FunctionDeclarationElements getFunctionDeclarationAccess() {
 		return (pFunctionDeclaration != null) ? pFunctionDeclaration : (pFunctionDeclaration = new FunctionDeclarationElements());
 	}
 	
 	public ParserRule getFunctionDeclarationRule() {
 		return getFunctionDeclarationAccess().getRule();
-	}
-
-	//Body:
-	//	expressions+=Expression | {Body} "{" (expressions+=Expression ";")* "}";
-	public BodyElements getBodyAccess() {
-		return (pBody != null) ? pBody : (pBody = new BodyElements());
-	}
-	
-	public ParserRule getBodyRule() {
-		return getBodyAccess().getRule();
 	}
 
 	//SymbolReference:

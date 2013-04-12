@@ -50,6 +50,15 @@ public interface MiniScriptFactory extends EFactory
   Expression createExpression();
 
   /**
+   * Returns a new object of class '<em>Block Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Block Expression</em>'.
+   * @generated
+   */
+  BlockExpression createBlockExpression();
+
+  /**
    * Returns a new object of class '<em>Let Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -93,15 +102,6 @@ public interface MiniScriptFactory extends EFactory
    * @generated
    */
   FunctionDeclaration createFunctionDeclaration();
-
-  /**
-   * Returns a new object of class '<em>Body</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Body</em>'.
-   * @generated
-   */
-  Body createBody();
 
   /**
    * Returns a new object of class '<em>Symbol Reference</em>'.

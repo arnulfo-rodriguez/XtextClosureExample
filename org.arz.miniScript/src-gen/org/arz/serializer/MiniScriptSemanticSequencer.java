@@ -3,7 +3,7 @@ package org.arz.serializer;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import org.arz.miniScript.Apply;
-import org.arz.miniScript.Body;
+import org.arz.miniScript.BlockExpression;
 import org.arz.miniScript.ComparisonExpression;
 import org.arz.miniScript.Factor;
 import org.arz.miniScript.FunctionDeclaration;
@@ -56,9 +56,21 @@ public class MiniScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 					return; 
 				}
 				else break;
-			case MiniScriptPackage.BODY:
-				if(context == grammarAccess.getBodyRule()) {
-					sequence_Body(context, (Body) semanticObject); 
+			case MiniScriptPackage.BLOCK_EXPRESSION:
+				if(context == grammarAccess.getApplyRule() ||
+				   context == grammarAccess.getApplyAccess().getApplyFunctorAction_1_0() ||
+				   context == grammarAccess.getBlockExpressionRule() ||
+				   context == grammarAccess.getComparisonExpressionRule() ||
+				   context == grammarAccess.getComparisonExpressionAccess().getComparisonExpressionLeftExprAction_1_0() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getFactorRule() ||
+				   context == grammarAccess.getFactorAccess().getFactorLeftTermAction_1_0() ||
+				   context == grammarAccess.getFunctorRule() ||
+				   context == grammarAccess.getNumericExpressionRule() ||
+				   context == grammarAccess.getNumericExpressionAccess().getNumericExpressionLeftFactorAction_1_0() ||
+				   context == grammarAccess.getParenthesisExpressionRule() ||
+				   context == grammarAccess.getTermRule()) {
+					sequence_BlockExpression(context, (BlockExpression) semanticObject); 
 					return; 
 				}
 				else break;
@@ -299,9 +311,9 @@ public class MiniScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (expressions+=Expression*)
+	 *     expressions+=Expression+
 	 */
-	protected void sequence_Body(EObject context, Body semanticObject) {
+	protected void sequence_BlockExpression(EObject context, BlockExpression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -352,7 +364,7 @@ public class MiniScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     ((parameters+=ID parameters+=ID*)? body=Body)
+	 *     ((parameters+=ID parameters+=ID*)? body=Expression)
 	 */
 	protected void sequence_FunctionDeclaration(EObject context, FunctionDeclaration semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

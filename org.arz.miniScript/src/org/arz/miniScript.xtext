@@ -28,13 +28,18 @@ Expression:
 	LogicalUnaryExpression |
 	TernaryExpression |
 	ComparisonExpression |
-	LetExpression
+	LetExpression |
+	BlockExpression
 ;
+
+BlockExpression:
+	'{'(expressions+=Expression ';')+ '}'
+;
+
 
 LetExpression:
 	'let' (assigment = VariableAssignment ',') expression = Expression
 ;
-
 
 
 TernaryExpression:
@@ -56,12 +61,7 @@ ComparisonExpression returns Expression:
 
 
 FunctionDeclaration:
-	'func' '(' (parameters+=ID (',' parameters+=ID)*)? ')' body=Body
-;
-
-Body :
- 	expressions+=Expression |
-    {Body}'{' ( expressions+=Expression ';')* '}'
+	'func' '(' (parameters+=ID (',' parameters+=ID)*)? ')' body=Expression
 ;
 
 

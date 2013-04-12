@@ -4,7 +4,7 @@ package org.arz.miniScript.impl;
 
 import java.util.Collection;
 
-import org.arz.miniScript.Body;
+import org.arz.miniScript.Expression;
 import org.arz.miniScript.FunctionDeclaration;
 import org.arz.miniScript.MiniScriptPackage;
 
@@ -54,7 +54,7 @@ public class FunctionDeclarationImpl extends ExpressionImpl implements FunctionD
    * @generated
    * @ordered
    */
-  protected Body body;
+  protected Expression body;
 
   /**
    * <!-- begin-user-doc -->
@@ -96,7 +96,7 @@ public class FunctionDeclarationImpl extends ExpressionImpl implements FunctionD
    * <!-- end-user-doc -->
    * @generated
    */
-  public Body getBody()
+  public Expression getBody()
   {
     return body;
   }
@@ -106,9 +106,9 @@ public class FunctionDeclarationImpl extends ExpressionImpl implements FunctionD
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBody(Body newBody, NotificationChain msgs)
+  public NotificationChain basicSetBody(Expression newBody, NotificationChain msgs)
   {
-    Body oldBody = body;
+    Expression oldBody = body;
     body = newBody;
     if (eNotificationRequired())
     {
@@ -123,7 +123,7 @@ public class FunctionDeclarationImpl extends ExpressionImpl implements FunctionD
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBody(Body newBody)
+  public void setBody(Expression newBody)
   {
     if (newBody != body)
     {
@@ -189,7 +189,7 @@ public class FunctionDeclarationImpl extends ExpressionImpl implements FunctionD
         getParameters().addAll((Collection<? extends String>)newValue);
         return;
       case MiniScriptPackage.FUNCTION_DECLARATION__BODY:
-        setBody((Body)newValue);
+        setBody((Expression)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -209,7 +209,7 @@ public class FunctionDeclarationImpl extends ExpressionImpl implements FunctionD
         getParameters().clear();
         return;
       case MiniScriptPackage.FUNCTION_DECLARATION__BODY:
-        setBody((Body)null);
+        setBody((Expression)null);
         return;
     }
     super.eUnset(featureID);

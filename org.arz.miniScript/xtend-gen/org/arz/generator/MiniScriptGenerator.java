@@ -11,7 +11,7 @@ import org.arz.generator.CompilationContext;
 import org.arz.miniScript.AdditionOperator;
 import org.arz.miniScript.Apply;
 import org.arz.miniScript.BinaryLogicalOperator;
-import org.arz.miniScript.Body;
+import org.arz.miniScript.BlockExpression;
 import org.arz.miniScript.BooleanValue;
 import org.arz.miniScript.ComparisonExpression;
 import org.arz.miniScript.ComparisonOperator;
@@ -39,7 +39,6 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.generator.IGenerator;
-import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.Conversions;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IntegerRange;
@@ -81,9 +80,18 @@ public class MiniScriptGenerator implements IGenerator {
       _builder.append("    \t");
       _builder.append("{");
       _builder.newLine();
+      _builder.append("    \t\t");
+      _builder.append("interface Closure {public Object apply(Object...arguments);}");
+      _builder.newLine();
+      _builder.append("    \t\t");
+      _builder.newLine();
       _builder.append("    \t    ");
       String _doGenerateInnerClasses = this.doGenerateInnerClasses(rootContext);
       _builder.append(_doGenerateInnerClasses, "    	    ");
+      _builder.newLineIfNotEmpty();
+      _builder.append("    \t    ");
+      String _doGenerateMethods = this.doGenerateMethods(rootContext);
+      _builder.append(_doGenerateMethods, "    	    ");
       _builder.newLineIfNotEmpty();
       _builder.append("    \t\t");
       String _doGenerateFieldDeclarations = this.doGenerateFieldDeclarations(rootContext);
@@ -260,9 +268,45 @@ public class MiniScriptGenerator implements IGenerator {
       }
     }
     if (!_matched) {
+      if (e instanceof BlockExpression) {
+        final BlockExpression _blockExpression = (BlockExpression)e;
+        _matched=true;
+        String _doCompileBlockExpression = this.doCompileBlockExpression(_blockExpression, context);
+        _switchResult = _doCompileBlockExpression;
+      }
+    }
+    if (!_matched) {
       _switchResult = "";
     }
     return _switchResult;
+  }
+  
+  public String doCompileBlockExpression(final BlockExpression expression, final CompilationContext context) {
+    String _xblockexpression = null;
+    {
+      String methodName = context.generateMethodName("Block");
+      EList<Expression> _expressions = expression.getExpressions();
+      String body = this.doCompileStatementSequence(_expressions, context);
+      StringConcatenation _builder = new StringConcatenation();
+      _builder.append("private Object ");
+      _builder.append(methodName, "");
+      _builder.append("()");
+      _builder.newLineIfNotEmpty();
+      _builder.append("\t\t");
+      _builder.append("{");
+      _builder.newLine();
+      _builder.append("\t\t\t");
+      _builder.append(body, "			");
+      _builder.newLineIfNotEmpty();
+      _builder.append("\t\t");
+      _builder.append("}");
+      context.addMethod(_builder.toString());
+      StringConcatenation _builder_1 = new StringConcatenation();
+      _builder_1.append(methodName, "");
+      _builder_1.append("()");
+      _xblockexpression = (_builder_1.toString());
+    }
+    return _xblockexpression;
   }
   
   public String doCompileLetExpression(final LetExpression LetExpression, final CompilationContext context) {
@@ -271,10 +315,9 @@ public class MiniScriptGenerator implements IGenerator {
       CompilationContext newContext = context.newChildContext();
       VariableAssignment _assigment = LetExpression.getAssigment();
       Expression _expression = LetExpression.getExpression();
-      ArrayList<Expression> _newArrayList = CollectionLiterals.<Expression>newArrayList(_assigment, _expression);
-      CharSequence bodyCode = this.doCompileLetBody(_newArrayList, newContext);
+      CharSequence bodyCode = this.doCompileLetBody(_assigment, _expression, newContext);
       StringConcatenation _builder = new StringConcatenation();
-      _builder.append("new  org.arz.runtime.Closure()");
+      _builder.append("new  Closure()");
       _builder.newLine();
       _builder.append("\t\t");
       _builder.append("{");
@@ -282,6 +325,10 @@ public class MiniScriptGenerator implements IGenerator {
       _builder.append("\t\t        ");
       String _doGenerateInnerClasses = this.doGenerateInnerClasses(newContext);
       _builder.append(_doGenerateInnerClasses, "		        ");
+      _builder.newLineIfNotEmpty();
+      _builder.append("\t\t        ");
+      String _doGenerateMethods = this.doGenerateMethods(newContext);
+      _builder.append(_doGenerateMethods, "		        ");
       _builder.newLineIfNotEmpty();
       _builder.append("\t\t\t    ");
       String _doGenerateFieldDeclarations = this.doGenerateFieldDeclarations(newContext);
@@ -297,7 +344,13 @@ public class MiniScriptGenerator implements IGenerator {
     return _xblockexpression;
   }
   
-  public CharSequence doCompileLetBody(final List<Expression> expressions, final CompilationContext context) {
+  public String doGenerateMethods(final CompilationContext context) {
+    Iterable<String> _methods = context.getMethods();
+    String _join = IterableExtensions.join(_methods, "\n");
+    return _join;
+  }
+  
+  public CharSequence doCompileLetBody(final VariableAssignment assigment, final Expression body, final CompilationContext context) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append(" ");
     _builder.append("@Override public Object apply(Object...arguments)");
@@ -305,10 +358,16 @@ public class MiniScriptGenerator implements IGenerator {
     _builder.append("\t       ");
     _builder.append("{");
     _builder.newLine();
-    _builder.append("\t       \t ");
-    String _doCompileStatementSequence = this.doCompileStatementSequence(expressions, context);
-    _builder.append(_doCompileStatementSequence, "	       	 ");
-    _builder.append(" ");
+    _builder.append("\t       \t  ");
+    String _doCompileExpression = this.doCompileExpression(assigment, context);
+    _builder.append(_doCompileExpression, "	       	  ");
+    _builder.append(";");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t       \t  ");
+    _builder.append("return ");
+    String _doCompileExpression_1 = this.doCompileExpression(body, context);
+    _builder.append(_doCompileExpression_1, "	       	  ");
+    _builder.append(";");
     _builder.newLineIfNotEmpty();
     _builder.append("\t  \t   ");
     _builder.append("}");
@@ -327,7 +386,7 @@ public class MiniScriptGenerator implements IGenerator {
     StringConcatenation _builder = new StringConcatenation();
     Expression _functor = apply.getFunctor();
     String _doCompileExpression = this.doCompileExpression(_functor, context);
-    String _cast = this.cast("org.arz.runtime.Closure", _doCompileExpression);
+    String _cast = this.cast("Closure", _doCompileExpression);
     _builder.append(_cast, "");
     _builder.append(".apply(");
     EList<Expression> _arguments = apply.getArguments();
@@ -408,13 +467,12 @@ public class MiniScriptGenerator implements IGenerator {
       CompilationContext newContext = context.newChildContext();
       String clazzName = newContext.generateClassName();
       EList<String> _parameters = functionDeclaration.getParameters();
-      Body _body = functionDeclaration.getBody();
-      EList<Expression> _expressions = _body.getExpressions();
-      String code = this.doCompileExecuteBody(_parameters, _expressions, newContext);
+      Expression _body = functionDeclaration.getBody();
+      String code = this.doCompileExecuteBody(_parameters, _body, newContext);
       StringConcatenation _builder = new StringConcatenation();
       _builder.append("class ");
       _builder.append(clazzName, "");
-      _builder.append(" implements org.arz.runtime.Closure");
+      _builder.append(" implements Closure");
       _builder.newLineIfNotEmpty();
       _builder.append("\t");
       _builder.append("{");
@@ -422,6 +480,10 @@ public class MiniScriptGenerator implements IGenerator {
       _builder.append("\t\t    ");
       String _doGenerateInnerClasses = this.doGenerateInnerClasses(newContext);
       _builder.append(_doGenerateInnerClasses, "		    ");
+      _builder.newLineIfNotEmpty();
+      _builder.append("\t\t    ");
+      String _doGenerateMethods = this.doGenerateMethods(newContext);
+      _builder.append(_doGenerateMethods, "		    ");
       _builder.newLineIfNotEmpty();
       _builder.append("\t\t    ");
       String _doGenerateFieldDeclarations = this.doGenerateFieldDeclarations(newContext);
@@ -449,52 +511,53 @@ public class MiniScriptGenerator implements IGenerator {
     return _join;
   }
   
-  public String doCompileExecuteBody(final List<String> parameters, final List<Expression> expressions, final CompilationContext context) {
+  public String doCompileExecuteBody(final List<String> parameters, final Expression body, final CompilationContext context) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append(" ");
     _builder.append("private boolean __invoked__= false;");
     _builder.newLine();
-    _builder.append("  ");
+    _builder.append(" ");
     _builder.append("@Override public Object apply(Object...arguments)");
     _builder.newLine();
-    _builder.append("  ");
+    _builder.append(" ");
     _builder.append("{");
     _builder.newLine();
-    _builder.append("  \t");
+    _builder.append(" \t");
     _builder.append("if (__invoked__)");
     _builder.newLine();
-    _builder.append("  \t");
+    _builder.append(" \t");
     _builder.append("{");
     _builder.newLine();
-    _builder.append("  \t  ");
+    _builder.append(" \t  ");
     _builder.append("return new ");
     String _currenctClassName = context.getCurrenctClassName();
-    _builder.append(_currenctClassName, "  	  ");
+    _builder.append(_currenctClassName, " 	  ");
     _builder.append("().applyImpl(arguments);");
     _builder.newLineIfNotEmpty();
-    _builder.append("  \t");
+    _builder.append(" \t");
     _builder.append("}");
     _builder.newLine();
-    _builder.append("  \t");
+    _builder.append(" \t");
     _builder.append("__invoked__ = true;");
     _builder.newLine();
-    _builder.append("  \t");
+    _builder.append(" \t");
     _builder.append("return applyImpl(arguments);");
     _builder.newLine();
-    _builder.append("  ");
+    _builder.append(" ");
     _builder.append("}");
     _builder.newLine();
-    _builder.append("  ");
+    _builder.append(" ");
     _builder.append("private Object applyImpl(Object[] arguments) {");
     _builder.newLine();
-    _builder.append("\t");
+    _builder.append("\t\t");
     String _doCompileSetupArguments = this.doCompileSetupArguments(parameters, context);
-    _builder.append(_doCompileSetupArguments, "	");
+    _builder.append(_doCompileSetupArguments, "		");
+    _builder.newLineIfNotEmpty();
+    _builder.append("return ");
+    String _doCompileExpression = this.doCompileExpression(body, context);
+    _builder.append(_doCompileExpression, "");
+    _builder.append(";");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
-    String _doCompileStatementSequence = this.doCompileStatementSequence(expressions, context);
-    _builder.append(_doCompileStatementSequence, "	");
-    _builder.newLineIfNotEmpty();
     _builder.append("}");
     _builder.newLine();
     return _builder.toString();

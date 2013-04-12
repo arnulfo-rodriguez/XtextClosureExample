@@ -5,7 +5,7 @@ package org.arz.miniScript.impl;
 import org.arz.miniScript.AdditionOperator;
 import org.arz.miniScript.Apply;
 import org.arz.miniScript.BinaryLogicalOperator;
-import org.arz.miniScript.Body;
+import org.arz.miniScript.BlockExpression;
 import org.arz.miniScript.BooleanValue;
 import org.arz.miniScript.ComparisonExpression;
 import org.arz.miniScript.ComparisonOperator;
@@ -71,6 +71,13 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass blockExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass letExpressionEClass = null;
 
   /**
@@ -100,13 +107,6 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * @generated
    */
   private EClass functionDeclarationEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass bodyEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -321,6 +321,26 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getBlockExpression()
+  {
+    return blockExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBlockExpression_Expressions()
+  {
+    return (EReference)blockExpressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getLetExpression()
   {
     return letExpressionEClass;
@@ -494,26 +514,6 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
   public EReference getFunctionDeclaration_Body()
   {
     return (EReference)functionDeclarationEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getBody()
-  {
-    return bodyEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getBody_Expressions()
-  {
-    return (EReference)bodyEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -863,6 +863,9 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
 
     expressionEClass = createEClass(EXPRESSION);
 
+    blockExpressionEClass = createEClass(BLOCK_EXPRESSION);
+    createEReference(blockExpressionEClass, BLOCK_EXPRESSION__EXPRESSIONS);
+
     letExpressionEClass = createEClass(LET_EXPRESSION);
     createEReference(letExpressionEClass, LET_EXPRESSION__ASSIGMENT);
     createEReference(letExpressionEClass, LET_EXPRESSION__EXPRESSION);
@@ -885,9 +888,6 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
     functionDeclarationEClass = createEClass(FUNCTION_DECLARATION);
     createEAttribute(functionDeclarationEClass, FUNCTION_DECLARATION__PARAMETERS);
     createEReference(functionDeclarationEClass, FUNCTION_DECLARATION__BODY);
-
-    bodyEClass = createEClass(BODY);
-    createEReference(bodyEClass, BODY__EXPRESSIONS);
 
     symbolReferenceEClass = createEClass(SYMBOL_REFERENCE);
     createEAttribute(symbolReferenceEClass, SYMBOL_REFERENCE__ID);
@@ -961,6 +961,7 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
 
     // Add supertypes to classes
     programEClass.getESuperTypes().add(this.getModel());
+    blockExpressionEClass.getESuperTypes().add(this.getExpression());
     letExpressionEClass.getESuperTypes().add(this.getExpression());
     ternaryExpressionEClass.getESuperTypes().add(this.getExpression());
     logicalBinaryExpressionEClass.getESuperTypes().add(this.getExpression());
@@ -983,6 +984,9 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
 
     initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+    initEClass(blockExpressionEClass, BlockExpression.class, "BlockExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getBlockExpression_Expressions(), this.getExpression(), null, "expressions", null, 0, -1, BlockExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(letExpressionEClass, LetExpression.class, "LetExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getLetExpression_Assigment(), this.getVariableAssignment(), null, "assigment", null, 0, 1, LetExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getLetExpression_Expression(), this.getExpression(), null, "expression", null, 0, 1, LetExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1004,10 +1008,7 @@ public class MiniScriptPackageImpl extends EPackageImpl implements MiniScriptPac
 
     initEClass(functionDeclarationEClass, FunctionDeclaration.class, "FunctionDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFunctionDeclaration_Parameters(), ecorePackage.getEString(), "parameters", null, 0, -1, FunctionDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFunctionDeclaration_Body(), this.getBody(), null, "body", null, 0, 1, FunctionDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(bodyEClass, Body.class, "Body", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getBody_Expressions(), this.getExpression(), null, "expressions", null, 0, -1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFunctionDeclaration_Body(), this.getExpression(), null, "body", null, 0, 1, FunctionDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(symbolReferenceEClass, SymbolReference.class, "SymbolReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSymbolReference_Id(), ecorePackage.getEString(), "id", null, 0, 1, SymbolReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

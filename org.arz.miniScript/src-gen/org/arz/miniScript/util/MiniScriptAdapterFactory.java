@@ -90,6 +90,11 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
         return createExpressionAdapter();
       }
       @Override
+      public Adapter caseBlockExpression(BlockExpression object)
+      {
+        return createBlockExpressionAdapter();
+      }
+      @Override
       public Adapter caseLetExpression(LetExpression object)
       {
         return createLetExpressionAdapter();
@@ -113,11 +118,6 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
       public Adapter caseFunctionDeclaration(FunctionDeclaration object)
       {
         return createFunctionDeclarationAdapter();
-      }
-      @Override
-      public Adapter caseBody(Body object)
-      {
-        return createBodyAdapter();
       }
       @Override
       public Adapter caseSymbolReference(SymbolReference object)
@@ -227,6 +227,21 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.arz.miniScript.BlockExpression <em>Block Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.arz.miniScript.BlockExpression
+   * @generated
+   */
+  public Adapter createBlockExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.arz.miniScript.LetExpression <em>Let Expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -297,21 +312,6 @@ public class MiniScriptAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFunctionDeclarationAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.arz.miniScript.Body <em>Body</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.arz.miniScript.Body
-   * @generated
-   */
-  public Adapter createBodyAdapter()
   {
     return null;
   }

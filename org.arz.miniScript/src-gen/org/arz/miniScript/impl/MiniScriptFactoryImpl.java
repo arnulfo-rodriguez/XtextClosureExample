@@ -68,12 +68,12 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
       case MiniScriptPackage.MODEL: return createModel();
       case MiniScriptPackage.PROGRAM: return createProgram();
       case MiniScriptPackage.EXPRESSION: return createExpression();
+      case MiniScriptPackage.BLOCK_EXPRESSION: return createBlockExpression();
       case MiniScriptPackage.LET_EXPRESSION: return createLetExpression();
       case MiniScriptPackage.TERNARY_EXPRESSION: return createTernaryExpression();
       case MiniScriptPackage.LOGICAL_BINARY_EXPRESSION: return createLogicalBinaryExpression();
       case MiniScriptPackage.LOGICAL_UNARY_EXPRESSION: return createLogicalUnaryExpression();
       case MiniScriptPackage.FUNCTION_DECLARATION: return createFunctionDeclaration();
-      case MiniScriptPackage.BODY: return createBody();
       case MiniScriptPackage.SYMBOL_REFERENCE: return createSymbolReference();
       case MiniScriptPackage.LITERAL_BOOLEAN: return createLiteralBoolean();
       case MiniScriptPackage.LITERAL_NUMBER: return createLiteralNumber();
@@ -183,6 +183,17 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
    * <!-- end-user-doc -->
    * @generated
    */
+  public BlockExpression createBlockExpression()
+  {
+    BlockExpressionImpl blockExpression = new BlockExpressionImpl();
+    return blockExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public LetExpression createLetExpression()
   {
     LetExpressionImpl letExpression = new LetExpressionImpl();
@@ -231,17 +242,6 @@ public class MiniScriptFactoryImpl extends EFactoryImpl implements MiniScriptFac
   {
     FunctionDeclarationImpl functionDeclaration = new FunctionDeclarationImpl();
     return functionDeclaration;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Body createBody()
-  {
-    BodyImpl body = new BodyImpl();
-    return body;
   }
 
   /**

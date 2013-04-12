@@ -76,8 +76,7 @@ public class ParsingTests {
 			Assert.assertTrue(expression instanceof FunctionDeclaration);
 			FunctionDeclaration f = (FunctionDeclaration) expression;
 			Assert.assertEquals(0, f.getParameters().size());
-			Assert.assertEquals(1, f.getBody().getExpressions().size());
-			Assert.assertTrue(f.getBody().getExpressions().get(0) instanceof LiteralNumber);
+			Assert.assertTrue(f.getBody() instanceof LiteralNumber);
 		} catch (Exception e) {
 			Assert.fail();
 		}

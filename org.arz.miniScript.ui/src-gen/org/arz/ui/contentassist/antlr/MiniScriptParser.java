@@ -38,7 +38,6 @@ public class MiniScriptParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getExpressionAccess().getAlternatives(), "rule__Expression__Alternatives");
-					put(grammarAccess.getBodyAccess().getAlternatives(), "rule__Body__Alternatives");
 					put(grammarAccess.getTermAccess().getAlternatives(), "rule__Term__Alternatives");
 					put(grammarAccess.getFunctorAccess().getAlternatives(), "rule__Functor__Alternatives");
 					put(grammarAccess.getLiteralExpressionAccess().getAlternatives(), "rule__LiteralExpression__Alternatives");
@@ -49,6 +48,8 @@ public class MiniScriptParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBooleanValueAccess().getAlternatives(), "rule__BooleanValue__Alternatives");
 					put(grammarAccess.getProgramAccess().getGroup(), "rule__Program__Group__0");
 					put(grammarAccess.getProgramAccess().getGroup_2(), "rule__Program__Group_2__0");
+					put(grammarAccess.getBlockExpressionAccess().getGroup(), "rule__BlockExpression__Group__0");
+					put(grammarAccess.getBlockExpressionAccess().getGroup_1(), "rule__BlockExpression__Group_1__0");
 					put(grammarAccess.getLetExpressionAccess().getGroup(), "rule__LetExpression__Group__0");
 					put(grammarAccess.getLetExpressionAccess().getGroup_1(), "rule__LetExpression__Group_1__0");
 					put(grammarAccess.getTernaryExpressionAccess().getGroup(), "rule__TernaryExpression__Group__0");
@@ -59,8 +60,6 @@ public class MiniScriptParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFunctionDeclarationAccess().getGroup(), "rule__FunctionDeclaration__Group__0");
 					put(grammarAccess.getFunctionDeclarationAccess().getGroup_2(), "rule__FunctionDeclaration__Group_2__0");
 					put(grammarAccess.getFunctionDeclarationAccess().getGroup_2_1(), "rule__FunctionDeclaration__Group_2_1__0");
-					put(grammarAccess.getBodyAccess().getGroup_1(), "rule__Body__Group_1__0");
-					put(grammarAccess.getBodyAccess().getGroup_1_2(), "rule__Body__Group_1_2__0");
 					put(grammarAccess.getNumericExpressionAccess().getGroup(), "rule__NumericExpression__Group__0");
 					put(grammarAccess.getNumericExpressionAccess().getGroup_1(), "rule__NumericExpression__Group_1__0");
 					put(grammarAccess.getFactorAccess().getGroup(), "rule__Factor__Group__0");
@@ -73,6 +72,7 @@ public class MiniScriptParser extends AbstractContentAssistParser {
 					put(grammarAccess.getParenthesisExpressionAccess().getGroup(), "rule__ParenthesisExpression__Group__0");
 					put(grammarAccess.getProgramAccess().getExpressionsAssignment_0(), "rule__Program__ExpressionsAssignment_0");
 					put(grammarAccess.getProgramAccess().getExpressionsAssignment_2_0(), "rule__Program__ExpressionsAssignment_2_0");
+					put(grammarAccess.getBlockExpressionAccess().getExpressionsAssignment_1_0(), "rule__BlockExpression__ExpressionsAssignment_1_0");
 					put(grammarAccess.getLetExpressionAccess().getAssigmentAssignment_1_0(), "rule__LetExpression__AssigmentAssignment_1_0");
 					put(grammarAccess.getLetExpressionAccess().getExpressionAssignment_2(), "rule__LetExpression__ExpressionAssignment_2");
 					put(grammarAccess.getTernaryExpressionAccess().getOperatorAssignment_0(), "rule__TernaryExpression__OperatorAssignment_0");
@@ -89,8 +89,6 @@ public class MiniScriptParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFunctionDeclarationAccess().getParametersAssignment_2_0(), "rule__FunctionDeclaration__ParametersAssignment_2_0");
 					put(grammarAccess.getFunctionDeclarationAccess().getParametersAssignment_2_1_1(), "rule__FunctionDeclaration__ParametersAssignment_2_1_1");
 					put(grammarAccess.getFunctionDeclarationAccess().getBodyAssignment_4(), "rule__FunctionDeclaration__BodyAssignment_4");
-					put(grammarAccess.getBodyAccess().getExpressionsAssignment_0(), "rule__Body__ExpressionsAssignment_0");
-					put(grammarAccess.getBodyAccess().getExpressionsAssignment_1_2_0(), "rule__Body__ExpressionsAssignment_1_2_0");
 					put(grammarAccess.getSymbolReferenceAccess().getIdAssignment(), "rule__SymbolReference__IdAssignment");
 					put(grammarAccess.getNumericExpressionAccess().getOperatorAssignment_1_1(), "rule__NumericExpression__OperatorAssignment_1_1");
 					put(grammarAccess.getNumericExpressionAccess().getRightFactorAssignment_1_2(), "rule__NumericExpression__RightFactorAssignment_1_2");

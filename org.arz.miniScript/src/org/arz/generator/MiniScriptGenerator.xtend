@@ -8,6 +8,7 @@ import java.util.LinkedList
 import java.util.List
 import org.arz.miniScript.Apply
 import org.arz.miniScript.BinaryLogicalOperator
+import org.arz.miniScript.BlockExpression
 import org.arz.miniScript.ComparisonExpression
 import org.arz.miniScript.ComparisonOperator
 import org.arz.miniScript.Expression
@@ -28,7 +29,6 @@ import org.arz.miniScript.VariableAssignment
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
-import java.util.Collection
 
 class MiniScriptGenerator implements IGenerator {
 	
@@ -45,7 +45,10 @@ class MiniScriptGenerator implements IGenerator {
     	var code = doCompileStatementSequence(program.expressions,rootContext)
     	'''class «name»
     	{
+    		interface Closure {public Object apply(Object...arguments);}
+    		
     	    «doGenerateInnerClasses(rootContext)»
+    	    «doGenerateMethods(rootContext)»
     		«doGenerateFieldDeclarations(rootContext)»
     		public Object eval()
     		{
@@ -85,28 +88,46 @@ def String doCompileExpression(Expression e, CompilationContext context)
 		SymbolReference:  doCompileSymbolReference(e,context)
 		Factor:  doCompileFactor(e,context)
 		LetExpression:  doCompileLetExpression(e,context)
+		BlockExpression: doCompileBlockExpression(e,context)
 		default: ""
     }
 }
+	def String doCompileBlockExpression(BlockExpression expression, CompilationContext context) {
+		var methodName = context.generateMethodName("Block")
+		var body = doCompileStatementSequence(expression.expressions,context)
+		context.addMethod('''private Object «methodName»()
+		{
+			«body»
+		}''')
+		
+		'''«methodName»()'''
+	}
+
 	def String doCompileLetExpression(LetExpression LetExpression,CompilationContext context) { 
 		
 		var newContext = context.newChildContext;
-		var bodyCode = doCompileLetBody(newArrayList(LetExpression.assigment,LetExpression.expression),newContext)
+		var bodyCode = doCompileLetBody(LetExpression.assigment,LetExpression.expression,newContext)
 	   
-		'''new  org.arz.runtime.Closure()
+		'''new  Closure()
 		{
 		        «doGenerateInnerClasses(newContext)»
+		        «doGenerateMethods(newContext)»
 			    «doGenerateFieldDeclarations(newContext)»
 				«bodyCode»
 		}.apply()'''
 		
-	   
 	}
 	
-	def doCompileLetBody(List<Expression> expressions, CompilationContext context) { 
+	def doGenerateMethods(CompilationContext context) { 
+		context.methods.join('\n')
+	}
+
+	
+	def doCompileLetBody(VariableAssignment assigment, Expression body, CompilationContext context) { 
 		''' @Override public Object apply(Object...arguments)
 	       {
-	       	 «doCompileStatementSequence(expressions,context)» 
+	       	  «doCompileExpression(assigment,context)»;
+	       	  return «doCompileExpression(body,context)»;
 	  	   }
 	  	'''
 	}
@@ -118,7 +139,7 @@ def String doCompileSymbolReference(SymbolReference symbolReference,CompilationC
 }
 
 def String doCompileApply(Apply apply,CompilationContext context){
-	'''«cast("org.arz.runtime.Closure",doCompileExpression(apply.functor,context))».apply(«apply.arguments.map[arg | doCompileExpression(arg,context)].join(",")»)'''
+	'''«cast("Closure",doCompileExpression(apply.functor,context))».apply(«apply.arguments.map[arg | doCompileExpression(arg,context)].join(",")»)'''
 }
 
 def String doCompileLiteralNumber(LiteralNumber literalNumber,CompilationContext context){
@@ -141,10 +162,11 @@ def String doCompileNumericExpression(NumericExpression numericExpression,Compil
 def String doCompileFunctionDeclaration  (FunctionDeclaration   functionDeclaration,CompilationContext context){
 	var newContext = context.newChildContext;
 	var clazzName = newContext.generateClassName;
-	var code = doCompileExecuteBody(functionDeclaration.parameters,functionDeclaration.body.expressions,newContext)
-	var String clazz = '''class «clazzName» implements org.arz.runtime.Closure
+	var code = doCompileExecuteBody(functionDeclaration.parameters,functionDeclaration.body,newContext)
+	var String clazz = '''class «clazzName» implements Closure
 	{
 		    «doGenerateInnerClasses(newContext)»
+		    «doGenerateMethods(newContext)»
 		    «doGenerateFieldDeclarations(newContext)»
 			«code»
 	}'''
@@ -158,7 +180,7 @@ def doGenerateInnerClasses(CompilationContext context) {
 }
 
 
-def String doCompileExecuteBody(List<String> parameters, List<Expression> expressions,CompilationContext context) { 
+def String doCompileExecuteBody(List<String> parameters, Expression body,CompilationContext context) { 
 	'''
 	 private boolean __invoked__= false;
 	  @Override public Object apply(Object...arguments)
@@ -172,7 +194,7 @@ def String doCompileExecuteBody(List<String> parameters, List<Expression> expres
 	  }
 	  private Object applyImpl(Object[] arguments) {
 		«doCompileSetupArguments(parameters,context)»
-		«doCompileStatementSequence(expressions,context)»
+	 return «doCompileExpression(body,context)»;
 	}
 	'''
 }

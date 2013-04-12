@@ -124,6 +124,34 @@ public interface MiniScriptPackage extends EPackage
   int EXPRESSION_FEATURE_COUNT = 0;
 
   /**
+   * The meta object id for the '{@link org.arz.miniScript.impl.BlockExpressionImpl <em>Block Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.arz.miniScript.impl.BlockExpressionImpl
+   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getBlockExpression()
+   * @generated
+   */
+  int BLOCK_EXPRESSION = 3;
+
+  /**
+   * The feature id for the '<em><b>Expressions</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOCK_EXPRESSION__EXPRESSIONS = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Block Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOCK_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link org.arz.miniScript.impl.LetExpressionImpl <em>Let Expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -131,7 +159,7 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getLetExpression()
    * @generated
    */
-  int LET_EXPRESSION = 3;
+  int LET_EXPRESSION = 4;
 
   /**
    * The feature id for the '<em><b>Assigment</b></em>' containment reference.
@@ -168,7 +196,7 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getTernaryExpression()
    * @generated
    */
-  int TERNARY_EXPRESSION = 4;
+  int TERNARY_EXPRESSION = 5;
 
   /**
    * The feature id for the '<em><b>Operator</b></em>' attribute.
@@ -223,7 +251,7 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getLogicalBinaryExpression()
    * @generated
    */
-  int LOGICAL_BINARY_EXPRESSION = 5;
+  int LOGICAL_BINARY_EXPRESSION = 6;
 
   /**
    * The feature id for the '<em><b>Operator</b></em>' attribute.
@@ -269,7 +297,7 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getLogicalUnaryExpression()
    * @generated
    */
-  int LOGICAL_UNARY_EXPRESSION = 6;
+  int LOGICAL_UNARY_EXPRESSION = 7;
 
   /**
    * The feature id for the '<em><b>Operator</b></em>' attribute.
@@ -306,7 +334,7 @@ public interface MiniScriptPackage extends EPackage
    * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getFunctionDeclaration()
    * @generated
    */
-  int FUNCTION_DECLARATION = 7;
+  int FUNCTION_DECLARATION = 8;
 
   /**
    * The feature id for the '<em><b>Parameters</b></em>' attribute list.
@@ -334,34 +362,6 @@ public interface MiniScriptPackage extends EPackage
    * @ordered
    */
   int FUNCTION_DECLARATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.arz.miniScript.impl.BodyImpl <em>Body</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.arz.miniScript.impl.BodyImpl
-   * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getBody()
-   * @generated
-   */
-  int BODY = 8;
-
-  /**
-   * The feature id for the '<em><b>Expressions</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BODY__EXPRESSIONS = 0;
-
-  /**
-   * The number of structural features of the '<em>Body</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BODY_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.arz.miniScript.impl.SymbolReferenceImpl <em>Symbol Reference</em>}' class.
@@ -772,6 +772,27 @@ public interface MiniScriptPackage extends EPackage
   EClass getExpression();
 
   /**
+   * Returns the meta object for class '{@link org.arz.miniScript.BlockExpression <em>Block Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Block Expression</em>'.
+   * @see org.arz.miniScript.BlockExpression
+   * @generated
+   */
+  EClass getBlockExpression();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.arz.miniScript.BlockExpression#getExpressions <em>Expressions</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Expressions</em>'.
+   * @see org.arz.miniScript.BlockExpression#getExpressions()
+   * @see #getBlockExpression()
+   * @generated
+   */
+  EReference getBlockExpression_Expressions();
+
+  /**
    * Returns the meta object for class '{@link org.arz.miniScript.LetExpression <em>Let Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -963,27 +984,6 @@ public interface MiniScriptPackage extends EPackage
    * @generated
    */
   EReference getFunctionDeclaration_Body();
-
-  /**
-   * Returns the meta object for class '{@link org.arz.miniScript.Body <em>Body</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Body</em>'.
-   * @see org.arz.miniScript.Body
-   * @generated
-   */
-  EClass getBody();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.arz.miniScript.Body#getExpressions <em>Expressions</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Expressions</em>'.
-   * @see org.arz.miniScript.Body#getExpressions()
-   * @see #getBody()
-   * @generated
-   */
-  EReference getBody_Expressions();
 
   /**
    * Returns the meta object for class '{@link org.arz.miniScript.SymbolReference <em>Symbol Reference</em>}'.
@@ -1373,6 +1373,24 @@ public interface MiniScriptPackage extends EPackage
     EClass EXPRESSION = eINSTANCE.getExpression();
 
     /**
+     * The meta object literal for the '{@link org.arz.miniScript.impl.BlockExpressionImpl <em>Block Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.arz.miniScript.impl.BlockExpressionImpl
+     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getBlockExpression()
+     * @generated
+     */
+    EClass BLOCK_EXPRESSION = eINSTANCE.getBlockExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Expressions</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BLOCK_EXPRESSION__EXPRESSIONS = eINSTANCE.getBlockExpression_Expressions();
+
+    /**
      * The meta object literal for the '{@link org.arz.miniScript.impl.LetExpressionImpl <em>Let Expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1525,24 +1543,6 @@ public interface MiniScriptPackage extends EPackage
      * @generated
      */
     EReference FUNCTION_DECLARATION__BODY = eINSTANCE.getFunctionDeclaration_Body();
-
-    /**
-     * The meta object literal for the '{@link org.arz.miniScript.impl.BodyImpl <em>Body</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.arz.miniScript.impl.BodyImpl
-     * @see org.arz.miniScript.impl.MiniScriptPackageImpl#getBody()
-     * @generated
-     */
-    EClass BODY = eINSTANCE.getBody();
-
-    /**
-     * The meta object literal for the '<em><b>Expressions</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference BODY__EXPRESSIONS = eINSTANCE.getBody_Expressions();
 
     /**
      * The meta object literal for the '{@link org.arz.miniScript.impl.SymbolReferenceImpl <em>Symbol Reference</em>}' class.

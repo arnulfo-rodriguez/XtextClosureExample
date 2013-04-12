@@ -42,6 +42,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//Program/expressions"/>
     </genClasses>
     <genClasses ecoreClass="MiniScript.ecore#//Expression"/>
+    <genClasses ecoreClass="MiniScript.ecore#//BlockExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//BlockExpression/expressions"/>
+    </genClasses>
     <genClasses ecoreClass="MiniScript.ecore#//LetExpression">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//LetExpression/assigment"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//LetExpression/expression"/>
@@ -64,9 +67,6 @@
     <genClasses ecoreClass="MiniScript.ecore#//FunctionDeclaration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MiniScript.ecore#//FunctionDeclaration/parameters"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//FunctionDeclaration/body"/>
-    </genClasses>
-    <genClasses ecoreClass="MiniScript.ecore#//Body">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniScript.ecore#//Body/expressions"/>
     </genClasses>
     <genClasses ecoreClass="MiniScript.ecore#//SymbolReference">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MiniScript.ecore#//SymbolReference/id"/>

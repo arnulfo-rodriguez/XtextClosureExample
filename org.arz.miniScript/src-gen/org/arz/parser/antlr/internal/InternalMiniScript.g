@@ -242,6 +242,67 @@ ruleExpression returns [EObject current=null]
         $current = $this_LetExpression_6.current; 
         afterParserOrEnumRuleCall();
     }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getExpressionAccess().getBlockExpressionParserRuleCall_7()); 
+    }
+    this_BlockExpression_7=ruleBlockExpression
+    { 
+        $current = $this_BlockExpression_7.current; 
+        afterParserOrEnumRuleCall();
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleBlockExpression
+entryRuleBlockExpression returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getBlockExpressionRule()); }
+	 iv_ruleBlockExpression=ruleBlockExpression 
+	 { $current=$iv_ruleBlockExpression.current; } 
+	 EOF 
+;
+
+// Rule BlockExpression
+ruleBlockExpression returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='{' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getBlockExpressionAccess().getLeftCurlyBracketKeyword_0());
+    }
+((
+(
+		{ 
+	        newCompositeNode(grammarAccess.getBlockExpressionAccess().getExpressionsExpressionParserRuleCall_1_0_0()); 
+	    }
+		lv_expressions_1_0=ruleExpression		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getBlockExpressionRule());
+	        }
+       		add(
+       			$current, 
+       			"expressions",
+        		lv_expressions_1_0, 
+        		"Expression");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_2=';' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getBlockExpressionAccess().getSemicolonKeyword_1_1());
+    }
+)+	otherlv_3='}' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getBlockExpressionAccess().getRightCurlyBracketKeyword_2());
+    }
 )
 ;
 
@@ -716,9 +777,9 @@ ruleFunctionDeclaration returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getFunctionDeclarationAccess().getBodyBodyParserRuleCall_4_0()); 
+	        newCompositeNode(grammarAccess.getFunctionDeclarationAccess().getBodyExpressionParserRuleCall_4_0()); 
 	    }
-		lv_body_6_0=ruleBody		{
+		lv_body_6_0=ruleExpression		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getFunctionDeclarationRule());
 	        }
@@ -726,87 +787,11 @@ ruleFunctionDeclaration returns [EObject current=null]
        			$current, 
        			"body",
         		lv_body_6_0, 
-        		"Body");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-))
-;
-
-
-
-
-
-// Entry rule entryRuleBody
-entryRuleBody returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getBodyRule()); }
-	 iv_ruleBody=ruleBody 
-	 { $current=$iv_ruleBody.current; } 
-	 EOF 
-;
-
-// Rule Body
-ruleBody returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-((
-(
-		{ 
-	        newCompositeNode(grammarAccess.getBodyAccess().getExpressionsExpressionParserRuleCall_0_0()); 
-	    }
-		lv_expressions_0_0=ruleExpression		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getBodyRule());
-	        }
-       		add(
-       			$current, 
-       			"expressions",
-        		lv_expressions_0_0, 
         		"Expression");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)
-    |((
-    {
-        $current = forceCreateModelElement(
-            grammarAccess.getBodyAccess().getBodyAction_1_0(),
-            $current);
-    }
-)	otherlv_2='{' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getBodyAccess().getLeftCurlyBracketKeyword_1_1());
-    }
-((
-(
-		{ 
-	        newCompositeNode(grammarAccess.getBodyAccess().getExpressionsExpressionParserRuleCall_1_2_0_0()); 
-	    }
-		lv_expressions_3_0=ruleExpression		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getBodyRule());
-	        }
-       		add(
-       			$current, 
-       			"expressions",
-        		lv_expressions_3_0, 
-        		"Expression");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)	otherlv_4=';' 
-    {
-    	newLeafNode(otherlv_4, grammarAccess.getBodyAccess().getSemicolonKeyword_1_2_1());
-    }
-)*	otherlv_5='}' 
-    {
-    	newLeafNode(otherlv_5, grammarAccess.getBodyAccess().getRightCurlyBracketKeyword_1_3());
-    }
 ))
 ;
 

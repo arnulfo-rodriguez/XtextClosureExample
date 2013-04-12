@@ -27,6 +27,13 @@ public class CompilationContext {
     }
   }.apply();
   
+  private final Collection<String> methods = new Function0<Collection<String>>() {
+    public Collection<String> apply() {
+      ArrayList<String> _arrayList = new ArrayList<String>();
+      return _arrayList;
+    }
+  }.apply();
+  
   private String _currentClassName;
   
   public String getCurrentClassName() {
@@ -37,7 +44,7 @@ public class CompilationContext {
     this._currentClassName = currentClassName;
   }
   
-  private static int clazzCount = 0;
+  private static int nameCount = 0;
   
   private final static String classNamePrefix = "Closure";
   
@@ -75,14 +82,24 @@ public class CompilationContext {
   }
   
   public String generateClassName() {
-    int _plus = (CompilationContext.clazzCount + 1);
-    CompilationContext.clazzCount = _plus;
+    int _plus = (CompilationContext.nameCount + 1);
+    CompilationContext.nameCount = _plus;
     StringConcatenation _builder = new StringConcatenation();
     _builder.append(CompilationContext.classNamePrefix, "");
     _builder.append("_");
-    _builder.append(CompilationContext.clazzCount, "");
+    _builder.append(CompilationContext.nameCount, "");
     this.setCurrentClassName(_builder.toString());
     return this.getCurrentClassName();
+  }
+  
+  public String generateMethodName(final String prefix) {
+    int _plus = (CompilationContext.nameCount + 1);
+    CompilationContext.nameCount = _plus;
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append(prefix, "");
+    _builder.append("_");
+    _builder.append(CompilationContext.nameCount, "");
+    return _builder.toString();
   }
   
   public String getCurrenctClassName() {
@@ -149,5 +166,13 @@ public class CompilationContext {
       };
     Iterable<String> _map = IterableExtensions.<Symbol, String>map(this.symbols, _function);
     return _map;
+  }
+  
+  public void addMethod(final String method) {
+    this.methods.add(method);
+  }
+  
+  public Iterable<String> getMethods() {
+    return this.methods;
   }
 }
